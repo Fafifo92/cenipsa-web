@@ -50,7 +50,14 @@
 
   /* Tipografía */
   --font-display: 'Fraunces Variable', ui-serif, Georgia, serif;
-  --font-sans: 'Manrope Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Noto Sans Variable', ui-sans-serif, system-ui, sans-serif;
+
+  /* Radios sobrios (sobreescriben la escala por defecto de Tailwind):
+     esquinas discretas, look editorial — nada de píldoras ni tarjetas globo. */
+  --radius-lg: 0.375rem; /* 6px */
+  --radius-xl: 0.5rem; /* 8px */
+  --radius-2xl: 0.625rem; /* 10px */
+  --radius-3xl: 0.75rem; /* 12px */
 
   /* Sombras suaves y profundas */
   --shadow-soft: 0 1px 2px rgb(10 20 30 / 0.04), 0 8px 24px -8px rgb(10 20 30 / 0.1);
@@ -272,7 +279,7 @@ html.js [data-reveal].is-visible {
 
 /* Botones */
 @utility btn {
-  @apply inline-flex items-center justify-center gap-2.5 rounded-full px-7 py-3.5 text-[0.95rem] font-semibold tracking-wide transition-all duration-300;
+  @apply inline-flex items-center justify-center gap-2.5 rounded-lg px-7 py-3.5 text-[0.95rem] font-semibold tracking-wide transition-all duration-300;
 }
 .btn-primary {
   @apply btn bg-brand-600 text-white shadow-soft hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-lift active:translate-y-0;
@@ -297,5 +304,5 @@ html.js [data-reveal].is-visible {
 
 /* Skip link accesible */
 .skip-link {
-  @apply fixed top-3 left-3 z-[100] -translate-y-20 rounded-full bg-ink-950 px-5 py-2.5 text-sm font-semibold text-white shadow-lift transition-transform focus:translate-y-0;
+  @apply fixed top-3 left-3 z-[100] -translate-y-20 rounded-lg bg-ink-950 px-5 py-2.5 text-sm font-semibold text-white shadow-lift transition-transform focus:translate-y-0;
 }

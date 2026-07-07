@@ -82,7 +82,7 @@ const dateStr = post.data.pubDate.toLocaleDateString('es-CO', {
         post.data.categories.length > 0 && (
           <ul class="mt-5 flex flex-wrap gap-2" data-reveal style="--reveal-delay:200ms">
             {post.data.categories.map((cat) => (
-              <li class="rounded-full border border-white/15 bg-white/5 px-3.5 py-1 text-[0.75rem] font-semibold tracking-wide text-ink-200">
+              <li class="rounded-lg border border-white/15 bg-white/5 px-3.5 py-1 text-[0.75rem] font-semibold tracking-wide text-ink-200">
                 {cat}
               </li>
             ))}
