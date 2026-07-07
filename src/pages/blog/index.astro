@@ -1,15 +1,13 @@
 ---
-/** Índice del blog: noticias y actualizaciones. */
-import { getCollection } from 'astro:content';
+/** Índice del blog (ES): noticias y actualizaciones. */
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import PageHero from '@/components/PageHero.astro';
 import CtaBanner from '@/components/CtaBanner.astro';
 import PostCard from '@/components/PostCard.astro';
 import { breadcrumbSchema } from '@/lib/seo';
+import { allPosts } from '@/lib/blog';
 
-const posts = (await getCollection('blog')).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+const posts = await allPosts();
 
 const crumbs = [
   { name: 'Inicio', path: '/' },
@@ -21,6 +19,7 @@ const crumbs = [
   title="Blog de investigación privada y derecho | CENIPSA Inteligencia Investigativa"
   description="Noticias y actualizaciones sobre investigación privada, detectives, poligrafía, GPS y asesoría jurídica en Colombia. Artículos del equipo de CENIPSA S.A.S."
   path="/blog/"
+  altLocalePath="/en/blog/"
   schemas={[breadcrumbSchema(crumbs)]}
 >
   <PageHero
@@ -33,7 +32,7 @@ const crumbs = [
   <section class="section-pad">
     <div class="container-site">
       <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {posts.map((post, i) => <PostCard post={post} index={i} />)}
+        {posts.map((post, i) => <PostCard post={post} index={i} lang="es" />)}
       </div>
     </div>
   </section>

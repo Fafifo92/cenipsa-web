@@ -1,0 +1,129 @@
+---
+/**
+ * Cuerpo de una entrada del blog, reutilizable en ES (/blog/) y EN (/en/blog/).
+ * El contenido del artículo es siempre en español (lo redacta el equipo editorial);
+ * solo el chrome (encabezados, etiquetas, CTA) se traduce según `lang`.
+ */
+import type { CollectionEntry } from 'astro:content';
+import { render } from 'astro:content';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import PostCard from '@/components/PostCard.astro';
+import { CONTACT } from '@/lib/site';
+
+export interface Props {
+  post: CollectionEntry<'blog'>;
+  related: CollectionEntry<'blog'>[];
+  lang: 'es' | 'en';
+}
+
+const { post, related, lang } = Astro.props;
+const { Content } = await render(post);
+
+const blogBase = lang === 'es' ? '/blog/' : '/en/blog/';
+const t =
+  lang === 'es'
+    ? {
+        home: 'Inicio',
+        blog: 'Blog',
+        published: 'Publicado:',
+        team: 'Equipo CENIPSA — Investigadores y Abogados',
+        related: 'Artículos relacionados',
+        ctaTitle: '¿Tienes un caso?',
+        ctaText: 'Cuéntanos tu situación con total confidencialidad.',
+        ctaWhats: 'Asesoría por WhatsApp',
+        ctaContact: 'Contáctanos',
+        contactPath: '/contacto/',
+      }
+    : {
+        home: 'Home',
+        blog: 'Blog',
+        published: 'Published:',
+        team: 'CENIPSA Team — Investigators & Lawyers',
+        related: 'Related articles',
+        ctaTitle: 'Have a case?',
+        ctaText: 'Tell us your situation in full confidence.',
+        ctaWhats: 'WhatsApp consultation',
+        ctaContact: 'Contact us',
+        contactPath: '/en/contact/',
+      };
+
+const dateStr = post.data.pubDate.toLocaleDateString(lang === 'es' ? 'es-CO' : 'en-US', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+
+const crumbs = [
+  { name: t.home, path: lang === 'es' ? '/' : '/en/' },
+  { name: t.blog, path: blogBase },
+];
+---
+
+<header class="relative overflow-hidden bg-ink-950 pt-36 pb-14 md:pt-44">
+  <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+    <div class="absolute -top-40 right-[-10%] h-[30rem] w-[30rem] rounded-full bg-brand-500/10 blur-3xl"></div>
+  </div>
+  <div class="container-site relative">
+    <Breadcrumbs crumbs={crumbs} onDark lang={lang} />
+    <h1 class="mt-7 max-w-4xl font-display text-3xl leading-[1.15] font-semibold text-white md:text-[2.8rem]" data-reveal>
+      {post.data.title}
+    </h1>
+    <p class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-[0.85rem] text-ink-300" data-reveal style="--reveal-delay:120ms">
+      <time datetime={post.data.pubDate.toISOString().slice(0, 10)}>{t.published} {dateStr}</time>
+      <span class="hidden h-1 w-1 rounded-full bg-ink-500 sm:block" aria-hidden="true"></span>
+      <span>{t.team}</span>
+    </p>
+    {
+      post.data.categories.length > 0 && (
+        <ul class="mt-5 flex flex-wrap gap-2" data-reveal style="--reveal-delay:200ms">
+          {post.data.categories.map((cat) => (
+            <li class="rounded-lg border border-white/15 bg-white/5 px-3.5 py-1 text-[0.75rem] font-semibold tracking-wide text-ink-200">
+              {cat}
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
+</header>
+
+<article class="section-pad">
+  <div class="container-site">
+    <div class="grid gap-y-12 lg:grid-cols-[minmax(0,1fr)_19rem] lg:gap-x-14 xl:gap-x-20">
+      <div class="prose-site min-w-0">
+        <Content />
+      </div>
+
+      <aside class="space-y-8 lg:sticky lg:top-28 lg:self-start">
+        <div class="overflow-hidden rounded-3xl bg-ink-950 p-6 text-white">
+          <h2 class="font-display text-xl font-semibold">{t.ctaTitle}</h2>
+          <p class="mt-2 text-[0.9rem] leading-relaxed text-ink-300">{t.ctaText}</p>
+          <div class="mt-5 flex flex-col gap-2.5">
+            <a href={CONTACT.whatsappHref} target="_blank" rel="noopener" class="btn-gold w-full text-[0.9rem]">
+              {t.ctaWhats}
+            </a>
+            <a href={t.contactPath} class="btn-outline-light w-full text-[0.9rem]">{t.ctaContact}</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</article>
+
+{
+  related.length > 0 && (
+    <section class="bg-mist section-pad" aria-labelledby="related-posts-title">
+      <div class="container-site">
+        <h2 id="related-posts-title" class="eyebrow">
+          <span class="h-px w-8 bg-gold-500" aria-hidden="true" />
+          {t.related}
+        </h2>
+        <div class="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {related.map((p, i) => (
+            <PostCard post={p} index={i} lang={lang} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}

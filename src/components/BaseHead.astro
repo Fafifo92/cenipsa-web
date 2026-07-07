@@ -13,6 +13,8 @@ export interface Props {
   description: string;
   /** Ruta canónica con slash final, p. ej. "/detectives-privados-bogota-2/" */
   path: string;
+  /** Sobrescribe la URL canónica (p. ej. blog EN → apunta a la versión ES). */
+  canonicalPath?: string;
   /** Ruta del par de idioma si existe (genera hreflang bidireccional) */
   altLocalePath?: string;
   /** Idioma de esta página */
@@ -30,6 +32,7 @@ const {
   title,
   description,
   path,
+  canonicalPath,
   altLocalePath,
   lang = 'es',
   ogImage = '/images/og-default.jpg',
@@ -40,7 +43,7 @@ const {
   modifiedTime,
 } = Astro.props;
 
-const canonical = new URL(path, SITE.url).href;
+const canonical = new URL(canonicalPath ?? path, SITE.url).href;
 const ogImageAbs = new URL(ogImage, SITE.url).href;
 const desc = metaDescription(description);
 const isEs = lang === 'es';

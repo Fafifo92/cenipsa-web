@@ -47,20 +47,57 @@ const t =
         affiliation: 'Member of the Bogotá Chamber of Commerce Affiliates Circle.',
       };
 
-const aboutLinks =
-  lang === 'es'
-    ? [
-        { label: t.who, href: '/nosotros/' },
-        { label: t.team, href: '/equipo-interdisciplinar/' },
-        { label: t.guarantees, href: '/garantias/' },
-        { label: t.cases, href: '/casos-de-exito/' },
-        { label: t.blog, href: '/blog/' },
-        { label: t.faqs, href: '/faq/' },
-      ]
-    : [
-        { label: t.who, href: '/en/about-us/' },
-        { label: t.blog, href: '/blog/' },
-      ];
+const isEs = lang === 'es';
+
+const aboutLinks = isEs
+  ? [
+      { label: t.who, href: '/nosotros/' },
+      { label: t.team, href: '/equipo-interdisciplinar/' },
+      { label: t.guarantees, href: '/garantias/' },
+      { label: t.cases, href: '/casos-de-exito/' },
+      { label: t.blog, href: '/blog/' },
+      { label: t.faqs, href: '/faq/' },
+    ]
+  : [
+      { label: t.who, href: '/en/about-us/' },
+      { label: t.team, href: '/en/interdisciplinary-team/' },
+      { label: t.guarantees, href: '/en/guarantees/' },
+      { label: t.cases, href: '/en/success-stories/' },
+      { label: t.blog, href: '/en/blog/' },
+      { label: t.faqs, href: '/en/faq/' },
+    ];
+
+// Legales: solo existen en español; en EN se enlazan igual (contenido jurídico primario).
+const legalLinks = [
+  { label: t.terms, href: '/terminos-y-condiciones/' },
+  { label: t.privacy, href: '/politica-de-tratamiento-de-datos-y-privacidad/' },
+];
+
+// Servicios del footer, según idioma (en EN, rutas /en/…).
+const footerServices = isEs
+  ? FOOTER_SERVICES
+  : [
+      { label: 'Personal investigation', href: '/en/personal-investigation/' },
+      { label: 'Corporate investigation', href: '/en/corporate-investigation/' },
+      { label: 'Legal advice & representation', href: '/en/legal-advice/' },
+      { label: 'Criminalistics', href: '/en/criminalistics/' },
+      { label: 'GPS satellite tracking', href: '/en/gps-tracking/' },
+      { label: 'Online services', href: '/en/online-services/' },
+      { label: 'Payments', href: '/en/payments/' },
+      { label: 'Services for lawyers', href: '/en/services-for-lawyers/' },
+      { label: 'Electronic sweep', href: '/en/electronic-sweep/' },
+    ];
+
+// Cuarta columna: en ES, landings SEO; en EN, recursos rápidos (evita enlazar a slugs en español).
+const resourceLinks = isEs
+  ? null
+  : [
+      { label: 'Services', href: '/en/services/' },
+      { label: 'Blog', href: '/en/blog/' },
+      { label: 'FAQ', href: '/en/faq/' },
+      { label: 'Payments', href: '/en/payments/' },
+      { label: 'Contact', href: '/en/contact/' },
+    ];
 
 const socials = [
   {
@@ -121,20 +158,19 @@ const socials = [
               <a href={l.href} class="text-ink-300 transition-colors hover:text-brand-300">{l.label}</a>
             </li>
           ))}
-          <li>
-            <a href="/terminos-y-condiciones/" class="text-ink-300 transition-colors hover:text-brand-300">{t.terms}</a>
-          </li>
-          <li>
-            <a href="/politica-de-tratamiento-de-datos-y-privacidad/" class="text-ink-300 transition-colors hover:text-brand-300">{t.privacy}</a>
-          </li>
+          {legalLinks.map((l) => (
+            <li>
+              <a href={l.href} class="text-ink-300 transition-colors hover:text-brand-300">{l.label}</a>
+            </li>
+          ))}
         </ul>
       </nav>
 
-      <!-- Servicios + Enlaces de interés -->
+      <!-- Servicios -->
       <nav aria-label={t.services}>
         <h2 class="font-display text-[0.95rem] font-semibold tracking-wide text-white">{t.services}</h2>
         <ul class="mt-5 space-y-2.5 text-[0.9rem]">
-          {FOOTER_SERVICES.map((l) => (
+          {footerServices.map((l) => (
             <li>
               <a href={l.href} class="text-ink-300 transition-colors hover:text-brand-300">{l.label}</a>
             </li>
@@ -146,7 +182,7 @@ const socials = [
         <nav aria-label={t.links}>
           <h2 class="font-display text-[0.95rem] font-semibold tracking-wide text-white">{t.links}</h2>
           <ul class="mt-5 columns-1 space-y-2.5 text-[0.9rem]">
-            {FOOTER_SEO_LINKS.slice(0, 8).map((l) => (
+            {(resourceLinks ?? FOOTER_SEO_LINKS.slice(0, 8)).map((l) => (
               <li>
                 <a href={l.href} class="text-ink-300 transition-colors hover:text-brand-300">{l.label}</a>
               </li>
@@ -156,16 +192,20 @@ const socials = [
       </div>
     </div>
 
-    <!-- Más enlaces de interés (fila completa) -->
-    <nav class="mt-10 border-t border-white/10 pt-8" aria-label={`${t.links} 2`}>
-      <ul class="flex flex-wrap gap-x-7 gap-y-2.5 text-[0.85rem]">
-        {FOOTER_SEO_LINKS.slice(8).map((l) => (
-          <li>
-            <a href={l.href} class="text-ink-400 transition-colors hover:text-brand-300">{l.label}</a>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <!-- Más enlaces de interés SEO (solo ES: son landings orientadas a búsquedas en español) -->
+    {
+      isEs && (
+        <nav class="mt-10 border-t border-white/10 pt-8" aria-label={`${t.links} 2`}>
+          <ul class="flex flex-wrap gap-x-7 gap-y-2.5 text-[0.85rem]">
+            {FOOTER_SEO_LINKS.slice(8).map((l) => (
+              <li>
+                <a href={l.href} class="text-ink-400 transition-colors hover:text-brand-300">{l.label}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )
+    }
 
     <!-- Contacto -->
     <div class="mt-10 grid gap-6 border-t border-white/10 pt-8 text-[0.9rem] sm:grid-cols-2 lg:grid-cols-4">

@@ -90,7 +90,8 @@ export default defineConfig({
   },
   integrations: [
     sitemap({
-      filter: (page) => !NOINDEX_PATHS.has(page),
+      // Excluye páginas noindex y todo el blog EN (canonical → versión ES).
+      filter: (page) => !NOINDEX_PATHS.has(page) && !page.includes('/en/blog/'),
       changefreq: 'weekly',
       priority: 0.7,
       serialize(item) {

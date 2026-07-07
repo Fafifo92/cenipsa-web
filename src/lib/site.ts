@@ -86,9 +86,19 @@ export const NAV_ES: NavLink[] = [
   { label: 'Contáctenos', href: '/contacto/' },
 ];
 
+/** Navegación EN — espeja EXACTAMENTE la estructura de NAV_ES (mismo nº de ítems). */
 export const NAV_EN: NavLink[] = [
   { label: 'Home', href: '/en/' },
-  { label: 'About us', href: '/en/about-us/' },
+  {
+    label: 'About us',
+    href: '/en/about-us/',
+    children: [
+      { label: 'Who we are', href: '/en/about-us/' },
+      { label: 'Interdisciplinary team', href: '/en/interdisciplinary-team/' },
+      { label: 'Guarantees', href: '/en/guarantees/' },
+      { label: 'Success stories', href: '/en/success-stories/' },
+    ],
+  },
   {
     label: 'Services',
     href: '/en/services/',
@@ -99,24 +109,38 @@ export const NAV_EN: NavLink[] = [
       { label: 'Criminalistics', href: '/en/criminalistics/' },
       { label: 'GPS satellite tracking', href: '/en/gps-tracking/' },
       { label: 'Polygraph testing', href: '/en/polygraph/' },
+      { label: 'Electronic sweep', href: '/en/electronic-sweep/' },
+      { label: 'Services for lawyers', href: '/en/services-for-lawyers/' },
+      { label: 'Online services', href: '/en/online-services/' },
     ],
   },
-  { label: 'Blog', href: '/blog/' },
+  { label: 'Blog', href: '/en/blog/' },
+  { label: 'FAQ', href: '/en/faq/' },
+  { label: 'Payments', href: '/en/payments/' },
   { label: 'Contact', href: '/en/contact/' },
 ];
 
-/** Pares hreflang ES ↔ EN (solo páginas core con versión en inglés). */
+/** Pares hreflang ES ↔ EN (páginas con versión en inglés). */
 export const I18N_PAIRS: Record<string, string> = {
   '/': '/en/',
   '/nosotros/': '/en/about-us/',
   '/servicios/': '/en/services/',
   '/contacto/': '/en/contact/',
+  '/faq/': '/en/faq/',
+  '/pagos-en-linea/': '/en/payments/',
+  '/blog/': '/en/blog/',
   '/investigacion-personal/': '/en/personal-investigation/',
   '/investigacion-corporativa/': '/en/corporate-investigation/',
   '/asesoria-juridica/': '/en/legal-advice/',
   '/criminalistica/': '/en/criminalistics/',
   '/plataforma-gps/': '/en/gps-tracking/',
   '/examen-de-poligrafia/': '/en/polygraph/',
+  '/barrido-electronico/': '/en/electronic-sweep/',
+  '/servicios-especiales/': '/en/services-for-lawyers/',
+  '/servicios-en-linea/': '/en/online-services/',
+  '/equipo-interdisciplinar/': '/en/interdisciplinary-team/',
+  '/garantias/': '/en/guarantees/',
+  '/casos-de-exito/': '/en/success-stories/',
 };
 
 /** Devuelve el par de idioma de una ruta (en cualquier dirección). */

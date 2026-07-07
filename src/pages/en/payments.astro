@@ -1,5 +1,5 @@
 ---
-/** Pagos en línea (PayU). */
+/** Online payments (PayU) — EN. */
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import PageHero from '@/components/PageHero.astro';
 import CtaBanner from '@/components/CtaBanner.astro';
@@ -7,34 +7,36 @@ import Icon from '@/components/Icon.astro';
 import { breadcrumbSchema } from '@/lib/seo';
 
 const crumbs = [
-  { name: 'Inicio', path: '/' },
-  { name: 'Pagos en línea', path: '/pagos-en-linea/' },
+  { name: 'Home', path: '/en/' },
+  { name: 'Payments', path: '/en/payments/' },
 ];
 
 const methods = [
-  'PSE', 'Visa', 'Visa Débito', 'Mastercard', 'Mastercard Débito', 'American Express',
+  'PSE', 'Visa', 'Visa Debit', 'Mastercard', 'Mastercard Debit', 'American Express',
   'Diners Club', 'Efecty', 'Baloto', 'Su Red', 'Bancolombia', 'Davivienda', 'Banco de Bogotá', 'Codensa',
 ];
 
 const features = [
-  'Ofrecemos diferentes medios de pago, pues contamos con integración a la plataforma de pagos PayU. Esta plataforma le permite mayor seguridad, protección en sus medios de pago y optimización de su tiempo.',
-  'Usted podrá elegir cualquier medio de pago: Efecty, Baloto, Su Red, PSE, tarjetas crédito o débito y bancos, entre otros.',
-  'Al correo registrado en plataforma, llegará un comprobante de la transferencia y estado de su pago.',
+  'We offer several payment methods through our integration with the PayU payment platform, giving you greater security, protection for your payment methods and saved time.',
+  'You may choose any payment method: Efecty, Baloto, Su Red, PSE, credit or debit cards and banks, among others.',
+  'A receipt of the transfer and the status of your payment will be sent to the email registered on the platform.',
 ];
 ---
 
 <BaseLayout
-  title="Pagos en línea seguros con PayU | CENIPSA"
-  description="Realice pagos seguros a CENIPSA S.A.S. a través de la plataforma PayU: PSE, tarjetas de crédito y débito, Efecty, Baloto y bancos. Comprobante inmediato a su correo."
-  path="/pagos-en-linea/"
-  altLocalePath="/en/payments/"
+  title="Secure online payments with PayU | CENIPSA"
+  description="Pay CENIPSA S.A.S. securely through the PayU platform: PSE, credit and debit cards, Efecty, Baloto and banks. Instant receipt to your email."
+  path="/en/payments/"
+  altLocalePath="/pagos-en-linea/"
+  lang="en"
   schemas={[breadcrumbSchema(crumbs)]}
 >
   <PageHero
-    eyebrow="Pagos en línea"
-    title="Pagos seguros"
-    description="Contamos con integración a la plataforma de pagos PayU: mayor seguridad, protección en sus medios de pago y optimización de su tiempo."
+    eyebrow="Payments"
+    title="Secure payments"
+    description="We integrate with the PayU payment platform: greater security, protection for your payment methods and saved time."
     crumbs={crumbs}
+    lang="en"
   />
 
   <section class="section-pad">
@@ -55,21 +57,21 @@ const features = [
           </ul>
 
           <div class="rounded-3xl bg-ink-950 p-8 text-white md:p-10">
-            <h2 class="font-display text-2xl font-semibold">¿Cómo realizar tu pago?</h2>
+            <h2 class="font-display text-2xl font-semibold">How do you make your payment?</h2>
             <p class="mt-3 leading-relaxed text-ink-200">
-              Solicita tu enlace de pago personalizado a nuestro equipo: te lo enviaremos por correo o WhatsApp con
-              el detalle del servicio contratado, para que pagues de forma segura a través de PayU.
+              Request your personalized payment link from our team: we will send it by email or WhatsApp with the
+              details of the contracted service, so you can pay securely through PayU.
             </p>
             <div class="mt-7 flex flex-wrap gap-4">
-              <a href="/contacto/" class="btn-gold">Solicitar enlace de pago</a>
-              <a href="/servicios-en-linea/" class="btn-outline-light">Servicios en línea</a>
+              <a href="/en/contact/" class="btn-gold">Request payment link</a>
+              <a href="/en/online-services/" class="btn-outline-light">Online services</a>
             </div>
           </div>
         </div>
 
         <aside class="lg:sticky lg:top-28 lg:self-start" data-reveal>
           <div class="rounded-3xl border border-ink-100 bg-white p-6 shadow-soft">
-            <h2 class="font-display text-lg font-semibold text-ink-950">Medios de pago disponibles</h2>
+            <h2 class="font-display text-lg font-semibold text-ink-950">Available payment methods</h2>
             <ul class="mt-5 flex flex-wrap gap-2">
               {
                 methods.map((m) => (
@@ -81,7 +83,7 @@ const features = [
             </ul>
             <p class="mt-6 flex items-center gap-2 border-t border-ink-100 pt-5 text-[0.85rem] font-semibold text-brand-700">
               <Icon name="shield" class="h-4 w-4" />
-              Pagos protegidos por PayU
+              Payments secured by PayU
             </p>
           </div>
         </aside>
@@ -89,5 +91,5 @@ const features = [
     </div>
   </section>
 
-  <CtaBanner />
+  <CtaBanner lang="en" />
 </BaseLayout>

@@ -1,0 +1,41 @@
+---
+/**
+ * Entrada del blog (chrome EN): mismo artículo en español, con encabezados en
+ * inglés y aviso de idioma. Canonical → versión ES + noindex (evita duplicado).
+ */
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BlogPostBody from '@/components/BlogPostBody.astro';
+import BlogSpanishNotice from '@/components/BlogSpanishNotice.astro';
+import CtaBanner from '@/components/CtaBanner.astro';
+import { relatedPosts } from '@/lib/blog';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const enPath = `/en/blog/${post.id}/`;
+const esPath = `/blog/${post.id}/`;
+const related = await relatedPosts(post);
+---
+
+<BaseLayout
+  title={`${post.data.title} | CENIPSA`}
+  description={post.data.description}
+  path={enPath}
+  canonicalPath={esPath}
+  altLocalePath={esPath}
+  lang="en"
+  ogType="article"
+  ogImage={post.data.image}
+  noindex
+>
+  <BlogPostBody post={post} related={related} lang="en" />
+  <CtaBanner lang="en" />
+  <BlogSpanishNotice esUrl={esPath} />
+</BaseLayout>

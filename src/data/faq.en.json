@@ -1,0 +1,134 @@
+[
+  {
+    "id": "faq-1",
+    "question": "Where are you located?",
+    "answer": "<p>We invite you to our offices to learn about the range of products and services suited to your case.</p><p><strong>Address:</strong> Carrera 62 # 103 – 44, Edificio Torre del Reloj, Oficina 403, Sede Norte, Bogotá</p><p><strong>WhatsApp:</strong> <a href=\"https://api.whatsapp.com/send?phone=573174232502\">317 423 2502</a></p><p><strong>PBX:</strong> <a href=\"tel:+576016290498\">+57 (601) 6290498</a></p>",
+    "order": 1
+  },
+  {
+    "id": "faq-2",
+    "question": "Which email addresses can I write to for information about services or products?",
+    "answer": "<p><a href=\"mailto:info@inteligenciainvestigativa.com\">info@inteligenciainvestigativa.com</a></p>",
+    "order": 2
+  },
+  {
+    "id": "faq-3",
+    "question": "Can I visit the company's facilities without an appointment?",
+    "answer": "<p>No. In accordance with our confidentiality, security, and privacy policies, you can schedule your appointment by phone for investigative or legal advisory services.</p>",
+    "order": 3
+  },
+  {
+    "id": "faq-4",
+    "question": "Can I request a virtual investigative consultation?",
+    "answer": "<p>Yes. You must contact us so we can explain the logistics and schedule your appointment, subject to availability.</p>",
+    "order": 4
+  },
+  {
+    "id": "faq-5",
+    "question": "What experience do you have in the field of private investigations?",
+    "answer": "<p>We are a pioneering company in the field of private and legal investigations, with extensive expertise over the past 10 years across a wide range of judicial matters that affect citizens. Through casuistic methodology, case studies, and direct support to our clients, we uncover the truth of the facts under investigation.</p>",
+    "order": 5
+  },
+  {
+    "id": "faq-6",
+    "question": "How do you guarantee confidentiality?",
+    "answer": "<p>We apply legal protocols through confidentiality agreements to protect your personal data, and we maintain absolute discretion. At <strong>CENIPSA SAS</strong>, privacy and respect for professional secrecy are fundamental.</p>",
+    "order": 6
+  },
+  {
+    "id": "faq-7",
+    "question": "What are your main services for individuals?",
+    "answer": "<ul><li>Locating persons or families.</li><li>Family and asset investigation.</li><li>Family investigation for foreign nationality applications.</li><li>Investigation before entering into a marriage commitment.</li><li>Clinical Psychology.</li></ul>",
+    "order": 7
+  },
+  {
+    "id": "faq-8",
+    "question": "Do you offer GPS services?",
+    "answer": "<p>Yes. We have our own satellite platform and monitoring application, <strong>CENIPSA Track</strong>, which lets you keep control of the vehicle in real time and access route history. The GPS device includes a hidden microphone inside the vehicle to listen to any sounds or voices produced within it.</p>",
+    "order": 8
+  },
+  {
+    "id": "faq-9",
+    "question": "What is your experience in the corporate field?",
+    "answer": "<p>We have a department specialized in vulnerability auditing and the prevention of corporate risks and crimes. Our professionals are highly qualified in corporate investigation and provide comprehensive support, starting with a specialized diagnosis of the situation, followed by the planning and execution of the investigation. Ultimately, we contribute to the effective resolution of the case.</p>",
+    "order": 9
+  },
+  {
+    "id": "faq-10",
+    "question": "What are your main corporate services?",
+    "answer": "<ul><li>Pre-employment screening.</li><li>Asset and financial studies.</li><li>Theft and fraud investigation.</li><li>Support for the human resources department.</li><li>Polygraph testing.</li><li>Electronic sweep.</li></ul>",
+    "order": 10
+  },
+  {
+    "id": "faq-11",
+    "question": "Do you have special services for lawyers?",
+    "answer": "<p>We regularly work with various groups of lawyers, providing services such as judicial notification, debt collection, asset investigation for precautionary measures, executive analysis of financial information, and evidentiary advisory services.</p>",
+    "order": 11
+  },
+  {
+    "id": "faq-12",
+    "question": "Do you offer legal services?",
+    "answer": "<p>We have a legal department covering different areas of law. You can visit us at <a href=\"https://abogadosbogotaespecializados.com\">https://abogadosbogotaespecializados.com</a></p>",
+    "order": 12
+  },
+  {
+    "id": "faq-13",
+    "question": "What criminalistics services do you offer?",
+    "answer": "<ul><li>Locating missing persons.</li><li>Investigation of crimes against life and the family.</li><li>Investigation of fraud against communities.</li><li>Investigation of vehicle theft.</li><li>Investigation of adulterated beverages.</li></ul>",
+    "order": 13
+  },
+  {
+    "id": "faq-14",
+    "question": "What payment methods do you accept?",
+    "answer": "<p>We offer a range of options and are integrated with Banco Internacional PayU, so you can pay using any payment method (PSE, Efecty, Baloto, cards, in-bank deposits, among others). We also accept payments through social media.</p>",
+    "order": 14
+  },
+  {
+    "id": "faq-15",
+    "question": "How much does a personal or corporate investigation cost?",
+    "answer": "<p>Prices depend on the complexity of the specific case. For this reason, you must first tell us about your case, and we will send a commercial proposal based on the diagnosis of your issue or conflict.</p>",
+    "order": 15
+  },
+  {
+    "id": "faq-16",
+    "question": "Do you work throughout the entire country?",
+    "answer": "<p>Our investigations are conducted nationwide.</p>",
+    "order": 16
+  },
+  {
+    "id": "faq-17",
+    "question": "If I decide to hire an investigative service, for my own safety, what should I keep in mind when hiring?",
+    "answer": "<p>Never hand over money in the street or to the accounts of individuals.</p><p>Do not accept blind appointments with strangers in public places. This is the perfect setting for scams.</p><ul><li><strong>ALWAYS MAKE DEPOSITS IN THE NAME OF THE LEGAL ENTITY</strong>. Remember that, in order to have the support of Colombian banks, companies must first undergo a bank review, including visits to their physical facilities and other security protocols, to ensure they are legal in every respect and not front operations.</li><li>Make sure they meet the requirements of a legally established company.</li></ul><p>Regarding the Chamber of Commerce certificate, keep the following in mind.</p><ul><li>Registration with the Chamber of Commerce where the address matches the location of your appointment.</li><li>That the physical office is not virtual (offices rented by the hour). Fronts.</li><li>Verify that the amount of experience they claim to have on their website matches how long they have been registered with the Chamber of Commerce.</li><li>Confirm that the legal representative exists and that their ID number matches their name. Ask to speak with them.</li><li>Remember that you can perform these verifications yourself (consult the SINGLE BUSINESS REGISTRY, known by its acronym RUE. You can search by NIT or by company name).</li><li>That the company has a serious, carefully maintained website, not templates thrown together on the spot with clear intent to defraud.</li></ul>",
+    "order": 17
+  },
+  {
+    "id": "faq-18",
+    "question": "How can I find out whether my partner (wife/husband) is being unfaithful?",
+    "answer": "<p>Regarding your request for an investigation into suspected infidelity, I would like to let you know that we have both technological and physical resources to uncover the truth.</p><p>As for TECHNOLOGICAL resources, we offer mobile phone intelligence, recovery of deleted messages on phones, WhatsApp monitoring, satellite tracking, location history, records of incoming and outgoing calls, remote microphones, and more. When we use these technical tools, we guarantee highly effective results and the ability to uncover the truth using all the latest technological developments.</p><p>As for PHYSICAL resources, we deploy our investigators to the location you indicate to record on video and in photographs every event involving the subject, such as the places they visit, the people they meet with, and, in general, their entire routine as detected during the investigation. This is a highly efficient surveillance operation, carried out by suitable, qualified personnel applying the most rigorous intelligence techniques.</p>",
+    "order": 18
+  },
+  {
+    "id": "faq-19",
+    "question": "What should I do to arrange a surveillance service?",
+    "answer": "<p>Clients visiting our office is fundamental and very important, as each client is a special case. Here they will find a group of suitable, qualified professionals who are ready to:</p><ul><li>Listen to them</li><li>Advise them</li><li>Guide them</li><li>Help them find the best strategy to uncover the truth through our technological and physical resources.</li></ul>",
+    "order": 19
+  },
+  {
+    "id": "faq-20",
+    "question": "Can I recover deleted data from a phone, such as calls, photos, WhatsApp, etc.?",
+    "answer": "<p>Regarding your request, I would like to let you know that we perform a forensic analysis of the mobile device, which consists of scanning all deleted activity on the device and recovering WhatsApp chats, audio messages, photos, videos, records of incoming and outgoing numbers, text messages, contacts, and other activity generated from the phone. This study is carried out with specialized equipment over five days, and the information obtained is delivered on a USB drive.</p>",
+    "order": 20
+  },
+  {
+    "id": "faq-21",
+    "question": "I am getting married and suspect that my partner in Colombia is lying to me. I want to verify their information, marital status, children, employment, education, etc.?",
+    "answer": "<p>Regarding your request, I would like to let you know that we first carry out an electronic investigation to establish the subject's true residential and work location and their family circle. We then proceed to investigate the environment in which they operate, deploying our investigators undercover to record on video and in photographs every event involving the subject. After completing our intelligence work, we present you with a written report, attaching the supporting evidence of the results obtained in the investigation.</p>",
+    "order": 21
+  },
+  {
+    "id": "faq-22",
+    "question": "How do I go about locating a person?",
+    "answer": "<p>Regarding your request, I would like to let you know that we begin our intelligence work using basic information such as full name and identification number. Providing an identification number is important in order to fully establish the identity of the person under investigation; however, if this information is not provided, we can also carry out more painstaking work to achieve full identification, which involves ruling out namesakes in order to narrow things down based on data associated with the subject that would distinguish them from others with the same name.</p>",
+    "order": 22
+  }
+]

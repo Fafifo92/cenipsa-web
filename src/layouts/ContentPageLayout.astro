@@ -10,7 +10,7 @@ import BaseLayout from './BaseLayout.astro';
 import PageHero from '@/components/PageHero.astro';
 import CtaBanner from '@/components/CtaBanner.astro';
 import { serviceSchema, breadcrumbSchema, metaDescription } from '@/lib/seo';
-import { altLocaleFor } from '@/lib/site';
+import { altLocaleFor, CONTACT } from '@/lib/site';
 
 export interface Props {
   entry: CollectionEntry<'paginas'>;
@@ -29,6 +29,11 @@ const t =
         services: 'Servicios',
         servicesPath: '/servicios/',
         related: 'También te puede interesar',
+        ctaTitle: '¿Tienes un caso?',
+        ctaText: 'Cuéntanos tu situación con total confidencialidad. Te asesoramos sin compromiso.',
+        ctaWhats: 'Asesoría por WhatsApp',
+        ctaContact: 'Formulario de contacto',
+        contactPath: '/contacto/',
         typeLabel: { service: 'Servicios', landing: 'Cobertura', info: 'Nosotros', legal: 'Legal' } as Record<string, string>,
       }
     : {
@@ -36,6 +41,11 @@ const t =
         services: 'Services',
         servicesPath: '/en/services/',
         related: 'You may also be interested in',
+        ctaTitle: 'Have a case?',
+        ctaText: 'Tell us your situation in full confidence. Free initial consultation.',
+        ctaWhats: 'WhatsApp consultation',
+        ctaContact: 'Contact form',
+        contactPath: '/en/contact/',
         typeLabel: { service: 'Services', landing: 'Coverage', info: 'About us', legal: 'Legal' } as Record<string, string>,
       };
 
@@ -84,35 +94,50 @@ const seoTitle =
 
   <article class="section-pad">
     <div class="container-site">
-      <div class="prose-site mx-auto max-w-3xl" data-reveal>
-        <Content />
-      </div>
+      <div class="grid gap-y-12 lg:grid-cols-[minmax(0,1fr)_19rem] lg:gap-x-14 xl:gap-x-20">
+        <div class="prose-site min-w-0" data-reveal>
+          <Content />
+        </div>
 
-      {
-        data.related.length > 0 && (
-          <aside class="mx-auto mt-14 max-w-3xl" data-reveal aria-labelledby="related-title">
-            <h2 id="related-title" class="eyebrow">
-              <span class="h-px w-8 bg-gold-500" aria-hidden="true" />
-              {t.related}
-            </h2>
-            <ul class="mt-5 grid gap-3 sm:grid-cols-2">
-              {data.related.map((rel) => (
-                <li>
-                  <a
-                    href={rel.href}
-                    class="group flex items-center justify-between gap-3 rounded-2xl border border-ink-100 bg-white px-5 py-4 text-[0.95rem] font-semibold text-ink-900 shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-300 hover:text-brand-700 hover:shadow-lift"
-                  >
-                    {rel.label}
-                    <svg class="h-4 w-4 shrink-0 text-brand-500 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-                      <path d="M5 12h14m-6-6 6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </aside>
-        )
-      }
+        <aside class="space-y-8 lg:sticky lg:top-28 lg:self-start">
+          {
+            data.related.length > 0 && (
+              <nav aria-labelledby="related-title">
+                <h2 id="related-title" class="eyebrow">
+                  <span class="h-px w-8 bg-gold-500" aria-hidden="true" />
+                  {t.related}
+                </h2>
+                <ul class="mt-5 space-y-2.5">
+                  {data.related.map((rel) => (
+                    <li>
+                      <a
+                        href={rel.href}
+                        class="group flex items-center justify-between gap-3 rounded-2xl border border-ink-100 bg-white px-4 py-3 text-[0.9rem] font-semibold text-ink-900 shadow-soft transition-all duration-300 hover:border-brand-300 hover:text-brand-700 hover:shadow-lift"
+                      >
+                        {rel.label}
+                        <svg class="h-4 w-4 shrink-0 text-brand-500 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                          <path d="M5 12h14m-6-6 6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            )
+          }
+
+          <div class="overflow-hidden rounded-3xl bg-ink-950 p-6 text-white">
+            <h2 class="font-display text-xl font-semibold">{t.ctaTitle}</h2>
+            <p class="mt-2 text-[0.9rem] leading-relaxed text-ink-300">{t.ctaText}</p>
+            <div class="mt-5 flex flex-col gap-2.5">
+              <a href={CONTACT.whatsappHref} target="_blank" rel="noopener" class="btn-gold w-full text-[0.9rem]">
+                {t.ctaWhats}
+              </a>
+              <a href={t.contactPath} class="btn-outline-light w-full text-[0.9rem]">{t.ctaContact}</a>
+            </div>
+          </div>
+        </aside>
+      </div>
     </div>
   </article>
 

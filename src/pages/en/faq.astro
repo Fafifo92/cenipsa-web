@@ -1,29 +1,31 @@
 ---
-/** Preguntas frecuentes con acordeón + schema FAQPage. */
-import { getCollection } from 'astro:content';
+/** Frequently asked questions (EN) with accordion + FAQPage schema. */
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import PageHero from '@/components/PageHero.astro';
 import CtaBanner from '@/components/CtaBanner.astro';
 import FaqAccordion from '@/components/FaqAccordion.astro';
 import { faqSchema, breadcrumbSchema } from '@/lib/seo';
 import { CONTACT } from '@/lib/site';
+import faqEn from '@/data/faq.en.json';
 
-const faqs = (await getCollection('faq')).sort((a, b) => a.data.order - b.data.order);
-const items = faqs.map((f) => ({ question: f.data.question, answer: f.data.answer }));
+const items = [...faqEn]
+  .sort((a, b) => a.order - b.order)
+  .map((f) => ({ question: f.question, answer: f.answer }));
 
 const stripHtml = (html: string) => html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 
 const crumbs = [
-  { name: 'Inicio', path: '/' },
-  { name: 'Preguntas frecuentes', path: '/faq/' },
+  { name: 'Home', path: '/en/' },
+  { name: 'FAQ', path: '/en/faq/' },
 ];
 ---
 
 <BaseLayout
-  title="Preguntas frecuentes | CENIPSA Inteligencia Investigativa"
-  description="Resolvemos las dudas más comunes sobre investigación privada, detectives, poligrafía, GPS satelital y asesoría jurídica en Colombia. Consulte nuestras preguntas frecuentes."
-  path="/faq/"
-  altLocalePath="/en/faq/"
+  title="Frequently asked questions | CENIPSA"
+  description="Answers to the most common questions about private investigation, detectives, polygraph, GPS tracking and legal advice in Colombia."
+  path="/en/faq/"
+  altLocalePath="/faq/"
+  lang="en"
   schemas={[
     faqSchema(items.map((it) => ({ question: it.question, answer: stripHtml(it.answer) }))),
     breadcrumbSchema(crumbs),
@@ -31,9 +33,10 @@ const crumbs = [
 >
   <PageHero
     eyebrow="FAQ"
-    title="Preguntas frecuentes"
-    description="Resolvemos las dudas más comunes sobre nuestros servicios investigativos y jurídicos."
+    title="Frequently asked questions"
+    description="Answers to the most common questions about our investigative and legal services."
     crumbs={crumbs}
+    lang="en"
   />
 
   <section class="section-pad">
@@ -44,15 +47,15 @@ const crumbs = [
         </div>
         <aside class="lg:sticky lg:top-28 lg:self-start">
           <div class="overflow-hidden rounded-3xl bg-ink-950 p-6 text-white">
-            <h2 class="font-display text-xl font-semibold">¿No encuentras la respuesta?</h2>
+            <h2 class="font-display text-xl font-semibold">Didn't find your answer?</h2>
             <p class="mt-2 text-[0.9rem] leading-relaxed text-ink-300">
-              Escríbenos y un asesor resolverá tu caso de forma personalizada y confidencial.
+              Write to us and an advisor will handle your case personally and confidentially.
             </p>
             <div class="mt-5 flex flex-col gap-2.5">
               <a href={CONTACT.whatsappHref} target="_blank" rel="noopener" class="btn-gold w-full text-[0.9rem]">
-                Asesoría por WhatsApp
+                WhatsApp consultation
               </a>
-              <a href="/contacto/" class="btn-outline-light w-full text-[0.9rem]">Contáctanos</a>
+              <a href="/en/contact/" class="btn-outline-light w-full text-[0.9rem]">Contact us</a>
             </div>
           </div>
         </aside>
@@ -61,7 +64,8 @@ const crumbs = [
   </section>
 
   <CtaBanner
-    title="¿No encuentras la respuesta que buscas?"
-    text="Escríbenos y un asesor de nuestro equipo resolverá tu caso de forma personalizada y confidencial."
+    lang="en"
+    title="Didn't find the answer you were looking for?"
+    text="Write to us and an advisor from our team will handle your case personally and confidentially."
   />
 </BaseLayout>

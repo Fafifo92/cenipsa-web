@@ -5,14 +5,16 @@ import type { CollectionEntry } from 'astro:content';
 export interface Props {
   post: CollectionEntry<'blog'>;
   index?: number;
+  lang?: 'es' | 'en';
 }
-const { post, index = 0 } = Astro.props;
-const href = `/blog/${post.id}/`;
-const date = post.data.pubDate.toLocaleDateString('es-CO', {
+const { post, index = 0, lang = 'es' } = Astro.props;
+const href = `${lang === 'es' ? '/blog/' : '/en/blog/'}${post.id}/`;
+const date = post.data.pubDate.toLocaleDateString(lang === 'es' ? 'es-CO' : 'en-US', {
   day: 'numeric',
   month: 'long',
   year: 'numeric',
 });
+const readLabel = lang === 'es' ? 'Leer artículo' : 'Read article';
 ---
 
 <article
@@ -47,7 +49,7 @@ const date = post.data.pubDate.toLocaleDateString('es-CO', {
         {post.data.description}
       </p>
       <p class="mt-5 inline-flex items-center gap-2 text-[0.85rem] font-bold text-brand-700">
-        Leer artículo
+        {readLabel}
         <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
           <path d="M5 12h14m-6-6 6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
