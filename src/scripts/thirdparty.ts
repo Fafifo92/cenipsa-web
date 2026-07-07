@@ -41,6 +41,7 @@ function loadThirdParties() {
       Tawk_LoadStart?: Date;
     }
     const w = window as TawkWindow;
+    w.Tawk_LoadStart = new Date(); // parte del snippet oficial: Tawk lo usa para medir el tiempo de carga
     w.Tawk_API = w.Tawk_API ?? {};
     const api = w.Tawk_API;
     const emit = (name: string) => document.dispatchEvent(new CustomEvent(name));
@@ -58,6 +59,10 @@ function loadThirdParties() {
     s.async = true;
     s.src = `https://embed.tawk.to/${tawkId}`;
     s.setAttribute('crossorigin', '*');
+    // Tawk.to está en la lista de bloqueo de varios ad-blockers (uBlock, Brave
+    // Shields, etc.): si el script no carga, el launcher lo detecta y ofrece
+    // WhatsApp como alternativa en vez de quedar colgado sin respuesta.
+    s.onerror = () => emit('tawk:blocked');
     document.head.appendChild(s);
   }
 }
