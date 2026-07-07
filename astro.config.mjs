@@ -9,21 +9,47 @@ import { redirects } from './redirects.config.mjs';
 const SITE = 'https://www.inteligenciainvestigativa.com';
 
 /**
- * Rehype plugin: loading="lazy" + decoding="async" en imágenes de markdown
- * (las de contenido migrado van bajo el pliegue).
+ * Rehype plugin para imágenes de markdown: loading="lazy" + decoding="async"
+ * y width/height reales (evita CLS) leyendo el archivo de public/ con sharp.
  */
 function rehypeLazyImages() {
+  /** @type {Map<string, {width?: number, height?: number}>} */
+  const dimensionCache = new Map();
+
   /** @param {any} tree */
-  return (tree) => {
+  return async (tree) => {
+    /** @type {any[]} */
+    const images = [];
     const visit = (/** @type {any} */ node) => {
-      if (node.type === 'element' && node.tagName === 'img') {
-        node.properties ??= {};
-        node.properties.loading ??= 'lazy';
-        node.properties.decoding ??= 'async';
-      }
+      if (node.type === 'element' && node.tagName === 'img') images.push(node);
       if (node.children) node.children.forEach(visit);
     };
     visit(tree);
+
+    for (const node of images) {
+      node.properties ??= {};
+      node.properties.loading ??= 'lazy';
+      node.properties.decoding ??= 'async';
+
+      const src = String(node.properties.src ?? '');
+      if (!src.startsWith('/images/') || (node.properties.width && node.properties.height)) continue;
+      if (!dimensionCache.has(src)) {
+        try {
+          const { default: sharp } = await import('sharp');
+          const filePath = join(process.cwd(), 'public', decodeURIComponent(src));
+          const meta = await sharp(filePath).metadata();
+          dimensionCache.set(src, { width: meta.width, height: meta.height });
+        } catch (err) {
+          console.warn(`[rehype-lazy-images] sin dimensiones para ${src}: ${err instanceof Error ? err.message : err}`);
+          dimensionCache.set(src, {});
+        }
+      }
+      const dims = dimensionCache.get(src) ?? {};
+      if (dims.width && dims.height) {
+        node.properties.width ??= dims.width;
+        node.properties.height ??= dims.height;
+      }
+    }
   };
 }
 
