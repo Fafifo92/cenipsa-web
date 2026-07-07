@@ -1,0 +1,40 @@
+---
+/** Barra fina de progreso de lectura en el borde superior (posts del blog). */
+---
+
+<div
+  id="reading-progress"
+  class="fixed inset-x-0 top-0 z-[60] h-[3px] origin-left scale-x-0 bg-gradient-to-r from-brand-500 via-brand-400 to-gold-400"
+  style="will-change: transform"
+  aria-hidden="true"
+>
+</div>
+
+<script>
+  function initReadingProgress() {
+    const bar = document.getElementById('reading-progress');
+    if (!bar || bar.dataset.bound === 'true') return;
+    bar.dataset.bound = 'true';
+
+    let ticking = false;
+    const update = () => {
+      const doc = document.documentElement;
+      const max = doc.scrollHeight - doc.clientHeight;
+      const p = max > 0 ? Math.min(1, doc.scrollTop / max) : 0;
+      bar.style.transform = `scaleX(${p})`;
+      ticking = false;
+    };
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    };
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+  }
+
+  initReadingProgress();
+  document.addEventListener('astro:page-load', initReadingProgress);
+</script>

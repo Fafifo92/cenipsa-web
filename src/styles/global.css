@@ -308,3 +308,44 @@ html.js [data-reveal].is-visible {
 .skip-link {
   @apply fixed top-3 left-3 z-[100] -translate-y-20 rounded-lg bg-ink-950 px-5 py-2.5 text-sm font-semibold text-white shadow-lift transition-transform focus:translate-y-0;
 }
+
+/* ============================================================
+   Controles de formulario — estilo unificado.
+   El <select> usa appearance-none + chevron propio en escritorio;
+   en móvil el navegador abre igualmente el picker nativo del sistema.
+   ============================================================ */
+.field-label {
+  @apply mb-1.5 block text-[0.85rem] font-semibold text-ink-900;
+}
+@utility field {
+  @apply w-full rounded-lg border border-ink-200 bg-white px-4 py-3 text-[0.95rem] text-ink-900 transition-[border-color,box-shadow] duration-200 placeholder:text-ink-300;
+  &:hover {
+    @apply border-ink-300;
+  }
+  &:focus {
+    @apply border-brand-500 outline-none ring-2 ring-brand-200;
+  }
+}
+/* Modificador para <select>: chevron propio + picker nativo del sistema en móvil */
+.field-select {
+  @apply cursor-pointer appearance-none bg-no-repeat pr-11;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23487292' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-position: right 0.9rem center;
+  background-size: 1.1rem;
+}
+/* El placeholder del select (value vacío) se ve como placeholder */
+.field-select:has(option[value='']:checked) {
+  @apply text-ink-400;
+}
+.field-checkbox {
+  @apply mt-1 h-4.5 w-4.5 shrink-0 rounded border-ink-300 accent-brand-600 transition-transform duration-150;
+  &:active {
+    @apply scale-90;
+  }
+}
+
+/* Badge de reCAPTCHA v3 oculto: la divulgación legal se muestra bajo el formulario
+   (cumple los términos de Google al mostrar el aviso textual). */
+.grecaptcha-badge {
+  visibility: hidden;
+}

@@ -1,0 +1,186 @@
+---
+/**
+ * Launcher de chat propio: sustituye el botón por defecto de Tawk.to con uno
+ * acorde a la estética del sitio y con animaciones de entrada, hover y
+ * apertura/cierre. Controla el panel de Tawk vía Tawk_API (ver thirdparty.ts).
+ */
+export interface Props {
+  lang?: 'es' | 'en';
+}
+const { lang = 'es' } = Astro.props;
+const label = lang === 'es' ? '¿Necesitas ayuda? Chatea con nosotros' : 'Need help? Chat with us';
+const bubble = lang === 'es' ? 'Estamos en línea' : "We're online";
+---
+
+<div id="chat-launcher" class="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3" data-state="idle">
+  <!-- Burbuja de saludo -->
+  <div
+    id="chat-bubble"
+    class="chat-bubble pointer-events-none max-w-[15rem] origin-bottom-right rounded-2xl rounded-br-sm border border-ink-100 bg-white px-4 py-2.5 text-[0.85rem] font-medium text-ink-800 shadow-lift"
+    role="status"
+  >
+    <span class="flex items-center gap-2">
+      <span class="relative flex h-2 w-2">
+        <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#25d366] opacity-75 motion-reduce:hidden"></span>
+        <span class="relative inline-flex h-2 w-2 rounded-full bg-[#25d366]"></span>
+      </span>
+      {bubble}
+    </span>
+  </div>
+
+  <button
+    type="button"
+    id="chat-button"
+    class="chat-button group relative flex h-14 w-14 items-center justify-center rounded-full bg-brand-600 text-white shadow-lift transition-[transform,background-color] duration-300 [transition-timing-function:var(--ease-spring)] hover:scale-110 hover:bg-brand-700"
+    aria-label={label}
+    aria-haspopup="dialog"
+  >
+    <!-- halo animado -->
+    <span class="chat-halo pointer-events-none absolute inset-0 rounded-full" aria-hidden="true"></span>
+    <!-- icono chat -->
+    <svg class="chat-icon-chat absolute h-6.5 w-6.5 transition-all duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true">
+      <path d="M7.5 8.5h9M7.5 12h6M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3 20.5l1.5-5.2A8.5 8.5 0 1 1 21 11.5Z" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <!-- icono cerrar -->
+    <svg class="chat-icon-close absolute h-6 w-6 scale-0 rotate-90 opacity-0 transition-all duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+      <path d="M6 6l12 12M18 6 6 18" stroke-linecap="round" />
+    </svg>
+  </button>
+
+  <span
+    id="chat-tooltip"
+    class="pointer-events-none absolute bottom-1.5 right-16 hidden whitespace-nowrap rounded-lg bg-ink-950 px-3.5 py-2 text-[0.8rem] font-semibold text-white opacity-0 shadow-lift transition-opacity duration-300 md:block"
+    aria-hidden="true"
+  >
+    {label}
+  </span>
+</div>
+
+<style>
+  #chat-launcher {
+    /* entrada */
+    opacity: 0;
+    transform: translateY(1.5rem) scale(0.8);
+    animation: chat-enter 0.6s var(--ease-spring) forwards;
+    animation-delay: 1.4s;
+  }
+  @keyframes chat-enter {
+    to { opacity: 1; transform: none; }
+  }
+
+  /* Halo con pulso de atención (se detiene tras varias repeticiones) */
+  .chat-halo {
+    box-shadow: 0 0 0 0 rgb(41 147 170 / 0.5);
+    animation: chat-pulse 2.4s var(--ease-out-expo) 3s 4;
+  }
+  @keyframes chat-pulse {
+    0% { box-shadow: 0 0 0 0 rgb(41 147 170 / 0.5); }
+    70% { box-shadow: 0 0 0 16px rgb(41 147 170 / 0); }
+    100% { box-shadow: 0 0 0 0 rgb(41 147 170 / 0); }
+  }
+
+  /* Burbuja de saludo: aparece y se auto-oculta */
+  .chat-bubble {
+    opacity: 0;
+    transform: translateY(0.5rem) scale(0.9);
+    transition: opacity 0.4s var(--ease-out-expo), transform 0.4s var(--ease-out-expo);
+  }
+  #chat-launcher.greeting .chat-bubble {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Tooltip en hover (desktop) */
+  #chat-button:hover ~ #chat-tooltip {
+    opacity: 1;
+  }
+
+  /* Estado abierto: morph a icono de cerrar */
+  #chat-launcher[data-state='open'] .chat-icon-chat {
+    transform: scale(0) rotate(-90deg);
+    opacity: 0;
+  }
+  #chat-launcher[data-state='open'] .chat-icon-close {
+    transform: none;
+    opacity: 1;
+  }
+  #chat-launcher[data-state='open'] .chat-bubble {
+    opacity: 0;
+    transform: translateY(0.5rem) scale(0.9);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #chat-launcher {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+    .chat-halo { animation: none; }
+    .chat-button { transition: background-color 0.2s; }
+  }
+</style>
+
+<script>
+  import { ensureThirdParties } from '@/scripts/thirdparty';
+
+  interface TawkAPI {
+    maximize?: () => void;
+    minimize?: () => void;
+    showWidget?: () => void;
+  }
+
+  function initChatLauncher() {
+    const root = document.getElementById('chat-launcher');
+    const button = document.getElementById('chat-button');
+    if (!root || !button || root.dataset.bound === 'true') return;
+    root.dataset.bound = 'true';
+
+    let pendingOpen = false;
+    const tawk = () => (window as unknown as { Tawk_API?: TawkAPI }).Tawk_API;
+
+    const openChat = () => {
+      const api = tawk();
+      if (api?.maximize) {
+        api.showWidget?.();
+        api.maximize();
+      } else {
+        pendingOpen = true;
+        ensureThirdParties(); // dispara la carga de Tawk si aún no ocurrió
+      }
+    };
+
+    button.addEventListener('click', () => {
+      if (root.dataset.state === 'open') {
+        tawk()?.minimize?.();
+      } else {
+        openChat();
+      }
+    });
+
+    document.addEventListener('tawk:ready', () => {
+      if (pendingOpen) {
+        pendingOpen = false;
+        const api = tawk();
+        api?.showWidget?.();
+        api?.maximize?.();
+      }
+    });
+    document.addEventListener('tawk:maximized', () => (root.dataset.state = 'open'));
+    document.addEventListener('tawk:minimized', () => (root.dataset.state = 'idle'));
+
+    // Saludo temporal (una vez por sesión), si no se abrió el chat.
+    try {
+      if (!sessionStorage.getItem('cenipsa-chat-greeted')) {
+        window.setTimeout(() => root.classList.add('greeting'), 2600);
+        window.setTimeout(() => root.classList.remove('greeting'), 9000);
+        sessionStorage.setItem('cenipsa-chat-greeted', '1');
+      }
+    } catch {
+      /* sin storage: omitir saludo persistente */
+    }
+    button.addEventListener('pointerenter', () => root.classList.remove('greeting'));
+  }
+
+  initChatLauncher();
+  document.addEventListener('astro:page-load', initChatLauncher);
+</script>

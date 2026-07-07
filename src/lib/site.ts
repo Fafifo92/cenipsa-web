@@ -44,6 +44,36 @@ export const THIRD_PARTY = {
   tawkId: import.meta.env.PUBLIC_TAWK_ID ?? '5f5fbb92f0e7167d0010402a/default',
   /** Endpoint del formulario de contacto (p. ej. Formspree). Vacío ⇒ fallback mailto. */
   formEndpoint: import.meta.env.PUBLIC_FORM_ENDPOINT ?? '',
+  /** Clave de sitio de reCAPTCHA v3 (invisible). Vacío ⇒ solo honeypot. */
+  recaptchaSiteKey: import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY ?? '',
+} as const;
+
+/** Servicios ofrecidos para el selector del formulario de contacto. */
+export const SERVICE_OPTIONS = {
+  es: [
+    'Investigación personal',
+    'Investigación corporativa',
+    'Asesoría y representación jurídica',
+    'Criminalística',
+    'GPS rastreo satelital',
+    'Poligrafía',
+    'Barrido electrónico',
+    'Investigación de infidelidad',
+    'Servicios para abogados',
+    'Otro / no estoy seguro',
+  ],
+  en: [
+    'Personal investigation',
+    'Corporate investigation',
+    'Legal advice & representation',
+    'Criminalistics',
+    'GPS satellite tracking',
+    'Polygraph testing',
+    'Electronic sweep',
+    'Infidelity investigation',
+    'Services for lawyers',
+    'Other / not sure',
+  ],
 } as const;
 
 export interface NavLink {

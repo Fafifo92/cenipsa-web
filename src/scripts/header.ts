@@ -38,7 +38,7 @@ function setMobileMenu(button: HTMLElement, open: boolean) {
   menu?.classList.toggle('open', open);
   document.body.style.overflow = open ? 'hidden' : '';
   // El resto de la página queda inerte mientras el panel está abierto (focus trap real)
-  for (const region of document.querySelectorAll<HTMLElement>('main, footer, [data-wa-button]')) {
+  for (const region of document.querySelectorAll<HTMLElement>('main, footer, [data-wa-button], #chat-launcher')) {
     if (open) region.setAttribute('inert', '');
     else region.removeAttribute('inert');
   }

@@ -44,11 +44,32 @@ Sitio web estático de **CENIPSA S.A.S.** (www.inteligenciainvestigativa.com), m
   no necesite `unsafe-inline`. Nota GTM: los tags de tipo **Custom HTML** del contenedor inyectan scripts
   inline que la CSP bloqueará — revisar el contenedor `GTM-W8N2BTC` y migrar esos tags a plantillas nativas.
 
+## Variables de entorno
+
+Todas se definen en `.env` (ver `.env.example`). Son `PUBLIC_*` (llegan al cliente; sin secretos):
+
+| Variable | Para qué | Si se deja vacía |
+|---|---|---|
+| `PUBLIC_GTM_ID` | Google Tag Manager (analítica) | No carga GTM |
+| `PUBLIC_TAWK_ID` | Chat en vivo Tawk.to (`propertyId/widgetId`) | No carga el chat ni su botón |
+| `PUBLIC_FORM_ENDPOINT` | Endpoint del formulario (Formspree u otro) | El formulario abre `mailto:` |
+| `PUBLIC_RECAPTCHA_SITE_KEY` | reCAPTCHA v3 invisible (clave de sitio) | Solo honeypot antispam |
+
 ## Formulario de contacto
 
 Estático. Configura `PUBLIC_FORM_ENDPOINT` (p. ej. [Formspree](https://formspree.io)) y el formulario hará
-POST con redirección a `/gracias/`. Sin endpoint, degrada a `mailto:`. Los correos de destino históricos del
-CF7 de WordPress eran `info@` y `gerencia@inteligenciainvestigativa.com`.
+POST con redirección a `/gracias/`. Sin endpoint, degrada a `mailto:` prellenado. Incluye honeypot y, si defines
+`PUBLIC_RECAPTCHA_SITE_KEY`, **reCAPTCHA v3 invisible** (envía `g-recaptcha-response`; la verificación del token
+la hace el backend receptor — Formspree con su propia protección, o tu endpoint con la clave secreta). El campo
+"Servicio de interés" es un `<select>` estilizado que usa el picker nativo del sistema en móvil. Los correos de
+destino históricos del CF7 de WordPress eran `info@` y `gerencia@inteligenciainvestigativa.com`.
+
+## Chat en vivo
+
+Se usa un **launcher propio** (`ChatLauncher.astro`) con la estética del sitio y animaciones de entrada, hover y
+apertura/cierre; controla el panel de Tawk.to vía `Tawk_API` (el botón por defecto de Tawk queda oculto). El chat
+solo se carga tras la primera interacción del usuario (o al pulsar el botón), para no penalizar el rendimiento.
+En `dev` los terceros (GTM/Tawk) están desactivados; se activan en el build de producción.
 
 ## Despliegue
 

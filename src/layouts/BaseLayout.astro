@@ -5,6 +5,7 @@ import BaseHead, { type Props as HeadProps } from '@/components/BaseHead.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import WhatsAppButton from '@/components/WhatsAppButton.astro';
+import ChatLauncher from '@/components/ChatLauncher.astro';
 import { THIRD_PARTY } from '@/lib/site';
 
 export interface Props extends HeadProps {}
@@ -45,6 +46,7 @@ const tawkId = import.meta.env.PROD ? THIRD_PARTY.tawkId : '';
     </main>
     <Footer lang={lang} />
     <WhatsAppButton lang={lang} />
+    {THIRD_PARTY.tawkId && <ChatLauncher lang={lang} />}
     <script>
       import '@/scripts/reveal';
       import '@/scripts/thirdparty';

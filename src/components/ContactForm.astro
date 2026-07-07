@@ -1,16 +1,19 @@
 ---
 /**
  * Formulario de contacto estático: POST al endpoint configurado
- * (PUBLIC_FORM_ENDPOINT, p. ej. Formspree) con honeypot antispam y
- * validación nativa. Sin endpoint, degrada a mailto: prellenado.
+ * (PUBLIC_FORM_ENDPOINT, p. ej. Formspree) con honeypot antispam, reCAPTCHA v3
+ * invisible (si hay PUBLIC_RECAPTCHA_SITE_KEY) y validación nativa.
+ * Sin endpoint, degrada a mailto: prellenado.
  */
-import { THIRD_PARTY, CONTACT } from '@/lib/site';
+import { THIRD_PARTY, CONTACT, SERVICE_OPTIONS } from '@/lib/site';
 
 export interface Props {
   lang?: 'es' | 'en';
 }
 const { lang = 'es' } = Astro.props;
 const hasEndpoint = Boolean(THIRD_PARTY.formEndpoint);
+const recaptchaKey = THIRD_PARTY.recaptchaSiteKey;
+const services = SERVICE_OPTIONS[lang];
 
 const t =
   lang === 'es'
@@ -18,24 +21,41 @@ const t =
         name: 'Nombre',
         email: 'Correo electrónico',
         phone: 'Teléfono (opcional)',
+        service: 'Servicio de interés',
+        servicePlaceholder: 'Selecciona un servicio…',
         message: 'Cuéntanos tu caso',
         privacy: 'He leído y acepto la',
         privacyLink: 'política de tratamiento de datos y privacidad',
         submit: 'Enviar mensaje',
         sending: 'Enviando…',
         note: 'Tus datos se tratan con absoluta confidencialidad.',
+        error: 'No pudimos enviar el mensaje. Intenta de nuevo o escríbenos por WhatsApp.',
+        recaptcha: 'Protegido por reCAPTCHA. Aplican la',
+        privacyG: 'Política de privacidad',
+        and: 'y las',
+        termsG: 'Condiciones del servicio',
+        ofGoogle: 'de Google.',
       }
     : {
         name: 'Name',
         email: 'Email',
         phone: 'Phone (optional)',
+        service: 'Service of interest',
+        servicePlaceholder: 'Select a service…',
         message: 'Tell us about your case',
         privacy: 'I have read and accept the',
         privacyLink: 'data processing and privacy policy',
         submit: 'Send message',
         sending: 'Sending…',
         note: 'Your information is handled with absolute confidentiality.',
+        error: 'We could not send your message. Please try again or reach us on WhatsApp.',
+        recaptcha: 'Protected by reCAPTCHA. The Google',
+        privacyG: 'Privacy Policy',
+        and: 'and',
+        termsG: 'Terms of Service',
+        ofGoogle: 'apply.',
       };
+const privacyHref = lang === 'es' ? '/politica-de-tratamiento-de-datos-y-privacidad/' : '/politica-de-tratamiento-de-datos-y-privacidad/';
 ---
 
 <form
@@ -46,6 +66,8 @@ const t =
   data-endpoint={hasEndpoint ? 'true' : 'false'}
   data-mailto={CONTACT.emailInfo}
   data-thanks={lang === 'es' ? '/gracias/' : '/en/thank-you/'}
+  data-recaptcha={recaptchaKey}
+  data-error={t.error}
 >
   <!-- honeypot: los bots lo rellenan, los humanos no lo ven -->
   <p class="absolute -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
@@ -57,70 +79,39 @@ const t =
 
   <div class="grid gap-5 sm:grid-cols-2">
     <div>
-      <label for="cf-name" class="mb-1.5 block text-[0.85rem] font-semibold text-ink-900">{t.name} *</label>
-      <input
-        id="cf-name"
-        name="name"
-        type="text"
-        required
-        autocomplete="name"
-        maxlength="120"
-        class="w-full rounded-xl border border-ink-200 bg-white px-4 py-3 text-[0.95rem] transition-colors placeholder:text-ink-300 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200"
-      />
+      <label for="cf-name" class="field-label">{t.name} *</label>
+      <input id="cf-name" name="name" type="text" required autocomplete="name" maxlength="120" class="field" />
     </div>
     <div>
-      <label for="cf-email" class="mb-1.5 block text-[0.85rem] font-semibold text-ink-900">{t.email} *</label>
-      <input
-        id="cf-email"
-        name="email"
-        type="email"
-        required
-        autocomplete="email"
-        maxlength="150"
-        class="w-full rounded-xl border border-ink-200 bg-white px-4 py-3 text-[0.95rem] transition-colors placeholder:text-ink-300 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200"
-      />
+      <label for="cf-email" class="field-label">{t.email} *</label>
+      <input id="cf-email" name="email" type="email" required autocomplete="email" maxlength="150" class="field" />
+    </div>
+  </div>
+
+  <div class="grid gap-5 sm:grid-cols-2">
+    <div>
+      <label for="cf-phone" class="field-label">{t.phone}</label>
+      <input id="cf-phone" name="phone" type="tel" autocomplete="tel" maxlength="30" class="field" />
+    </div>
+    <div>
+      <label for="cf-service" class="field-label">{t.service}</label>
+      <select id="cf-service" name="service" class="field field-select">
+        <option value="">{t.servicePlaceholder}</option>
+        {services.map((s) => <option value={s}>{s}</option>)}
+      </select>
     </div>
   </div>
 
   <div>
-    <label for="cf-phone" class="mb-1.5 block text-[0.85rem] font-semibold text-ink-900">{t.phone}</label>
-    <input
-      id="cf-phone"
-      name="phone"
-      type="tel"
-      autocomplete="tel"
-      maxlength="30"
-      class="w-full rounded-xl border border-ink-200 bg-white px-4 py-3 text-[0.95rem] transition-colors placeholder:text-ink-300 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200"
-    />
-  </div>
-
-  <div>
-    <label for="cf-message" class="mb-1.5 block text-[0.85rem] font-semibold text-ink-900">{t.message} *</label>
-    <textarea
-      id="cf-message"
-      name="message"
-      required
-      rows="5"
-      maxlength="4000"
-      class="w-full resize-y rounded-xl border border-ink-200 bg-white px-4 py-3 text-[0.95rem] transition-colors placeholder:text-ink-300 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200"
-    ></textarea>
+    <label for="cf-message" class="field-label">{t.message} *</label>
+    <textarea id="cf-message" name="message" required rows="5" maxlength="4000" class="field resize-y"></textarea>
   </div>
 
   <div class="flex items-start gap-3">
-    <input
-      id="cf-privacy"
-      name="privacy"
-      type="checkbox"
-      required
-      class="mt-1 h-4.5 w-4.5 shrink-0 rounded border-ink-300 accent-brand-600"
-    />
+    <input id="cf-privacy" name="privacy" type="checkbox" required class="field-checkbox" />
     <label for="cf-privacy" class="text-[0.85rem] leading-relaxed text-ink-700">
       {t.privacy}
-      <a
-        href="/politica-de-tratamiento-de-datos-y-privacidad/"
-        class="font-medium text-brand-700 underline underline-offset-2"
-        target="_blank"
-      >
+      <a href={privacyHref} class="font-medium text-brand-700 underline underline-offset-2" target="_blank" rel="noopener">
         {t.privacyLink}
       </a>. *
     </label>
@@ -130,63 +121,20 @@ const t =
     {t.submit}
   </button>
   <p class="text-[0.8rem] text-ink-500">{t.note}</p>
+
+  {
+    recaptchaKey && (
+      <p class="text-[0.72rem] leading-relaxed text-ink-400">
+        {t.recaptcha}{' '}
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="underline hover:text-ink-600">{t.privacyG}</a>{' '}
+        {t.and}{' '}
+        <a href="https://policies.google.com/terms" target="_blank" rel="noopener" class="underline hover:text-ink-600">{t.termsG}</a>{' '}
+        {t.ofGoogle}
+      </p>
+    )
+  }
 </form>
 
 <script>
-  function initContactForm() {
-    const form = document.getElementById('contact-form') as HTMLFormElement | null;
-    if (!form || form.dataset.bound === 'true') return;
-    form.dataset.bound = 'true';
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const honeypot = form.querySelector<HTMLInputElement>('input[name="_gotcha"]');
-      if (honeypot?.value) return; // bot detectado
-
-      if (form.dataset.endpoint !== 'true') {
-        // Sin endpoint configurado: abre el cliente de correo con el mensaje prellenado.
-        const data = new FormData(form);
-        const subject = `Consulta desde el sitio web — ${data.get('name') ?? ''}`;
-        const body = [
-          `Nombre: ${data.get('name') ?? ''}`,
-          `Email: ${data.get('email') ?? ''}`,
-          `Teléfono: ${data.get('phone') ?? ''}`,
-          '',
-          String(data.get('message') ?? ''),
-        ].join('\n');
-        window.location.href = `mailto:${form.dataset.mailto}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        return;
-      }
-
-      const button = form.querySelector<HTMLButtonElement>('button[type="submit"]');
-      if (button) {
-        button.disabled = true;
-        button.textContent = button.dataset.sending ?? '…';
-      }
-      try {
-        const res = await fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { Accept: 'application/json' },
-        });
-        if (res.ok) {
-          window.location.assign(form.dataset.thanks ?? '/gracias/');
-          return;
-        }
-        throw new Error(`HTTP ${res.status}`);
-      } catch {
-        if (button) {
-          button.disabled = false;
-          button.textContent = button.dataset.label ?? 'Enviar';
-        }
-        form.querySelector('.form-error')?.remove();
-        form.insertAdjacentHTML(
-          'beforeend',
-          '<p class="form-error mt-2 rounded-xl bg-red-50 px-4 py-3 text-sm font-medium text-red-700" role="alert">No pudimos enviar el mensaje. Intenta de nuevo o escríbenos por WhatsApp.</p>'
-        );
-      }
-    });
-  }
-  initContactForm();
-  document.addEventListener('astro:page-load', initContactForm);
+  import '@/scripts/contact-form';
 </script>

@@ -8,6 +8,7 @@ import type { CollectionEntry } from 'astro:content';
 import { render } from 'astro:content';
 import Breadcrumbs from '@/components/Breadcrumbs.astro';
 import PostCard from '@/components/PostCard.astro';
+import ReadingProgress from '@/components/ReadingProgress.astro';
 import { CONTACT } from '@/lib/site';
 
 export interface Props {
@@ -58,6 +59,8 @@ const crumbs = [
   { name: t.blog, path: blogBase },
 ];
 ---
+
+<ReadingProgress />
 
 <header class="relative overflow-hidden bg-ink-950 pt-36 pb-14 md:pt-44">
   <div class="pointer-events-none absolute inset-0" aria-hidden="true">

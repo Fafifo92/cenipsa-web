@@ -36,6 +36,26 @@ const { items, openFirst = false } = Astro.props;
 </div>
 
 <style>
+  /* Apertura suave del contenido (fade + slide) al expandir la pregunta. */
+  details[open] .faq-answer {
+    animation: faq-in 0.34s var(--ease-out-expo);
+  }
+  @keyframes faq-in {
+    from {
+      opacity: 0;
+      transform: translateY(-0.4rem);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    details[open] .faq-answer {
+      animation: none;
+    }
+  }
+
   .faq-answer :global(p + p) {
     margin-top: 0.75rem;
   }
