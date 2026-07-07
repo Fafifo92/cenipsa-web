@@ -23,7 +23,7 @@ Nuestros servicios de investigación privada están creados a fin de proteger lo
 
 ### Detección de fraude y auditoría forense
 
-El fraude corporativo provoca pérdidas económicas y deteriora la confianza interna. Nuestro equipo de [**detectives privados**](/blog/que-papel-juegan-los-detectives-privados-en-las-empresas-u-organizaciones/) y auditores forenses se enfoca en la detección y prevención de fraudes internos y externos, malversación de fondos o manipulación contable. Con técnicas avanzadas para reconocer a los responsables y otorgar evidencias sólidas, es posible tomar acciones legales.
+El fraude corporativo provoca pérdidas económicas y deteriora la confianza interna. Nuestro equipo de **detectives privados** y auditores forenses se enfoca en la detección y prevención de fraudes internos y externos, malversación de fondos o manipulación contable. Con técnicas avanzadas para reconocer a los responsables y otorgar evidencias sólidas, es posible tomar acciones legales.
 
 Nos caracterizamos por garantizar absoluta confidencialidad para proteger la rentabilidad y reputación de la empresa.
 

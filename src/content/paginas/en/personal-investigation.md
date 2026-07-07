@@ -47,9 +47,9 @@ Ideal for Colombian or foreign nationals who, before entering a marriage or simi
 
 We provide timely, effective psychological care — particularly for emotional and affective disorders — through assessment and, where appropriate, a therapeutic process aimed at improving quality of life for you and your family. Services include psychological consultation, couples therapy, and treatment for anxiety, substance-related and mood disorders, including depression.
 
-### Technology
+## Technology
 
-## Investigative GPS satellite tracker with microphone
+### Investigative GPS satellite tracker with microphone
 
 CENIPSA's engineering department offers a satellite tracking system with monitoring software that lets you view a vehicle's real-time location and travel history through a virtual platform or app.
 
@@ -63,10 +63,10 @@ CENIPSA's engineering department offers a satellite tracking system with monitor
 
 [Learn more](/en/gps-tracking/)
 
-## Home security — hidden cameras
+### Home security — hidden cameras
 
 High-quality video and audio systems that our professionals conceal within everyday objects to protect your home, family or business. They help safeguard loved ones and assets, deter theft, and identify strangers or irregular situations on your property.
 
-## Forensic analysis and audit of devices
+### Forensic analysis and audit of devices
 
 Personal or private information can be lost — or deliberately deleted by third parties who tamper with a device. We provide specialized recovery and tracing of deleted activity, allowing you to recover contact histories, calls, text messages, images, videos and other data, and to verify whether the device was manipulated by someone else. This service complements our broader [criminalistics](/en/criminalistics/) capabilities.

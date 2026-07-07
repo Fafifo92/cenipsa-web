@@ -57,7 +57,7 @@ Debido a su experiencia, tanto en investigación privada como en derecho, estos 
 
 ### Discreción y anonimato con detectives privados Colombia
 
-Un detective privado como los que [se pueden conseguir con CENIPSA](/detectives-y-abogados-sucesiones-bogota-cuando-contactar/), es un experto en métodos de discreción para tener la oportunidad de pasar desapercibidos en cualquier entorno. Asimismo, conforme al caso que se presente, contará con un profesional con el perfil ideal que acceda a los diversos ambientes específicos.
+Un detective privado como los que se pueden conseguir con CENIPSA, es un experto en métodos de discreción para tener la oportunidad de pasar desapercibidos en cualquier entorno. Asimismo, conforme al caso que se presente, contará con un profesional con el perfil ideal que acceda a los diversos ambientes específicos.
 
 ### Asesoramiento y confianza
 
@@ -71,7 +71,7 @@ En CENIPSA tenemos como objeto otorgar soluciones a esas demandas de derechos de
 
 Nuestra acción profesional está sujeta analizar incongruencias, contradicciones, irregularidades, amenazas, dificultades, ambigüedades y delitos; de esta forma exploramos el problema y desarrollamos alternativas, del mismo modo, desmitificamos hipótesis y orientamos al contratante para evitar errores. Igualmente, cuando exploramos alternativas en los casos, brindamos otras soluciones que ofrecen confianza y legitimidad.
 
-A su vez, somos especialistas en realizar giros completos en las investigaciones que estaban siendo llevadas de forma errónea, auditamos procesos anteriores, así, trazamos una ruta de éxito, incluso la falta de profesionalismo en el aspecto investigativo genera peores situaciones de vulneración. Cada herramienta investigativa implementada en los [ámbitos personales](/reencuentros-familiares-investigadores-privados-para-la-busqueda-de-personas/) o corporativos ha sido pensada y evaluada, en nuestra labor nada es deliberado, todo tiene un sentido teórico, metodológico y ético.
+A su vez, somos especialistas en realizar giros completos en las investigaciones que estaban siendo llevadas de forma errónea, auditamos procesos anteriores, así, trazamos una ruta de éxito, incluso la falta de profesionalismo en el aspecto investigativo genera peores situaciones de vulneración. Cada herramienta investigativa implementada en los ámbitos personales o corporativos ha sido pensada y evaluada, en nuestra labor nada es deliberado, todo tiene un sentido teórico, metodológico y ético.
 
 Dentro de nuestra compañía tenemos valores que nos impulsan a prestar servicios de calidad enfocados a encontrar la verdad de lo investigado. Muchas veces encontrar la realidad de los hechos investigados hace que las personas puedan sanar, descansar y superar problemas emocionales. Las consecuencias de la falta de verdad son nefastas, generan dolor profundo en la persona por la incertidumbre.
 

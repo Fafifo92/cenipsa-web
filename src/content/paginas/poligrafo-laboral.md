@@ -10,7 +10,7 @@ related:
   - { label: "Investigación corporativa", href: "/investigacion-corporativa/" }
 ---
 
-El [**polígrafo laboral**](/blog/la-prueba-de-poligrafo-es-viable-para-sus-procesos-de-seleccion/) es un servicio usado por empresas en Bogotá para comprobar la honestidad en procesos de selección, auditorías o investigaciones internas. En CENIPSA, un poligrafista certificado se encarga de llevar a cabo una entrevista y conecta sensores que permiten medir respuestas fisiológicas, definiendo con alta fiabilidad si la persona responde con veracidad.
+El [**polígrafo laboral**](/blog/la-poligrafia-laboral-y-su-considerable-utilidad-para-las-empresas/) es un servicio usado por empresas en Bogotá para comprobar la honestidad en procesos de selección, auditorías o investigaciones internas. En CENIPSA, un poligrafista certificado se encarga de llevar a cabo una entrevista y conecta sensores que permiten medir respuestas fisiológicas, definiendo con alta fiabilidad si la persona responde con veracidad.
 
 Muchas empresas optan por este tipo de prueba de polígrafo, con el fin de prevenir riesgos, o, por el contrario, las aplican cuando han sucedido situaciones irregulares que necesitan ser evaluadas para descubrir la verdad de los hechos.
 
@@ -62,7 +62,7 @@ El protocolo de CENIPSA SAS asegura un proceso riguroso clave para la validez de
 1. Entrevista preliminar y consentimiento informado. Primeramente, se realiza una indagación si es apto para la prueba, y una vez existe certeza de ello, se procede a explicar al evaluado mediante un consentimiento informado el tipo de prueba, el porqué de su aplicación, respectiva autorización y las preguntas a realizar.
 2. Conexión de sensores y calibración del equipo. En la aplicación de la prueba, el poligrafista le conecta al evaluado los sensores o aditamentos; con ello podrá evaluar las respuestas y estímulos del evaluado frente a las preguntas que él realiza; e igualmente monitoreará la respuesta fisiológica, neuronal, respiratoria y movimiento corporal del evaluado.
 3. Formulación de preguntas. El poligrafista gestiona las preguntas diseñadas con precisión técnica y de forma clara, lo que permite garantizar la objetividad del examen.
-4. Análisis de gráficas y entrega de informe confidencial. Una vez finalizada la prueba, el experto hace un análisis de la información y construye un informe integral con un concepto final, que oriente a la toma de decisiones de las empresas que solicitaron prueba de [**polígrafo laboral**](/blog/prueba-de-poligrafo-laboral-herramienta-para-minimizar-los-riesgos-en-la-empresa/).
+4. Análisis de gráficas y entrega de informe confidencial. Una vez finalizada la prueba, el experto hace un análisis de la información y construye un informe integral con un concepto final, que oriente a la toma de decisiones de las empresas que solicitaron prueba de [**polígrafo laboral**](/blog/minimiza-riesgos-aprovechando-el-poligrafo-laboral/).
 
 ## ¿Por qué elegir a CENIPSA para tus pruebas de poligrafía?
 

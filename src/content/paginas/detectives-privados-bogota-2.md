@@ -47,7 +47,7 @@ En el sector corporativo y jurídico, el apoyo de detectives especializados es s
 
 En el ámbito corporativo, algunas compañías incluyen en sus equipos interdisciplinares a detectives especialistas en diferentes áreas, los convierten en aliados estratégicos o agentes consultores de prevención de riesgos corporativos e incluso son sus representantes en las dificultades jurídicas.
 
-Así, los hallazgos encontrados por los [**detectives privados Bogotá**](/blog/detectives-bogota-razones-por-las-que-debes-contratar-a-un-investigador-privado/) en las investigaciones han sido herramientas orientadoras o criterios auxiliares de las compañías. De esta forma, pueden tomar decisiones acertadas en los diferentes ámbitos financieros, laborales, patrimoniales, comerciales, organizacionales y penales.
+Así, los hallazgos encontrados por los **detectives privados Bogotá** en las investigaciones han sido herramientas orientadoras o criterios auxiliares de las compañías. De esta forma, pueden tomar decisiones acertadas en los diferentes ámbitos financieros, laborales, patrimoniales, comerciales, organizacionales y penales.
 
 ### Papel de los detectives privados en el ámbito familiar
 

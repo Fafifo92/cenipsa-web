@@ -1,0 +1,134 @@
+[
+  {
+    "id": "faq-1",
+    "question": "¿Dónde están ubicados?",
+    "answer": "<p>Lo invitamos a nuestras oficinas para que conozca la oferta de productos y servicios de acuerdo con su caso.</p><p><strong>Dirección:</strong> Carrera 62 # 103 – 44, Edificio Torre del Reloj, Oficina 403, Sede Norte, Bogotá</p><p><strong>WhatsApp:</strong> <a href=\"https://api.whatsapp.com/send?phone=573174232502\">317 423 2502</a></p><p><strong>PBX:</strong> <a href=\"tel:+576016290498\">+57 (601) 6290498</a></p>",
+    "order": 1
+  },
+  {
+    "id": "faq-2",
+    "question": "¿A qué correos puedo escribir para solicitar información de servicios o productos?",
+    "answer": "<p><a href=\"mailto:info@inteligenciainvestigativa.com\">info@inteligenciainvestigativa.com</a></p>",
+    "order": 2
+  },
+  {
+    "id": "faq-3",
+    "question": "¿Puedo asistir sin cita previa a las instalaciones de la empresa?",
+    "answer": "<p>No, de acuerdo con nuestras políticas de confidencialidad, seguridad y privacidad, usted podrá agendar su cita vía telefónica para asesoría investigativa o jurídica.</p>",
+    "order": 3
+  },
+  {
+    "id": "faq-4",
+    "question": "¿Puedo solicitar una asesoría investigativa virtual?",
+    "answer": "<p>Sí, debe comunicarse con nosotros para informarle de la logística y agendar su cita, según disponibilidad de agenda.</p>",
+    "order": 4
+  },
+  {
+    "id": "faq-5",
+    "question": "¿Qué experiencia tienen en el campo de las investigaciones privadas?",
+    "answer": "<p>Empresa pionera en el campo de las investigaciones privadas y jurídicas, con amplia experticia desde hace 10 años en diversas problemáticas judiciales, que afectan a los ciudadanos; mediante la metodología de casuística, estudios de caso y acompañamiento directo a nuestros contratantes encontramos la verdad de los hechos investigados.</p>",
+    "order": 5
+  },
+  {
+    "id": "faq-6",
+    "question": "¿Cómo garantizan la confidencialidad?",
+    "answer": "<p>Aplicamos protocolos legales, mediante acuerdos de confidencialidad, en procura de la protección de sus datos personales, manejamos absoluta reserva. En <strong>CENIPSA SAS</strong> es fundamental la privacidad y el respeto por el secreto profesional.</p>",
+    "order": 6
+  },
+  {
+    "id": "faq-7",
+    "question": "¿Cuáles son sus principales servicios en el ámbito personal?",
+    "answer": "<ul><li>Ubicación de personas o familias.</li><li>Investigación familiar y patrimonial.</li><li>Investigación familiar para solicitar nacionalidad extranjera.</li><li>Investigación antes de contraer compromiso matrimonial.</li><li>Psicología Clínica.</li></ul>",
+    "order": 7
+  },
+  {
+    "id": "faq-8",
+    "question": "¿Ustedes ofrecen servicios de GPS?",
+    "answer": "<p>Sí, contamos con nuestra plataforma satelital y aplicación de monitoreo <strong>CENIPSA Track</strong>, allí podrá en tiempo real mantener el control del vehículo, conocer historiales de recorrido y el GPS cuenta con micrófono oculto dentro del vehículo para escuchar los sonidos o voces que se produzcan en el interior de este.</p>",
+    "order": 8
+  },
+  {
+    "id": "faq-9",
+    "question": "¿Cuál es su experiencia en el ámbito corporativo?",
+    "answer": "<p>Nosotros contamos con un departamento especializado en auditoría de vulnerabilidades, prevención de riesgos o delitos corporativos. Nuestros profesionales son altamente calificados en áreas de investigación corporativa, que realizan acompañamiento integral, a partir de un diagnóstico especializado de la situación, planeación y desarrollo de la investigación. Finalmente, contribuimos a la resolución efectiva del caso.</p>",
+    "order": 9
+  },
+  {
+    "id": "faq-10",
+    "question": "¿Cuáles son sus principales servicios corporativos?",
+    "answer": "<ul><li>Estudios precontratación.</li><li>Estudios patrimoniales y financieros.</li><li>Investigación de hurtos y fraudes.</li><li>Acompañamiento al área de gestión humana.</li><li>Poligrafía</li><li>Barrido electrónico.</li></ul>",
+    "order": 10
+  },
+  {
+    "id": "faq-11",
+    "question": "¿Ustedes tienen servicios especiales para abogados?",
+    "answer": "<p>Constantemente trabajamos para diversos colectivos de abogados, prestamos servicios de notificación judicial, cobro de cartera, investigación patrimonial para medidas cautelares, análisis ejecutivo de información financiera y asesoría en prueba.</p>",
+    "order": 11
+  },
+  {
+    "id": "faq-12",
+    "question": "¿Ustedes tienen servicios jurídicos?",
+    "answer": "<p>Contamos con un departamento jurídico en diferentes áreas del derecho, puede visitarnos en <a href=\"https://abogadosbogotaespecializados.com\">https://abogadosbogotaespecializados.com</a></p>",
+    "order": 12
+  },
+  {
+    "id": "faq-13",
+    "question": "¿Qué servicios de criminalística ofrecen?",
+    "answer": "<ul><li>Ubicación de personas desaparecidas.</li><li>Investigación de delitos contra la vida y la familia.</li><li>Investigación de fraudes a comunidades.</li><li>Investigación de hurtos a vehículos.</li><li>Investigación de bebidas adulteradas.</li></ul>",
+    "order": 13
+  },
+  {
+    "id": "faq-14",
+    "question": "¿Qué medios de pago reciben?",
+    "answer": "<p>Brindamos diferentes facilidades, contamos con integración a Banco Internacional Payu, por tanto, usted podrá cancelar con cualquier medio de pago (PSE, Efecty, Baloto, tarjetas y recibos en banco, entre otros). Asimismo, tenemos pagos por redes sociales.</p>",
+    "order": 14
+  },
+  {
+    "id": "faq-15",
+    "question": "¿Cuánto cuesta una investigación personal o corporativa?",
+    "answer": "<p>Los precios dependen de la complejidad del caso específico, por ello, primero debe contarnos su caso y enviaremos una propuesta comercial a partir del diagnóstico de su problemática o conflicto.</p>",
+    "order": 15
+  },
+  {
+    "id": "faq-16",
+    "question": "¿Ustedes trabajan en todo el territorio nacional?",
+    "answer": "<p>Nuestras investigaciones son a nivel nacional.</p>",
+    "order": 16
+  },
+  {
+    "id": "faq-17",
+    "question": "¿Si tomo la decisión de un servicio investigativo, por mi seguridad, qué debo tener en cuenta en el momento de la contratación?",
+    "answer": "<p>Nunca entregue plata en la calle, ni a cuentas de personas naturales.</p><p>No acepte citas a ciegas con desconocidos y en sitios públicos. Este se constituye en el escenario perfecto para estafas.</p><ul><li><strong>SIEMPRE CONSIGNE A NOMBRE DE LA PERSONA JURIDICA</strong>. Recuerde que las empresas para contar con el apoyo de los bancos colombianos, estos previo, tuvieron que hacer un estudio de la empresa, así como visitas a las instalaciones físicas y demás protocolo de seguridad, para garantizar que sean legales en todas sus formas y no fachadas.</li><li>Que cumplan con los requisitos de una empresa legalmente constituida.</li></ul><p>En cuanto al certificado de la Cámara de Comercio. Tener en cuenta lo siguiente.</p><ul><li>Registro en Cámara de Comercio en donde coincida la dirección con el sitio que le ponen la cita.</li><li>Que la oficina física no sea virtual. (Oficinas contratadas por horas). Fachadas.</li><li>Compruebe que la experiencia en tiempo que dicen tener en la página, corresponda a la antigüedad de inscripción en el registro de la Cámara de Comercio.</li><li>Constate que el representante legal exista y coincida la cédula con el nombre. Pida hablar con él.</li><li>Recuerde que Ud. Puede ingresar a efectuar estas constataciones a (consulta REGISTRO UNICO EMPRESARIAL. CON SIGLA RUE. Ud. puede consultar por NIT o por nombre de la empresa)</li><li>Que la empresa cuente con una página seria y esmerada y no con plantillas hechas de momento con claras pretensiones de estafa.</li></ul>",
+    "order": 17
+  },
+  {
+    "id": "faq-18",
+    "question": "¿Cómo hago para descubrir una infidelidad de mi pareja (esposa/esposo)?",
+    "answer": "<p>En cuanto a su solicitud de investigación por sospechas de infidelidad, le comunico que nosotros tenemos recursos tecnológicos y físicos para encontrar la verdad.</p><p>En cuanto a los recursos TECNOLÓGICOS, tenemos inteligencia al celular, recuperación de mensajes borrados en los celulares, espía de whatsapp, rastreos satelitales, historial de ubicaciones, registro de llamadas entrantes y salientes, micrófonos remotos, etc. Si utilizamos estas herramientas técnicas, les garantizamos que los resultados son altamente efectivos y que podemos encontrar la verdad utilizando todos los desarrollos tecnológicos de avanzada.</p><p>En cuanto a los recursos FÍSICOS, desplazamos nuestros investigadores al lugar que usted nos indique, para registrar en video y fotografía todos los eventos que presente el investigado como lugares a los que ingrese, personas con las que se encuentra y en general toda la rutina detectada durante la investigación. Este es un dispositivo de seguimiento de alta eficiencia, realizado por personal idóneo y calificado y aplicando las más rigurosas técnicas de inteligencia.</p>",
+    "order": 18
+  },
+  {
+    "id": "faq-19",
+    "question": "¿Qué debo hacer para contactar un servicio de seguimiento?",
+    "answer": "<p>La visita de los clientes a nuestra oficina es fundamental y muy importante, pues cada uno de ellos es un caso especial, allí encuentran un grupo de personas idóneas y calificadas que están dispuestas a:</p><ul><li>Escucharlos</li><li>Asesorarlos</li><li>Orientarlos</li><li>Ayudarlos a encontrar la mejor estrategia para descubrir la verdad, a través de nuestros medios tecnológicos y físicos.</li></ul>",
+    "order": 19
+  },
+  {
+    "id": "faq-20",
+    "question": "¿Puedo recuperar datos borrados de un celular como llamadas, fotos, WhatsApp, etc.?",
+    "answer": "<p>En cuanto a su solicitud, le comunico que nosotros realizamos un análisis forense al equipo móvil, que consiste en escanear toda la actividad borrada en el equipo y recuperar chat de whatsapp, mensajes de audio, fotos, videos, registro de números entrantes y salientes, mensajes de texto, contactos y demás actividades generadas desde el celular. Este es un estudio realizado con equipos especializados durante cinco días, la información obtenida se entrega en USB.</p>",
+    "order": 20
+  },
+  {
+    "id": "faq-21",
+    "question": "¿Me voy a casar y sospecho que mi pareja en Colombia me dice mentiras, quiero verificar sus datos, estado civil, hijos, empleo, escolaridad, etc.?",
+    "answer": "<p>En cuanto a su solicitud, le comunico que nosotros en primera instancia, realizamos una investigación electrónica, para lograr su verdadera ubicación residencial, laboral y su núcleo familiar. Seguidamente procedemos a investigar el entorno en el que se desarrolla, desplazando nuestros investigadores de manera encubierta para lograr registrar en video y fotografía, todos los eventos que presente el investigado. Luego de culminar nuestra labor de inteligencia, le presentamos un informe escrito, adjuntando el material probatorio, de los resultados obtenidos en la investigación.</p>",
+    "order": 21
+  },
+  {
+    "id": "faq-22",
+    "question": "¿Cómo hago para ubicar una persona?",
+    "answer": "<p>En cuanto a su solicitud, le comunico que nosotros empezamos a realizar labores de inteligencia, a partir de datos básicos como nombre completo y número de identificación. Es importante aportar número de identificación, para tener la plena identidad de la persona objeto de la investigación, pero si este dato no es suministrado, también podemos realizar labores más dispendiosas para lograr la identidad plena, consistentes en descartar homónimos, para lograr acercamientos partiendo de datos asociados al investigado y que lo diferenciarían de sus homónimos.</p>",
+    "order": 22
+  }
+]

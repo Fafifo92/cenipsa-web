@@ -271,7 +271,7 @@ html.js [data-reveal].is-visible {
 }
 
 /* Botones */
-.btn {
+@utility btn {
   @apply inline-flex items-center justify-center gap-2.5 rounded-full px-7 py-3.5 text-[0.95rem] font-semibold tracking-wide transition-all duration-300;
 }
 .btn-primary {

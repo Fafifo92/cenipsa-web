@@ -19,7 +19,7 @@ A polygraph examination is a voluntary, non-invasive assessment that requires th
 
 ## Advantages of polygraph testing
 
-Because polygraph testing must deliver reliability, trust, confidentiality and fast results, your organization gains:
+Polygraph testing is built on reliability, trust, confidentiality and fast turnaround. For your organization, that means:
 
 - Information to protect your corporate image against irregularities committed by employees.
 - A legally endorsed, methodologically sound procedure.

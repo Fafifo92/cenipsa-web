@@ -1,11 +1,10 @@
 ---
 title: "Who we are"
 seoTitle: "About Us — Private Investigators in Bogotá | CENIPSA"
-description: "CENIPSA is a Colombian firm of private investigators and lawyers in Bogotá. Meet our mission, vision and interdisciplinary team — request a consultation."
+description: "CENIPSA is a Colombian firm of private investigators and lawyers in Bogotá. Discover our mission, vision and team — request a confidential consultation."
 type: info
 eyebrow: "About us"
 order: 1
-
 related: []
 ---
 
@@ -19,7 +18,7 @@ At CENIPSA S.A.S. we contribute to the restoration of violated rights. We work w
 
 ## Our vision
 
-By 2030, CENIPSA S.A.S. will be recognized nationally in Colombia for its contribution to truth and justice through judicial investigation, strengthening national and international institutional alliances as a consultative ally in the defense of human rights, anti-corruption and the reduction of inequality.
+By 2030, CENIPSA S.A.S. will be recognized throughout Colombia for its contribution to truth and justice through judicial investigation, strengthening national and international institutional alliances as a consultative ally in the defense of human rights, anti-corruption and the reduction of inequality.
 
 ## Our pillars
 
@@ -43,4 +42,4 @@ An interdisciplinary team with proven theoretical, methodological, practical and
 
 ## A seal of quality: affiliated with the Bogotá Chamber of Commerce
 
-CENIPSA belongs to the Chamber of Commerce of Bogotá's Circle of Affiliates, a credential granted to companies with a reliable, impeccable track record and more than 10 years of business activity.
+CENIPSA belongs to the Bogotá Chamber of Commerce's Circle of Affiliates, a credential granted to companies with a reliable, impeccable track record and more than 10 years of business activity.

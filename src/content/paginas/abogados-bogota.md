@@ -137,7 +137,7 @@ Sin importar si se trata de un caso corporativo, penal o familiar, es sumamente 
 
 Hemos demostrado que ofrecemos soluciones reales para la defensa legal, incrementando las posibilidades de éxito. Hoy mismo, puede dar el primer paso. Contáctenos y permita que nuestro equipo le brinde la asesoría experta.
 
-Puede escribirnos o comunicarse con nosotros mediante el correo [info@inteligenciainvestigativa.com](mailto:info@inteligenciainvestigativa.com) o la línea PBX [+57 (601) 629 0498](tel:576016290498). Allí podrá solicitar una asesoría profesional con uno de nuestros [**abogados**](/blog/la-importancia-de-tener-una-buena-asesoria-legal/) **en Bogotá** y aclarar cualquier duda o inquietud que tenga.
+Puede escribirnos o comunicarse con nosotros mediante el correo [info@inteligenciainvestigativa.com](mailto:info@inteligenciainvestigativa.com) o la línea PBX [+57 (601) 629 0498](tel:576016290498). Allí podrá solicitar una asesoría profesional con uno de nuestros [**abogados**](/asesoria-juridica/) **en Bogotá** y aclarar cualquier duda o inquietud que tenga.
 
 ## Preguntas frecuentes
 
