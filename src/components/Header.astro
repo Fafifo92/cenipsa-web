@@ -1,0 +1,255 @@
+---
+/**
+ * Header sticky con efecto vidrio, dropdowns accesibles y menú móvil.
+ */
+import Logo from './Logo.astro';
+import { NAV_ES, NAV_EN, CONTACT, type NavLink } from '@/lib/site';
+
+export interface Props {
+  lang?: 'es' | 'en';
+  currentPath: string;
+  altLocalePath?: string;
+}
+
+const { lang = 'es', currentPath, altLocalePath } = Astro.props;
+const nav: NavLink[] = lang === 'es' ? NAV_ES : NAV_EN;
+const langTarget = altLocalePath ?? (lang === 'es' ? '/en/' : '/');
+const langLabel = lang === 'es' ? 'EN' : 'ES';
+const langTitle = lang === 'es' ? 'Switch to English' : 'Cambiar a español';
+
+const isActive = (href: string) =>
+  href === '/' || href === '/en/' ? currentPath === href : currentPath.startsWith(href);
+---
+
+<header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-500">
+  <!-- Barra superior de contacto -->
+  <div
+    id="header-topbar"
+    class="hidden border-b border-white/10 bg-ink-950 text-[0.78rem] text-ink-200 transition-all duration-500 lg:block"
+  >
+    <div class="container-site flex items-center justify-between py-2">
+      <p class="flex items-center gap-2 truncate">
+        <svg class="h-3.5 w-3.5 shrink-0 text-brand-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2a7.5 7.5 0 0 0-7.5 7.5c0 5.25 7.5 12.5 7.5 12.5s7.5-7.25 7.5-12.5A7.5 7.5 0 0 0 12 2Zm0 10a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z" />
+        </svg>
+        <span class="truncate">{CONTACT.address.street}, {CONTACT.address.city}</span>
+      </p>
+      <div class="flex shrink-0 items-center gap-6">
+        <a href={CONTACT.pbxHref} class="flex items-center gap-1.5 transition-colors hover:text-white">
+          <svg class="h-3.5 w-3.5 text-brand-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M6.6 10.8a15.9 15.9 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.8 21 3 13.2 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2Z" />
+          </svg>
+          PBX {CONTACT.pbx}
+        </a>
+        <a
+          href={CONTACT.whatsappHref}
+          target="_blank"
+          rel="noopener"
+          class="flex items-center gap-1.5 transition-colors hover:text-white"
+        >
+          <svg class="h-3.5 w-3.5 text-[#25d366]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2A10 10 0 0 0 3.4 17.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.4 1.8 2.2 1.2 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .8-.2 1.5Z" />
+          </svg>
+          {CONTACT.whatsapp}
+        </a>
+        <a href={`mailto:${CONTACT.emailInfo}`} class="transition-colors hover:text-white">{CONTACT.emailInfo}</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Barra de navegación -->
+  <div id="header-bar" class="transition-all duration-500">
+    <nav class="container-site" aria-label={lang === 'es' ? 'Navegación principal' : 'Main navigation'}>
+      <div class="flex items-center justify-between py-3.5">
+        <a href={lang === 'es' ? '/' : '/en/'} class="rounded-lg" aria-label="CENIPSA — Inteligencia Investigativa">
+          <Logo />
+        </a>
+
+        <!-- Desktop -->
+        <ul class="hidden items-center gap-1 lg:flex">
+          {nav.map((item) =>
+            item.children ? (
+              <li class="group relative" data-dropdown>
+                <button
+                  type="button"
+                  class:list={[
+                    'flex items-center gap-1 rounded-full px-4 py-2 text-[0.92rem] font-semibold transition-colors',
+                    isActive(item.href) ? 'text-brand-700' : 'text-ink-800 hover:text-brand-700',
+                  ]}
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                >
+                  {item.label}
+                  <svg class="h-3.5 w-3.5 transition-transform duration-300 group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div
+                  class="invisible absolute left-1/2 top-full z-50 -translate-x-1/2 translate-y-2 pt-3 opacity-0 transition-all duration-300 [transition-timing-function:var(--ease-out-expo)] group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100"
+                >
+                  <ul class="min-w-72 rounded-2xl border border-ink-100 bg-white p-2.5 shadow-lift">
+                    <li>
+                      <a
+                        href={item.href}
+                        class="block rounded-xl px-4 py-2.5 text-[0.9rem] font-bold text-ink-950 transition-colors hover:bg-brand-50 hover:text-brand-700"
+                        aria-current={currentPath === item.href ? 'page' : undefined}
+                      >
+                        {lang === 'es' ? `Ver todos — ${item.label}` : `All — ${item.label}`}
+                      </a>
+                    </li>
+                    <li role="separator" class="mx-4 my-1.5 border-t border-ink-100"></li>
+                    {item.children.map((child) => (
+                      <li>
+                        <a
+                          href={child.href}
+                          class="block rounded-xl px-4 py-2.5 text-[0.9rem] font-medium text-ink-700 transition-colors hover:bg-brand-50 hover:text-brand-700"
+                          aria-current={currentPath === child.href ? 'page' : undefined}
+                        >
+                          {child.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </li>
+            ) : (
+              <li>
+                <a
+                  href={item.href}
+                  class:list={[
+                    'link-underline rounded-full px-4 py-2 text-[0.92rem] font-semibold transition-colors',
+                    isActive(item.href) ? 'text-brand-700' : 'text-ink-800 hover:text-brand-700',
+                  ]}
+                  aria-current={currentPath === item.href ? 'page' : undefined}
+                >
+                  {item.label}
+                </a>
+              </li>
+            )
+          )}
+          <li class="ml-2">
+            <a
+              href={langTarget}
+              class="inline-flex items-center gap-1.5 rounded-full border border-ink-200 px-3.5 py-1.5 text-[0.8rem] font-bold tracking-wider text-ink-700 transition-all hover:border-brand-500 hover:text-brand-700"
+              title={langTitle}
+            >
+              <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M3.5 12h17M12 3a14.5 14.5 0 0 1 0 18M12 3a14.5 14.5 0 0 0 0 18" />
+              </svg>
+              {langLabel}
+            </a>
+          </li>
+        </ul>
+
+        <!-- Móvil: hamburguesa -->
+        <button
+          type="button"
+          id="mobile-menu-button"
+          class="relative z-50 flex h-11 w-11 items-center justify-center rounded-full text-ink-900 lg:hidden"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label={lang === 'es' ? 'Abrir menú' : 'Open menu'}
+        >
+          <span class="hamburger relative block h-[2px] w-6 rounded bg-current transition-all duration-300 before:absolute before:-top-2 before:left-0 before:h-[2px] before:w-6 before:rounded before:bg-current before:transition-all before:duration-300 after:absolute after:top-2 after:left-0 after:h-[2px] after:w-6 after:rounded after:bg-current after:transition-all after:duration-300"
+          ></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Panel móvil -->
+  <div
+    id="mobile-menu"
+    class="pointer-events-none invisible fixed inset-0 z-40 flex flex-col bg-ink-950/98 opacity-0 backdrop-blur-xl transition-all duration-500 lg:hidden"
+  >
+    <nav class="container-site flex-1 overflow-y-auto pb-10 pt-28" aria-label={lang === 'es' ? 'Menú móvil' : 'Mobile menu'}>
+      <ul class="space-y-1">
+        {nav.map((item, i) => (
+          <li class="mobile-nav-item" style={`--reveal-delay:${60 + i * 45}ms`}>
+            <a
+              href={item.href}
+              class="block border-b border-white/10 py-4 font-display text-2xl font-medium text-white transition-colors hover:text-brand-300"
+              aria-current={currentPath === item.href ? 'page' : undefined}
+            >
+              {item.label}
+            </a>
+            {item.children && (
+              <ul class="mt-1 space-y-0.5 pb-3 pl-4">
+                {item.children.map((child) => (
+                  <li>
+                    <a href={child.href} class="block py-2 text-[0.95rem] text-ink-300 transition-colors hover:text-white">
+                      {child.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))}
+        <li class="pt-6">
+          <a
+            href={langTarget}
+            class="inline-flex items-center gap-2 rounded-full border border-white/25 px-5 py-2.5 text-sm font-bold tracking-wider text-white"
+          >
+            {langLabel === 'EN' ? 'English version' : 'Versión en español'}
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  /* Estado scrolled — aplicado por header.ts */
+  :global(#site-header.scrolled) #header-topbar {
+    margin-top: -2.4rem;
+    opacity: 0;
+  }
+  :global(#site-header.scrolled) #header-bar {
+    @apply glass shadow-soft;
+  }
+  #header-bar {
+    background: var(--color-paper);
+  }
+
+  /* Menú móvil abierto */
+  :global(#mobile-menu.open) {
+    @apply pointer-events-auto visible opacity-100;
+  }
+  :global(#mobile-menu-button[aria-expanded='true']) .hamburger {
+    background: transparent;
+  }
+  :global(#mobile-menu-button[aria-expanded='true']) .hamburger::before {
+    transform: translateY(0.5rem) rotate(45deg);
+  }
+  :global(#mobile-menu-button[aria-expanded='true']) .hamburger::after {
+    transform: translateY(-0.5rem) rotate(-45deg);
+  }
+  :global(#mobile-menu-button[aria-expanded='true']) {
+    color: white;
+  }
+
+  .mobile-nav-item {
+    opacity: 0;
+    transform: translateY(14px);
+    transition:
+      opacity 0.5s var(--ease-out-expo),
+      transform 0.5s var(--ease-out-expo);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  :global(#mobile-menu.open) .mobile-nav-item {
+    opacity: 1;
+    transform: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .mobile-nav-item {
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>
+
+<script>
+  import '@/scripts/header';
+</script>

@@ -1,0 +1,30 @@
+---
+/** Botón flotante de WhatsApp — canal principal de conversión. */
+import { CONTACT } from '@/lib/site';
+
+export interface Props {
+  lang?: 'es' | 'en';
+}
+const { lang = 'es' } = Astro.props;
+const label = lang === 'es' ? 'Escríbenos por WhatsApp' : 'Chat with us on WhatsApp';
+---
+
+<a
+  href={CONTACT.whatsappHref}
+  target="_blank"
+  rel="noopener"
+  class="group fixed bottom-6 left-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25d366] text-white shadow-lift transition-transform duration-300 animate-pulse-ring hover:scale-110 motion-reduce:animate-none"
+  aria-label={label}
+>
+  <svg class="h-7 w-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path
+      d="M12 2A10 10 0 0 0 3.4 17.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.4 1.8 2.2 1.2 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .8-.2 1.5Z"
+    />
+  </svg>
+  <span
+    class="pointer-events-none absolute left-full ml-3 hidden whitespace-nowrap rounded-full bg-ink-950 px-4 py-2 text-[0.8rem] font-semibold text-white opacity-0 shadow-lift transition-opacity duration-300 group-hover:opacity-100 md:block"
+    aria-hidden="true"
+  >
+    {label}
+  </span>
+</a>

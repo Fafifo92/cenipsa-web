@@ -1,0 +1,73 @@
+---
+/** English contact page. */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import ContactForm from '@/components/ContactForm.astro';
+import Icon from '@/components/Icon.astro';
+import { CONTACT } from '@/lib/site';
+import { breadcrumbSchema } from '@/lib/seo';
+
+const crumbs = [
+  { name: 'Home', path: '/en/' },
+  { name: 'Contact', path: '/en/contact/' },
+];
+---
+
+<BaseLayout
+  title="Contact us | CENIPSA Private Investigators & Lawyers"
+  description="Tell us your case in full confidence. Phone +57 (601) 6290498, WhatsApp +57 317 4232502. Carrera 62 # 103-44, Torre del Reloj Building, Office 403, Bogotá, Colombia."
+  path="/en/contact/"
+  altLocalePath="/contacto/"
+  lang="en"
+  schemas={[breadcrumbSchema(crumbs)]}
+>
+  <PageHero
+    eyebrow="Contact"
+    title="Tell us your case"
+    description="We are online to advise you with absolute confidentiality."
+    crumbs={crumbs}
+    lang="en"
+  />
+
+  <section class="section-pad">
+    <div class="container-site grid gap-14 lg:grid-cols-[1fr_1.2fr]">
+      <div class="space-y-6" data-reveal="left">
+        <div class="flex gap-5 rounded-2xl border border-ink-100 bg-white p-6 shadow-soft">
+          <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand-50 text-brand-700">
+            <Icon name="map-pin" class="h-6 w-6" />
+          </span>
+          <div>
+            <h2 class="font-display text-lg font-semibold text-ink-950">Head office, Bogotá</h2>
+            <p class="mt-1 text-[0.93rem] leading-relaxed text-ink-600">{CONTACT.address.street}</p>
+            <p class="text-[0.93rem] text-ink-600">Bogotá, Colombia</p>
+          </div>
+        </div>
+        <div class="flex gap-5 rounded-2xl border border-ink-100 bg-white p-6 shadow-soft">
+          <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand-50 text-brand-700">
+            <Icon name="pulse" class="h-6 w-6" />
+          </span>
+          <div>
+            <h2 class="font-display text-lg font-semibold text-ink-950">Phone lines</h2>
+            <p class="mt-1"><a href={CONTACT.pbxHref} class="text-[0.93rem] font-medium text-brand-700 underline underline-offset-4">PBX {CONTACT.pbx}</a></p>
+            <p class="mt-1"><a href={CONTACT.whatsappHref} target="_blank" rel="noopener" class="text-[0.93rem] font-medium text-brand-700 underline underline-offset-4">WhatsApp {CONTACT.whatsapp}</a></p>
+          </div>
+        </div>
+        <div class="flex gap-5 rounded-2xl border border-ink-100 bg-white p-6 shadow-soft">
+          <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand-50 text-brand-700">
+            <Icon name="globe" class="h-6 w-6" />
+          </span>
+          <div>
+            <h2 class="font-display text-lg font-semibold text-ink-950">Email</h2>
+            <p class="mt-1"><a href={`mailto:${CONTACT.emailInfo}`} class="text-[0.93rem] font-medium text-brand-700 underline underline-offset-4">{CONTACT.emailInfo}</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-3xl border border-ink-100 bg-white p-7 shadow-soft md:p-10" data-reveal="right">
+        <h2 class="font-display text-2xl font-semibold text-ink-950">Write to us</h2>
+        <p class="mt-2 mb-7 text-[0.93rem] text-ink-600">Complete the form and our team will contact you shortly.</p>
+        <ContactForm lang="en" />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

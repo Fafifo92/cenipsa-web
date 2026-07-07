@@ -1,0 +1,177 @@
+---
+/**
+ * Formulario de contacto estático: POST al endpoint configurado
+ * (PUBLIC_FORM_ENDPOINT, p. ej. Formspree) con honeypot antispam y
+ * validación nativa. Sin endpoint, degrada a mailto: prellenado.
+ */
+import { THIRD_PARTY, CONTACT } from '@/lib/site';
+
+export interface Props {
+  lang?: 'es' | 'en';
+}
+const { lang = 'es' } = Astro.props;
+const hasEndpoint = Boolean(THIRD_PARTY.formEndpoint);
+
+const t =
+  lang === 'es'
+    ? {
+        name: 'Nombre',
+        email: 'Correo electrónico',
+        phone: 'Teléfono (opcional)',
+        message: 'Cuéntanos tu caso',
+        privacy: 'He leído y acepto la',
+        privacyLink: 'política de tratamiento de datos y privacidad',
+        submit: 'Enviar mensaje',
+        sending: 'Enviando…',
+        note: 'Tus datos se tratan con absoluta confidencialidad.',
+      }
+    : {
+        name: 'Name',
+        email: 'Email',
+        phone: 'Phone (optional)',
+        message: 'Tell us about your case',
+        privacy: 'I have read and accept the',
+        privacyLink: 'data processing and privacy policy',
+        submit: 'Send message',
+        sending: 'Sending…',
+        note: 'Your information is handled with absolute confidentiality.',
+      };
+---
+
+<form
+  id="contact-form"
+  method="POST"
+  action={hasEndpoint ? THIRD_PARTY.formEndpoint : `mailto:${CONTACT.emailInfo}`}
+  class="space-y-5"
+  data-endpoint={hasEndpoint ? 'true' : 'false'}
+  data-thanks={lang === 'es' ? '/gracias/' : '/en/thank-you/'}
+>
+  <!-- honeypot: los bots lo rellenan, los humanos no lo ven -->
+  <p class="absolute -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
+    <label>
+      No llenar este campo
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+    </label>
+  </p>
+
+  <div class="grid gap-5 sm:grid-cols-2">
+    <div>
+      <label for="cf-name" class="mb-1.5 block text-[0.85rem] font-semibold text-ink-900">{t.name} *</label>
+      <input
+        id="cf-name"
+        name="name"
+        type="text"
+        required
+        autocomplete="name"
+        maxlength="120"
+        class="w-full rounded-xl border border-ink-200 bg-white px-4 py-3 text-[0.95rem] transition-colors placeholder:text-ink-300 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200"
+      />
+    </div>
+    <div>
+      <label for="cf-email" class="mb-1.5 block text-[0.85rem] font-semibold text-ink-900">{t.email} *</label>
+      <input
+        id="cf-email"
+        name="email"
+        type="email"
+        required
+        autocomplete="email"
+        maxlength="150"
+        class="w-full rounded-xl border border-ink-200 bg-white px-4 py-3 text-[0.95rem] transition-colors placeholder:text-ink-300 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200"
+      />
+    </div>
+  </div>
+
+  <div>
+    <label for="cf-phone" class="mb-1.5 block text-[0.85rem] font-semibold text-ink-900">{t.phone}</label>
+    <input
+      id="cf-phone"
+      name="phone"
+      type="tel"
+      autocomplete="tel"
+      maxlength="30"
+      class="w-full rounded-xl border border-ink-200 bg-white px-4 py-3 text-[0.95rem] transition-colors placeholder:text-ink-300 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200"
+    />
+  </div>
+
+  <div>
+    <label for="cf-message" class="mb-1.5 block text-[0.85rem] font-semibold text-ink-900">{t.message} *</label>
+    <textarea
+      id="cf-message"
+      name="message"
+      required
+      rows="5"
+      maxlength="4000"
+      class="w-full resize-y rounded-xl border border-ink-200 bg-white px-4 py-3 text-[0.95rem] transition-colors placeholder:text-ink-300 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200"
+    ></textarea>
+  </div>
+
+  <div class="flex items-start gap-3">
+    <input
+      id="cf-privacy"
+      name="privacy"
+      type="checkbox"
+      required
+      class="mt-1 h-4.5 w-4.5 shrink-0 rounded border-ink-300 accent-brand-600"
+    />
+    <label for="cf-privacy" class="text-[0.85rem] leading-relaxed text-ink-700">
+      {t.privacy}
+      <a
+        href="/politica-de-tratamiento-de-datos-y-privacidad/"
+        class="font-medium text-brand-700 underline underline-offset-2"
+        target="_blank"
+      >
+        {t.privacyLink}
+      </a>. *
+    </label>
+  </div>
+
+  <button type="submit" class="btn-primary w-full sm:w-auto" data-label={t.submit} data-sending={t.sending}>
+    {t.submit}
+  </button>
+  <p class="text-[0.8rem] text-ink-500">{t.note}</p>
+</form>
+
+<script>
+  function initContactForm() {
+    const form = document.getElementById('contact-form') as HTMLFormElement | null;
+    if (!form || form.dataset.bound === 'true') return;
+    form.dataset.bound = 'true';
+
+    form.addEventListener('submit', async (e) => {
+      if (form.dataset.endpoint !== 'true') return; // fallback mailto: envío nativo
+      e.preventDefault();
+      const honeypot = form.querySelector<HTMLInputElement>('input[name="_gotcha"]');
+      if (honeypot?.value) return; // bot detectado
+
+      const button = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+      if (button) {
+        button.disabled = true;
+        button.textContent = button.dataset.sending ?? '…';
+      }
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' },
+        });
+        if (res.ok) {
+          window.location.assign(form.dataset.thanks ?? '/gracias/');
+          return;
+        }
+        throw new Error(`HTTP ${res.status}`);
+      } catch {
+        if (button) {
+          button.disabled = false;
+          button.textContent = button.dataset.label ?? 'Enviar';
+        }
+        form.querySelector('.form-error')?.remove();
+        form.insertAdjacentHTML(
+          'beforeend',
+          '<p class="form-error mt-2 rounded-xl bg-red-50 px-4 py-3 text-sm font-medium text-red-700" role="alert">No pudimos enviar el mensaje. Intenta de nuevo o escríbenos por WhatsApp.</p>'
+        );
+      }
+    });
+  }
+  initContactForm();
+  document.addEventListener('astro:page-load', initContactForm);
+</script>

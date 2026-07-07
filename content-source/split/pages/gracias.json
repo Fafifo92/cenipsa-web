@@ -1,0 +1,40 @@
+{
+  "title": "gracias",
+  "link": "https://www.inteligenciainvestigativa.com/gracias/",
+  "id": 860,
+  "date": "2021-05-19 13:13:41",
+  "modified": "2026-07-06 04:53:21",
+  "slug": "gracias",
+  "status": "publish",
+  "type": "page",
+  "parent": 0,
+  "menuOrder": 0,
+  "content": "<div style=\"margin-top:20px;\">\r\nGracias por tu mensaje en breve nos comunicaremos contigo.\r\n\r\n<a href=\"https://www.inteligenciainvestigativa.com/\">Regresar</a>\r\n</div>",
+  "excerpt": "",
+  "categories": [],
+  "seo": {
+    "yoastTitle": "",
+    "yoastDesc": "",
+    "yoastFocusKw": "",
+    "rmTitle": "",
+    "rmDesc": "",
+    "rmFocusKw": "",
+    "rmRobots": "a:1:{i:0;s:5:\"index\";}",
+    "canonical": ""
+  },
+  "thumbnailId": null,
+  "template": "default",
+  "rawMetaKeys": [
+    "_last_editor_used_jetpack",
+    "_edit_last",
+    "_wp_page_template",
+    "_wpb_vc_js_status",
+    "_vc_post_settings",
+    "slide_template",
+    "_yoast_wpseo_content_score",
+    "rank_math_news_sitemap_robots",
+    "rank_math_robots",
+    "rank_math_internal_links_processed",
+    "rank_math_analytic_object_id"
+  ]
+}

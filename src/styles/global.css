@@ -1,0 +1,301 @@
+@import 'tailwindcss';
+
+/* ============================================================
+   CENIPSA — Design tokens (Tailwind v4, CSS-first)
+   Paleta: tinta profunda + teal refinado + oro discreto.
+   ============================================================ */
+@theme {
+  /* Marca — tinta (azul noche profundo) */
+  --color-ink-50: #f4f7fa;
+  --color-ink-100: #e6edf3;
+  --color-ink-200: #c9d8e4;
+  --color-ink-300: #9db7cb;
+  --color-ink-400: #6a90ac;
+  --color-ink-500: #487292;
+  --color-ink-600: #365b79;
+  --color-ink-700: #2d4a62;
+  --color-ink-800: #294053;
+  --color-ink-900: #101f2d;
+  --color-ink-950: #0a141e;
+
+  /* Marca — teal (evolución sofisticada del cian corporativo) */
+  --color-brand-50: #effafb;
+  --color-brand-100: #d7f1f4;
+  --color-brand-200: #b4e3ea;
+  --color-brand-300: #80cedb;
+  --color-brand-400: #45afc4;
+  --color-brand-500: #2993aa;
+  --color-brand-600: #24778f;
+  --color-brand-700: #236075;
+  --color-brand-800: #245061;
+  --color-brand-900: #224353;
+  --color-brand-950: #112b38;
+
+  /* Acento — oro viejo */
+  --color-gold-50: #faf8ec;
+  --color-gold-100: #f3eecd;
+  --color-gold-200: #e9dc9d;
+  --color-gold-300: #dcc465;
+  --color-gold-400: #d1ad3c;
+  --color-gold-500: #c19a2e;
+  --color-gold-600: #a67a25;
+  --color-gold-700: #855a21;
+  --color-gold-800: #6f4a22;
+  --color-gold-900: #5f3e22;
+  --color-gold-950: #372011;
+
+  /* Superficies cálidas */
+  --color-paper: #fbfaf7;
+  --color-mist: #eef2f5;
+
+  /* Tipografía */
+  --font-display: 'Fraunces Variable', ui-serif, Georgia, serif;
+  --font-sans: 'Manrope Variable', ui-sans-serif, system-ui, sans-serif;
+
+  /* Sombras suaves y profundas */
+  --shadow-soft: 0 1px 2px rgb(10 20 30 / 0.04), 0 8px 24px -8px rgb(10 20 30 / 0.1);
+  --shadow-lift: 0 2px 4px rgb(10 20 30 / 0.06), 0 20px 44px -12px rgb(10 20 30 / 0.18);
+  --shadow-glow: 0 0 0 1px rgb(41 147 170 / 0.15), 0 12px 40px -8px rgb(41 147 170 / 0.35);
+
+  /* Curvas de animación */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.4, 0.64, 1);
+
+  /* Animaciones */
+  --animate-marquee: marquee 42s linear infinite;
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-pulse-ring: pulse-ring 2.4s var(--ease-out-expo) infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  @keyframes pulse-ring {
+    0% { box-shadow: 0 0 0 0 rgb(37 211 102 / 0.45); }
+    70% { box-shadow: 0 0 0 14px rgb(37 211 102 / 0); }
+    100% { box-shadow: 0 0 0 0 rgb(37 211 102 / 0); }
+  }
+}
+
+/* ============================================================
+   Base
+   ============================================================ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-paper font-sans text-ink-900 antialiased;
+    font-optical-sizing: auto;
+  }
+
+  ::selection {
+    @apply bg-brand-600 text-white;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-600;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+    font-variation-settings: 'SOFT' 40, 'WONK' 0;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* ============================================================
+   Componentes y utilidades del sitio
+   ============================================================ */
+@utility container-site {
+  @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+}
+
+@utility section-pad {
+  @apply py-16 md:py-24;
+}
+
+/* Etiqueta pequeña sobre títulos de sección */
+@utility eyebrow {
+  @apply inline-flex items-center gap-2.5 text-[0.8rem] font-semibold uppercase tracking-[0.18em] text-brand-600;
+}
+
+/* Vidrio esmerilado (header) */
+@utility glass {
+  background: rgb(251 250 247 / 0.82);
+  backdrop-filter: blur(14px) saturate(1.4);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4);
+}
+
+@utility glass-dark {
+  background: rgb(10 20 30 / 0.72);
+  backdrop-filter: blur(14px) saturate(1.4);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4);
+}
+
+/* Enlace con subrayado animado */
+@utility link-underline {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    background: currentColor;
+    transition: transform 0.35s var(--ease-out-expo);
+  }
+  &:hover::after,
+  &[aria-current='page']::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+/* ============================================================
+   Reveal on scroll — activado por src/scripts/reveal.ts
+   Los elementos [data-reveal] parten ocultos SOLO si JS está
+   disponible (html.js), garantizando contenido visible sin JS.
+   ============================================================ */
+html.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 0.9s var(--ease-out-expo),
+    transform 0.9s var(--ease-out-expo);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+html.js [data-reveal='left'] { transform: translateX(-32px); }
+html.js [data-reveal='right'] { transform: translateX(32px); }
+html.js [data-reveal='zoom'] { transform: scale(0.94); }
+
+html.js [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ============================================================
+   Prosa — artículos del blog y páginas de contenido
+   ============================================================ */
+.prose-site {
+  @apply text-[1.06rem] leading-[1.85] text-ink-800;
+
+  h2 {
+    @apply mt-12 mb-5 text-2xl font-semibold text-ink-950 md:text-[1.7rem];
+  }
+  h3 {
+    @apply mt-9 mb-4 text-xl font-semibold text-ink-950;
+  }
+  p {
+    @apply mb-5;
+  }
+  a {
+    @apply font-medium text-brand-700 underline decoration-brand-300 decoration-2 underline-offset-4 transition-colors hover:text-brand-600 hover:decoration-brand-500;
+  }
+  strong {
+    @apply font-semibold text-ink-950;
+  }
+  ul, ol {
+    @apply mb-6 space-y-2.5 pl-6;
+  }
+  ul {
+    list-style: none;
+    li {
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        left: -1.3rem;
+        top: 0.72em;
+        width: 0.45rem;
+        height: 0.45rem;
+        border-radius: 9999px;
+        background: var(--color-gold-500);
+      }
+    }
+  }
+  ol {
+    @apply list-decimal marker:font-semibold marker:text-brand-600;
+  }
+  blockquote {
+    @apply my-8 border-l-4 border-gold-400 bg-mist px-6 py-4 font-display text-lg text-ink-900 italic;
+  }
+  img {
+    @apply my-8 h-auto w-full rounded-2xl shadow-soft;
+  }
+  figure {
+    @apply my-8;
+    img { @apply my-0; }
+    figcaption { @apply mt-3 text-center text-sm text-ink-500; }
+  }
+  hr {
+    @apply my-10 border-ink-100;
+  }
+  table {
+    @apply my-8 w-full border-collapse text-sm;
+    th { @apply border-b-2 border-ink-200 px-4 py-3 text-left font-semibold text-ink-950; }
+    td { @apply border-b border-ink-100 px-4 py-3; }
+  }
+}
+
+/* Botones */
+.btn {
+  @apply inline-flex items-center justify-center gap-2.5 rounded-full px-7 py-3.5 text-[0.95rem] font-semibold tracking-wide transition-all duration-300;
+}
+.btn-primary {
+  @apply btn bg-brand-600 text-white shadow-soft hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-lift active:translate-y-0;
+}
+.btn-gold {
+  @apply btn bg-gold-400 text-ink-950 shadow-soft hover:-translate-y-0.5 hover:bg-gold-300 hover:shadow-lift active:translate-y-0;
+}
+.btn-outline {
+  @apply btn border border-ink-200 bg-transparent text-ink-900 hover:border-brand-500 hover:text-brand-700;
+}
+.btn-outline-light {
+  @apply btn border border-white/30 bg-white/5 text-white backdrop-blur-sm hover:border-white/70 hover:bg-white/10;
+}
+
+/* Tarjeta con elevación */
+.card-lift {
+  @apply rounded-2xl bg-white shadow-soft transition-all duration-500;
+  &:hover {
+    @apply -translate-y-1.5 shadow-lift;
+  }
+}
+
+/* Skip link accesible */
+.skip-link {
+  @apply fixed top-3 left-3 z-[100] -translate-y-20 rounded-full bg-ink-950 px-5 py-2.5 text-sm font-semibold text-white shadow-lift transition-transform focus:translate-y-0;
+}

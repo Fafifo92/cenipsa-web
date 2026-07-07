@@ -1,0 +1,52 @@
+---
+/** Set de iconos de línea, consistente (stroke 1.8, redondeado). */
+export interface Props {
+  name: string;
+  class?: string;
+}
+const { name, class: className = 'h-6 w-6' } = Astro.props;
+
+const paths: Record<string, string> = {
+  'user-search':
+    'M10 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-7 9a7 7 0 0 1 10.3-6.2M16.5 19a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Zm4.5 2-2.2-2.2',
+  building:
+    'M4 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16M4 21h16M16 8h3a1 1 0 0 1 1 1v12M8 7h2m-2 4h2m-2 4h2m2-8h2m-2 4h2m-2 4h2',
+  scale:
+    'M12 3v18m-7 0h14M12 6l6 1m-6-1L6 7m12 0-2.5 6a3 3 0 0 0 5 0L18 7ZM6 7l-2.5 6a3 3 0 0 0 5 0L6 7Z',
+  microscope:
+    'M6 18h12M9 21h9M13 3l3 3-5.5 5.5-3-3L13 3ZM9.5 11.5 8 13a4.9 4.9 0 0 0 3 8.5c3 .3 6-1.5 6.5-5',
+  satellite:
+    'M13 7 17 3l4 4-4 4-4-4Zm-2 2-8 8 4 4 8-8m-6 2-2-2m9.5-9.5L15 5M12 21a9 9 0 0 0 9-9',
+  pulse: 'M3 12h4l2.5-7 5 14 2.5-7h4',
+  radar:
+    'M12 12l6-6m3 6a9 9 0 1 1-9-9m9 9h-4.5M12 3v4.5M12 16.5a4.5 4.5 0 1 1 4.5-4.5',
+  briefcase:
+    'M4 8h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Zm5 0V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13.5h18',
+  globe:
+    'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm-9-9h18M12 3a13.9 13.9 0 0 1 0 18M12 3a13.9 13.9 0 0 0 0 18',
+  'heart-crack':
+    'M12 21S3 14 3 8.5A4.5 4.5 0 0 1 12 6a4.5 4.5 0 0 1 9 2.5C21 14 12 21 12 21Zm0-15-2 4 3 2-2 4',
+  route:
+    'M6 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm12-10a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM8 17h8a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h7',
+  'map-pin':
+    'M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11Zm0-8.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z',
+  landmark:
+    'M3 21h18M4 18h16M6 18v-7m4 7v-7m4 7v-7m4 7v-7M3 8l9-5 9 5v1H3V8Z',
+  chart: 'M4 20V4m0 16h16M8 16v-5m4 5V8m4 8v-3m4 3V6',
+  users:
+    'M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-7 10a7 7 0 0 1 14 0M17 3.5a4 4 0 0 1 0 7.4M22 21a7 7 0 0 0-4-6.3',
+  shield:
+    'M12 3l8 3v6c0 4.5-3.4 7.8-8 9-4.6-1.2-8-4.5-8-9V6l8-3Zm-3 9 2.2 2.2L15.5 10',
+  eye: 'M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Zm10 3a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z',
+  fingerprint:
+    'M12 11a2 2 0 0 1 2 2c0 2.5-.3 4.5-.8 6.5M9.5 13a2.5 2.5 0 0 1 5 0M7 13a5 5 0 0 1 10 0c0 2-.2 3.8-.6 5.5M4.6 13A7.4 7.4 0 0 1 12 5.6c1.8 0 3.5.7 4.8 1.8M8.5 20.4c.4-1.6.6-3.3.6-5.1',
+  handshake:
+    'M11 6 7.5 9.5a2 2 0 0 0 2.8 2.8L12 10.5l5 4.7a1.8 1.8 0 0 1-2.5 2.6M13 6l3.5 3.5M3 7l4-2 4 1m7 9 3-1.5M3 15l3 1.5M21 7l-4-2-4 1',
+};
+
+const d = paths[name] ?? paths['fingerprint'];
+---
+
+<svg class={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d={d}></path>
+</svg>

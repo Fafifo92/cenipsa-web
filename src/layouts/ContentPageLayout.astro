@@ -1,0 +1,108 @@
+---
+/**
+ * Layout para páginas de contenido (servicios, landings SEO, institucionales):
+ * hero tinta + prosa + enlaces relacionados + CTA de conversión.
+ * Bilingüe: las entradas con id `en/...` se sirven en inglés bajo /en/.
+ */
+import type { CollectionEntry } from 'astro:content';
+import { render } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import CtaBanner from '@/components/CtaBanner.astro';
+import { serviceSchema, breadcrumbSchema, metaDescription } from '@/lib/seo';
+import { altLocaleFor } from '@/lib/site';
+
+export interface Props {
+  entry: CollectionEntry<'paginas'>;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const data = entry.data;
+const lang: 'es' | 'en' = entry.id.startsWith('en/') ? 'en' : 'es';
+const path = `/${entry.id}/`;
+
+const t =
+  lang === 'es'
+    ? {
+        home: 'Inicio',
+        services: 'Servicios',
+        servicesPath: '/servicios/',
+        related: 'También te puede interesar',
+        typeLabel: { service: 'Servicios', landing: 'Cobertura', info: 'Nosotros', legal: 'Legal' } as Record<string, string>,
+      }
+    : {
+        home: 'Home',
+        services: 'Services',
+        servicesPath: '/en/services/',
+        related: 'You may also be interested in',
+        typeLabel: { service: 'Services', landing: 'Coverage', info: 'About us', legal: 'Legal' } as Record<string, string>,
+      };
+
+const crumbs = [
+  { name: t.home, path: lang === 'es' ? '/' : '/en/' },
+  ...(data.type === 'service' ? [{ name: t.services, path: t.servicesPath }] : []),
+  { name: data.title, path },
+];
+
+const schemas: object[] = [breadcrumbSchema(crumbs)];
+if (data.type === 'service' || data.type === 'landing') {
+  schemas.push(
+    serviceSchema({ name: data.title, description: metaDescription(data.description), path })
+  );
+}
+---
+
+<BaseLayout
+  title={data.seoTitle ?? `${data.title} | CENIPSA Inteligencia Investigativa`}
+  description={data.description}
+  path={path}
+  lang={lang}
+  altLocalePath={altLocaleFor(path)}
+  schemas={schemas}
+  modifiedTime={data.updatedDate?.toISOString()}
+>
+  <PageHero
+    eyebrow={data.eyebrow ?? t.typeLabel[data.type]}
+    title={data.title}
+    description={data.type !== 'legal' ? data.description : undefined}
+    crumbs={crumbs}
+    lang={lang}
+  />
+
+  <article class="section-pad">
+    <div class="container-site">
+      <div class="prose-site mx-auto max-w-3xl" data-reveal>
+        <Content />
+      </div>
+
+      {
+        data.related.length > 0 && (
+          <aside class="mx-auto mt-14 max-w-3xl" data-reveal aria-labelledby="related-title">
+            <h2 id="related-title" class="eyebrow">
+              <span class="h-px w-8 bg-gold-500" aria-hidden="true" />
+              {t.related}
+            </h2>
+            <ul class="mt-5 grid gap-3 sm:grid-cols-2">
+              {data.related.map((rel) => (
+                <li>
+                  <a
+                    href={rel.href}
+                    class="group flex items-center justify-between gap-3 rounded-2xl border border-ink-100 bg-white px-5 py-4 text-[0.95rem] font-semibold text-ink-900 shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-300 hover:text-brand-700 hover:shadow-lift"
+                  >
+                    {rel.label}
+                    <svg class="h-4 w-4 shrink-0 text-brand-500 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                      <path d="M5 12h14m-6-6 6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </aside>
+        )
+      }
+    </div>
+  </article>
+
+  {data.type !== 'legal' && <CtaBanner lang={lang} />}
+</BaseLayout>

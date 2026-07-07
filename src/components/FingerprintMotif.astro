@@ -1,0 +1,91 @@
+---
+/**
+ * Motivo de marca: huella dactilar SVG con trazos que se dibujan al entrar
+ * en viewport (stroke-dashoffset). Decorativo, aria-hidden.
+ */
+export interface Props {
+  class?: string;
+}
+const { class: className = '' } = Astro.props;
+---
+
+<svg
+  viewBox="0 0 200 240"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+  class:list={['fingerprint-motif', className]}
+  data-fingerprint
+>
+  <g stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+    <path d="M100 28c-42 0-70 30-70 68 0 26-4 48-12 68" />
+    <path d="M100 48c-30 0-50 22-50 48 0 30-3 54-10 74" />
+    <path d="M100 68c-19 0-30 14-30 28 0 34-2 58-8 78" />
+    <path d="M100 88c-7 0-10 4-10 8 0 38-2 60-6 80" />
+    <path d="M100 28c42 0 70 30 70 68 0 26 4 48 12 68" opacity=".55" />
+    <path d="M100 48c30 0 50 22 50 48 0 30 3 54 10 74" opacity=".55" />
+    <path d="M100 68c19 0 30 14 30 28 0 34 2 58 8 78" opacity=".55" />
+    <path d="M100 88c7 0 10 4 10 8 0 38 2 60 6 80" opacity=".55" />
+    <path d="M100 108v68" opacity=".8" />
+  </g>
+</svg>
+
+<style>
+  .fingerprint-motif path {
+    stroke-dasharray: 460;
+    stroke-dashoffset: 0;
+  }
+  :global(html.js) .fingerprint-motif:not(.is-drawn) path {
+    stroke-dashoffset: 460;
+  }
+  .fingerprint-motif.is-drawn path {
+    animation: fp-draw 2.6s var(--ease-out-expo) forwards;
+  }
+  .fingerprint-motif.is-drawn path:nth-child(2) { animation-delay: 0.12s; }
+  .fingerprint-motif.is-drawn path:nth-child(3) { animation-delay: 0.24s; }
+  .fingerprint-motif.is-drawn path:nth-child(4) { animation-delay: 0.36s; }
+  .fingerprint-motif.is-drawn path:nth-child(5) { animation-delay: 0.2s; }
+  .fingerprint-motif.is-drawn path:nth-child(6) { animation-delay: 0.32s; }
+  .fingerprint-motif.is-drawn path:nth-child(7) { animation-delay: 0.44s; }
+  .fingerprint-motif.is-drawn path:nth-child(8) { animation-delay: 0.56s; }
+  .fingerprint-motif.is-drawn path:nth-child(9) { animation-delay: 0.68s; }
+
+  @keyframes fp-draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    :global(html.js) .fingerprint-motif:not(.is-drawn) path {
+      stroke-dashoffset: 0;
+    }
+    .fingerprint-motif.is-drawn path {
+      animation: none;
+    }
+  }
+</style>
+
+<script>
+  function initFingerprints() {
+    const motifs = document.querySelectorAll<SVGElement>('[data-fingerprint]:not(.is-drawn)');
+    if (!motifs.length) return;
+    if (!('IntersectionObserver' in window)) {
+      motifs.forEach((m) => m.classList.add('is-drawn'));
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            e.target.classList.add('is-drawn');
+            io.unobserve(e.target);
+          }
+        }
+      },
+      { threshold: 0.25 }
+    );
+    motifs.forEach((m) => io.observe(m));
+  }
+  initFingerprints();
+  document.addEventListener('astro:page-load', initFingerprints);
+</script>

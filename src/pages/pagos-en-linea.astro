@@ -1,0 +1,94 @@
+---
+/** Pagos en línea (PayU). */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import CtaBanner from '@/components/CtaBanner.astro';
+import Icon from '@/components/Icon.astro';
+import { breadcrumbSchema } from '@/lib/seo';
+
+const crumbs = [
+  { name: 'Inicio', path: '/' },
+  { name: 'Pagos en línea', path: '/pagos-en-linea/' },
+];
+
+const methods = [
+  'PSE',
+  'Visa',
+  'Visa Débito',
+  'Mastercard',
+  'Mastercard Débito',
+  'American Express',
+  'Diners Club',
+  'Efecty',
+  'Baloto',
+  'Su Red',
+  'Bancolombia',
+  'Davivienda',
+  'Banco de Bogotá',
+  'Codensa',
+];
+---
+
+<BaseLayout
+  title="Pagos en línea seguros con PayU | CENIPSA"
+  description="Realice pagos seguros a CENIPSA S.A.S. a través de la plataforma PayU: PSE, tarjetas de crédito y débito, Efecty, Baloto y bancos. Comprobante inmediato a su correo."
+  path="/pagos-en-linea/"
+  schemas={[breadcrumbSchema(crumbs)]}
+>
+  <PageHero
+    eyebrow="Pagos en línea"
+    title="Pagos seguros"
+    description="Contamos con integración a la plataforma de pagos PayU: mayor seguridad, protección en sus medios de pago y optimización de su tiempo."
+    crumbs={crumbs}
+  />
+
+  <section class="section-pad">
+    <div class="container-site">
+      <div class="mx-auto max-w-3xl space-y-10">
+        <ul class="space-y-5" data-reveal>
+          {
+            [
+              'Ofrecemos diferentes medios de pago, pues contamos con integración a la plataforma de pagos PAYU. Esta plataforma le permite mayor seguridad, protección en sus medios de pago y optimización de su tiempo.',
+              'Usted podrá elegir cualquier medio de pago: Efecty, Baloto, Su Red, PSE, tarjetas crédito o débito y bancos, entre otros.',
+              'Al correo registrado en plataforma, llegará un comprobante de la transferencia y estado de su pago.',
+            ].map((text) => (
+              <li class="flex gap-4 rounded-2xl border border-ink-100 bg-white p-6 shadow-soft">
+                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-50 text-brand-700">
+                  <Icon name="shield" class="h-4.5 w-4.5" />
+                </span>
+                <p class="leading-relaxed text-ink-700">{text}</p>
+              </li>
+            ))
+          }
+        </ul>
+
+        <div data-reveal>
+          <h2 class="font-display text-2xl font-semibold text-ink-950">Medios de pago disponibles</h2>
+          <ul class="mt-6 flex flex-wrap gap-2.5">
+            {
+              methods.map((m) => (
+                <li class="rounded-full border border-ink-200 bg-white px-4 py-2 text-[0.85rem] font-semibold text-ink-700 shadow-soft">
+                  {m}
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+
+        <div class="rounded-3xl bg-ink-950 p-9 text-white md:p-12" data-reveal="zoom">
+          <h2 class="font-display text-2xl font-semibold">¿Cómo realizar tu pago?</h2>
+          <p class="mt-3 leading-relaxed text-ink-200">
+            Solicita tu enlace de pago personalizado a nuestro equipo: te lo enviaremos por correo o WhatsApp con
+            el detalle del servicio contratado, para que pagues de forma segura a través de PayU.
+          </p>
+          <div class="mt-7 flex flex-wrap gap-4">
+            <a href="/contacto/" class="btn-gold">Solicitar enlace de pago</a>
+            <a href="/servicios-en-linea/" class="btn-outline-light">Servicios en línea</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner />
+</BaseLayout>

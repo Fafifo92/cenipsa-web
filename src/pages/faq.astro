@@ -1,0 +1,49 @@
+---
+/** Preguntas frecuentes con acordeón + schema FAQPage. */
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import CtaBanner from '@/components/CtaBanner.astro';
+import FaqAccordion from '@/components/FaqAccordion.astro';
+import { faqSchema, breadcrumbSchema } from '@/lib/seo';
+
+const faqs = (await getCollection('faq')).sort((a, b) => a.data.order - b.data.order);
+const items = faqs.map((f) => ({ question: f.data.question, answer: f.data.answer }));
+
+const stripHtml = (html: string) => html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+
+const crumbs = [
+  { name: 'Inicio', path: '/' },
+  { name: 'Preguntas frecuentes', path: '/faq/' },
+];
+---
+
+<BaseLayout
+  title="Preguntas frecuentes | CENIPSA Inteligencia Investigativa"
+  description="Resolvemos las dudas más comunes sobre investigación privada, detectives, poligrafía, GPS satelital y asesoría jurídica en Colombia. Consulte nuestras preguntas frecuentes."
+  path="/faq/"
+  schemas={[
+    faqSchema(items.map((it) => ({ question: it.question, answer: stripHtml(it.answer) }))),
+    breadcrumbSchema(crumbs),
+  ]}
+>
+  <PageHero
+    eyebrow="FAQ"
+    title="Preguntas frecuentes"
+    description="Resolvemos las dudas más comunes sobre nuestros servicios investigativos y jurídicos."
+    crumbs={crumbs}
+  />
+
+  <section class="section-pad">
+    <div class="container-site">
+      <div class="mx-auto max-w-3xl">
+        <FaqAccordion items={items} openFirst />
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner
+    title="¿No encuentras la respuesta que buscas?"
+    text="Escríbenos y un asesor de nuestro equipo resolverá tu caso de forma personalizada y confidencial."
+  />
+</BaseLayout>

@@ -1,0 +1,67 @@
+---
+/** Índice de servicios: catálogo completo desde la colección `paginas`. */
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import CtaBanner from '@/components/CtaBanner.astro';
+import Icon from '@/components/Icon.astro';
+import { breadcrumbSchema } from '@/lib/seo';
+
+const services = (
+  await getCollection('paginas', (e) => e.data.type === 'service' && !e.id.startsWith('en/'))
+).sort((a, b) => a.data.order - b.data.order);
+
+const crumbs = [
+  { name: 'Inicio', path: '/' },
+  { name: 'Servicios', path: '/servicios/' },
+];
+---
+
+<BaseLayout
+  title="Servicios de investigación privada y jurídica | CENIPSA"
+  description="Catálogo de servicios de CENIPSA S.A.S.: investigación personal y corporativa, asesoría jurídica, criminalística, poligrafía, GPS satelital, barrido electrónico y más en Colombia."
+  path="/servicios/"
+  altLocalePath="/en/services/"
+  schemas={[breadcrumbSchema(crumbs)]}
+>
+  <PageHero
+    eyebrow="Servicios"
+    title="Soluciones investigativas y jurídicas"
+    description="Prevenga y resuelva sus conflictos presentes y futuros con metodologías que combinan experiencia, tecnología, idoneidad y confidencialidad."
+    crumbs={crumbs}
+  />
+
+  <section class="section-pad">
+    <div class="container-site">
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          services.map((s, i) => (
+            <a
+              href={`/${s.id}/`}
+              class="card-lift group relative flex flex-col overflow-hidden p-7"
+              data-reveal
+              style={`--reveal-delay:${(i % 3) * 90}ms`}
+            >
+              <span class="absolute top-0 left-0 h-1 w-full origin-left scale-x-0 bg-gradient-to-r from-brand-500 to-gold-400 transition-transform duration-500 [transition-timing-function:var(--ease-out-expo)] group-hover:scale-x-100" aria-hidden="true" />
+              <span class="flex h-13 w-13 items-center justify-center rounded-2xl bg-brand-50 text-brand-700 transition-all duration-500 group-hover:bg-brand-600 group-hover:text-white">
+                <Icon name={s.data.icon ?? 'fingerprint'} class="h-6.5 w-6.5" />
+              </span>
+              <h2 class="mt-5 font-display text-[1.22rem] leading-snug font-semibold text-ink-950 transition-colors group-hover:text-brand-700">
+                {s.data.title}
+              </h2>
+              <p class="mt-2.5 line-clamp-3 flex-1 text-[0.93rem] leading-relaxed text-ink-600">{s.data.description}</p>
+              <span class="mt-5 inline-flex items-center gap-2 text-[0.85rem] font-bold text-brand-700">
+                Ver más
+                <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                  <path d="M5 12h14m-6-6 6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner />
+</BaseLayout>

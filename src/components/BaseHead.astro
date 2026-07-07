@@ -1,0 +1,100 @@
+---
+/**
+ * Cabecera SEO completa: meta, canonical, hreflang, Open Graph, Twitter y JSON-LD.
+ */
+import { SITE } from '@/lib/site';
+import { organizationSchema, websiteSchema, metaDescription } from '@/lib/seo';
+import '@fontsource-variable/manrope';
+import '@fontsource-variable/fraunces';
+import '@/styles/global.css';
+
+export interface Props {
+  title: string;
+  description: string;
+  /** Ruta canónica con slash final, p. ej. "/detectives-privados-bogota-2/" */
+  path: string;
+  /** Ruta del par de idioma si existe (genera hreflang bidireccional) */
+  altLocalePath?: string;
+  /** Idioma de esta página */
+  lang?: 'es' | 'en';
+  ogImage?: string;
+  ogType?: 'website' | 'article';
+  noindex?: boolean;
+  /** Bloques JSON-LD adicionales de la página */
+  schemas?: object[];
+  publishedTime?: string;
+  modifiedTime?: string;
+}
+
+const {
+  title,
+  description,
+  path,
+  altLocalePath,
+  lang = 'es',
+  ogImage = '/images/og-default.jpg',
+  ogType = 'website',
+  noindex = false,
+  schemas = [],
+  publishedTime,
+  modifiedTime,
+} = Astro.props;
+
+const canonical = new URL(path, SITE.url).href;
+const ogImageAbs = new URL(ogImage, SITE.url).href;
+const desc = metaDescription(description);
+const isEs = lang === 'es';
+const esPath = isEs ? path : altLocalePath;
+const enPath = isEs ? altLocalePath : path;
+
+const allSchemas = [organizationSchema(), websiteSchema(), ...schemas];
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{title}</title>
+<meta name="description" content={desc} />
+{noindex ? <meta name="robots" content="noindex, follow" /> : <meta name="robots" content="index, follow, max-image-preview:large" />}
+<link rel="canonical" href={canonical} />
+
+{esPath && enPath && (
+  <>
+    <link rel="alternate" hreflang="es-CO" href={new URL(esPath, SITE.url).href} />
+    <link rel="alternate" hreflang="es" href={new URL(esPath, SITE.url).href} />
+    <link rel="alternate" hreflang="en" href={new URL(enPath, SITE.url).href} />
+    <link rel="alternate" hreflang="x-default" href={new URL(esPath, SITE.url).href} />
+  </>
+)}
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#0a141e" />
+<link rel="sitemap" href="/sitemap-index.xml" />
+<meta name="generator" content={Astro.generator} />
+
+<!-- Open Graph -->
+<meta property="og:type" content={ogType} />
+<meta property="og:site_name" content={SITE.name} />
+<meta property="og:locale" content={isEs ? 'es_CO' : 'en_US'} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={desc} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={ogImageAbs} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+{publishedTime && <meta property="article:published_time" content={publishedTime} />}
+{modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={desc} />
+<meta name="twitter:image" content={ogImageAbs} />
+
+{allSchemas.map((schema) => (
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+))}
+
+{/* Marca JS disponible (habilita reveals). Cadena EXACTA anclada por hash en la CSP — no modificar sin actualizar el hash en _headers y vercel.json. */}
+<script is:inline>document.documentElement.classList.add('js')</script>

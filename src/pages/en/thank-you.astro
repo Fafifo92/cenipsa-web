@@ -1,0 +1,34 @@
+---
+/** English thank-you page (noindex). */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import FingerprintMotif from '@/components/FingerprintMotif.astro';
+---
+
+<BaseLayout
+  title="Thank you for your message | CENIPSA"
+  description="We received your message. A CENIPSA S.A.S. advisor will contact you shortly."
+  path="/en/thank-you/"
+  lang="en"
+  noindex
+>
+  <section class="relative flex min-h-[80vh] items-center overflow-hidden bg-ink-950 pt-32 pb-20">
+    <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+      <FingerprintMotif class="absolute right-[-3rem] top-1/2 h-[110%] w-auto -translate-y-1/2 text-brand-400/15" />
+    </div>
+    <div class="container-site relative text-center">
+      <span class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-brand-500/15 text-brand-300" data-reveal="zoom">
+        <svg class="h-10 w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="m5 13 4 4L19 7" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </span>
+      <h1 class="mt-8 font-display text-4xl font-semibold text-white md:text-5xl" data-reveal style="--reveal-delay:120ms">Thank you for your message!</h1>
+      <p class="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-ink-200" data-reveal style="--reveal-delay:220ms">
+        We received your request. An advisor from our team of investigators and lawyers will contact you
+        shortly, in full confidence.
+      </p>
+      <div class="mt-9 flex flex-wrap justify-center gap-4" data-reveal style="--reveal-delay:320ms">
+        <a href="/en/" class="btn-gold">Back to home</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,128 @@
+---
+/** English home — condensed version for international clients. */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import FingerprintMotif from '@/components/FingerprintMotif.astro';
+import Icon from '@/components/Icon.astro';
+import CtaBanner from '@/components/CtaBanner.astro';
+import { CONTACT } from '@/lib/site';
+
+const services = [
+  {
+    icon: 'user-search',
+    title: 'Personal investigation',
+    text: 'Solve personal matters through investigative and technological tools, in full confidence.',
+    href: '/en/personal-investigation/',
+  },
+  {
+    icon: 'building',
+    title: 'Corporate investigation',
+    text: 'Has your company suffered corruption, bribery or information leaks? We find the evidence.',
+    href: '/en/corporate-investigation/',
+  },
+  {
+    icon: 'scale',
+    title: 'Legal advice & representation',
+    text: 'Restore your infringed rights with our team of specialized lawyers.',
+    href: '/en/legal-advice/',
+  },
+  {
+    icon: 'microscope',
+    title: 'Criminalistics',
+    text: 'Judicial investigation services with scientific rigor and chain of custody.',
+    href: '/en/criminalistics/',
+  },
+  {
+    icon: 'satellite',
+    title: 'GPS satellite tracking',
+    text: 'Protect your vehicles and assets with our GPS satellite tracking platform.',
+    href: '/en/gps-tracking/',
+  },
+  {
+    icon: 'pulse',
+    title: 'Polygraph testing',
+    text: 'Corporate and investigative polygraph exams performed by certified experts.',
+    href: '/en/polygraph/',
+  },
+];
+---
+
+<BaseLayout
+  title="Private investigators & lawyers in Bogotá, Colombia | CENIPSA"
+  description="CENIPSA S.A.S. — private investigators and lawyers in Bogotá, Colombia. Personal and corporate investigation, polygraph, criminalistics, GPS tracking and legal advice."
+  path="/en/"
+  altLocalePath="/"
+  lang="en"
+>
+  <section class="relative flex min-h-[88vh] items-center overflow-hidden bg-ink-950 pt-32 pb-20">
+    <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+      <div class="absolute -top-32 left-[-10%] h-[36rem] w-[36rem] rounded-full bg-brand-500/12 blur-3xl"></div>
+      <div class="absolute right-[-8%] bottom-[-20%] h-[32rem] w-[32rem] rounded-full bg-gold-500/8 blur-3xl"></div>
+      <FingerprintMotif class="absolute right-[-4rem] top-1/2 h-[120%] w-auto -translate-y-1/2 text-brand-400/15 md:right-[4%]" />
+    </div>
+    <div class="container-site relative">
+      <p class="eyebrow text-brand-300" data-reveal>
+        <span class="h-px w-8 bg-gold-400" aria-hidden="true"></span>
+        Investigators &amp; lawyers in Colombia
+      </p>
+      <h1 class="mt-5 max-w-4xl font-display text-[2.6rem] leading-[1.08] font-semibold text-white sm:text-6xl md:text-[4rem]" data-reveal style="--reveal-delay:100ms">
+        Investigative and legal advisory.
+        <span class="mt-2 block bg-gradient-to-r from-brand-300 via-brand-400 to-gold-300 bg-clip-text text-transparent">We find the truth.</span>
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200 md:text-xl" data-reveal style="--reveal-delay:200ms">
+        Private investigators and lawyers with experience, technology and absolute confidentiality,
+        serving clients across Colombia from Bogotá.
+      </p>
+      <div class="mt-9 flex flex-wrap items-center gap-4" data-reveal style="--reveal-delay:300ms">
+        <a href={CONTACT.whatsappHref} target="_blank" rel="noopener" class="btn-gold">Tell us your case</a>
+        <a href="/en/services/" class="btn-outline-light">Our services</a>
+      </div>
+      <dl class="mt-16 grid max-w-3xl grid-cols-2 gap-6 border-t border-white/10 pt-8 sm:grid-cols-3" data-reveal style="--reveal-delay:420ms">
+        <div>
+          <dt class="text-[0.78rem] font-semibold tracking-[0.14em] text-ink-400 uppercase">Experience</dt>
+          <dd class="mt-1.5 font-display text-3xl font-semibold text-white">10+ years</dd>
+        </div>
+        <div>
+          <dt class="text-[0.78rem] font-semibold tracking-[0.14em] text-ink-400 uppercase">Quality seal</dt>
+          <dd class="mt-1.5 font-display text-lg leading-snug font-medium text-white">Bogotá Chamber of Commerce</dd>
+        </div>
+        <div>
+          <dt class="text-[0.78rem] font-semibold tracking-[0.14em] text-ink-400 uppercase">Coverage</dt>
+          <dd class="mt-1.5 font-display text-lg leading-snug font-medium text-white">Bogotá · Medellín · Cali</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section-pad" aria-labelledby="services-title-en">
+    <div class="container-site">
+      <div class="max-w-2xl" data-reveal>
+        <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>Services</p>
+        <h2 id="services-title-en" class="mt-4 font-display text-3xl font-semibold text-ink-950 md:text-4xl">
+          Comprehensive investigative and legal solutions
+        </h2>
+      </div>
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          services.map((s, i) => (
+            <a href={s.href} class="card-lift group relative flex flex-col overflow-hidden p-7" data-reveal style={`--reveal-delay:${(i % 3) * 100}ms`}>
+              <span class="absolute top-0 left-0 h-1 w-full origin-left scale-x-0 bg-gradient-to-r from-brand-500 to-gold-400 transition-transform duration-500 [transition-timing-function:var(--ease-out-expo)] group-hover:scale-x-100" aria-hidden="true" />
+              <span class="flex h-13 w-13 items-center justify-center rounded-2xl bg-brand-50 text-brand-700 transition-all duration-500 group-hover:bg-brand-600 group-hover:text-white">
+                <Icon name={s.icon} class="h-6.5 w-6.5" />
+              </span>
+              <h3 class="mt-5 font-display text-[1.25rem] font-semibold text-ink-950 transition-colors group-hover:text-brand-700">{s.title}</h3>
+              <p class="mt-2.5 flex-1 text-[0.94rem] leading-relaxed text-ink-600">{s.text}</p>
+              <span class="mt-5 inline-flex items-center gap-2 text-[0.85rem] font-bold text-brand-700">
+                Learn more
+                <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                  <path d="M5 12h14m-6-6 6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner lang="en" />
+</BaseLayout>

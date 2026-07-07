@@ -1,0 +1,145 @@
+---
+/** Nosotros: quiénes somos + misión + visión (fusiona /mision/ y /vision/). */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import CtaBanner from '@/components/CtaBanner.astro';
+import Icon from '@/components/Icon.astro';
+import { breadcrumbSchema } from '@/lib/seo';
+
+const crumbs = [
+  { name: 'Inicio', path: '/' },
+  { name: 'Nosotros', path: '/nosotros/' },
+];
+
+const values = [
+  {
+    icon: 'shield',
+    title: 'Confidencialidad',
+    text: 'Tratamos cada caso con absoluta reserva y protección de la información de nuestros contratantes.',
+  },
+  {
+    icon: 'scale',
+    title: 'Rigor jurídico',
+    text: 'Material probatorio obtenido con fundamento legal, útil dentro y fuera de los escenarios judiciales.',
+  },
+  {
+    icon: 'eye',
+    title: 'Verdad',
+    text: 'Enfoque investigativo-socio-jurídico orientado al esclarecimiento de los hechos investigados.',
+  },
+  {
+    icon: 'handshake',
+    title: 'Idoneidad',
+    text: 'Equipo interdisciplinar con experticia epistemológica, teórica, metodológica, práctica y ética.',
+  },
+];
+---
+
+<BaseLayout
+  title="Quiénes somos | CENIPSA Inteligencia Investigativa"
+  description="Somos una compañía colombiana con amplia trayectoria en investigaciones privadas y derecho. Conozca la misión, visión y equipo de CENIPSA S.A.S. en Bogotá, Colombia."
+  path="/nosotros/"
+  altLocalePath="/en/about-us/"
+  schemas={[breadcrumbSchema(crumbs)]}
+>
+  <PageHero
+    eyebrow="Nosotros"
+    title="Quiénes somos"
+    description="Somos una compañía colombiana con amplia trayectoria en el campo de las investigaciones privadas y el derecho."
+    crumbs={crumbs}
+  />
+
+  <section class="section-pad">
+    <div class="container-site">
+      <div class="prose-site mx-auto max-w-3xl" data-reveal>
+        <p>
+          Brindamos orientaciones especializadas en lo investigativo y judicial para que los ciudadanos puedan
+          superar las consecuencias de los delitos y responsabilidades civiles. Nuestro principal objetivo es
+          contribuir a la construcción de justicia y restablecimiento de derechos a los ciudadanos que han sido
+          víctimas de diversas vulneraciones.
+        </p>
+        <p>
+          Contamos con un <a href="/equipo-interdisciplinar/">equipo interdisciplinar</a> de abogados,
+          investigadores judiciales, científicos sociales, ingenieros y peritos forenses, y con
+          <a href="/garantias/">garantías</a> claras de servicio para cada contratante.
+        </p>
+      </div>
+
+      <!-- Misión / Visión -->
+      <div class="mx-auto mt-16 grid max-w-5xl gap-8 md:grid-cols-2">
+        <article class="relative overflow-hidden rounded-3xl bg-ink-950 p-9 text-white shadow-lift md:p-11" data-reveal="left">
+          <div class="absolute -top-16 -right-16 h-48 w-48 rounded-full bg-brand-500/15 blur-2xl" aria-hidden="true"></div>
+          <p class="eyebrow text-brand-300"><span class="h-px w-8 bg-gold-400" aria-hidden="true"></span>Misión</p>
+          <p class="relative mt-5 leading-relaxed text-ink-100">
+            En CENIPSA SAS contribuimos al restablecimiento de los derechos vulnerados; por ello trabajamos con un
+            enfoque investigativo-socio-jurídico que nos permite la búsqueda del material probatorio y el
+            esclarecimiento de los hechos investigados en procura de encontrar la verdad. Nuestro equipo
+            interdisciplinar tiene amplio conocimiento, experticia y capacidad estratégica para asesorarlo en sus
+            diferentes vulneraciones o problemas personales y corporativos.
+          </p>
+        </article>
+        <article class="relative overflow-hidden rounded-3xl border border-ink-100 bg-white p-9 shadow-soft md:p-11" data-reveal="right">
+          <div class="absolute -top-16 -right-16 h-48 w-48 rounded-full bg-gold-200/40 blur-2xl" aria-hidden="true"></div>
+          <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>Visión</p>
+          <p class="relative mt-5 leading-relaxed text-ink-700">
+            Para 2030, CENIPSA SAS tendrá un reconocimiento nacional por su contribución a la búsqueda de la verdad
+            y justicia mediante la investigación judicial. Asimismo, fortaleceremos alianzas institucionales
+            nacionales e internacionales que nos convertirán en aliado consultivo en defensa de los derechos
+            humanos, la anticorrupción y la reducción de las desigualdades.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Valores -->
+  <section class="bg-mist section-pad" aria-labelledby="values-title">
+    <div class="container-site">
+      <div class="max-w-2xl" data-reveal>
+        <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>Nuestros pilares</p>
+        <h2 id="values-title" class="mt-4 font-display text-3xl font-semibold text-ink-950 md:text-4xl">
+          La combinación perfecta entre experiencia y tecnología
+        </h2>
+      </div>
+      <ul class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {
+          values.map((v, i) => (
+            <li class="card-lift p-7" data-reveal style={`--reveal-delay:${i * 90}ms`}>
+              <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-50 text-brand-700">
+                <Icon name={v.icon} class="h-6 w-6" />
+              </span>
+              <h3 class="mt-4 font-display text-lg font-semibold text-ink-950">{v.title}</h3>
+              <p class="mt-2 text-[0.92rem] leading-relaxed text-ink-600">{v.text}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <!-- Afiliación CCB -->
+  <section class="section-pad" aria-labelledby="ccb-title">
+    <div class="container-site">
+      <div class="mx-auto flex max-w-4xl flex-col items-center gap-8 rounded-3xl border border-gold-200 bg-gold-50 p-10 text-center md:p-14" data-reveal="zoom">
+        <span class="flex h-16 w-16 items-center justify-center rounded-full bg-ink-950 text-gold-300">
+          <Icon name="shield" class="h-8 w-8" />
+        </span>
+        <div>
+          <h2 id="ccb-title" class="font-display text-2xl font-semibold text-ink-950 md:text-3xl">
+            Un sello de calidad: afiliados a la Cámara de Comercio de Bogotá
+          </h2>
+          <p class="mx-auto mt-4 max-w-2xl leading-relaxed text-ink-700">
+            Pertenecemos al Círculo de Afiliados de la CCB, credencial otorgada a empresas que ofrecen un servicio
+            confiable e intachable con más de 10 años de actividad empresarial.
+          </p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/casos-de-exito/" class="btn-primary">Casos de éxito</a>
+          <a href="/garantias/" class="btn-outline">Garantías de servicio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner />
+</BaseLayout>

@@ -1,0 +1,17 @@
+---
+/** Ruta dinámica para todas las páginas de contenido (colección `paginas`). */
+import { getCollection } from 'astro:content';
+import ContentPageLayout from '@/layouts/ContentPageLayout.astro';
+
+export async function getStaticPaths() {
+  const paginas = await getCollection('paginas');
+  return paginas.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+---
+
+<ContentPageLayout entry={entry} />

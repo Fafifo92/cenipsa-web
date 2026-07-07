@@ -1,0 +1,45 @@
+---
+/** Logotipo CENIPSA: monograma C + huella dactilar, en SVG accesible y nítido. */
+export interface Props {
+  variant?: 'dark' | 'light';
+  class?: string;
+}
+const { variant = 'dark', class: className = '' } = Astro.props;
+const ink = variant === 'dark' ? '#101f2d' : '#ffffff';
+const sub = variant === 'dark' ? '#487292' : '#9db7cb';
+---
+
+<span class:list={['inline-flex items-center gap-3', className]}>
+  <svg
+    width="44"
+    height="44"
+    viewBox="0 0 48 48"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    class="shrink-0"
+  >
+    <!-- Monograma C -->
+    <path
+      d="M30 10.5A15 15 0 1 0 30 37.5"
+      stroke={ink}
+      stroke-width="3.4"
+      stroke-linecap="round"
+    />
+    <!-- Huella dactilar -->
+    <g stroke="#2993aa" stroke-width="1.9" stroke-linecap="round" class="logo-print">
+      <path d="M33 20.2c2.9 0 5.3 2.3 5.3 5.2 0 2.1-.2 4.2-.7 6.1" />
+      <path d="M28.5 24.9c0-2.5 2-4.5 4.5-4.5" transform="translate(0 .5)" opacity="0" />
+      <path d="M33 24c.9 0 1.6.7 1.6 1.5 0 2.6-.3 5.1-1 7.4" />
+      <path d="M29.4 25.5c0-2 1.6-3.7 3.6-3.7" />
+      <path d="M29.4 29.2c0 2.4-.3 4.3-.8 6" opacity=".65" />
+      <path d="M36.9 22.4a8.9 8.9 0 0 1 1.5 5" opacity=".65" />
+    </g>
+  </svg>
+  <span class="flex flex-col leading-none">
+    <span class="font-display text-[1.35rem] font-semibold tracking-[0.08em]" style={`color:${ink}`}>CENIPSA</span>
+    <span class="mt-1 text-[0.62rem] font-semibold tracking-[0.24em] uppercase" style={`color:${sub}`}
+      >Investigadores &amp; Abogados</span
+    >
+  </span>
+</span>

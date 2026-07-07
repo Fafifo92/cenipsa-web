@@ -1,0 +1,50 @@
+---
+/** Banner de conversión: asesoría por WhatsApp / contacto. */
+import { CONTACT } from '@/lib/site';
+import FingerprintMotif from './FingerprintMotif.astro';
+
+export interface Props {
+  lang?: 'es' | 'en';
+  title?: string;
+  text?: string;
+}
+const { lang = 'es' } = Astro.props;
+const title =
+  Astro.props.title ?? (lang === 'es' ? 'Cuéntanos tu caso con total confidencialidad' : 'Tell us your case in full confidence');
+const text =
+  Astro.props.text ??
+  (lang === 'es'
+    ? 'Recibe una asesoría inicial con nuestros investigadores y abogados. Diagnóstico especializado, discreción absoluta y estrategias a la medida de tu situación.'
+    : 'Get an initial consultation with our investigators and lawyers. Specialized assessment, absolute discretion and strategies tailored to your situation.');
+const ctaWhats = lang === 'es' ? 'Asesoría por WhatsApp' : 'WhatsApp consultation';
+const ctaContact = lang === 'es' ? 'Formulario de contacto' : 'Contact form';
+const contactHref = lang === 'es' ? '/contacto/' : '/en/contact/';
+---
+
+<section class="section-pad">
+  <div class="container-site">
+    <div class="relative overflow-hidden rounded-3xl bg-ink-950 px-7 py-14 md:px-16 md:py-16" data-reveal="zoom">
+      <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+        <div class="absolute -left-20 -top-20 h-72 w-72 rounded-full bg-brand-500/15 blur-3xl"></div>
+        <div class="absolute -bottom-24 right-10 h-72 w-72 rounded-full bg-gold-500/10 blur-3xl"></div>
+        <FingerprintMotif class="absolute -right-6 -top-10 h-[150%] w-auto text-brand-400/15" />
+      </div>
+      <div class="relative max-w-2xl">
+        <h2 class="font-display text-3xl font-semibold leading-tight text-white md:text-4xl">{title}</h2>
+        <p class="mt-4 text-[1.02rem] leading-relaxed text-ink-200">{text}</p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href={CONTACT.whatsappHref} target="_blank" rel="noopener" class="btn-gold">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2A10 10 0 0 0 3.4 17.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.4 1.8 2.2 1.2 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .8-.2 1.5Z" />
+            </svg>
+            {ctaWhats}
+          </a>
+          <a href={contactHref} class="btn-outline-light">{ctaContact}</a>
+        </div>
+        <p class="mt-6 text-[0.85rem] text-ink-400">
+          PBX {CONTACT.pbx} · WhatsApp {CONTACT.whatsapp} · {CONTACT.emailInfo}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

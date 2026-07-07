@@ -1,0 +1,106 @@
+---
+/** Contacto: formulario + datos de contacto + sede. */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import ContactForm from '@/components/ContactForm.astro';
+import Icon from '@/components/Icon.astro';
+import { CONTACT } from '@/lib/site';
+import { breadcrumbSchema } from '@/lib/seo';
+
+const crumbs = [
+  { name: 'Inicio', path: '/' },
+  { name: 'Contacto', path: '/contacto/' },
+];
+
+const channels = [
+  {
+    icon: 'map-pin',
+    title: 'Sede Norte, Bogotá',
+    lines: [CONTACT.address.street, `${CONTACT.address.city}, ${CONTACT.address.countryName}`],
+  },
+  {
+    icon: 'pulse',
+    title: 'Líneas de atención',
+    lines: [],
+    links: [
+      { label: `PBX ${CONTACT.pbx}`, href: CONTACT.pbxHref },
+      { label: `WhatsApp ${CONTACT.whatsapp}`, href: CONTACT.whatsappHref, external: true },
+    ],
+  },
+  {
+    icon: 'globe',
+    title: 'Correos electrónicos',
+    lines: [],
+    links: [
+      { label: CONTACT.emailInfo, href: `mailto:${CONTACT.emailInfo}` },
+      { label: CONTACT.emailGerencia, href: `mailto:${CONTACT.emailGerencia}` },
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Contáctenos | CENIPSA Inteligencia Investigativa"
+  description="Cuéntanos tu caso con total confidencialidad. PBX +57 (601) 6290498, WhatsApp 317 4232502. Carrera 62 # 103-44, Edificio Torre del Reloj, Oficina 403, Bogotá, Colombia."
+  path="/contacto/"
+  altLocalePath="/en/contact/"
+  schemas={[breadcrumbSchema(crumbs)]}
+>
+  <PageHero
+    eyebrow="Contacto"
+    title="Cuéntanos tu caso"
+    description="Bienvenidos a CENIPSA SAS: estamos en línea para asesorarte con absoluta confidencialidad."
+    crumbs={crumbs}
+  />
+
+  <section class="section-pad">
+    <div class="container-site grid gap-14 lg:grid-cols-[1fr_1.2fr]">
+      <div class="space-y-6" data-reveal="left">
+        {
+          channels.map((c) => (
+            <div class="flex gap-5 rounded-2xl border border-ink-100 bg-white p-6 shadow-soft">
+              <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand-50 text-brand-700">
+                <Icon name={c.icon} class="h-6 w-6" />
+              </span>
+              <div>
+                <h2 class="font-display text-lg font-semibold text-ink-950">{c.title}</h2>
+                {c.lines?.map((l) => (
+                  <p class="mt-1 text-[0.93rem] leading-relaxed text-ink-600">{l}</p>
+                ))}
+                {c.links?.map((l) => (
+                  <p class="mt-1">
+                    <a
+                      href={l.href}
+                      target={l.external ? '_blank' : undefined}
+                      rel={l.external ? 'noopener' : undefined}
+                      class="text-[0.93rem] font-medium text-brand-700 underline decoration-brand-300 underline-offset-4 transition-colors hover:text-brand-600"
+                    >
+                      {l.label}
+                    </a>
+                  </p>
+                ))}
+              </div>
+            </div>
+          ))
+        }
+        <div class="rounded-2xl bg-ink-950 p-7 text-white">
+          <h2 class="font-display text-lg font-semibold">Atención inmediata</h2>
+          <p class="mt-2 text-[0.92rem] leading-relaxed text-ink-300">
+            ¿Tu caso es urgente? Escríbenos directamente por WhatsApp y un investigador te atenderá.
+          </p>
+          <a href={CONTACT.whatsappHref} target="_blank" rel="noopener" class="btn-gold mt-5">
+            Abrir WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-3xl border border-ink-100 bg-white p-7 shadow-soft md:p-10" data-reveal="right">
+        <h2 class="font-display text-2xl font-semibold text-ink-950">Escríbenos</h2>
+        <p class="mt-2 mb-7 text-[0.93rem] text-ink-600">
+          Completa el formulario y nuestro equipo te contactará a la mayor brevedad.
+        </p>
+        <ContactForm />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

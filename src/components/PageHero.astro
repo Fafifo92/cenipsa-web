@@ -1,0 +1,42 @@
+---
+/** Hero interior: fondo tinta con motivo de huella, eyebrow, H1 y descripción. */
+import Breadcrumbs, { type Crumb } from './Breadcrumbs.astro';
+import FingerprintMotif from './FingerprintMotif.astro';
+
+export interface Props {
+  eyebrow?: string;
+  title: string;
+  description?: string;
+  crumbs?: Crumb[];
+  lang?: 'es' | 'en';
+}
+const { eyebrow, title, description, crumbs, lang = 'es' } = Astro.props;
+---
+
+<section class="relative overflow-hidden bg-ink-950 pt-36 pb-16 md:pt-44 md:pb-20">
+  <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+    <div class="absolute -top-40 right-[-10%] h-[30rem] w-[30rem] rounded-full bg-brand-500/10 blur-3xl"></div>
+    <div class="absolute bottom-[-40%] left-[-5%] h-[26rem] w-[26rem] rounded-full bg-gold-500/8 blur-3xl"></div>
+    <FingerprintMotif class="absolute -right-8 top-1/2 h-[130%] w-auto -translate-y-1/2 text-brand-400/12 md:right-8" />
+  </div>
+
+  <div class="container-site relative">
+    {crumbs && <Breadcrumbs crumbs={crumbs} onDark lang={lang} />}
+    {eyebrow && <p class="eyebrow mt-7 text-brand-300" data-reveal><span class="h-px w-8 bg-gold-400" aria-hidden="true"></span>{eyebrow}</p>}
+    <h1
+      class="mt-4 max-w-3xl font-display text-4xl font-semibold leading-[1.12] text-white md:text-[3.2rem]"
+      data-reveal
+      style="--reveal-delay: 90ms"
+    >
+      {title}
+    </h1>
+    {
+      description && (
+        <p class="mt-5 max-w-2xl text-lg leading-relaxed text-ink-200" data-reveal style="--reveal-delay: 180ms">
+          {description}
+        </p>
+      )
+    }
+    <slot />
+  </div>
+</section>

@@ -1,0 +1,42 @@
+---
+/** Índice del blog: noticias y actualizaciones. */
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import CtaBanner from '@/components/CtaBanner.astro';
+import PostCard from '@/components/PostCard.astro';
+import { breadcrumbSchema } from '@/lib/seo';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const crumbs = [
+  { name: 'Inicio', path: '/' },
+  { name: 'Blog', path: '/blog/' },
+];
+---
+
+<BaseLayout
+  title="Blog de investigación privada y derecho | CENIPSA Inteligencia Investigativa"
+  description="Noticias y actualizaciones sobre investigación privada, detectives, poligrafía, GPS y asesoría jurídica en Colombia. Artículos del equipo de CENIPSA S.A.S."
+  path="/blog/"
+  schemas={[breadcrumbSchema(crumbs)]}
+>
+  <PageHero
+    eyebrow="Blog"
+    title="Noticias y actualizaciones"
+    description="Análisis y guías de nuestros investigadores y abogados: investigación privada, poligrafía, rastreo satelital GPS y derecho en Colombia."
+    crumbs={crumbs}
+  />
+
+  <section class="section-pad">
+    <div class="container-site">
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {posts.map((post, i) => <PostCard post={post} index={i} />)}
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner />
+</BaseLayout>

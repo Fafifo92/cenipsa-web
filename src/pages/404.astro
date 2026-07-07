@@ -1,0 +1,33 @@
+---
+/** Página 404. */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import FingerprintMotif from '@/components/FingerprintMotif.astro';
+---
+
+<BaseLayout
+  title="Página no encontrada (404) | CENIPSA"
+  description="La página que buscas no existe o fue movida. Explora los servicios de investigación privada y asesoría jurídica de CENIPSA."
+  path="/404/"
+  noindex
+>
+  <section class="relative flex min-h-[80vh] items-center overflow-hidden bg-ink-950 pt-32 pb-20">
+    <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+      <FingerprintMotif class="absolute left-1/2 top-1/2 h-[110%] w-auto -translate-x-1/2 -translate-y-1/2 text-brand-400/10" />
+    </div>
+    <div class="container-site relative text-center">
+      <p class="font-display text-[6rem] leading-none font-semibold text-brand-400/80 md:text-[8rem]" data-reveal>404</p>
+      <h1 class="mt-4 font-display text-3xl font-semibold text-white md:text-4xl" data-reveal style="--reveal-delay:100ms">
+        Caso no encontrado
+      </h1>
+      <p class="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-ink-200" data-reveal style="--reveal-delay:200ms">
+        Hasta nuestros mejores detectives no hallaron esta página: no existe o fue movida.
+        Estas pistas pueden ayudarte a retomar el rastro.
+      </p>
+      <div class="mt-9 flex flex-wrap justify-center gap-4" data-reveal style="--reveal-delay:300ms">
+        <a href="/" class="btn-gold">Ir al inicio</a>
+        <a href="/servicios/" class="btn-outline-light">Ver servicios</a>
+        <a href="/contacto/" class="btn-outline-light">Contacto</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,37 @@
+---
+/** Página de agradecimiento tras enviar el formulario (noindex). */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import FingerprintMotif from '@/components/FingerprintMotif.astro';
+---
+
+<BaseLayout
+  title="¡Gracias por tu mensaje! | CENIPSA"
+  description="Hemos recibido tu mensaje. Un asesor de CENIPSA S.A.S. te contactará a la mayor brevedad."
+  path="/gracias/"
+  noindex
+>
+  <section class="relative flex min-h-[80vh] items-center overflow-hidden bg-ink-950 pt-32 pb-20">
+    <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+      <div class="absolute top-[-20%] left-[10%] h-[28rem] w-[28rem] rounded-full bg-brand-500/12 blur-3xl"></div>
+      <FingerprintMotif class="absolute right-[-3rem] top-1/2 h-[110%] w-auto -translate-y-1/2 text-brand-400/15" />
+    </div>
+    <div class="container-site relative text-center">
+      <span class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-brand-500/15 text-brand-300" data-reveal="zoom">
+        <svg class="h-10 w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="m5 13 4 4L19 7" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </span>
+      <h1 class="mt-8 font-display text-4xl font-semibold text-white md:text-5xl" data-reveal style="--reveal-delay:120ms">
+        ¡Gracias por tu mensaje!
+      </h1>
+      <p class="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-ink-200" data-reveal style="--reveal-delay:220ms">
+        Hemos recibido tu solicitud. Un asesor de nuestro equipo de investigadores y abogados te contactará a la
+        mayor brevedad, con absoluta confidencialidad.
+      </p>
+      <div class="mt-9 flex flex-wrap justify-center gap-4" data-reveal style="--reveal-delay:320ms">
+        <a href="/" class="btn-gold">Volver al inicio</a>
+        <a href="/blog/" class="btn-outline-light">Visitar el blog</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

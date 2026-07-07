@@ -1,0 +1,937 @@
+[
+  {
+    "slug": "investigacion-personal",
+    "type": "service",
+    "order": 1,
+    "icon": "user-search",
+    "sources": [
+      "investigacion-personal"
+    ],
+    "related": [
+      {
+        "label": "Investigación de infidelidad",
+        "href": "/infidelidad/"
+      },
+      {
+        "label": "Seguimientos inteligentes",
+        "href": "/seguimientos-inteligentes/"
+      },
+      {
+        "label": "Detectives privados Bogotá",
+        "href": "/detectives-privados-bogota-2/"
+      },
+      {
+        "label": "Investigadores privados Bogotá",
+        "href": "/investigadores-privados-bogota-2/"
+      }
+    ],
+    "liveTitle": "Investigación personal - Inteligencia Investigativa",
+    "liveDesc": "",
+    "liveH1": ""
+  },
+  {
+    "slug": "investigacion-corporativa",
+    "type": "service",
+    "order": 2,
+    "icon": "building",
+    "sources": [
+      "investigacion-corporativa",
+      "investigacion-corporativa-2"
+    ],
+    "related": [
+      {
+        "label": "Polígrafo laboral",
+        "href": "/poligrafo-laboral/"
+      },
+      {
+        "label": "Barrido electrónico",
+        "href": "/barrido-electronico/"
+      },
+      {
+        "label": "Abogados Bogotá",
+        "href": "/abogados-bogota/"
+      }
+    ],
+    "liveTitle": "Investigación Corporativa - Inteligencia Investigativa",
+    "liveDesc": "◉ Investigación al interior de la Empresa en un eventual robo continuado de inventarios, donde podemos infiltrar nuestros detectives con cámaras ocultas,",
+    "liveH1": ""
+  },
+  {
+    "slug": "asesoria-juridica",
+    "type": "service",
+    "order": 3,
+    "icon": "scale",
+    "sources": [
+      "asesoria-juridica",
+      "asesoria-juridica-2"
+    ],
+    "related": [
+      {
+        "label": "Abogados Bogotá",
+        "href": "/abogados-bogota/"
+      },
+      {
+        "label": "Abogados sucesiones Bogotá",
+        "href": "/abogados-sucesiones-bogota/"
+      },
+      {
+        "label": "Asesoría y representación jurídica",
+        "href": "/asesoria-juridica/"
+      },
+      {
+        "label": "Servicios especiales para abogados",
+        "href": "/servicios-especiales/"
+      }
+    ],
+    "liveTitle": "Asesoría Jurídica - Inteligencia Investigativa",
+    "liveDesc": "En Inteligencia Investigativa nos hemos preparado para asumir de principio a fin las investigaciones que usted o su empresa tengan que enfrentar, para ello",
+    "liveH1": ""
+  },
+  {
+    "slug": "criminalistica",
+    "type": "service",
+    "order": 4,
+    "icon": "microscope",
+    "sources": [
+      "criminalistica"
+    ],
+    "related": [
+      {
+        "label": "Investigación corporativa",
+        "href": "/investigacion-corporativa/"
+      },
+      {
+        "label": "Detectives privados Bogotá",
+        "href": "/detectives-privados-bogota-2/"
+      },
+      {
+        "label": "Investigadores privados Bogotá",
+        "href": "/investigadores-privados-bogota-2/"
+      },
+      {
+        "label": "Investigación patrimonial",
+        "href": "/investigacion-patrimonial-para-medidas-cautelares/"
+      }
+    ],
+    "liveTitle": "Criminalística - Inteligencia Investigativa",
+    "liveDesc": "En CENIPSA SAS, nuestros investigadores fundamentan sus acciones en estrategias de inteligencia con un soporte de las ciencias forenses, exactas, humanas y",
+    "liveH1": ""
+  },
+  {
+    "slug": "plataforma-gps",
+    "type": "service",
+    "order": 5,
+    "icon": "satellite",
+    "sources": [
+      "plataforma-gps"
+    ],
+    "related": [
+      {
+        "label": "GPS Bogotá",
+        "href": "/gps-bogota/"
+      },
+      {
+        "label": "GPS para carros Bogotá",
+        "href": "/gps-para-carros-bogota/"
+      }
+    ],
+    "liveTitle": "Plataforma GPS - Inteligencia Investigativa",
+    "liveDesc": "",
+    "liveH1": ""
+  },
+  {
+    "slug": "examen-de-poligrafia",
+    "type": "service",
+    "order": 6,
+    "icon": "pulse",
+    "sources": [
+      "examen-de-poligrafia"
+    ],
+    "related": [
+      {
+        "label": "Prueba de polígrafo Bogotá",
+        "href": "/prueba-de-poligrafo-bogota/"
+      },
+      {
+        "label": "Polígrafo laboral",
+        "href": "/poligrafo-laboral/"
+      },
+      {
+        "label": "Investigación corporativa",
+        "href": "/investigacion-corporativa/"
+      }
+    ],
+    "liveTitle": "Examen de poligrafía - Inteligencia Investigativa",
+    "liveDesc": "Es una evaluación voluntaria que requiere autorización por parte de la persona examinada, no invasiva y direccionada bajo estrictos parámetros de respeto a la",
+    "liveH1": "Examen de poligrafía"
+  },
+  {
+    "slug": "barrido-electronico",
+    "type": "service",
+    "order": 7,
+    "icon": "radar",
+    "sources": [
+      "barrido-electronico"
+    ],
+    "related": [
+      {
+        "label": "Investigación corporativa",
+        "href": "/investigacion-corporativa/"
+      },
+      {
+        "label": "Detectives privados Bogotá",
+        "href": "/detectives-privados-bogota-2/"
+      },
+      {
+        "label": "Investigadores privados Bogotá",
+        "href": "/investigadores-privados-bogota-2/"
+      }
+    ],
+    "liveTitle": "Barrido electrónico - Inteligencia Investigativa",
+    "liveDesc": "",
+    "liveH1": ""
+  },
+  {
+    "slug": "servicios-especiales",
+    "type": "service",
+    "order": 8,
+    "icon": "briefcase",
+    "sources": [
+      "servicios-especiales",
+      "servicios-especiales-para-abogados-y-empresas-de-cartera"
+    ],
+    "related": [
+      {
+        "label": "Abogados Bogotá",
+        "href": "/abogados-bogota/"
+      },
+      {
+        "label": "Abogados sucesiones Bogotá",
+        "href": "/abogados-sucesiones-bogota/"
+      },
+      {
+        "label": "Asesoría y representación jurídica",
+        "href": "/asesoria-juridica/"
+      },
+      {
+        "label": "Ubicación de personas para notificación judicial",
+        "href": "/ubicacion-de-personas-para-notificacion-judicial/"
+      }
+    ],
+    "liveTitle": "Servicios especiales - Inteligencia Investigativa",
+    "liveDesc": "",
+    "liveH1": ""
+  },
+  {
+    "slug": "servicios-en-linea",
+    "type": "service",
+    "order": 9,
+    "icon": "globe",
+    "sources": [
+      "servicios-en-linea"
+    ],
+    "related": [
+      {
+        "label": "Pagos en línea",
+        "href": "/pagos-en-linea/"
+      },
+      {
+        "label": "Detectives privados Bogotá",
+        "href": "/detectives-privados-bogota-2/"
+      },
+      {
+        "label": "Investigadores privados Bogotá",
+        "href": "/investigadores-privados-bogota-2/"
+      }
+    ],
+    "liveTitle": "Servicios en línea - Inteligencia Investigativa",
+    "liveDesc": "",
+    "liveH1": ""
+  },
+  {
+    "slug": "infidelidad",
+    "type": "service",
+    "order": 10,
+    "icon": "heart-crack",
+    "sources": [
+      "infidelidad",
+      "seguimiento-de-infidelidad"
+    ],
+    "related": [
+      {
+        "label": "Investigación personal",
+        "href": "/investigacion-personal/"
+      },
+      {
+        "label": "Seguimientos inteligentes",
+        "href": "/seguimientos-inteligentes/"
+      },
+      {
+        "label": "Detectives privados Bogotá",
+        "href": "/detectives-privados-bogota-2/"
+      },
+      {
+        "label": "Prueba de polígrafo Bogotá",
+        "href": "/prueba-de-poligrafo-bogota/"
+      }
+    ],
+    "liveTitle": "Infidelidad - Inteligencia Investigativa",
+    "liveDesc": "La infidelidad es un problema histórico que afecta a millones de personas sin importar el contexto, dificulta la convivencia, estabilidad física, emocional y",
+    "liveH1": "Infidelidad"
+  },
+  {
+    "slug": "seguimientos-inteligentes",
+    "type": "service",
+    "order": 11,
+    "icon": "route",
+    "sources": [
+      "seguimientos-inteligentes"
+    ],
+    "related": [
+      {
+        "label": "Investigación personal",
+        "href": "/investigacion-personal/"
+      },
+      {
+        "label": "GPS rastreo satelital",
+        "href": "/plataforma-gps/"
+      },
+      {
+        "label": "GPS Bogotá",
+        "href": "/gps-bogota/"
+      }
+    ],
+    "liveTitle": "SEGUIMIENTOS INTELIGENTES - Inteligencia Investigativa",
+    "liveDesc": "CENIPSA SAS, busca generar consciencia a la hora de elegir este recurso, desarrollando técnicas de seguimiento tecnológico, implementado recursos, mecanismos",
+    "liveH1": "SEGUIMIENTOS INTELIGENTES"
+  },
+  {
+    "slug": "ubicacion-de-personas-para-notificacion-judicial",
+    "type": "service",
+    "order": 12,
+    "icon": "map-pin",
+    "sources": [
+      "ubicacion-de-personas-para-notificacion-judicial"
+    ],
+    "related": [
+      {
+        "label": "Asesoría y representación jurídica",
+        "href": "/asesoria-juridica/"
+      },
+      {
+        "label": "Servicios especiales para abogados",
+        "href": "/servicios-especiales/"
+      },
+      {
+        "label": "Detectives privados Bogotá",
+        "href": "/detectives-privados-bogota-2/"
+      },
+      {
+        "label": "Investigadores privados Bogotá",
+        "href": "/investigadores-privados-bogota-2/"
+      }
+    ],
+    "liveTitle": "Ubicación de personas para notificación judicial - Inteligencia Investigativa",
+    "liveDesc": "A partir del nombre, número de identificación o número telefónico del investigado, realizamos labores de inteligencia para lograr su ubicación residencial y",
+    "liveH1": "Ubicación de personas para notificación judicial"
+  },
+  {
+    "slug": "investigacion-patrimonial-para-medidas-cautelares",
+    "type": "service",
+    "order": 13,
+    "icon": "landmark",
+    "sources": [
+      "investigacion-patrimonial-para-medidas-cautelares"
+    ],
+    "related": [
+      {
+        "label": "Asesoría y representación jurídica",
+        "href": "/asesoria-juridica/"
+      },
+      {
+        "label": "Servicios especiales para abogados",
+        "href": "/servicios-especiales/"
+      },
+      {
+        "label": "Análisis ejecutivo de información financiera",
+        "href": "/analisis-ejecutivo-de-informacion-financiera-bienes-raices-y-vehiculos/"
+      }
+    ],
+    "liveTitle": "Investigación patrimonial para medidas cautelares - Inteligencia Investigativa",
+    "liveDesc": "“Para realizar este servicio se requiere la autorización escrita del investigado.”  ",
+    "liveH1": "Investigación patrimonial para medidas cautelares"
+  },
+  {
+    "slug": "analisis-ejecutivo-de-informacion-financiera-bienes-raices-y-vehiculos",
+    "type": "service",
+    "order": 14,
+    "icon": "chart",
+    "sources": [
+      "analisis-ejecutivo-de-informacion-financiera-bienes-raices-y-vehiculos"
+    ],
+    "related": [
+      {
+        "label": "Investigación patrimonial para medidas cautelares",
+        "href": "/investigacion-patrimonial-para-medidas-cautelares/"
+      },
+      {
+        "label": "Investigación corporativa",
+        "href": "/investigacion-corporativa/"
+      },
+      {
+        "label": "Polígrafo laboral",
+        "href": "/poligrafo-laboral/"
+      },
+      {
+        "label": "Barrido electrónico",
+        "href": "/barrido-electronico/"
+      }
+    ],
+    "liveTitle": "Análisis ejecutivo de información financiera, Bienes raíces y Vehículos - Inteligencia Investigativa",
+    "liveDesc": "Una vez compilada la información patrimonial, declaraciones de renta e historial contable de cada uno de los rubros que ejecutó el investigado en un",
+    "liveH1": "Análisis ejecutivo de información financiera, Bienes raíces y Vehículos"
+  },
+  {
+    "slug": "servicios-comunidad-lgtb",
+    "type": "service",
+    "order": 15,
+    "icon": "users",
+    "sources": [
+      "servicios-comunidad-lgtb"
+    ],
+    "related": [
+      {
+        "label": "Investigación personal",
+        "href": "/investigacion-personal/"
+      },
+      {
+        "label": "Investigación de infidelidad",
+        "href": "/infidelidad/"
+      },
+      {
+        "label": "Seguimientos inteligentes",
+        "href": "/seguimientos-inteligentes/"
+      }
+    ],
+    "liveTitle": "SERVICIOS COMUNIDAD LGTB - Inteligencia Investigativa",
+    "liveDesc": "Productos de Espionaje ◉ Equios GPS ◉ Camaras de Largo Alcance ◉ Microfonos ◉ Equipos de Audio Camuflados ◉ Esferos Espia ◉ Nulla dui fusce feugiat ◉",
+    "liveH1": "SERVICIOS COMUNIDAD LGTB"
+  },
+  {
+    "slug": "detectives-privados-bogota-2",
+    "type": "landing",
+    "h1": "Detectives privados Bogotá",
+    "sources": [
+      "detectives-privados-bogota-2",
+      "detectives-privados-bogota",
+      "detectives-bogota"
+    ],
+    "related": [
+      {
+        "label": "Investigadores privados Bogotá",
+        "href": "/investigadores-privados-bogota-2/"
+      },
+      {
+        "label": "Detectives privados Colombia",
+        "href": "/detectives-privados-colombia/"
+      },
+      {
+        "label": "Detectives privados Bogotá precios",
+        "href": "/detectives-privados-bogota-precios/"
+      },
+      {
+        "label": "Detectives privados en Medellín",
+        "href": "/detectives-privados-en-medellin/"
+      }
+    ],
+    "liveTitle": "Detectives privados Bogotá - Inteligencia investigativa",
+    "liveDesc": "Contrata Detectives Privados expertos en Bogotá CENIPSA. Ofrecemos investigación familiar, corporativa y criminalística con enfoque ético y jurídico.",
+    "liveH1": "Detectives privados Bogotá"
+  },
+  {
+    "slug": "investigadores-privados-bogota-2",
+    "type": "landing",
+    "h1": "Investigadores privados Bogotá",
+    "sources": [
+      "investigadores-privados-bogota-2",
+      "investigadores-privados-bogota"
+    ],
+    "related": [
+      {
+        "label": "Detectives privados Bogotá",
+        "href": "/detectives-privados-bogota-2/"
+      },
+      {
+        "label": "Detectives privados Colombia",
+        "href": "/detectives-privados-colombia/"
+      },
+      {
+        "label": "Detectives privados Bogotá precios",
+        "href": "/detectives-privados-bogota-precios/"
+      },
+      {
+        "label": "Investigador privado Colombia",
+        "href": "/investigador-privado-colombia/"
+      }
+    ],
+    "liveTitle": "Investigadores privados Bogotá - Inteligencia Investigativa",
+    "liveDesc": "Los Investigadores privados Bogotá de CENIPSA SAS son profesionales experimentados en entornos analíticos-investigativos-jurídicos para encontrar la verdad",
+    "liveH1": "Investigadores privados Bogotá"
+  },
+  {
+    "slug": "detectives-privados-en-medellin",
+    "type": "landing",
+    "sources": [
+      "detectives-privados-en-medellin"
+    ],
+    "related": [
+      {
+        "label": "Detectives privados en Cali",
+        "href": "/detectives-privados-en-cali/"
+      },
+      {
+        "label": "Investigador privado Colombia",
+        "href": "/investigador-privado-colombia/"
+      },
+      {
+        "label": "Detectives privados Bogotá",
+        "href": "/detectives-privados-bogota-2/"
+      },
+      {
+        "label": "Investigadores privados Bogotá",
+        "href": "/investigadores-privados-bogota-2/"
+      }
+    ],
+    "liveTitle": "Detectives privados en Medellín - Inteligencia Investigativa",
+    "liveDesc": "Los detectives privados en Medellín de CENPSA SAS cuentan con diferentes canales virtuales de atención, que brindan un acercamiento",
+    "liveH1": "Detectives privados en Medellín"
+  },
+  {
+    "slug": "gps-bogota",
+    "type": "landing",
+    "sources": [
+      "gps-bogota"
+    ],
+    "related": [
+      {
+        "label": "GPS rastreo satelital",
+        "href": "/plataforma-gps/"
+      },
+      {
+        "label": "GPS para carros Bogotá",
+        "href": "/gps-para-carros-bogota/"
+      },
+      {
+        "label": "Detectives privados Bogotá",
+        "href": "/detectives-privados-bogota-2/"
+      }
+    ],
+    "liveTitle": "GPS Bogotá: Rastreo Satelital Investigativo en CENIPSA",
+    "liveDesc": "Instala GPS discreto en Bogotá con CENIPSA. Rastreo satelital investigativo para flotas y vehículos, con plataforma app y soporte experto. ¡Protege tus activos!",
+    "liveH1": "GPS Bogotá"
+  },
+  {
+    "slug": "detectives-privados-en-cali",
+    "type": "landing",
+    "sources": [
+      "detectives-privados-en-cali"
+    ],
+    "related": [
+      {
+        "label": "Detectives privados en Medellín",
+        "href": "/detectives-privados-en-medellin/"
+      },
+      {
+        "label": "Investigador privado Colombia",
+        "href": "/investigador-privado-colombia/"
+      },
+      {
+        "label": "Detectives privados Bogotá",
+        "href": "/detectives-privados-bogota-2/"
+      },
+      {
+        "label": "Investigadores privados Bogotá",
+        "href": "/investigadores-privados-bogota-2/"
+      }
+    ],
+    "liveTitle": "Detectives privados en Cali - Inteligencia Investigativa",
+    "liveDesc": "Los detectives privados en Cali de CENIPSA SAS son profesionales experimentados en entornos analíticos-investigativos-jurídicos para encontrar la verdad",
+    "liveH1": "Detectives privados en Cali"
+  },
+  {
+    "slug": "gps-para-carros-bogota",
+    "type": "landing",
+    "sources": [
+      "gps-para-carros-bogota"
+    ],
+    "related": [
+      {
+        "label": "GPS rastreo satelital",
+        "href": "/plataforma-gps/"
+      },
+      {
+        "label": "GPS Bogotá",
+        "href": "/gps-bogota/"
+      },
+      {
+        "label": "Detectives privados Bogotá",
+        "href": "/detectives-privados-bogota-2/"
+      }
+    ],
+    "liveTitle": "GPS para carros Bogotá - Inteligencia Investigativa",
+    "liveDesc": "El servicio de GPS para carros Bogotá de CENIPSA SAS constituye en la integración de un sistema satelital",
+    "liveH1": "GPS para carros Bogotá"
+  },
+  {
+    "slug": "detectives-privados-colombia",
+    "type": "landing",
+    "sources": [
+      "detectives-privados-colombia"
+    ],
+    "related": [
+      {
+        "label": "Detectives privados en Medellín",
+        "href": "/detectives-privados-en-medellin/"
+      },
+      {
+        "label": "Detectives privados en Cali",
+        "href": "/detectives-privados-en-cali/"
+      },
+      {
+        "label": "Investigador privado Colombia",
+        "href": "/investigador-privado-colombia/"
+      },
+      {
+        "label": "Detectives privados Bogotá",
+        "href": "/detectives-privados-bogota-2/"
+      }
+    ],
+    "liveTitle": "Detectives privados Colombia - Inteligencia Investigativa",
+    "liveDesc": "Consigue un servicio de detectives privados Colombia completo, seguro y altamente confidencial. Descubre al mejor aliado para esto como lo es CENIPSA.",
+    "liveH1": "Detectives privados Colombia"
+  },
+  {
+    "slug": "prueba-de-poligrafo-bogota",
+    "type": "landing",
+    "sources": [
+      "prueba-de-poligrafo-bogota",
+      "prueba-de-poligrafo",
+      "poligrafia"
+    ],
+    "related": [
+      {
+        "label": "Polígrafo laboral",
+        "href": "/poligrafo-laboral/"
+      },
+      {
+        "label": "Examen de poligrafía",
+        "href": "/examen-de-poligrafia/"
+      },
+      {
+        "label": "Investigación corporativa",
+        "href": "/investigacion-corporativa/"
+      }
+    ],
+    "liveTitle": "Prueba de polígrafo Bogotá - Inteligencia Investigativa",
+    "liveDesc": "La prueba de polígrafo es una herramienta orientada a evaluar y brindar un seguimiento del empleado de una compañía a través de una serie de preguntas",
+    "liveH1": "Prueba de polígrafo Bogotá"
+  },
+  {
+    "slug": "investigador-privado-colombia",
+    "type": "landing",
+    "sources": [
+      "investigador-privado-colombia",
+      "investigador-privado"
+    ],
+    "related": [
+      {
+        "label": "Detectives privados Colombia",
+        "href": "/detectives-privados-colombia/"
+      },
+      {
+        "label": "Detectives privados en Medellín",
+        "href": "/detectives-privados-en-medellin/"
+      },
+      {
+        "label": "Detectives privados en Cali",
+        "href": "/detectives-privados-en-cali/"
+      },
+      {
+        "label": "Detectives privados Bogotá",
+        "href": "/detectives-privados-bogota-2/"
+      }
+    ],
+    "liveTitle": "Investigador privado Colombia - Inteligencia Investigativa",
+    "liveDesc": "CENIPSA SAS cuenta con investigador privado Colombia altamente calificado en la búsqueda de la verdad ante cualquier escenario",
+    "liveH1": "Investigador privado Colombia"
+  },
+  {
+    "slug": "detectives-privados-bogota-precios",
+    "type": "landing",
+    "sources": [
+      "detectives-privados-bogota-precios"
+    ],
+    "related": [
+      {
+        "label": "Detectives privados Bogotá",
+        "href": "/detectives-privados-bogota-2/"
+      },
+      {
+        "label": "Investigadores privados Bogotá",
+        "href": "/investigadores-privados-bogota-2/"
+      },
+      {
+        "label": "Detectives privados Colombia",
+        "href": "/detectives-privados-colombia/"
+      }
+    ],
+    "liveTitle": "Detectives privados Bogotá precios - Inteligencia Investigativa",
+    "liveDesc": "El departamento de criminalística del CENIPSA S. A. está dirigido por diferentes investigadores y peritos especializados en cada una de las ramas forenses",
+    "liveH1": "Detectives privados Bogotá precios"
+  },
+  {
+    "slug": "detectives-privados",
+    "type": "landing",
+    "sources": [
+      "detectives-privados"
+    ],
+    "related": [
+      {
+        "label": "Detectives privados Bogotá",
+        "href": "/detectives-privados-bogota-2/"
+      },
+      {
+        "label": "Detectives privados Colombia",
+        "href": "/detectives-privados-colombia/"
+      },
+      {
+        "label": "Investigación personal",
+        "href": "/investigacion-personal/"
+      },
+      {
+        "label": "Detectives privados en Medellín",
+        "href": "/detectives-privados-en-medellin/"
+      }
+    ],
+    "liveTitle": "Detectives privados - Inteligencia Investigativa",
+    "liveDesc": "Servicios de detectives privados en Bogotá. Investigaciones corporativas, jurídicas y familiares. Máxima confidencialidad con CENIPSA. ¡Contáctanos ahora!",
+    "liveH1": "Detectives privados"
+  },
+  {
+    "slug": "abogados-bogota",
+    "type": "landing",
+    "sources": [
+      "abogados-bogota"
+    ],
+    "related": [
+      {
+        "label": "Abogados sucesiones Bogotá",
+        "href": "/abogados-sucesiones-bogota/"
+      },
+      {
+        "label": "Asesoría y representación jurídica",
+        "href": "/asesoria-juridica/"
+      },
+      {
+        "label": "Servicios especiales para abogados",
+        "href": "/servicios-especiales/"
+      }
+    ],
+    "liveTitle": "Abogados Bogotá - Inteligencia Investigativa",
+    "liveDesc": "Nuestro equipo de abogados en Bogotá ofrece soporte jurídico integral para solventar el caso que requiera. Consulta ahora con nosotros.",
+    "liveH1": "Abogados Bogotá"
+  },
+  {
+    "slug": "investigadores-privados-2",
+    "type": "landing",
+    "h1": "Investigadores privados",
+    "sources": [
+      "investigadores-privados-2",
+      "investigadores-privados",
+      "investigadores-privados-2-2"
+    ],
+    "related": [
+      {
+        "label": "Investigadores privados Bogotá",
+        "href": "/investigadores-privados-bogota-2/"
+      },
+      {
+        "label": "Detectives privados Colombia",
+        "href": "/detectives-privados-colombia/"
+      },
+      {
+        "label": "Investigación personal",
+        "href": "/investigacion-personal/"
+      }
+    ],
+    "liveTitle": "Investigadores privados - Inteligencia Investigativa",
+    "liveDesc": "Compañía de investigadores privados en Bogotá. CENIPSA, expertos en casos corporativos, familiares y jurídicos. ¡Hable con un experto ahora!",
+    "liveH1": "Investigadores privados"
+  },
+  {
+    "slug": "abogados-sucesiones-bogota",
+    "type": "landing",
+    "sources": [
+      "abogados-sucesiones-bogota"
+    ],
+    "related": [
+      {
+        "label": "Abogados Bogotá",
+        "href": "/abogados-bogota/"
+      },
+      {
+        "label": "Asesoría y representación jurídica",
+        "href": "/asesoria-juridica/"
+      },
+      {
+        "label": "Servicios especiales para abogados",
+        "href": "/servicios-especiales/"
+      },
+      {
+        "label": "Ubicación de personas para notificación judicial",
+        "href": "/ubicacion-de-personas-para-notificacion-judicial/"
+      }
+    ],
+    "liveTitle": "Abogados sucesiones Bogotá - Inteligencia Investigativa",
+    "liveDesc": "Los abogados sucesiones Bogotá cumplen varias funciones en la sociedad al momento de discutir una herencia. Acá responderemos las preguntas frecuentes respecto a la labor de estos profesionales",
+    "liveH1": "Abogados sucesiones Bogotá"
+  },
+  {
+    "slug": "poligrafo-laboral",
+    "type": "landing",
+    "sources": [
+      "poligrafo-laboral"
+    ],
+    "related": [
+      {
+        "label": "Prueba de polígrafo Bogotá",
+        "href": "/prueba-de-poligrafo-bogota/"
+      },
+      {
+        "label": "Examen de poligrafía",
+        "href": "/examen-de-poligrafia/"
+      },
+      {
+        "label": "Investigación corporativa",
+        "href": "/investigacion-corporativa/"
+      }
+    ],
+    "liveTitle": "Servicio de polígrafo laboral en Bogotá | CENIPSA",
+    "liveDesc": "Expertos en pruebas de polígrafo laboral en Bogotá. Ofrecemos exámenes preempleo, de rutina y específicos para empresas. Agende su servicio en CENIPSA.",
+    "liveH1": "Polígrafo laboral"
+  },
+  {
+    "slug": "equipo-interdisciplinar",
+    "type": "info",
+    "order": 20,
+    "sources": [
+      "equipo-interdisciplinar"
+    ],
+    "related": [
+      {
+        "label": "Quiénes somos",
+        "href": "/nosotros/"
+      },
+      {
+        "label": "Garantías",
+        "href": "/garantias/"
+      },
+      {
+        "label": "Casos de éxito",
+        "href": "/casos-de-exito/"
+      }
+    ],
+    "liveTitle": "EQUIPO INTERDISCIPLINAR - Inteligencia Investigativa",
+    "liveDesc": "La investigación tiene alto nivel de complejidad porque el contexto y los problemas de cada persona exigen la construcción de diferentes soluciones. Por",
+    "liveH1": "EQUIPO INTERDISCIPLINAR"
+  },
+  {
+    "slug": "garantias",
+    "type": "info",
+    "order": 21,
+    "sources": [
+      "garantias"
+    ],
+    "related": [
+      {
+        "label": "Quiénes somos",
+        "href": "/nosotros/"
+      },
+      {
+        "label": "Equipo interdisciplinar",
+        "href": "/equipo-interdisciplinar/"
+      },
+      {
+        "label": "Casos de éxito",
+        "href": "/casos-de-exito/"
+      }
+    ],
+    "liveTitle": "Garantías - Inteligencia Investigativa",
+    "liveDesc": "Entendemos la sensibilidad de su caso y por tanto le garantizamos absoluta reserva y cláusula de confidencialidad en la que CENIPSA SAS se compromete a la no",
+    "liveH1": "Garantías"
+  },
+  {
+    "slug": "casos-de-exito",
+    "type": "info",
+    "order": 22,
+    "sources": [
+      "casos-de-exito"
+    ],
+    "related": [
+      {
+        "label": "Garantías",
+        "href": "/garantias/"
+      },
+      {
+        "label": "Nuestros servicios",
+        "href": "/servicios/"
+      }
+    ],
+    "liveTitle": "Casos de éxito - Inteligencia Investigativa",
+    "liveDesc": "INFORMACIÓN Y DATOS Ubicación de personas para notificación Bienes Vehículos Cuentas Tarjetas de crédito Últimas consultas de Datacrédito Comportamientos de",
+    "liveH1": "Casos de éxito"
+  },
+  {
+    "slug": "consejos-de-seguridad",
+    "type": "info",
+    "order": 23,
+    "sources": [
+      "consejos-de-seguridad"
+    ],
+    "related": [
+      {
+        "label": "Blog",
+        "href": "/blog/"
+      },
+      {
+        "label": "Preguntas frecuentes",
+        "href": "/faq/"
+      }
+    ],
+    "liveTitle": "Consejos de seguridad - Inteligencia Investigativa",
+    "liveDesc": "Para un servicio investigativo, por su seguridad,  tenga en cuenta lo siguiente:",
+    "liveH1": "Consejos de seguridad"
+  },
+  {
+    "slug": "terminos-y-condiciones",
+    "type": "legal",
+    "sources": [
+      "terminos-y-condiciones"
+    ],
+    "related": [],
+    "liveTitle": "Términos y condiciones - Inteligencia Investigativa",
+    "liveDesc": "",
+    "liveH1": ""
+  },
+  {
+    "slug": "politica-de-tratamiento-de-datos-y-privacidad",
+    "type": "legal",
+    "sources": [
+      "politica-de-tratamiento-de-datos-y-privacidad"
+    ],
+    "related": [],
+    "liveTitle": "Política de tratamiento de datos y privacidad - Inteligencia Investigativa",
+    "liveDesc": "",
+    "liveH1": ""
+  }
+]

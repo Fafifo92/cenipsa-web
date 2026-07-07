@@ -1,0 +1,42 @@
+---
+/** Migas de pan accesibles. El JSON-LD BreadcrumbList se emite desde la página. */
+export interface Crumb {
+  name: string;
+  path: string;
+}
+export interface Props {
+  crumbs: Crumb[];
+  /** Sobre fondo oscuro */
+  onDark?: boolean;
+  lang?: 'es' | 'en';
+}
+const { crumbs, onDark = false, lang = 'es' } = Astro.props;
+---
+
+<nav aria-label={lang === 'es' ? 'Migas de pan' : 'Breadcrumb'} class="text-[0.82rem]">
+  <ol class:list={['flex flex-wrap items-center gap-1.5', onDark ? 'text-ink-300' : 'text-ink-500']}>
+    {
+      crumbs.map((crumb, i) => {
+        const last = i === crumbs.length - 1;
+        return (
+          <li class="flex items-center gap-1.5">
+            {i > 0 && (
+              <svg class="h-3 w-3 opacity-50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <path d="m9 6 6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            )}
+            {last ? (
+              <span aria-current="page" class:list={[onDark ? 'text-white/90' : 'text-ink-900', 'font-medium']}>
+                {crumb.name}
+              </span>
+            ) : (
+              <a href={crumb.path} class:list={['transition-colors', onDark ? 'hover:text-white' : 'hover:text-brand-700']}>
+                {crumb.name}
+              </a>
+            )}
+          </li>
+        );
+      })
+    }
+  </ol>
+</nav>

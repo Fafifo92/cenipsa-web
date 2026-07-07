@@ -1,0 +1,17 @@
+# build output
+dist/
+.astro/
+
+# dependencies
+node_modules/
+
+# environment
+.env
+.env.production
+
+# system
+.DS_Store
+Thumbs.db
+
+# fuente de migración (HTML crudo del sitio anterior; los JSON curados sí se versionan)
+content-source/live-html/

@@ -1,0 +1,208 @@
+{
+  "forms": [
+    {
+      "title": "Formulario de contacto 1",
+      "link": "https://www.inteligenciainvestigativa.com/?post_type=wpcf7_contact_form&#038;p=175",
+      "id": 175,
+      "date": "2016-05-20 20:22:12",
+      "modified": "2024-04-07 23:47:29",
+      "slug": "formulario-de-contacto-1",
+      "status": "publish",
+      "type": "wpcf7_contact_form",
+      "parent": 0,
+      "menuOrder": 0,
+      "content": "<p>Nombre (requerido)<br />\r\n    [text* your-name] </p>\r\n\r\n<p>Correo electrónico (requerido)<br />\r\n    [email* your-email] </p>\r\n\r\n<p>Asunto<br />\r\n    [text your-subject] </p>\r\n\r\n<p>Mensaje<br />\r\n    [textarea your-message] </p>\r\n\r\n<p>[submit \"Enviar\"]</p>\r\n\r\n<script>\r\ndocument.addEventListener( 'wpcf7mailsent', function( event ) {\r\n  location = 'https://www.inteligenciainvestigativa.com/gracias/';\r\n}, false );\r\n</script>\n1\nInteligencia Investigativa \"[your-subject]\"\nwordpress@inteligenciainvestigativa.com\narmando.dector@optimizacion-online.com\nDe: [your-name] <[your-email]>\r\nAsunto: [your-subject]\r\n\r\nCuerpo del mensaje:\r\n[your-message]\r\n\r\n--\r\nEste mensaje se ha enviado desde un formulario de contacto en Inteligencia Investigativa (http://www.inteligenciainvestigativa.com)\nReply-To: [your-email]\n\n\n\n\nInteligencia Investigativa \"[your-subject]\"\nInteligencia Investigativa <wordpress@seocoachmexico.com>\n[your-email]\nCuerpo del mensaje:\r\n[your-message]\r\n\r\n--\r\nEste mensaje se ha enviado desde un formulario de contacto en Inteligencia Investigativa (http://www.inteligenciainvestigativa.com)\nReply-To: armando.dector@optimizacion-online.com\n\n\n\nGracias por tu mensaje. Ha sido enviado.\nHubo un error intentando enviar tu mensaje. Por favor inténtalo de nuevo más tarde.\nUno o más campos tienen un error. Por favor revisa e inténtalo de nuevo.\nHubo un error intentando enviar tu mensaje. Por favor inténtalo de nuevo más tarde.\nDebes aceptar los términos y condiciones antes de enviar tu mensaje.\nEl campo es obligatorio.\nEl campo es demasiado largo.\nEl campo es demasiado corto.\nHa ocurrido un error desconocido al subir el archivo.\nNo tienes permisos para subir archivos de este tipo.\nEl archivo es demasiado grande.\nHa ocurrido un error al subir el archivo.\nEl formato de fecha es incorrecto.\nLa fecha es anterior a la más temprana permitida.\nLa fecha es posterior a la más tardía permitida.\nEl formato de número no es válido.\nEl número es menor que el mínimo permitido.\nEl número es mayor que el máximo permitido.\nLa respuesta al cuestionario no es correcta.\nLa dirección de correo electrónico que has introducido no es válida.\nLa URL no es válida.\nEl número de teléfono no es válido.",
+      "excerpt": "",
+      "categories": [],
+      "seo": {
+        "yoastTitle": "",
+        "yoastDesc": "",
+        "yoastFocusKw": "",
+        "rmTitle": "",
+        "rmDesc": "",
+        "rmFocusKw": "",
+        "rmRobots": "",
+        "canonical": ""
+      },
+      "thumbnailId": null,
+      "template": "",
+      "rawMetaKeys": [
+        "_form",
+        "_mail",
+        "_mail_2",
+        "_messages",
+        "_additional_settings",
+        "_locale",
+        "_vc_post_settings",
+        "_hash"
+      ]
+    },
+    {
+      "title": "Contacto",
+      "link": "https://www.inteligenciainvestigativa.com/?post_type=wpcf7_contact_form&#038;p=176",
+      "id": 176,
+      "date": "2016-05-20 20:24:20",
+      "modified": "2021-08-17 23:06:57",
+      "slug": "contacto",
+      "status": "publish",
+      "type": "wpcf7_contact_form",
+      "parent": 0,
+      "menuOrder": 0,
+      "content": "<h3 class=\"section-subtitle\" style=\"font-size: 200%\">CONTÁCTANOS</h3>\r\n\r\n<div class=\"md-form md-outline mt-3\">\r\n[text* your-name placeholder \"Nombre\"]\r\n</div>\r\n\r\n<div class=\"md-form md-outline \">\r\n[email* your-email placeholder \"Email\"]\r\n</div>\r\n\r\n<div class=\"md-form md-outline\">\r\n[text telefono placeholder \"Teléfono\"]\r\n</div>\r\n\r\n<div class=\"md-form md-outline\">\r\n[textarea your-message x3 placeholder \"Mensaje\"]\r\n</div>\r\n\r\n<p style=\"font-size:12px\">[checkbox* checkbox-341 \"He leído y acepto la política de tratamiento de datos y privacidad.\"] <a href=\"https://www.inteligenciainvestigativa.com/politica-de-tratamiento-de-datos-y-privacidad/\">Ver aquí</a></p>\r\n\r\n<p>[submit \"Enviar\"]</p>\r\n\r\n<style>                     \r\n.wpcf7-submit{background-color: #4285F4;color: white;border:0}\r\n</style>\r\n\r\n<script>\r\ndocument.addEventListener( 'wpcf7mailsent', function( event ) {\r\n  location = 'https://www.inteligenciainvestigativa.com/gracias/';\r\n}, false );\r\n</script>\n1\nInteligencia Investigativa\n[your-name] <wordpress@inteligenciainvestigativa.com>\ninfo@inteligenciainvestigativa.com,gerencia@inteligenciainvestigativa.com\nDe: [your-name] <[your-email]>\r\n\r\nCuerpo del mensaje:\r\nNombre:[your-name]\r\nE-mail:[your-email]\r\nTeléfono:[telefono]\r\nMensaje:[your-message]\r\n\r\n--\r\nEste mensaje se ha enviado desde un formulario de contacto en Inteligencia Investigativa (http://www.inteligenciainvestigativa.com)\nReply-To: [your-email]\n\n\n\n\nInteligencia Investigativa \"[your-subject]\"\nInteligencia Investigativa <wordpress@seocoachmexico.com>\n[your-email]\nCuerpo del mensaje:\r\n[your-message]\r\n\r\n--\r\nEste mensaje se ha enviado desde un formulario de contacto en Inteligencia Investigativa (http://www.inteligenciainvestigativa.com)\nReply-To: armando.dector@optimizacion-online.com\n\n\n\nGracias por tu mensaje. Ha sido enviado.\nHubo un error intentando enviar tu mensaje. Por favor inténtalo de nuevo más tarde.\nUno o más campos tienen un error. Por favor revisa e inténtalo de nuevo.\nHubo un error intentando enviar tu mensaje. Por favor inténtalo de nuevo más tarde.\nDebes aceptar los términos y condiciones antes de enviar tu mensaje.\nEl campo es obligatorio.\nEl campo es demasiado largo.\nEl campo es demasiado corto.\nHubo un error desconocido subiendo el archivo.\nNo tienes permisos para subir archivos de este tipo.\nEl archivo es demasiado grande.\nSe ha producido un error subiendo la imagen\nEl formato de fecha es incorrecto.\nLa fecha es anterior a la más temprana permitida.\nLa fecha es posterior a la más tardía permitida.\nEl formato de número no es válido.\nEl número es menor que el mínimo permitido.\nEl número es mayor que el máximo permitido.\nLa respuesta al cuestionario no es correcta.\nLa dirección de correo electrónico que has introducido no es válida.\nLa URL no es válida.\nEl número de teléfono no es válido.",
+      "excerpt": "",
+      "categories": [],
+      "seo": {
+        "yoastTitle": "",
+        "yoastDesc": "",
+        "yoastFocusKw": "",
+        "rmTitle": "",
+        "rmDesc": "",
+        "rmFocusKw": "",
+        "rmRobots": "",
+        "canonical": ""
+      },
+      "thumbnailId": null,
+      "template": "",
+      "rawMetaKeys": [
+        "_form",
+        "_mail",
+        "_mail_2",
+        "_messages",
+        "_additional_settings",
+        "_locale",
+        "_vc_post_settings",
+        "_hash"
+      ]
+    },
+    {
+      "title": "Contacto_copy",
+      "link": "https://www.inteligenciainvestigativa.com/?post_type=wpcf7_contact_form&#038;p=864",
+      "id": 864,
+      "date": "2021-05-19 17:08:00",
+      "modified": "2021-08-17 23:06:32",
+      "slug": "contacto_copy",
+      "status": "publish",
+      "type": "wpcf7_contact_form",
+      "parent": 0,
+      "menuOrder": 0,
+      "content": "<h3 class=\"section-subtitle\" style=\"font-size: 200%\">CONTÁCTANOS</h3>\r\n\r\n<div class=\"md-form md-outline mt-3\">\r\n[text* your-name placeholder \"Nombre\"]\r\n</div>\r\n\r\n<div class=\"md-form md-outline mt-3\">\r\n[email* your-email placeholder \"Email\"]\r\n</div>\r\n\r\n<div class=\"md-form md-outline\">\r\n[text telefono placeholder \"Teléfono\"]\r\n</div>\r\n\r\n<div class=\"md-form md-outline mb-3\">\r\n[textarea your-message placeholder \"Mensaje\"]\r\n</div>\r\n\r\n<p>[checkbox* checkbox-341 \"He leído y acepto la política de tratamiento de datos y privacidad.\"] <a href=\"https://www.inteligenciainvestigativa.com/politica-de-tratamiento-de-datos-y-privacidad/\">Ver aquí</a></p>\r\n\r\n<p>[submit \"Enviar\"]</p>\r\n\r\n<script>\r\ndocument.addEventListener( 'wpcf7mailsent', function( event ) {\r\n  location = 'https://www.inteligenciainvestigativa.com/gracias/';\r\n}, false );\r\n</script>\n1\nInteligencia Investigativa\n[your-name] <wordpress@inteligenciainvestigativa.com>\ninfo@inteligenciainvestigativa.com,gerencia@inteligenciainvestigativa.com\nDe: [your-name] <[your-email]>\r\n\r\nCuerpo del mensaje:\r\nNombre:[your-name]\r\nE-mail:[your-email]\r\nTeléfono:[telefono]\r\nMensaje:[your-message]\r\n\r\n--\r\nEste mensaje se ha enviado desde un formulario de contacto en Inteligencia Investigativa (http://www.inteligenciainvestigativa.com)\nReply-To: [your-email]\n\n\n\n\nInteligencia Investigativa \"[your-subject]\"\nInteligencia Investigativa <wordpress@seocoachmexico.com>\n[your-email]\nCuerpo del mensaje:\r\n[your-message]\r\n\r\n--\r\nEste mensaje se ha enviado desde un formulario de contacto en Inteligencia Investigativa (http://www.inteligenciainvestigativa.com)\nReply-To: armando.dector@optimizacion-online.com\n\n\n\nGracias por tu mensaje. Ha sido enviado.\nHubo un error intentando enviar tu mensaje. Por favor inténtalo de nuevo más tarde.\nUno o más campos tienen un error. Por favor revisa e inténtalo de nuevo.\nHubo un error intentando enviar tu mensaje. Por favor inténtalo de nuevo más tarde.\nDebes aceptar los términos y condiciones antes de enviar tu mensaje.\nEl campo es obligatorio.\nEl campo es demasiado largo.\nEl campo es demasiado corto.\nHubo un error desconocido subiendo el archivo.\nNo tienes permisos para subir archivos de este tipo.\nEl archivo es demasiado grande.\nSe ha producido un error subiendo la imagen\nEl formato de fecha es incorrecto.\nLa fecha es anterior a la más temprana permitida.\nLa fecha es posterior a la más tardía permitida.\nEl formato de número no es válido.\nEl número es menor que el mínimo permitido.\nEl número es mayor que el máximo permitido.\nLa respuesta al cuestionario no es correcta.\nLa dirección de correo electrónico que has introducido no es válida.\nLa URL no es válida.\nEl número de teléfono no es válido.",
+      "excerpt": "",
+      "categories": [],
+      "seo": {
+        "yoastTitle": "",
+        "yoastDesc": "",
+        "yoastFocusKw": "",
+        "rmTitle": "",
+        "rmDesc": "",
+        "rmFocusKw": "",
+        "rmRobots": "",
+        "canonical": ""
+      },
+      "thumbnailId": null,
+      "template": "",
+      "rawMetaKeys": [
+        "_vc_post_settings",
+        "_hash",
+        "_form",
+        "_mail",
+        "_mail_2",
+        "_messages",
+        "_additional_settings",
+        "_locale"
+      ]
+    }
+  ],
+  "css": [
+    {
+      "title": "wptheme",
+      "link": "https://www.inteligenciainvestigativa.com/sin-categoria/wptheme/",
+      "id": 761,
+      "date": "2021-03-11 17:57:45",
+      "modified": "2022-01-27 17:02:20",
+      "slug": "wptheme",
+      "status": "publish",
+      "type": "custom_css",
+      "parent": 0,
+      "menuOrder": 0,
+      "content": "\n.white{\n\tbackground-color:transparent !important;\n\tcolor:white;\n}\n\n.dark{\n\tbackground-color: rgba(0,0,0,0.4);\n    position: relative;\n}",
+      "excerpt": "",
+      "categories": [],
+      "seo": {
+        "yoastTitle": "",
+        "yoastDesc": "",
+        "yoastFocusKw": "",
+        "rmTitle": "",
+        "rmDesc": "",
+        "rmFocusKw": "",
+        "rmRobots": "",
+        "canonical": ""
+      },
+      "thumbnailId": null,
+      "template": "",
+      "rawMetaKeys": []
+    }
+  ],
+  "rm": [
+    {
+      "title": "",
+      "link": "https://www.inteligenciainvestigativa.com/?post_type=rm_content_editor&#038;p=4554",
+      "id": 4554,
+      "date": "2026-06-16 22:09:34",
+      "modified": "2026-06-16 22:09:34",
+      "slug": "",
+      "status": "draft",
+      "type": "rm_content_editor",
+      "parent": 0,
+      "menuOrder": 0,
+      "content": "",
+      "excerpt": "",
+      "categories": [],
+      "seo": {
+        "yoastTitle": "",
+        "yoastDesc": "",
+        "yoastFocusKw": "",
+        "rmTitle": "",
+        "rmDesc": "",
+        "rmFocusKw": "",
+        "rmRobots": "",
+        "canonical": ""
+      },
+      "thumbnailId": null,
+      "template": "",
+      "rawMetaKeys": []
+    }
+  ],
+  "attachments": [
+    {
+      "title": "contacto-2025",
+      "link": "https://www.inteligenciainvestigativa.com/contacto-2025/",
+      "id": 1338,
+      "date": "2025-05-08 21:00:47",
+      "modified": "2025-05-08 21:00:47",
+      "slug": "contacto-2025",
+      "status": "inherit",
+      "type": "attachment",
+      "parent": 0,
+      "menuOrder": 0,
+      "content": "",
+      "excerpt": "",
+      "categories": [],
+      "seo": {
+        "yoastTitle": "",
+        "yoastDesc": "",
+        "yoastFocusKw": "",
+        "rmTitle": "",
+        "rmDesc": "",
+        "rmFocusKw": "",
+        "rmRobots": "",
+        "canonical": ""
+      },
+      "thumbnailId": null,
+      "template": "",
+      "rawMetaKeys": [
+        "_wp_attached_file",
+        "_wp_attachment_metadata"
+      ]
+    }
+  ]
+}
