@@ -5,6 +5,11 @@
  * apertura/cierre. Controla el panel de Tawk vía Tawk_API (ver thirdparty.ts).
  * Si Tawk no responde (bloqueado por un ad-blocker, caído, etc.), el botón
  * ofrece WhatsApp como alternativa en vez de quedar sin reacción.
+ *
+ * El botón en sí es el único elemento que determina la posición fija
+ * (bottom-6 right-6, igual que WhatsAppButton): la burbuja de saludo y el
+ * tooltip van con position:absolute para nunca alterar esa caja, evitando
+ * que el botón quede desalineado respecto al de WhatsApp.
  */
 import { CONTACT } from '@/lib/site';
 
@@ -18,14 +23,14 @@ const bubble = lang === 'es' ? 'Estamos en línea' : "We're online";
 
 <div
   id="chat-launcher"
-  class="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3"
+  class="fixed bottom-6 right-6 z-40"
   data-state="idle"
   data-whatsapp={CONTACT.whatsappHref}
 >
-  <!-- Burbuja de saludo -->
+  <!-- Burbuja de saludo: absoluta, no afecta la posición del botón -->
   <div
     id="chat-bubble"
-    class="chat-bubble pointer-events-none max-w-[15rem] origin-bottom-right rounded-2xl rounded-br-sm border border-ink-100 bg-white px-4 py-2.5 text-[0.85rem] font-medium text-ink-800 shadow-lift"
+    class="chat-bubble pointer-events-none absolute right-0 bottom-full mb-3 max-w-[15rem] origin-bottom-right rounded-2xl rounded-br-sm border border-ink-100 bg-white px-4 py-2.5 text-[0.85rem] font-medium text-ink-800 shadow-lift"
     role="status"
   >
     <span class="flex items-center gap-2">
@@ -46,9 +51,12 @@ const bubble = lang === 'es' ? 'Estamos en línea' : "We're online";
   >
     <!-- halo animado -->
     <span class="chat-halo pointer-events-none absolute inset-0 rounded-full" aria-hidden="true"></span>
-    <!-- icono chat -->
-    <svg class="chat-icon-chat absolute h-6.5 w-6.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true">
-      <path d="M7.5 8.5h9M7.5 12h6M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3 20.5l1.5-5.2A8.5 8.5 0 1 1 21 11.5Z" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- icono chat: burbuja sólida, mismo peso visual que el de WhatsApp -->
+    <svg class="chat-icon-chat absolute h-7 w-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 3.5c-5 0-9 3.36-9 7.5 0 2.24 1.16 4.26 3 5.65V21l3.6-2.02c.77.17 1.57.27 2.4.27 5 0 9-3.36 9-7.5s-4-7.25-9-7.25Z" />
+      <circle cx="8.3" cy="11" r="1.05" fill="var(--color-brand-600)" />
+      <circle cx="12" cy="11" r="1.05" fill="var(--color-brand-600)" />
+      <circle cx="15.7" cy="11" r="1.05" fill="var(--color-brand-600)" />
     </svg>
     <!-- icono cerrar -->
     <svg class="chat-icon-close absolute h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
@@ -58,7 +66,7 @@ const bubble = lang === 'es' ? 'Estamos en línea' : "We're online";
 
   <span
     id="chat-tooltip"
-    class="pointer-events-none absolute bottom-1.5 right-16 hidden whitespace-nowrap rounded-lg bg-ink-950 px-3.5 py-2 text-[0.8rem] font-semibold text-white opacity-0 shadow-lift transition-opacity duration-300 md:block"
+    class="pointer-events-none absolute right-16 bottom-1.5 hidden whitespace-nowrap rounded-lg bg-ink-950 px-3.5 py-2 text-[0.8rem] font-semibold text-white opacity-0 shadow-lift transition-opacity duration-300 md:block"
     aria-hidden="true"
   >
     {label}
@@ -105,11 +113,10 @@ const bubble = lang === 'es' ? 'Estamos en línea' : "We're online";
   }
 
   /*
-   * Morph entre el icono de chat y el de cerrar. Ambos estados (por defecto Y
-   * abierto) se definen aquí, en el mismo origen, usando `transform` (no las
-   * propiedades scale/rotate independientes de Tailwind v4) para máxima
-   * compatibilidad: los iconos ya no llevan clases de utilidad de Tailwind
-   * para su transform/opacity, así que no hay conflicto de cascada posible.
+   * Morph entre el icono de chat y el de cerrar, usando `transform` (no las
+   * propiedades scale/rotate independientes de Tailwind v4, que no son
+   * canceladas por `transform: none`). Ambos estados viven en este único
+   * bloque de estilo, sin clases de utilidad de Tailwind compitiendo.
    */
   .chat-icon-chat,
   .chat-icon-close {
@@ -147,72 +154,82 @@ const bubble = lang === 'es' ? 'Estamos en línea' : "We're online";
   import { ensureThirdParties } from '@/scripts/thirdparty';
 
   interface TawkAPI {
-    maximize?: () => void;
-    minimize?: () => void;
-    showWidget?: () => void;
+    toggle?: () => void;
+  }
+  const w = window as Window & { __cenipsaChatGlobals?: boolean };
+  const tawk = () => (window as unknown as { Tawk_API?: TawkAPI }).Tawk_API;
+  const launcher = () => document.getElementById('chat-launcher');
+
+  // Estado compartido a nivel de módulo: el widget de Tawk es un singleton
+  // real (persiste entre navegaciones con view transitions), así que su
+  // estado de apertura pendiente/reintento también debe serlo — si viviera
+  // dentro de initChatLauncher() cada navegación crearía un cierre nuevo con
+  // su propio "pendingOpen", dejando temporizadores huérfanos apuntando a
+  // botones de páginas ya no visibles (la causa de que el chat no abriera
+  // de forma consistente al navegar, p. ej. a la versión en inglés).
+  let pendingOpen = false;
+  let fallbackTimer: number | undefined;
+
+  function clearFallback() {
+    if (fallbackTimer !== undefined) {
+      window.clearTimeout(fallbackTimer);
+      fallbackTimer = undefined;
+    }
   }
 
-  function initChatLauncher() {
-    const root = document.getElementById('chat-launcher');
-    const button = document.getElementById('chat-button');
-    if (!root || !button || root.dataset.bound === 'true') return;
-    root.dataset.bound = 'true';
+  // Si Tawk está bloqueado (ad-blocker) o tarda demasiado en responder, no
+  // dejamos el botón "colgado": abrimos WhatsApp como alternativa.
+  function fallbackToWhatsApp() {
+    pendingOpen = false;
+    clearFallback();
+    const whatsapp = launcher()?.dataset.whatsapp;
+    if (whatsapp) window.open(whatsapp, '_blank', 'noopener');
+  }
 
-    let pendingOpen = false;
-    let fallbackTimer: number | undefined;
-    const tawk = () => (window as unknown as { Tawk_API?: TawkAPI }).Tawk_API;
-
-    const clearFallback = () => {
-      if (fallbackTimer !== undefined) {
-        window.clearTimeout(fallbackTimer);
-        fallbackTimer = undefined;
-      }
-    };
-
-    // Si Tawk está bloqueado (ad-blocker) o tarda demasiado en responder,
-    // no dejamos el botón "colgado": abrimos WhatsApp como alternativa.
-    const fallbackToWhatsApp = () => {
-      pendingOpen = false;
+  function requestToggle() {
+    const api = tawk();
+    if (api?.toggle) {
+      api.toggle();
+    } else {
+      pendingOpen = true;
+      ensureThirdParties(); // dispara la carga de Tawk si aún no ocurrió
       clearFallback();
-      const whatsapp = root.dataset.whatsapp;
-      if (whatsapp) window.open(whatsapp, '_blank', 'noopener');
-    };
+      fallbackTimer = window.setTimeout(fallbackToWhatsApp, 6000);
+    }
+  }
 
-    const openChat = () => {
-      const api = tawk();
-      if (api?.maximize) {
-        api.showWidget?.();
-        api.maximize();
-      } else {
-        pendingOpen = true;
-        ensureThirdParties(); // dispara la carga de Tawk si aún no ocurrió
-        clearFallback();
-        fallbackTimer = window.setTimeout(fallbackToWhatsApp, 6000);
-      }
-    };
-
-    button.addEventListener('click', () => {
-      if (root.dataset.state === 'open') {
-        tawk()?.minimize?.();
-      } else {
-        openChat();
-      }
-    });
-
+  // Listeners globales: registrados UNA sola vez para toda la sesión de
+  // navegación (nunca se duplican entre astro:page-load), y siempre leen el
+  // #chat-launcher VIGENTE en el momento del evento en lugar de cerrar sobre
+  // una referencia capturada en una navegación anterior.
+  if (!w.__cenipsaChatGlobals) {
+    w.__cenipsaChatGlobals = true;
     document.addEventListener('tawk:ready', () => {
       clearFallback();
       if (pendingOpen) {
         pendingOpen = false;
-        const api = tawk();
-        api?.showWidget?.();
-        api?.maximize?.();
+        tawk()?.toggle?.();
       }
     });
     document.addEventListener('tawk:blocked', () => {
       if (pendingOpen) fallbackToWhatsApp();
     });
-    document.addEventListener('tawk:maximized', () => (root.dataset.state = 'open'));
-    document.addEventListener('tawk:minimized', () => (root.dataset.state = 'idle'));
+    document.addEventListener('tawk:maximized', () => {
+      const root = launcher();
+      if (root) root.dataset.state = 'open';
+    });
+    document.addEventListener('tawk:minimized', () => {
+      const root = launcher();
+      if (root) root.dataset.state = 'idle';
+    });
+  }
+
+  function initChatLauncher() {
+    const root = launcher();
+    const button = document.getElementById('chat-button');
+    if (!root || !button || button.dataset.bound === 'true') return;
+    button.dataset.bound = 'true';
+    button.addEventListener('click', requestToggle);
 
     // Saludo temporal (una vez por sesión), si no se abrió el chat.
     try {

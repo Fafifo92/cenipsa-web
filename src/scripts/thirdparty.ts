@@ -33,7 +33,9 @@ function loadThirdParties() {
       Tawk_API?: {
         hideWidget?: () => void;
         showWidget?: () => void;
+        toggle?: () => void;
         maximize?: () => void;
+        minimize?: () => void;
         onLoad?: () => void;
         onChatMinimized?: () => void;
         onChatMaximized?: () => void;
@@ -46,14 +48,15 @@ function loadThirdParties() {
     const api = w.Tawk_API;
     const emit = (name: string) => document.dispatchEvent(new CustomEvent(name));
     api.onLoad = () => {
+      // Se oculta UNA sola vez, aquí: hidden/visible es un eje independiente
+      // de maximizado/minimizado en la API de Tawk, así que no hace falta (y
+      // es contraproducente) repetir hideWidget() en cada minimizado — eso
+      // llegaba a cortar a media animación la apertura del panel en móvil.
       api.hideWidget?.();
       emit('tawk:ready');
     };
     api.onChatMaximized = () => emit('tawk:maximized');
-    api.onChatMinimized = () => {
-      api.hideWidget?.();
-      emit('tawk:minimized');
-    };
+    api.onChatMinimized = () => emit('tawk:minimized');
 
     const s = document.createElement('script');
     s.async = true;
