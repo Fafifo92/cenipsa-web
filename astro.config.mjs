@@ -52,6 +52,7 @@ function emitRedirectsFile() {
 export default defineConfig({
   site: SITE,
   output: 'static',
+  server: { port: process.env.PORT ? Number(process.env.PORT) : 4321 },
   trailingSlash: 'always',
   redirects: Object.fromEntries(
     Object.entries(redirects).map(([from, to]) => [from, { status: 301, destination: to }])

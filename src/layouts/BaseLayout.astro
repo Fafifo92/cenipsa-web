@@ -13,6 +13,9 @@ const props = Astro.props;
 const lang = props.lang ?? 'es';
 const currentPath = props.path;
 const skipLabel = lang === 'es' ? 'Saltar al contenido principal' : 'Skip to main content';
+// Terceros (GTM/tawk) solo en producción — en dev contaminan analytics y abren el chat real.
+const gtmId = import.meta.env.PROD ? THIRD_PARTY.gtmId : '';
+const tawkId = import.meta.env.PROD ? THIRD_PARTY.tawkId : '';
 ---
 
 <!doctype html>
@@ -21,12 +24,12 @@ const skipLabel = lang === 'es' ? 'Saltar al contenido principal' : 'Skip to mai
     <BaseHead {...props} />
     <ClientRouter />
   </head>
-  <body data-gtm-id={THIRD_PARTY.gtmId} data-tawk-id={THIRD_PARTY.tawkId}>
+  <body data-gtm-id={gtmId} data-tawk-id={tawkId}>
     {
-      THIRD_PARTY.gtmId && (
+      gtmId && (
         <noscript>
           <iframe
-            src={`https://www.googletagmanager.com/ns.html?id=${THIRD_PARTY.gtmId}`}
+            src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
             height="0"
             width="0"
             style="display:none;visibility:hidden"

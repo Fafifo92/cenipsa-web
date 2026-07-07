@@ -12,7 +12,14 @@ const crumbs = [
   { name: 'Contacto', path: '/contacto/' },
 ];
 
-const channels = [
+interface Channel {
+  icon: string;
+  title: string;
+  lines?: string[];
+  links?: { label: string; href: string; external?: boolean }[];
+}
+
+const channels: Channel[] = [
   {
     icon: 'map-pin',
     title: 'Sede Norte, Bogotá',
