@@ -1,7 +1,7 @@
 ---
 title: "Infidelidad"
 seoTitle: "Infidelidad - Inteligencia Investigativa"
-description: "La infidelidad es un problema histórico que afecta a millones de personas sin importar el contexto, dificulta la convivencia, estabilidad física, emocional y"
+description: "La infidelidad afecta la convivencia y la estabilidad física, emocional y mental de quien la padece. Investigamos su caso con discreción y evidencia."
 type: service
 related:
   - { label: "Investigación personal", href: "/investigacion-personal/" }

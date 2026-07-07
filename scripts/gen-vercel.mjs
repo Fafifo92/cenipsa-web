@@ -24,11 +24,12 @@ const vercel = {
   $schema: 'https://openapi.vercel.sh/vercel.json',
   cleanUrls: false,
   trailingSlash: true,
-  redirects: Object.entries(redirects).map(([source, destination]) => ({
-    source,
-    destination: `${destination}/`,
-    permanent: true,
-  })),
+  // Vercel hace matching estricto del path: hay que cubrir la forma con y sin
+  // slash final (las URLs indexadas de WordPress usan slash final).
+  redirects: Object.entries(redirects).flatMap(([source, destination]) => [
+    { source: `${source}/`, destination: `${destination}/`, permanent: true },
+    { source, destination: `${destination}/`, permanent: true },
+  ]),
   headers: [
     { source: '/(.*)', headers: securityHeaders },
     {

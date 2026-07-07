@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /gracias/
-Disallow: /en/thank-you/
 
 Sitemap: https://www.inteligenciainvestigativa.com/sitemap-index.xml

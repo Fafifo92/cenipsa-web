@@ -40,6 +40,9 @@ Sitio web estático de **CENIPSA S.A.S.** (www.inteligenciainvestigativa.com), m
 - Headers en `public/_headers` (Netlify/Cloudflare Pages) y `vercel.json` (Vercel).
 - Si cambias el script inline de `BaseHead.astro`, recalcula el hash y actualiza ambos archivos.
 - Formulario con honeypot; los IDs de GTM/tawk.to se configuran por variables `PUBLIC_*` (ver `.env.example`).
+- Los scripts del sitio se emiten SIEMPRE como archivos externos (`assetsInlineLimit: 0`) para que la CSP
+  no necesite `unsafe-inline`. Nota GTM: los tags de tipo **Custom HTML** del contenedor inyectan scripts
+  inline que la CSP bloqueará — revisar el contenedor `GTM-W8N2BTC` y migrar esos tags a plantillas nativas.
 
 ## Formulario de contacto
 

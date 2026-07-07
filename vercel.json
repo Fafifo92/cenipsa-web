@@ -4,7 +4,17 @@
   "trailingSlash": true,
   "redirects": [
     {
+      "source": "/mision/",
+      "destination": "/nosotros/",
+      "permanent": true
+    },
+    {
       "source": "/mision",
+      "destination": "/nosotros/",
+      "permanent": true
+    },
+    {
+      "source": "/vision/",
       "destination": "/nosotros/",
       "permanent": true
     },
@@ -14,8 +24,18 @@
       "permanent": true
     },
     {
+      "source": "/preguntas-frecuentes/",
+      "destination": "/faq/",
+      "permanent": true
+    },
+    {
       "source": "/preguntas-frecuentes",
       "destination": "/faq/",
+      "permanent": true
+    },
+    {
+      "source": "/contacto-3/",
+      "destination": "/contacto/",
       "permanent": true
     },
     {
@@ -24,8 +44,18 @@
       "permanent": true
     },
     {
+      "source": "/asesoria-juridica-2/",
+      "destination": "/asesoria-juridica/",
+      "permanent": true
+    },
+    {
       "source": "/asesoria-juridica-2",
       "destination": "/asesoria-juridica/",
+      "permanent": true
+    },
+    {
+      "source": "/investigacion-corporativa-2/",
+      "destination": "/investigacion-corporativa/",
       "permanent": true
     },
     {
@@ -34,8 +64,18 @@
       "permanent": true
     },
     {
+      "source": "/servicios-especiales-para-abogados-y-empresas-de-cartera/",
+      "destination": "/servicios-especiales/",
+      "permanent": true
+    },
+    {
       "source": "/servicios-especiales-para-abogados-y-empresas-de-cartera",
       "destination": "/servicios-especiales/",
+      "permanent": true
+    },
+    {
+      "source": "/detectives-privados-bogota/",
+      "destination": "/detectives-privados-bogota-2/",
       "permanent": true
     },
     {
@@ -44,12 +84,27 @@
       "permanent": true
     },
     {
+      "source": "/investigadores-privados-bogota/",
+      "destination": "/investigadores-privados-bogota-2/",
+      "permanent": true
+    },
+    {
       "source": "/investigadores-privados-bogota",
       "destination": "/investigadores-privados-bogota-2/",
       "permanent": true
     },
     {
+      "source": "/investigadores-privados/",
+      "destination": "/investigadores-privados-2/",
+      "permanent": true
+    },
+    {
       "source": "/investigadores-privados",
+      "destination": "/investigadores-privados-2/",
+      "permanent": true
+    },
+    {
+      "source": "/investigadores-privados-2-2/",
       "destination": "/investigadores-privados-2/",
       "permanent": true
     },
@@ -59,7 +114,17 @@
       "permanent": true
     },
     {
+      "source": "/detectives-bogota/",
+      "destination": "/detectives-privados-bogota-2/",
+      "permanent": true
+    },
+    {
       "source": "/detectives-bogota",
+      "destination": "/detectives-privados-bogota-2/",
+      "permanent": true
+    },
+    {
+      "source": "/detectives-privados-precios/",
       "destination": "/detectives-privados-bogota-2/",
       "permanent": true
     },
@@ -69,7 +134,17 @@
       "permanent": true
     },
     {
+      "source": "/programa-espia/",
+      "destination": "/detectives-privados/",
+      "permanent": true
+    },
+    {
       "source": "/programa-espia",
+      "destination": "/detectives-privados/",
+      "permanent": true
+    },
+    {
+      "source": "/como-espiar-un-celular/",
       "destination": "/detectives-privados/",
       "permanent": true
     },
@@ -79,7 +154,17 @@
       "permanent": true
     },
     {
+      "source": "/prueba-de-poligrafo/",
+      "destination": "/prueba-de-poligrafo-bogota/",
+      "permanent": true
+    },
+    {
       "source": "/prueba-de-poligrafo",
+      "destination": "/prueba-de-poligrafo-bogota/",
+      "permanent": true
+    },
+    {
+      "source": "/poligrafia/",
       "destination": "/prueba-de-poligrafo-bogota/",
       "permanent": true
     },
@@ -89,8 +174,18 @@
       "permanent": true
     },
     {
+      "source": "/seguimiento-de-infidelidad/",
+      "destination": "/infidelidad/",
+      "permanent": true
+    },
+    {
       "source": "/seguimiento-de-infidelidad",
       "destination": "/infidelidad/",
+      "permanent": true
+    },
+    {
+      "source": "/galeria/",
+      "destination": "/nosotros/",
       "permanent": true
     },
     {
@@ -99,8 +194,18 @@
       "permanent": true
     },
     {
+      "source": "/cosas-de-interes/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
       "source": "/cosas-de-interes",
       "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/productos-servicios/",
+      "destination": "/servicios/",
       "permanent": true
     },
     {
@@ -109,8 +214,18 @@
       "permanent": true
     },
     {
+      "source": "/equipos-gps/",
+      "destination": "/plataforma-gps/",
+      "permanent": true
+    },
+    {
       "source": "/equipos-gps",
       "destination": "/plataforma-gps/",
+      "permanent": true
+    },
+    {
+      "source": "/camaras-de-largo-alcance/",
+      "destination": "/servicios/",
       "permanent": true
     },
     {
@@ -119,8 +234,18 @@
       "permanent": true
     },
     {
+      "source": "/microfonos/",
+      "destination": "/barrido-electronico/",
+      "permanent": true
+    },
+    {
       "source": "/microfonos",
       "destination": "/barrido-electronico/",
+      "permanent": true
+    },
+    {
+      "source": "/seguridad/",
+      "destination": "/servicios/",
       "permanent": true
     },
     {
@@ -129,8 +254,18 @@
       "permanent": true
     },
     {
+      "source": "/busqueda/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
       "source": "/busqueda",
       "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/formulario-prueba/",
+      "destination": "/contacto/",
       "permanent": true
     },
     {
@@ -169,7 +304,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'sha256-Du+OJKJSbdUgz5nrHeWWINvez6XKDDU/tyj/5c2uvwo=' https://www.googletagmanager.com https://embed.tawk.to https://*.tawk.to; style-src 'self' 'unsafe-inline' https://*.tawk.to; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.tawk.to https://*.googleusercontent.com; font-src 'self' data: https://*.tawk.to; connect-src 'self' https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net https://*.tawk.to wss://*.tawk.to https://formspree.io; frame-src https://www.googletagmanager.com https://*.tawk.to; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io https://api.whatsapp.com; frame-ancestors 'none'; upgrade-insecure-requests"
+          "value": "default-src 'self'; script-src 'self' 'sha256-Du+OJKJSbdUgz5nrHeWWINvez6XKDDU/tyj/5c2uvwo=' https://www.googletagmanager.com https://embed.tawk.to https://*.tawk.to; style-src 'self' 'unsafe-inline' https://*.tawk.to; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.tawk.to https://*.googleusercontent.com; font-src 'self' data: https://*.tawk.to; connect-src 'self' https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net https://*.tawk.to wss://*.tawk.to https://formspree.io; media-src 'self' https://*.tawk.to; frame-src https://www.googletagmanager.com https://*.tawk.to; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io https://api.whatsapp.com; frame-ancestors 'none'; upgrade-insecure-requests"
         }
       ]
     },

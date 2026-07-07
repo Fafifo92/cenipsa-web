@@ -41,9 +41,10 @@ const t =
 <form
   id="contact-form"
   method="POST"
-  action={hasEndpoint ? THIRD_PARTY.formEndpoint : `mailto:${CONTACT.emailInfo}`}
+  action={hasEndpoint ? THIRD_PARTY.formEndpoint : '#'}
   class="space-y-5"
   data-endpoint={hasEndpoint ? 'true' : 'false'}
+  data-mailto={CONTACT.emailInfo}
   data-thanks={lang === 'es' ? '/gracias/' : '/en/thank-you/'}
 >
   <!-- honeypot: los bots lo rellenan, los humanos no lo ven -->
@@ -138,10 +139,24 @@ const t =
     form.dataset.bound = 'true';
 
     form.addEventListener('submit', async (e) => {
-      if (form.dataset.endpoint !== 'true') return; // fallback mailto: envío nativo
       e.preventDefault();
       const honeypot = form.querySelector<HTMLInputElement>('input[name="_gotcha"]');
       if (honeypot?.value) return; // bot detectado
+
+      if (form.dataset.endpoint !== 'true') {
+        // Sin endpoint configurado: abre el cliente de correo con el mensaje prellenado.
+        const data = new FormData(form);
+        const subject = `Consulta desde el sitio web — ${data.get('name') ?? ''}`;
+        const body = [
+          `Nombre: ${data.get('name') ?? ''}`,
+          `Email: ${data.get('email') ?? ''}`,
+          `Teléfono: ${data.get('phone') ?? ''}`,
+          '',
+          String(data.get('message') ?? ''),
+        ].join('\n');
+        window.location.href = `mailto:${form.dataset.mailto}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        return;
+      }
 
       const button = form.querySelector<HTMLButtonElement>('button[type="submit"]');
       if (button) {

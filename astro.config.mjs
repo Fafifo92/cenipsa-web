@@ -103,6 +103,11 @@ export default defineConfig({
   ],
   vite: {
     plugins: [tailwindcss()],
+    build: {
+      // Scripts SIEMPRE como archivos externos: la CSP solo permite 'self'
+      // más el hash del único script inline de BaseHead (sin 'unsafe-inline').
+      assetsInlineLimit: 0,
+    },
   },
   markdown: {
     rehypePlugins: [rehypeLazyImages],

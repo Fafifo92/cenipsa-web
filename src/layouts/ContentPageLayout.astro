@@ -51,10 +51,22 @@ if (data.type === 'service' || data.type === 'landing') {
     serviceSchema({ name: data.title, description: metaDescription(data.description), path })
   );
 }
+
+// Título SEO con sufijo de marca unificado: se conserva la parte de keyword del
+// title original de WordPress y se normaliza el sufijo (antes convivían
+// «- Inteligencia Investigativa» y «| CENIPSA…», inconsistente en las SERP).
+const baseTitle = (data.seoTitle ?? data.title)
+  .replace(/\s*[-|–]\s*Inteligencia [Ii]nvestigativa\s*$/, '')
+  .replace(/\s*\|\s*CENIPSA.*$/, '')
+  .trim();
+const seoTitle =
+  baseTitle.length <= 38
+    ? `${baseTitle} | CENIPSA Inteligencia Investigativa`
+    : `${baseTitle} | CENIPSA`;
 ---
 
 <BaseLayout
-  title={data.seoTitle ?? `${data.title} | CENIPSA Inteligencia Investigativa`}
+  title={seoTitle}
   description={data.description}
   path={path}
   lang={lang}
