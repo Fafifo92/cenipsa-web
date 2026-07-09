@@ -66,15 +66,21 @@ destino históricos del CF7 de WordPress eran `info@` y `gerencia@inteligenciain
 
 ## Chat en vivo
 
-**Estado actual: ACTIVO.** `CHAT_LAUNCHER_ENABLED = true` en `src/lib/site.ts` — es el interruptor maestro; en
-`false`, ni se renderiza el botón ni se carga el script de Tawk (cero peticiones de red), sin tocar código.
+**Estado actual: DESACTIVADO (segunda vez).** `CHAT_LAUNCHER_ENABLED = false` en `src/lib/site.ts` — es el
+interruptor maestro; en `false`, ni se renderiza el botón ni se carga el script de Tawk (cero peticiones de red),
+sin tocar código. El fix de recuperación de orfandad descrito abajo se implementó y se verificó en un ciclo
+controlado (`npm run dev`, Chromium vía CDP: abrir → navegar → abrir, 3 veces seguidas, todas exitosas), pero en
+uso real (dispositivos/condiciones reales) sigue fallando con frecuencia. Queda desactivado hasta poder
+implementarlo de forma más sólida — posiblemente reconsiderando el enfoque (forzar recarga completa de página en
+vez de navegación SPA mientras el chat está activo, o evaluar un proveedor de chat distinto) — o diagnosticar
+con acceso a un dispositivo real. Todo el código y el trabajo de investigación quedan intactos para retomarlo.
 
-El sitio usa un **launcher propio** (`ChatLauncher.astro`) con la estética del sitio y animaciones de entrada,
-hover y apertura/cierre; controla el panel de Tawk.to vía `Tawk_API.toggle()` (el botón por defecto de Tawk queda
-oculto). GTM se difiere a producción (evita pageviews falsos en dev); Tawk **no** se difiere — probarlo en local
-es necesario y no distorsiona ningún informe de tráfico.
+Cuando está activo, el sitio usa un **launcher propio** (`ChatLauncher.astro`) con la estética del sitio y
+animaciones de entrada, hover y apertura/cierre; controla el panel de Tawk.to vía `Tawk_API.toggle()` (el botón
+por defecto de Tawk queda oculto). GTM se difiere a producción (evita pageviews falsos en dev); Tawk **no** se
+difiere — probarlo en local es necesario y no distorsiona ningún informe de tráfico.
 
-### Bug corregido: el botón dejaba de responder tras navegar (causa raíz + fix)
+### Bug diagnosticado y parcialmente corregido: el botón dejaba de responder tras navegar
 
 **Síntoma reportado:** en algunos navegadores móviles el panel a veces no se cerraba correctamente y el botón
 dejaba de responder a los toques ("la ventana sigue abierta de algún modo y el botón ya no lo ejecuta").
@@ -118,9 +124,15 @@ real que mover, sin error visible y sin caer nunca al fallback de WhatsApp.
 **Verificado en navegador** (Chromium vía CDP, `npm run dev`): ciclo completo abrir → cerrar → navegar (SPA,
 clic real en enlaces del sitio, no recarga completa) → abrir de nuevo, repetido en 3 navegaciones consecutivas
 (`/` → `/nosotros/` → `/servicios/`), confirmando en cada parada que `Tawk_API.toggle` se recupera y el panel
-llega a `data-state="open"`. La parte específica de overlay/z-index en iOS Safari no es reproducible fuera de
-un dispositivo real; la red de seguridad del punto 3 cubre ese caso de forma genérica sin necesitar
-diagnosticarlo con exactitud.
+llega a `data-state="open"`.
+
+**Pero en uso real sigue fallando con frecuencia.** El ciclo controlado de arriba no cubre todo lo que puede
+pasar en un dispositivo real: overlay/z-index del panel de Tawk en iOS Safari, animaciones interrumpidas por el
+teclado virtual, condiciones de red variables, u otros comportamientos internos de Tawk que no son observables
+sin probar en el dispositivo real donde se reportan los fallos. La red de seguridad (punto 3) amortigua el
+síntoma (cae a WhatsApp en vez de quedar colgado) pero no elimina la causa de fondo en esos casos. Por eso queda
+desactivado en vez de "arreglado": hace falta diagnosticar con un dispositivo real antes de reactivarlo con
+confianza.
 
 ## Despliegue
 

@@ -49,14 +49,16 @@ export const THIRD_PARTY = {
 } as const;
 
 /**
- * Chat en vivo (launcher + widget de Tawk). Reactivado tras corregir la
- * causa raíz de que el botón dejara de responder en navegación SPA: ver
- * README.md § Chat en vivo para el detalle completo (recuperación automática
- * de la "orfandad" del widget en `src/scripts/thirdparty.ts` + red de
- * seguridad por timeout en `ChatLauncher.astro`). Cambiar a `false` para
- * apagarlo por completo (ni botón ni petición de red) sin tocar el código.
+ * Chat en vivo (launcher + widget de Tawk) DESACTIVADO de nuevo: el fix de
+ * recuperación de orfandad (ver README.md § Chat en vivo) se verificó en
+ * dev/Chromium, pero en uso real sigue fallando con frecuencia. El código
+ * (thirdparty.ts, ChatLauncher.astro) queda intacto — incluido el trabajo
+ * de diagnóstico ya hecho — para retomarlo con una implementación más
+ * sólida (o un proveedor de chat distinto) en el futuro. Cambiar a `true`
+ * para reactivarlo; en `false` no se renderiza el botón ni se hace ninguna
+ * petición de red a Tawk.
  */
-export const CHAT_LAUNCHER_ENABLED = true;
+export const CHAT_LAUNCHER_ENABLED = false;
 
 /** Servicios ofrecidos para el selector del formulario de contacto. */
 export const SERVICE_OPTIONS = {
