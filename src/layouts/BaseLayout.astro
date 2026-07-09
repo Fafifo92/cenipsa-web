@@ -18,8 +18,9 @@ const skipLabel = lang === 'es' ? 'Saltar al contenido principal' : 'Skip to mai
 // analítica real. Tawk NO se difiere: probar el chat en local es necesario y,
 // a diferencia de GTM, no distorsiona ningún informe de tráfico.
 const gtmId = import.meta.env.PROD ? THIRD_PARTY.gtmId : '';
-// Chat temporalmente desactivado (ver CHAT_LAUNCHER_ENABLED en lib/site.ts):
-// sin data-tawk-id, thirdparty.ts nunca carga el script — cero peticiones.
+// CHAT_LAUNCHER_ENABLED (lib/site.ts) es el interruptor maestro del chat: en
+// `false`, sin data-tawk-id, thirdparty.ts nunca carga el script — cero
+// peticiones de red y el botón ni se renderiza (línea de abajo).
 const tawkId = CHAT_LAUNCHER_ENABLED ? THIRD_PARTY.tawkId : '';
 ---
 

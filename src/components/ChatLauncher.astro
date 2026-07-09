@@ -151,7 +151,7 @@ const bubble = lang === 'es' ? 'Estamos en línea' : "We're online";
 </style>
 
 <script>
-  import { ensureThirdParties } from '@/scripts/thirdparty';
+  import { ensureThirdParties, isTawkOrphaned, markTawkOrphaned } from '@/scripts/thirdparty';
 
   interface TawkAPI {
     toggle?: () => void;
@@ -169,11 +169,18 @@ const bubble = lang === 'es' ? 'Estamos en línea' : "We're online";
   // de forma consistente al navegar, p. ej. a la versión en inglés).
   let pendingOpen = false;
   let fallbackTimer: number | undefined;
+  let watchdogTimer: number | undefined;
 
   function clearFallback() {
     if (fallbackTimer !== undefined) {
       window.clearTimeout(fallbackTimer);
       fallbackTimer = undefined;
+    }
+  }
+  function clearWatchdog() {
+    if (watchdogTimer !== undefined) {
+      window.clearTimeout(watchdogTimer);
+      watchdogTimer = undefined;
     }
   }
 
@@ -182,19 +189,38 @@ const bubble = lang === 'es' ? 'Estamos en línea' : "We're online";
   function fallbackToWhatsApp() {
     pendingOpen = false;
     clearFallback();
+    clearWatchdog();
     const whatsapp = launcher()?.dataset.whatsapp;
     if (whatsapp) window.open(whatsapp, '_blank', 'noopener');
   }
 
   function requestToggle() {
     const api = tawk();
-    if (api?.toggle) {
+    if (api?.toggle && !isTawkOrphaned()) {
+      const wasOpen = launcher()?.dataset.state === 'open';
       api.toggle();
+      // Red de seguridad: si tras togglear no llega NINGUNA confirmación de
+      // Tawk en ~2.5s (overlay de terceros tapando el botón, animación
+      // interrumpida por el teclado móvil, etc. — riesgos que no controlamos
+      // porque el DOM interno de Tawk es una caja negra), no dejamos el
+      // botón "colgado": al intentar ABRIR, ofrecemos WhatsApp; al intentar
+      // cerrar, solo marcamos el widget para que el próximo intento lo
+      // reinicie limpio en vez de seguir insistiendo sobre algo roto.
+      clearWatchdog();
+      watchdogTimer = window.setTimeout(() => {
+        markTawkOrphaned();
+        if (!wasOpen) fallbackToWhatsApp();
+      }, 2500);
     } else {
       pendingOpen = true;
-      ensureThirdParties(); // dispara la carga de Tawk si aún no ocurrió
+      ensureThirdParties(); // dispara o reinicia la carga de Tawk
       clearFallback();
-      fallbackTimer = window.setTimeout(fallbackToWhatsApp, 6000);
+      // 10s, no 6s: una carga en frío del widget implica ~15-20 peticiones
+      // (chunks JS, idiomas, fuentes, sonido) — en una conexión real más
+      // lenta que localhost, 6s alcanzaba a dispararse ANTES de que llegara
+      // tawk:ready, dejando pendingOpen ya en false cuando Tawk por fin
+      // terminaba de cargar (verificado: el chat sí abría solo, tarde).
+      fallbackTimer = window.setTimeout(fallbackToWhatsApp, 10000);
     }
   }
 
@@ -215,10 +241,12 @@ const bubble = lang === 'es' ? 'Estamos en línea' : "We're online";
       if (pendingOpen) fallbackToWhatsApp();
     });
     document.addEventListener('tawk:maximized', () => {
+      clearWatchdog();
       const root = launcher();
       if (root) root.dataset.state = 'open';
     });
     document.addEventListener('tawk:minimized', () => {
+      clearWatchdog();
       const root = launcher();
       if (root) root.dataset.state = 'idle';
     });

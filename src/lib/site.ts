@@ -49,15 +49,14 @@ export const THIRD_PARTY = {
 } as const;
 
 /**
- * Chat en vivo (launcher + widget de Tawk) DESACTIVADO temporalmente: en
- * algunos navegadores móviles el panel a veces no se cierra correctamente
- * (queda su overlay renderizado encima) y el botón deja de responder a los
- * toques. El código (ChatLauncher.astro, thirdparty.ts) permanece intacto;
- * con esta bandera en `false` no se renderiza el botón NI se carga el script
- * de Tawk (cero peticiones de red). Cambiar a `true` para reactivarlo cuando
- * se resuelva — ver la investigación de causa raíz en README.md § Chat en vivo.
+ * Chat en vivo (launcher + widget de Tawk). Reactivado tras corregir la
+ * causa raíz de que el botón dejara de responder en navegación SPA: ver
+ * README.md § Chat en vivo para el detalle completo (recuperación automática
+ * de la "orfandad" del widget en `src/scripts/thirdparty.ts` + red de
+ * seguridad por timeout en `ChatLauncher.astro`). Cambiar a `false` para
+ * apagarlo por completo (ni botón ni petición de red) sin tocar el código.
  */
-export const CHAT_LAUNCHER_ENABLED = false;
+export const CHAT_LAUNCHER_ENABLED = true;
 
 /** Servicios ofrecidos para el selector del formulario de contacto. */
 export const SERVICE_OPTIONS = {
