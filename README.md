@@ -51,7 +51,7 @@ Todas se definen en `.env` (ver `.env.example`). Son `PUBLIC_*` (llegan al clien
 | Variable | Para qué | Si se deja vacía |
 |---|---|---|
 | `PUBLIC_GTM_ID` | Google Tag Manager (analítica) | No carga GTM |
-| `PUBLIC_TAWK_ID` | Chat en vivo Tawk.to (`propertyId/widgetId`) | No carga el chat ni su botón |
+| `PUBLIC_TAWK_ID` | Chat en vivo Tawk.to (`propertyId/widgetId`) | No carga el chat ni su botón — **actualmente desactivado además por `CHAT_LAUNCHER_ENABLED` en `src/lib/site.ts`, ver § Chat en vivo** |
 | `PUBLIC_FORM_ENDPOINT` | Endpoint del formulario (Formspree u otro) | El formulario abre `mailto:` |
 | `PUBLIC_RECAPTCHA_SITE_KEY` | reCAPTCHA v3 invisible (clave de sitio) | Solo honeypot antispam |
 
@@ -66,10 +66,53 @@ destino históricos del CF7 de WordPress eran `info@` y `gerencia@inteligenciain
 
 ## Chat en vivo
 
-Se usa un **launcher propio** (`ChatLauncher.astro`) con la estética del sitio y animaciones de entrada, hover y
-apertura/cierre; controla el panel de Tawk.to vía `Tawk_API` (el botón por defecto de Tawk queda oculto). El chat
-solo se carga tras la primera interacción del usuario (o al pulsar el botón), para no penalizar el rendimiento.
-En `dev` los terceros (GTM/Tawk) están desactivados; se activan en el build de producción.
+**Estado actual: DESACTIVADO.** `CHAT_LAUNCHER_ENABLED = false` en `src/lib/site.ts` — con la bandera en `false`
+no se renderiza el botón **ni** se carga el script de Tawk (cero peticiones de red); el código
+(`ChatLauncher.astro`, `src/scripts/thirdparty.ts`) queda intacto para reactivarlo cuando se corrija la causa
+raíz descrita abajo. WhatsApp sigue siendo el canal de contacto flotante disponible.
+
+Cuando está activo, el sitio usa un **launcher propio** (`ChatLauncher.astro`) con la estética del sitio y
+animaciones de entrada, hover y apertura/cierre; controla el panel de Tawk.to vía `Tawk_API.toggle()` (el botón
+por defecto de Tawk queda oculto). GTM se difiere a producción (evitar pageviews falsos en dev); Tawk **no** se
+difiere — probarlo en local es necesario y no distorsiona ningún informe de tráfico.
+
+### Por qué se desactivó — causa raíz (investigación con verificación adversarial)
+
+**Síntoma reportado:** en algunos navegadores móviles el panel a veces no se cierra correctamente y el botón deja
+de responder a los toques ("la ventana sigue abierta de algún modo y el botón ya no lo ejecuta").
+
+**Causa raíz confirmada** (verificada leyendo el código fuente real de Astro, `swap-functions.js`, no solo
+inferida): el sitio usa `<ClientRouter />` (`astro:transitions`) para navegación SPA. En cada navegación
+same-site, Astro reemplaza el `<body>` completo (`oldElement.replaceWith(newElement)`) y solo conserva los nodos
+marcados con `transition:persist` — ninguno lo está en este proyecto. El widget de Tawk (su iframe/contenedor) lo
+inyecta el script embed directamente como hijo de `document.body` **en tiempo de ejecución**, fuera del árbol que
+Astro renderiza por SSR, así que **nunca podría persistir** aunque se marcara `#chat-launcher`. Al mismo tiempo,
+la bandera `loaded` en `thirdparty.ts` es una variable de módulo que sobrevive indefinidamente entre navegaciones
+(el mismo patrón, deliberado, que usa `pendingOpen`/`fallbackTimer`), así que `loadThirdParties()` nunca se
+vuelve a ejecutar tras la primera carga.
+
+Resultado: tras la **primera navegación SPA** posterior a usar el chat, el DOM real del widget de Tawk queda
+huérfano (destruido), pero `window.Tawk_API` sigue existiendo en memoria con sus métodos intactos.
+`requestToggle()` solo decide qué hacer mirando si `api?.toggle` es una función — que lo sigue siendo para
+siempre — así que **nunca** cae en la rama de fallback a WhatsApp; simplemente invoca `toggle()` sobre una
+referencia "zombie" sin ningún widget real que mover. Sin error visible, sin fallback: el botón deja de tener
+cualquier efecto observable por el resto de la sesión.
+
+Factores secundarios de menor confianza que probablemente agravan el problema en móvil específicamente (no
+verificables sin dispositivo real, ya que el DOM/CSS interno de Tawk es una caja negra):
+- El panel maximizado de Tawk en móvil ocupa toda la pantalla con un z-index casi con certeza muy superior al
+  `z-40` de nuestro botón; si una animación de cierre queda interrumpida (p. ej. por el resize de viewport del
+  teclado virtual en iOS Safari), el overlay podría quedar tapando físicamente el botón.
+- `showWidget()` está declarado pero nunca se invoca (solo `hideWidget()`, una vez, en `onLoad`); si Tawk trata
+  hidden/visible como un eje que también afecta al panel (no solo a su burbuja por defecto), podría interferir.
+- `requestToggle()` no tiene guard de reentrancia ni timeout de reconciliación tras el `toggle()`.
+
+**Plan para reactivar:** (1) añadir un timeout de reconciliación en `requestToggle()` — si tras `toggle()` no
+llega ningún evento `tawk:maximized`/`tawk:minimized` en ~2 s, asumir que el widget está muerto y caer a
+WhatsApp (mismo patrón que ya existe para "Tawk bloqueado"); (2) en `astro:page-load`, si Tawk ya se había
+cargado antes pero su DOM real ya no está presente, resetear `loaded = false` en `thirdparty.ts` y volver a
+inyectar el script; (3) opcionalmente, forzar recarga completa de página (en vez de navegación SPA) en los
+enlaces mientras el chat está abierto. Verificar en un dispositivo/emulador móvil real antes de reactivar.
 
 ## Despliegue
 

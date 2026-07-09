@@ -6,7 +6,7 @@ import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import WhatsAppButton from '@/components/WhatsAppButton.astro';
 import ChatLauncher from '@/components/ChatLauncher.astro';
-import { THIRD_PARTY } from '@/lib/site';
+import { THIRD_PARTY, CHAT_LAUNCHER_ENABLED } from '@/lib/site';
 
 export interface Props extends HeadProps {}
 
@@ -18,7 +18,9 @@ const skipLabel = lang === 'es' ? 'Saltar al contenido principal' : 'Skip to mai
 // analítica real. Tawk NO se difiere: probar el chat en local es necesario y,
 // a diferencia de GTM, no distorsiona ningún informe de tráfico.
 const gtmId = import.meta.env.PROD ? THIRD_PARTY.gtmId : '';
-const tawkId = THIRD_PARTY.tawkId;
+// Chat temporalmente desactivado (ver CHAT_LAUNCHER_ENABLED en lib/site.ts):
+// sin data-tawk-id, thirdparty.ts nunca carga el script — cero peticiones.
+const tawkId = CHAT_LAUNCHER_ENABLED ? THIRD_PARTY.tawkId : '';
 ---
 
 <!doctype html>
@@ -48,7 +50,7 @@ const tawkId = THIRD_PARTY.tawkId;
     </main>
     <Footer lang={lang} />
     <WhatsAppButton lang={lang} />
-    {THIRD_PARTY.tawkId && <ChatLauncher lang={lang} />}
+    {CHAT_LAUNCHER_ENABLED && THIRD_PARTY.tawkId && <ChatLauncher lang={lang} />}
     <script>
       import '@/scripts/reveal';
       import '@/scripts/thirdparty';

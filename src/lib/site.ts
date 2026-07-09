@@ -48,6 +48,17 @@ export const THIRD_PARTY = {
   recaptchaSiteKey: import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY ?? '',
 } as const;
 
+/**
+ * Chat en vivo (launcher + widget de Tawk) DESACTIVADO temporalmente: en
+ * algunos navegadores móviles el panel a veces no se cierra correctamente
+ * (queda su overlay renderizado encima) y el botón deja de responder a los
+ * toques. El código (ChatLauncher.astro, thirdparty.ts) permanece intacto;
+ * con esta bandera en `false` no se renderiza el botón NI se carga el script
+ * de Tawk (cero peticiones de red). Cambiar a `true` para reactivarlo cuando
+ * se resuelva — ver la investigación de causa raíz en README.md § Chat en vivo.
+ */
+export const CHAT_LAUNCHER_ENABLED = false;
+
 /** Servicios ofrecidos para el selector del formulario de contacto. */
 export const SERVICE_OPTIONS = {
   es: [

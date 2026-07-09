@@ -6,7 +6,7 @@ import { writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { redirects } from './redirects.config.mjs';
 
-const SITE = 'https://www.inteligenciainvestigativa.com';
+const SITE = 'https://exquisite-crostata-a53a97.netlify.app';
 
 /**
  * Rehype plugin para imágenes de markdown: loading="lazy" + decoding="async"
