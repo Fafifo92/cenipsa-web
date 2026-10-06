@@ -1,0 +1,73 @@
+---
+/** Bloque «Acompañamiento jurídico»: apoyo legal de CENIPSA relacionado con el tema de la página. */
+import Icon from './Icon.astro';
+import { CONTACT } from '@/lib/site';
+import { legalSupportFor } from '@/lib/legal-support';
+
+export interface Props {
+  /** id de la entrada de `paginas` (p. ej. `investigacion-personal`, `en/polygraph`). */
+  entryId: string;
+  lang?: 'es' | 'en';
+}
+const { entryId, lang = 'es' } = Astro.props;
+const support = legalSupportFor(entryId, lang);
+
+const t =
+  lang === 'es'
+    ? {
+        eyebrow: 'Acompañamiento jurídico',
+        title: 'Siempre con respaldo legal, de la investigación a la actuación jurídica',
+        areasLabel: 'Áreas en las que le podemos apoyar',
+        cta: 'Consultar con un abogado',
+        more: 'Ver asesoría y representación jurídica',
+        morePath: '/asesoria-juridica/',
+        whats: CONTACT.whatsappLegalHref,
+      }
+    : {
+        eyebrow: 'Legal support',
+        title: 'Always backed by legal counsel, from investigation to legal action',
+        areasLabel: 'Areas where we can support you',
+        cta: 'Talk to a lawyer',
+        more: 'See legal advice & representation',
+        morePath: '/en/legal-advice/',
+        whats: CONTACT.whatsappLegalHrefEn,
+      };
+---
+
+{
+  support && (
+    <section class="bg-mist section-pad" aria-labelledby="legal-support-title">
+      <div class="container-site grid items-start gap-12 lg:grid-cols-[1fr_1.1fr]">
+        <div data-reveal="left">
+          <p class="eyebrow">
+            <span class="h-px w-8 bg-gold-500" aria-hidden="true" />
+            {t.eyebrow}
+          </p>
+          <h2 id="legal-support-title" class="mt-4 font-display text-3xl font-semibold text-ink-950 md:text-4xl">
+            {t.title}
+          </h2>
+          <p class="mt-5 leading-relaxed text-ink-700">{support.text}</p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href={t.whats} target="_blank" rel="noopener" class="btn-primary">
+              {t.cta}
+            </a>
+            <a href={t.morePath} class="btn-outline">{t.more}</a>
+          </div>
+        </div>
+        <div data-reveal="right">
+          <h3 class="text-[0.78rem] font-semibold tracking-[0.14em] text-ink-500 uppercase">{t.areasLabel}</h3>
+          <ul class="mt-4 grid gap-3 sm:grid-cols-2">
+            {support.areas.map((area) => (
+              <li class="flex items-start gap-3 rounded-2xl border border-ink-100 bg-white p-4 shadow-soft">
+                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
+                  <Icon name="scale" class="h-5 w-5" />
+                </span>
+                <span class="pt-1.5 text-[0.92rem] leading-snug font-semibold text-ink-900">{area}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  )
+}

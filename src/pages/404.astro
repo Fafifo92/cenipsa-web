@@ -1,7 +1,6 @@
 ---
 /** Página 404. */
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import FingerprintMotif from '@/components/FingerprintMotif.astro';
 ---
 
 <BaseLayout
@@ -12,7 +11,6 @@ import FingerprintMotif from '@/components/FingerprintMotif.astro';
 >
   <section class="relative flex min-h-[80vh] items-center overflow-hidden bg-ink-950 pt-32 pb-20">
     <div class="pointer-events-none absolute inset-0" aria-hidden="true">
-      <FingerprintMotif class="absolute left-1/2 top-1/2 h-[110%] w-auto -translate-x-1/2 -translate-y-1/2 text-brand-400/10" />
     </div>
     <div class="container-site relative text-center">
       <p class="font-display text-[6rem] leading-none font-semibold text-brand-400/80 md:text-[8rem]" data-reveal>404</p>

@@ -4,6 +4,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import PageHero from '@/components/PageHero.astro';
 import CtaBanner from '@/components/CtaBanner.astro';
+import LegalSupport from '@/components/LegalSupport.astro';
 import Icon from '@/components/Icon.astro';
 import { breadcrumbSchema } from '@/lib/seo';
 
@@ -27,7 +28,7 @@ const crumbs = [
   <PageHero
     eyebrow="Servicios"
     title="Soluciones investigativas y jurídicas"
-    description="Prevenga y resuelva sus conflictos presentes y futuros con metodologías que combinan experiencia, tecnología, idoneidad y confidencialidad."
+    description="Prevenga y resuelva sus conflictos presentes y futuros con metodologías que combinan experiencia, tecnología, idoneidad y confidencialidad. Cada servicio cuenta con acompañamiento jurídico."
     crumbs={crumbs}
   />
 
@@ -62,6 +63,8 @@ const crumbs = [
       </div>
     </div>
   </section>
+
+  <LegalSupport entryId="default" />
 
   <CtaBanner />
 </BaseLayout>

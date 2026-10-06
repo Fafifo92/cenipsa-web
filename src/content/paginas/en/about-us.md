@@ -5,6 +5,7 @@ description: "CENIPSA is a Colombian firm of private investigators and lawyers i
 type: info
 eyebrow: "About us"
 order: 1
+heroImage: "/images/plaza-bolivar.jpg"
 related: []
 ---
 
@@ -43,3 +44,15 @@ An interdisciplinary team with proven theoretical, methodological, practical and
 ## A seal of quality: affiliated with the Bogotá Chamber of Commerce
 
 CENIPSA belongs to the Bogotá Chamber of Commerce's Circle of Affiliates, a credential granted to companies with a reliable, impeccable track record and more than 10 years of business activity.
+
+## Mission
+
+To protect the rights and reduce the risks of individuals and organizations through lawful, rigorous and confidential investigations, integrated with specialized legal advice, in order to provide reliable evidence and support timely decisions.
+
+Our mission rests on four commitments: **legality and ethics**, **investigative rigor**, **confidentiality** and **legal usefulness**.
+
+## Vision 2030
+
+By 2030, CENIPSA will be recognized in Colombia as a leading firm in integrated investigation and legal advice, with national and international alliances, distinguished by rigor, confidentiality and the responsible use of technology to generate reliable evidence, protect rights, prevent risks and contribute to the fight against corruption.
+
+We will get there through four priorities: **coverage**, **digitalization**, **specialization** and **trust**.

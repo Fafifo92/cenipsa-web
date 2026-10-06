@@ -5,6 +5,7 @@ description: "Absolute confidentiality and a legally compliant investigative pro
 type: info
 
 order: 21
+heroImage: "/images/despacho-juridico.jpg"
 related:
   - { label: "Who we are", href: "/en/about-us/" }
   - { label: "Interdisciplinary team", href: "/en/interdisciplinary-team/" }

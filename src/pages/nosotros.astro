@@ -11,6 +11,9 @@ const crumbs = [
   { name: 'Nosotros', path: '/nosotros/' },
 ];
 
+const mission = ['Legalidad y ética', 'Rigor investigativo', 'Confidencialidad', 'Utilidad jurídica'];
+const vision = ['Cobertura', 'Digitalización', 'Especialización', 'Confianza'];
+
 const values = [
   {
     icon: 'shield',
@@ -47,6 +50,7 @@ const values = [
     title="Quiénes somos"
     description="Somos una compañía colombiana con amplia trayectoria en el campo de las investigaciones privadas y el derecho."
     crumbs={crumbs}
+    image="/images/plaza-bolivar.jpg"
   />
 
   <section class="section-pad">
@@ -71,22 +75,30 @@ const values = [
           <div class="absolute -top-16 -right-16 h-48 w-48 rounded-full bg-brand-500/15 blur-2xl" aria-hidden="true"></div>
           <p class="eyebrow text-brand-300"><span class="h-px w-8 bg-gold-400" aria-hidden="true"></span>Misión</p>
           <p class="relative mt-5 leading-relaxed text-ink-100">
-            En CENIPSA SAS contribuimos al restablecimiento de los derechos vulnerados; por ello trabajamos con un
-            enfoque investigativo-socio-jurídico que nos permite la búsqueda del material probatorio y el
-            esclarecimiento de los hechos investigados en procura de encontrar la verdad. Nuestro equipo
-            interdisciplinar tiene amplio conocimiento, experticia y capacidad estratégica para asesorarlo en sus
-            diferentes vulneraciones o problemas personales y corporativos.
+            Proteger los derechos y reducir los riesgos de personas y organizaciones mediante investigaciones
+            legales, rigurosas y confidenciales, integradas con asesoría jurídica especializada, para aportar
+            evidencia confiable y facilitar decisiones oportunas.
           </p>
+          <ul class="relative mt-6 flex flex-wrap gap-2">
+            {mission.map((m) => (
+              <li class="rounded-lg border border-white/20 bg-white/5 px-3.5 py-1.5 text-[0.82rem] font-semibold text-white">{m}</li>
+            ))}
+          </ul>
         </article>
         <article class="relative overflow-hidden rounded-3xl border border-ink-100 bg-white p-9 shadow-soft md:p-11" data-reveal="right">
           <div class="absolute -top-16 -right-16 h-48 w-48 rounded-full bg-gold-200/40 blur-2xl" aria-hidden="true"></div>
           <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>Visión</p>
           <p class="relative mt-5 leading-relaxed text-ink-700">
-            Para 2030, CENIPSA SAS tendrá un reconocimiento nacional por su contribución a la búsqueda de la verdad
-            y justicia mediante la investigación judicial. Asimismo, fortaleceremos alianzas institucionales
-            nacionales e internacionales que nos convertirán en aliado consultivo en defensa de los derechos
-            humanos, la anticorrupción y la reducción de las desigualdades.
+            Para 2030, CENIPSA será reconocida en Colombia como una firma referente en investigación y asesoría
+            jurídica integral, con alianzas nacionales e internacionales, destacada por la rigurosidad, la
+            confidencialidad y el uso responsable de la tecnología para generar evidencia confiable, proteger
+            derechos, prevenir riesgos y contribuir a la lucha contra la corrupción.
           </p>
+          <ul class="relative mt-6 flex flex-wrap gap-2">
+            {vision.map((v) => (
+              <li class="rounded-lg border border-ink-950/15 bg-mist px-3.5 py-1.5 text-[0.82rem] font-semibold text-ink-950">{v}</li>
+            ))}
+          </ul>
         </article>
       </div>
     </div>

@@ -9,6 +9,7 @@ import { render } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
 import PageHero from '@/components/PageHero.astro';
 import CtaBanner from '@/components/CtaBanner.astro';
+import LegalSupport from '@/components/LegalSupport.astro';
 import { serviceSchema, breadcrumbSchema, metaDescription } from '@/lib/seo';
 import { altLocaleFor, CONTACT } from '@/lib/site';
 
@@ -90,6 +91,7 @@ const seoTitle =
     description={data.type !== 'legal' ? data.description : undefined}
     crumbs={crumbs}
     lang={lang}
+    image={data.heroImage}
   />
 
   <article class="section-pad">
@@ -140,6 +142,8 @@ const seoTitle =
       </div>
     </div>
   </article>
+
+  {(data.type === 'service' || data.type === 'landing') && <LegalSupport entryId={entry.id} lang={lang} />}
 
   {data.type !== 'legal' && <CtaBanner lang={lang} />}
 </BaseLayout>

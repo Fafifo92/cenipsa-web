@@ -128,7 +128,7 @@ const socials = [
       <!-- Marca -->
       <div>
         <a href={lang === 'es' ? '/' : '/en/'} aria-label="CENIPSA — Inteligencia Investigativa">
-          <Logo variant="light" />
+          <Logo variant="light" full class="h-20 md:h-24" />
         </a>
         <p class="mt-5 max-w-xs text-[0.92rem] leading-relaxed text-ink-300">{t.blurb}</p>
         <p class="mt-4 max-w-xs text-[0.8rem] leading-relaxed text-ink-400">{t.affiliation}</p>
@@ -138,7 +138,7 @@ const socials = [
               href={s.href}
               target="_blank"
               rel="noopener"
-              class="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-ink-200 transition-all duration-300 hover:-translate-y-1 hover:border-brand-400 hover:text-brand-300"
+              class="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white transition-all duration-300 hover:-translate-y-1 hover:border-gold-400 hover:text-gold-300"
               aria-label={s.name}
             >
               <svg class="h-4.5 w-4.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -155,12 +155,12 @@ const socials = [
         <ul class="mt-5 space-y-2.5 text-[0.9rem]">
           {aboutLinks.map((l) => (
             <li>
-              <a href={l.href} class="text-ink-300 transition-colors hover:text-brand-300">{l.label}</a>
+              <a href={l.href} class="text-ink-300 transition-colors hover:text-gold-300">{l.label}</a>
             </li>
           ))}
           {legalLinks.map((l) => (
             <li>
-              <a href={l.href} class="text-ink-300 transition-colors hover:text-brand-300">{l.label}</a>
+              <a href={l.href} class="text-ink-300 transition-colors hover:text-gold-300">{l.label}</a>
             </li>
           ))}
         </ul>
@@ -172,7 +172,7 @@ const socials = [
         <ul class="mt-5 space-y-2.5 text-[0.9rem]">
           {footerServices.map((l) => (
             <li>
-              <a href={l.href} class="text-ink-300 transition-colors hover:text-brand-300">{l.label}</a>
+              <a href={l.href} class="text-ink-300 transition-colors hover:text-gold-300">{l.label}</a>
             </li>
           ))}
         </ul>
@@ -184,7 +184,7 @@ const socials = [
           <ul class="mt-5 columns-1 space-y-2.5 text-[0.9rem]">
             {(resourceLinks ?? FOOTER_SEO_LINKS.slice(0, 8)).map((l) => (
               <li>
-                <a href={l.href} class="text-ink-300 transition-colors hover:text-brand-300">{l.label}</a>
+                <a href={l.href} class="text-ink-300 transition-colors hover:text-gold-300">{l.label}</a>
               </li>
             ))}
           </ul>
@@ -199,7 +199,7 @@ const socials = [
           <ul class="flex flex-wrap gap-x-7 gap-y-2.5 text-[0.85rem]">
             {FOOTER_SEO_LINKS.slice(8).map((l) => (
               <li>
-                <a href={l.href} class="text-ink-400 transition-colors hover:text-brand-300">{l.label}</a>
+                <a href={l.href} class="text-ink-400 transition-colors hover:text-gold-300">{l.label}</a>
               </li>
             ))}
           </ul>
@@ -210,24 +210,24 @@ const socials = [
     <!-- Contacto -->
     <div class="mt-10 grid gap-6 border-t border-white/10 pt-8 text-[0.9rem] sm:grid-cols-2 lg:grid-cols-4">
       <p class="flex items-start gap-3">
-        <svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M12 2a7.5 7.5 0 0 0-7.5 7.5c0 5.25 7.5 12.5 7.5 12.5s7.5-7.25 7.5-12.5A7.5 7.5 0 0 0 12 2Zm0 10a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z" />
         </svg>
         <span>{CONTACT.address.street}, {CONTACT.address.city}, {CONTACT.address.countryName}</span>
       </p>
       <p class="flex flex-col gap-2">
-        <a href={CONTACT.pbxHref} class="transition-colors hover:text-brand-300">PBX {CONTACT.pbx}</a>
-        <a href={CONTACT.whatsappHref} target="_blank" rel="noopener" class="transition-colors hover:text-brand-300">
+        <a href={CONTACT.pbxHref} class="transition-colors hover:text-gold-300">PBX {CONTACT.pbx}</a>
+        <a href={CONTACT.whatsappHref} target="_blank" rel="noopener" class="transition-colors hover:text-gold-300">
           WhatsApp {CONTACT.whatsapp}
         </a>
       </p>
       <p class="flex flex-col gap-2">
-        <a href={`mailto:${CONTACT.emailInfo}`} class="break-all transition-colors hover:text-brand-300">{CONTACT.emailInfo}</a>
-        <a href={`mailto:${CONTACT.emailGerencia}`} class="break-all transition-colors hover:text-brand-300">{CONTACT.emailGerencia}</a>
+        <a href={`mailto:${CONTACT.emailInfo}`} class="break-all transition-colors hover:text-gold-300">{CONTACT.emailInfo}</a>
+        <a href={`mailto:${CONTACT.emailGerencia}`} class="break-all transition-colors hover:text-gold-300">{CONTACT.emailGerencia}</a>
       </p>
       <p class="text-ink-400">
         {lang === 'es' ? 'Pagos seguros en línea con' : 'Secure online payments with'}
-        <a href="/pagos-en-linea/" class="font-semibold text-white transition-colors hover:text-brand-300">PayU</a>
+        <a href="/pagos-en-linea/" class="font-semibold text-white transition-colors hover:text-gold-300">PayU</a>
       </p>
     </div>
 

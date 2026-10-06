@@ -1,7 +1,6 @@
 ---
 /** Hero interior: fondo tinta con motivo de huella, eyebrow, H1 y descripción. */
 import Breadcrumbs, { type Crumb } from './Breadcrumbs.astro';
-import FingerprintMotif from './FingerprintMotif.astro';
 
 export interface Props {
   eyebrow?: string;
@@ -9,16 +8,19 @@ export interface Props {
   description?: string;
   crumbs?: Crumb[];
   lang?: 'es' | 'en';
+  /** Foto de fondo (ruta pública) con velo azul. */
+  image?: string;
 }
-const { eyebrow, title, description, crumbs, lang = 'es' } = Astro.props;
+const { eyebrow, title, description, crumbs, lang = 'es', image } = Astro.props;
 ---
 
 <section class="relative overflow-hidden bg-ink-950 pt-36 pb-16 md:pt-44 md:pb-20">
-  <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+  {image && <img src={image} alt="" width="1600" height="1067" fetchpriority="high" decoding="async" class="absolute inset-0 h-full w-full object-cover" />}
+  {image && <div class="absolute inset-0 bg-gradient-to-r from-ink-950/90 via-ink-950/60 to-ink-950/20" aria-hidden="true"></div>}
+  {!image && (<div class="pointer-events-none absolute inset-0" aria-hidden="true">
     <div class="absolute -top-40 right-[-10%] h-[30rem] w-[30rem] rounded-full bg-brand-500/10 blur-3xl"></div>
     <div class="absolute bottom-[-40%] left-[-5%] h-[26rem] w-[26rem] rounded-full bg-gold-500/8 blur-3xl"></div>
-    <FingerprintMotif class="absolute -right-8 top-1/2 h-[130%] w-auto -translate-y-1/2 text-brand-400/12 md:right-8" />
-  </div>
+  </div>)}
 
   <div class="container-site relative">
     {crumbs && <Breadcrumbs crumbs={crumbs} onDark lang={lang} />}

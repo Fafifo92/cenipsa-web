@@ -8,6 +8,7 @@ related:
   - { label: "Equipo interdisciplinar", href: "/equipo-interdisciplinar/" }
   - { label: "Casos de éxito", href: "/casos-de-exito/" }
 order: 21
+heroImage: "/images/despacho-juridico.jpg"
 ---
 
 - Entendemos la sensibilidad de su caso y por tanto le garantizamos absoluta reserva y cláusula de confidencialidad en la que [CENIPSA SAS](/) se compromete a la no utilización de esa información por ningún motivo. Cada uno de nuestros casos se les entregará el material resultante de la investigación y por ningún motivo habrá divulgación alguna o copias.

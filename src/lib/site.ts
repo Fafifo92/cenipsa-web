@@ -5,9 +5,9 @@ export const SITE = {
   name: 'Inteligencia Investigativa',
   legalName: 'CENIPSA S.A.S.',
   brand: 'CENIPSA — Investigadores y Abogados',
-  tagline: 'Encontramos la verdad de los hechos investigados',
+  tagline: 'Investigamos la verdad. Defendemos sus derechos.',
   description:
-    'CENIPSA S.A.S. es una compañía con amplia trayectoria en investigación privada y derecho en Colombia: detectives privados, abogados, poligrafía, criminalística y rastreo satelital GPS en Bogotá.',
+    'CENIPSA S.A.S. es una compañía con amplia trayectoria en investigación privada y derecho en Colombia: abogados y detectives privados que acompañan cada caso desde la investigación hasta la actuación jurídica, con poligrafía, criminalística y rastreo satelital GPS en Bogotá.',
   locale: 'es_CO',
   lang: 'es',
 } as const;
@@ -26,6 +26,11 @@ export const CONTACT = {
   whatsappIntl: '+573174232502',
   whatsappHref:
     'https://api.whatsapp.com/send?phone=573174232502&text=Hola%2C%20quiero%20una%20asesor%C3%ADa%20con%20CENIPSA',
+  /** WhatsApp con mensaje prellenado para consultas jurídicas (acompañamiento legal). */
+  whatsappLegalHref:
+    'https://api.whatsapp.com/send?phone=573174232502&text=Hola%2C%20quiero%20acompa%C3%B1amiento%20jur%C3%ADdico%20para%20mi%20caso%20con%20CENIPSA',
+  whatsappLegalHrefEn:
+    'https://api.whatsapp.com/send?phone=573174232502&text=Hello%2C%20I%20need%20legal%20support%20for%20my%20case%20with%20CENIPSA',
   emailInfo: 'info@inteligenciainvestigativa.com',
   emailGerencia: 'gerencia@inteligenciainvestigativa.com',
   /** Coordenadas aproximadas de la sede (Torre del Reloj, Bogotá) */
@@ -111,9 +116,9 @@ export const NAV_ES: NavLink[] = [
     label: 'Servicios',
     href: '/servicios/',
     children: [
+      { label: 'Asesoría y representación jurídica', href: '/asesoria-juridica/' },
       { label: 'Investigación personal', href: '/investigacion-personal/' },
       { label: 'Investigación corporativa', href: '/investigacion-corporativa/' },
-      { label: 'Asesoría y representación jurídica', href: '/asesoria-juridica/' },
       { label: 'Criminalística', href: '/criminalistica/' },
       { label: 'GPS rastreo satelital', href: '/plataforma-gps/' },
       { label: 'Poligrafía', href: '/examen-de-poligrafia/' },
@@ -145,9 +150,9 @@ export const NAV_EN: NavLink[] = [
     label: 'Services',
     href: '/en/services/',
     children: [
+      { label: 'Legal advice & representation', href: '/en/legal-advice/' },
       { label: 'Personal investigation', href: '/en/personal-investigation/' },
       { label: 'Corporate investigation', href: '/en/corporate-investigation/' },
-      { label: 'Legal advice & representation', href: '/en/legal-advice/' },
       { label: 'Criminalistics', href: '/en/criminalistics/' },
       { label: 'GPS satellite tracking', href: '/en/gps-tracking/' },
       { label: 'Polygraph testing', href: '/en/polygraph/' },
@@ -211,9 +216,9 @@ export const FOOTER_SEO_LINKS: NavLink[] = [
 ];
 
 export const FOOTER_SERVICES: NavLink[] = [
+  { label: 'Asesoría y representación jurídica', href: '/asesoria-juridica/' },
   { label: 'Investigación personal', href: '/investigacion-personal/' },
   { label: 'Investigación corporativa', href: '/investigacion-corporativa/' },
-  { label: 'Asesoría y representación jurídica', href: '/asesoria-juridica/' },
   { label: 'Criminalística', href: '/criminalistica/' },
   { label: 'GPS rastreo satelital', href: '/plataforma-gps/' },
   { label: 'Servicios en línea', href: '/servicios-en-linea/' },

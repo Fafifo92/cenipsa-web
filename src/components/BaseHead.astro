@@ -4,8 +4,8 @@
  */
 import { SITE } from '@/lib/site';
 import { organizationSchema, websiteSchema, metaDescription } from '@/lib/seo';
-import '@fontsource-variable/noto-sans';
-import '@fontsource-variable/fraunces';
+import '@fontsource-variable/inter';
+import '@fontsource-variable/lora';
 import '@/styles/global.css';
 
 export interface Props {
@@ -72,7 +72,7 @@ const allSchemas = [organizationSchema(), websiteSchema(), ...schemas];
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
-<meta name="theme-color" content="#0a141e" />
+<meta name="theme-color" content="#0b2538" />
 <link rel="sitemap" href="/sitemap-index.xml" />
 <meta name="generator" content={Astro.generator} />
 

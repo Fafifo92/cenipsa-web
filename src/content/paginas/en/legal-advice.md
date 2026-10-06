@@ -28,3 +28,15 @@ Our investigative capabilities give attorneys and collection agencies the eviden
 - Executive analysis of financial information, real estate and vehicles
 
 If you need legal counsel backed by professional investigators in Colombia, [contact us](/en/contact/) or learn more about our [corporate investigation services](/en/corporate-investigation/).
+
+## Legal support across all our services
+
+Our lawyers work alongside the investigators from day one, so evidence is obtained lawfully and holds up in proceedings. Typical situations where you can count on us:
+
+- **Family:** divorce, custody, child support and hidden assets, following a [personal investigation](/en/personal-investigation/).
+- **Criminal:** representation of victims and defense, supported by [criminalistics](/en/criminalistics/) and the [electronic sweep](/en/electronic-sweep/) in cybercrime cases.
+- **Labor:** disciplinary proceedings and decisions based on [polygraph testing](/en/polygraph/) or a [corporate investigation](/en/corporate-investigation/).
+- **Commercial & corporate:** internal fraud, breaches of contract and partner disputes.
+- **Vehicles & tracking:** complaints and claims backed by our [GPS platform](/en/gps-tracking/).
+
+If your case does not fit neatly into one of these areas, [tell us about it](/en/contact/) and we will point you to the right legal route.

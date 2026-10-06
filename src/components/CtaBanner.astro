@@ -1,7 +1,6 @@
 ---
 /** Banner de conversión: asesoría por WhatsApp / contacto. */
 import { CONTACT } from '@/lib/site';
-import FingerprintMotif from './FingerprintMotif.astro';
 
 export interface Props {
   lang?: 'es' | 'en';
@@ -14,8 +13,8 @@ const title =
 const text =
   Astro.props.text ??
   (lang === 'es'
-    ? 'Recibe una asesoría inicial con nuestros investigadores y abogados. Diagnóstico especializado, discreción absoluta y estrategias a la medida de tu situación.'
-    : 'Get an initial consultation with our investigators and lawyers. Specialized assessment, absolute discretion and strategies tailored to your situation.');
+    ? 'Recibe una asesoría inicial con nuestros investigadores y abogados. Diagnóstico especializado, acompañamiento jurídico, discreción absoluta y estrategias a la medida de tu situación.'
+    : 'Get an initial consultation with our investigators and lawyers. Specialized assessment, legal support, absolute discretion and strategies tailored to your situation.');
 const ctaWhats = lang === 'es' ? 'Asesoría por WhatsApp' : 'WhatsApp consultation';
 const ctaContact = lang === 'es' ? 'Formulario de contacto' : 'Contact form';
 const contactHref = lang === 'es' ? '/contacto/' : '/en/contact/';
@@ -24,11 +23,8 @@ const contactHref = lang === 'es' ? '/contacto/' : '/en/contact/';
 <section class="section-pad">
   <div class="container-site">
     <div class="relative overflow-hidden rounded-3xl bg-ink-950 px-7 py-14 md:px-16 md:py-16" data-reveal="zoom">
-      <div class="pointer-events-none absolute inset-0" aria-hidden="true">
-        <div class="absolute -left-20 -top-20 h-72 w-72 rounded-full bg-brand-500/15 blur-3xl"></div>
-        <div class="absolute -bottom-24 right-10 h-72 w-72 rounded-full bg-gold-500/10 blur-3xl"></div>
-        <FingerprintMotif class="absolute -right-6 -top-10 h-[150%] w-auto text-brand-400/15" />
-      </div>
+      <img src="/images/bogota-edificios.jpg" alt="" width="1920" height="1332" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-r from-ink-950/90 via-ink-950/65 to-ink-950/15" aria-hidden="true"></div>
       <div class="relative max-w-2xl">
         <h2 class="font-display text-3xl font-semibold leading-tight text-white md:text-4xl">{title}</h2>
         <p class="mt-4 text-[1.02rem] leading-relaxed text-ink-200">{text}</p>

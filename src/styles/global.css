@@ -2,55 +2,55 @@
 
 /* ============================================================
    CENIPSA — Design tokens (Tailwind v4, CSS-first)
-   Paleta: tinta profunda + teal refinado + oro discreto.
+   Paleta institucional: azul jurídico, verde petróleo, dorado sobrio, marfil y blanco.
    ============================================================ */
 @theme {
-  /* Marca — tinta (azul noche profundo) */
-  --color-ink-50: #f4f7fa;
-  --color-ink-100: #e6edf3;
-  --color-ink-200: #c9d8e4;
-  --color-ink-300: #9db7cb;
-  --color-ink-400: #6a90ac;
-  --color-ink-500: #487292;
-  --color-ink-600: #365b79;
-  --color-ink-700: #2d4a62;
-  --color-ink-800: #294053;
-  --color-ink-900: #101f2d;
-  --color-ink-950: #0a141e;
+  /* Neutros / texto — ink-950 es el azul jurídico (#0B2538); ink-900 el gris carbón (#252A2E) */
+  --color-ink-50: #f6f7f7;
+  --color-ink-100: #eceeef;
+  --color-ink-200: #d9dde0;
+  --color-ink-300: #bcc3c8;
+  --color-ink-400: #9aa3aa;
+  --color-ink-500: #78828a;
+  --color-ink-600: #5b646b;
+  --color-ink-700: #444c52;
+  --color-ink-800: #31383d;
+  --color-ink-900: #252a2e;
+  --color-ink-950: #0b2538;
 
-  /* Marca — teal (evolución sofisticada del cian corporativo) */
-  --color-brand-50: #effafb;
-  --color-brand-100: #d7f1f4;
-  --color-brand-200: #b4e3ea;
-  --color-brand-300: #80cedb;
-  --color-brand-400: #45afc4;
-  --color-brand-500: #2993aa;
-  --color-brand-600: #24778f;
-  --color-brand-700: #236075;
-  --color-brand-800: #245061;
-  --color-brand-900: #224353;
-  --color-brand-950: #112b38;
+  /* Secundario — verde petróleo (#285851 = brand-700) */
+  --color-brand-50: #eef7f5;
+  --color-brand-100: #dcede9;
+  --color-brand-200: #b9dad3;
+  --color-brand-300: #8cc2b7;
+  --color-brand-400: #5fa498;
+  --color-brand-500: #3f8478;
+  --color-brand-600: #2f6b62;
+  --color-brand-700: #285851;
+  --color-brand-800: #1e4540;
+  --color-brand-900: #17352f;
+  --color-brand-950: #0f2420;
 
-  /* Acento — oro viejo */
-  --color-gold-50: #faf8ec;
-  --color-gold-100: #f3eecd;
-  --color-gold-200: #e9dc9d;
-  --color-gold-300: #dcc465;
-  --color-gold-400: #d1ad3c;
-  --color-gold-500: #c19a2e;
-  --color-gold-600: #a67a25;
-  --color-gold-700: #855a21;
-  --color-gold-800: #6f4a22;
-  --color-gold-900: #5f3e22;
-  --color-gold-950: #372011;
+  /* Acento — dorado sobrio (#C9A536 = gold-400) */
+  --color-gold-50: #faf6e6;
+  --color-gold-100: #f4ecc6;
+  --color-gold-200: #e8d799;
+  --color-gold-300: #d9bf62;
+  --color-gold-400: #c9a536;
+  --color-gold-500: #b8932b;
+  --color-gold-600: #967523;
+  --color-gold-700: #735a1d;
+  --color-gold-800: #5a461a;
+  --color-gold-900: #473618;
+  --color-gold-950: #2a200d;
 
-  /* Superficies cálidas */
-  --color-paper: #fbfaf7;
-  --color-mist: #eef2f5;
+  /* Superficies — marfil (#F7F5EF) y su variante más profunda para alternar secciones */
+  --color-paper: #f7f5ef;
+  --color-mist: #efece2;
 
-  /* Tipografía */
-  --font-display: 'Fraunces Variable', ui-serif, Georgia, serif;
-  --font-sans: 'Noto Sans Variable', ui-sans-serif, system-ui, sans-serif;
+  /* Tipografía — títulos serif (Lora), texto y menú sans (Inter) */
+  --font-display: 'Lora Variable', ui-serif, Georgia, serif;
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
 
   /* Radios sobrios (sobreescriben la escala por defecto de Tailwind):
      esquinas discretas, look editorial — nada de píldoras ni tarjetas globo. */
@@ -62,9 +62,9 @@
   --radius-3xl: 0.5rem; /* 8px */
 
   /* Sombras suaves y profundas */
-  --shadow-soft: 0 1px 2px rgb(10 20 30 / 0.04), 0 8px 24px -8px rgb(10 20 30 / 0.1);
-  --shadow-lift: 0 2px 4px rgb(10 20 30 / 0.06), 0 20px 44px -12px rgb(10 20 30 / 0.18);
-  --shadow-glow: 0 0 0 1px rgb(41 147 170 / 0.15), 0 12px 40px -8px rgb(41 147 170 / 0.35);
+  --shadow-soft: 0 1px 2px rgb(11 37 56 / 0.04), 0 8px 24px -8px rgb(11 37 56 / 0.1);
+  --shadow-lift: 0 2px 4px rgb(11 37 56 / 0.06), 0 20px 44px -12px rgb(11 37 56 / 0.18);
+  --shadow-glow: 0 0 0 1px rgb(40 88 81 / 0.15), 0 12px 40px -8px rgb(40 88 81 / 0.35);
 
   /* Curvas de animación */
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -84,9 +84,9 @@
     50% { transform: translateY(-10px); }
   }
   @keyframes pulse-ring {
-    0% { box-shadow: 0 0 0 0 rgb(37 211 102 / 0.45); }
-    70% { box-shadow: 0 0 0 14px rgb(37 211 102 / 0); }
-    100% { box-shadow: 0 0 0 0 rgb(37 211 102 / 0); }
+    0% { box-shadow: 0 0 0 0 rgb(201 165 54 / 0.45); }
+    70% { box-shadow: 0 0 0 14px rgb(201 165 54 / 0); }
+    100% { box-shadow: 0 0 0 0 rgb(201 165 54 / 0); }
   }
 }
 
@@ -105,7 +105,7 @@
   }
 
   ::selection {
-    @apply bg-brand-600 text-white;
+    @apply bg-gold-400 text-ink-950;
   }
 
   :focus-visible {
@@ -114,7 +114,6 @@
 
   h1, h2, h3, h4 {
     @apply font-display;
-    font-variation-settings: 'SOFT' 40, 'WONK' 0;
     text-wrap: balance;
   }
 
@@ -147,18 +146,18 @@
 
 /* Etiqueta pequeña sobre títulos de sección */
 @utility eyebrow {
-  @apply inline-flex items-center gap-2.5 text-[0.8rem] font-semibold uppercase tracking-[0.18em] text-brand-600;
+  @apply inline-flex items-center gap-2.5 text-[0.8rem] font-semibold uppercase tracking-[0.18em] text-brand-700;
 }
 
 /* Vidrio esmerilado (header) */
 @utility glass {
-  background: rgb(251 250 247 / 0.82);
+  background: rgb(247 245 239 / 0.82);
   backdrop-filter: blur(14px) saturate(1.4);
   -webkit-backdrop-filter: blur(14px) saturate(1.4);
 }
 
 @utility glass-dark {
-  background: rgb(10 20 30 / 0.72);
+  background: rgb(11 37 56 / 0.92);
   backdrop-filter: blur(14px) saturate(1.4);
   -webkit-backdrop-filter: blur(14px) saturate(1.4);
 }
@@ -219,7 +218,7 @@ html.js [data-reveal].is-visible {
    Prosa — artículos del blog y páginas de contenido
    ============================================================ */
 .prose-site {
-  @apply text-[1.06rem] leading-[1.85] text-ink-800;
+  @apply text-left text-[1.06rem] leading-[1.85] text-ink-900;
 
   h2 {
     @apply mt-12 mb-5 text-2xl font-semibold text-ink-950 md:text-[1.7rem];
@@ -228,7 +227,7 @@ html.js [data-reveal].is-visible {
     @apply mt-9 mb-4 text-xl font-semibold text-ink-950;
   }
   p {
-    @apply mb-5;
+    @apply mb-5 max-w-[72ch] text-left;
   }
   a {
     @apply font-medium text-brand-700 underline decoration-brand-300 decoration-2 underline-offset-4 transition-colors hover:text-brand-600 hover:decoration-brand-500;
@@ -279,18 +278,33 @@ html.js [data-reveal].is-visible {
   }
 }
 
+/* Fichas compactas de enlaces (p. ej. «Productos y servicios» en Casos de éxito) */
+.prose-site .service-chips {
+  @apply my-6 grid gap-3 sm:grid-cols-2;
+  a {
+    @apply flex items-center justify-between gap-3 rounded-xl border border-ink-100 bg-white px-5 py-3.5 text-[0.95rem] font-semibold text-ink-950 no-underline shadow-soft transition-all duration-300 hover:border-gold-400 hover:text-brand-700;
+    &::after {
+      content: '→';
+      @apply text-gold-500 transition-transform duration-300;
+    }
+    &:hover::after {
+      @apply translate-x-1;
+    }
+  }
+}
+
 /* Botones */
 @utility btn {
   @apply inline-flex items-center justify-center gap-2.5 rounded-lg px-7 py-3.5 text-[0.95rem] font-semibold tracking-wide transition-all duration-300;
 }
 .btn-primary {
-  @apply btn bg-brand-600 text-white shadow-soft hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-lift active:translate-y-0;
+  @apply btn bg-gold-400 text-ink-950 shadow-soft hover:-translate-y-0.5 hover:bg-gold-300 hover:shadow-lift active:translate-y-0;
 }
 .btn-gold {
   @apply btn bg-gold-400 text-ink-950 shadow-soft hover:-translate-y-0.5 hover:bg-gold-300 hover:shadow-lift active:translate-y-0;
 }
 .btn-outline {
-  @apply btn border border-ink-200 bg-transparent text-ink-900 hover:border-brand-500 hover:text-brand-700;
+  @apply btn border border-ink-950/25 bg-transparent text-ink-950 hover:border-ink-950 hover:bg-ink-950 hover:text-white;
 }
 .btn-outline-light {
   @apply btn border border-white/30 bg-white/5 text-white backdrop-blur-sm hover:border-white/70 hover:bg-white/10;

@@ -38,6 +38,8 @@ const paginas = defineCollection({
     order: z.number().default(99),
     /** Icono para tarjetas de servicio (nombre del set interno). */
     icon: z.string().optional(),
+    /** Foto de fondo del hero (ruta pública). */
+    heroImage: z.string().optional(),
   }),
 });
 
