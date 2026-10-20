@@ -4,6 +4,1942 @@
   "trailingSlash": true,
   "redirects": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/asesoria-juridica/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/abogados-en-bogota/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/abogados-bogota/",
+      "permanent": true
+    },
+    {
+      "source": "/abogados-en-bogota",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/abogados-bogota/",
+      "permanent": true
+    },
+    {
+      "source": "/firma-de-abogados-en-colombia/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/abogados-bogota/",
+      "permanent": true
+    },
+    {
+      "source": "/firma-de-abogados-en-colombia",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/abogados-bogota/",
+      "permanent": true
+    },
+    {
+      "source": "/firmas-de-abogados-en-bogota/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/abogados-bogota/",
+      "permanent": true
+    },
+    {
+      "source": "/firmas-de-abogados-en-bogota",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/abogados-bogota/",
+      "permanent": true
+    },
+    {
+      "source": "/areas-de-practica/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/asesoria-juridica/",
+      "permanent": true
+    },
+    {
+      "source": "/areas-de-practica",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/asesoria-juridica/",
+      "permanent": true
+    },
+    {
+      "source": "/beneficios/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/garantias/",
+      "permanent": true
+    },
+    {
+      "source": "/beneficios",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/garantias/",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/contacto/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/contacto",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/la-firma/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/nosotros/",
+      "permanent": true
+    },
+    {
+      "source": "/la-firma",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/nosotros/",
+      "permanent": true
+    },
+    {
+      "source": "/nosotros/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/nosotros/",
+      "permanent": true
+    },
+    {
+      "source": "/nosotros",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/nosotros/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/faq/",
+      "permanent": true
+    },
+    {
+      "source": "/faq",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/faq/",
+      "permanent": true
+    },
+    {
+      "source": "/pagos-en-linea/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/pagos-en-linea/",
+      "permanent": true
+    },
+    {
+      "source": "/pagos-en-linea",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/pagos-en-linea/",
+      "permanent": true
+    },
+    {
+      "source": "/servicios-en-linea/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/servicios-en-linea/",
+      "permanent": true
+    },
+    {
+      "source": "/servicios-en-linea",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/servicios-en-linea/",
+      "permanent": true
+    },
+    {
+      "source": "/servicios-abogados/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/servicios-especiales/",
+      "permanent": true
+    },
+    {
+      "source": "/servicios-abogados",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/servicios-especiales/",
+      "permanent": true
+    },
+    {
+      "source": "/servicios-investigativos/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/servicios/",
+      "permanent": true
+    },
+    {
+      "source": "/servicios-investigativos",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/servicios/",
+      "permanent": true
+    },
+    {
+      "source": "/terminos-y-condiciones/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/terminos-y-condiciones/",
+      "permanent": true
+    },
+    {
+      "source": "/terminos-y-condiciones",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/terminos-y-condiciones/",
+      "permanent": true
+    },
+    {
+      "source": "/confidencialidad-y-privacidad/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/politica-de-tratamiento-de-datos-y-privacidad/",
+      "permanent": true
+    },
+    {
+      "source": "/confidencialidad-y-privacidad",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/politica-de-tratamiento-de-datos-y-privacidad/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-penal/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-penal/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-penal",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-penal/",
+      "permanent": true
+    },
+    {
+      "source": "/abogado-penal-bogota/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-penal/",
+      "permanent": true
+    },
+    {
+      "source": "/abogado-penal-bogota",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-penal/",
+      "permanent": true
+    },
+    {
+      "source": "/abogados-penalistas-bogota/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-penal/",
+      "permanent": true
+    },
+    {
+      "source": "/abogados-penalistas-bogota",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-penal/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-de-familia/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-de-familia/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-de-familia",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-de-familia/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-familiar/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-de-familia/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-familiar",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-de-familia/",
+      "permanent": true
+    },
+    {
+      "source": "/abogado-de-familia-bogota/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-de-familia/",
+      "permanent": true
+    },
+    {
+      "source": "/abogado-de-familia-bogota",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-de-familia/",
+      "permanent": true
+    },
+    {
+      "source": "/abogados-divorcio-bogota/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-de-familia/",
+      "permanent": true
+    },
+    {
+      "source": "/abogados-divorcio-bogota",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-de-familia/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-civil/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-civil/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-civil",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-civil/",
+      "permanent": true
+    },
+    {
+      "source": "/abogados-civiles-bogota/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-civil/",
+      "permanent": true
+    },
+    {
+      "source": "/abogados-civiles-bogota",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-civil/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-laboral/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-laboral/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-laboral",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-laboral/",
+      "permanent": true
+    },
+    {
+      "source": "/abogado-laboral-bogota/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-laboral/",
+      "permanent": true
+    },
+    {
+      "source": "/abogado-laboral-bogota",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-laboral/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-comercial/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-comercial/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-comercial",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-comercial/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-administrativo/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-administrativo/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-administrativo",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-administrativo/",
+      "permanent": true
+    },
+    {
+      "source": "/derechoadministrativo/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-administrativo/",
+      "permanent": true
+    },
+    {
+      "source": "/derechoadministrativo",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-administrativo/",
+      "permanent": true
+    },
+    {
+      "source": "/abogado-administrativo-bogota/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-administrativo/",
+      "permanent": true
+    },
+    {
+      "source": "/abogado-administrativo-bogota",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-administrativo/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-constitucional/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-constitucional/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-constitucional",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-constitucional/",
+      "permanent": true
+    },
+    {
+      "source": "/derechoconstitucional/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-constitucional/",
+      "permanent": true
+    },
+    {
+      "source": "/derechoconstitucional",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-constitucional/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-de-propiedad-intelectual/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-de-propiedad-intelectual/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-de-propiedad-intelectual",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-de-propiedad-intelectual/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-de-autor/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-de-propiedad-intelectual/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-de-autor",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-de-propiedad-intelectual/",
+      "permanent": true
+    },
+    {
+      "source": "/customer-area/:path*/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/pagos-en-linea/",
+      "permanent": true
+    },
+    {
+      "source": "/customer-area/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/pagos-en-linea/",
+      "permanent": true
+    },
+    {
+      "source": "/login/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/login",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/login-2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/login-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/registrarse/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/registrarse",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/profile/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/profile",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/forgot-password/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/forgot-password",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/:year/:month/:day/:slug/",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/blog/:slug/",
+      "permanent": true
+    },
+    {
+      "source": "/:year/:month/:day/:slug",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/blog/:slug/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/asesoria-juridica/",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/asesoria-juridica/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/abogados-en-bogota/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/abogados-bogota/",
+      "permanent": true
+    },
+    {
+      "source": "/abogados-en-bogota",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/abogados-bogota/",
+      "permanent": true
+    },
+    {
+      "source": "/firma-de-abogados-en-colombia/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/abogados-bogota/",
+      "permanent": true
+    },
+    {
+      "source": "/firma-de-abogados-en-colombia",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/abogados-bogota/",
+      "permanent": true
+    },
+    {
+      "source": "/firmas-de-abogados-en-bogota/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/abogados-bogota/",
+      "permanent": true
+    },
+    {
+      "source": "/firmas-de-abogados-en-bogota",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/abogados-bogota/",
+      "permanent": true
+    },
+    {
+      "source": "/areas-de-practica/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/asesoria-juridica/",
+      "permanent": true
+    },
+    {
+      "source": "/areas-de-practica",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/asesoria-juridica/",
+      "permanent": true
+    },
+    {
+      "source": "/beneficios/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/garantias/",
+      "permanent": true
+    },
+    {
+      "source": "/beneficios",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/garantias/",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/contacto/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/contacto",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/la-firma/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/nosotros/",
+      "permanent": true
+    },
+    {
+      "source": "/la-firma",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/nosotros/",
+      "permanent": true
+    },
+    {
+      "source": "/nosotros/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/nosotros/",
+      "permanent": true
+    },
+    {
+      "source": "/nosotros",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/nosotros/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/faq/",
+      "permanent": true
+    },
+    {
+      "source": "/faq",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/faq/",
+      "permanent": true
+    },
+    {
+      "source": "/pagos-en-linea/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/pagos-en-linea/",
+      "permanent": true
+    },
+    {
+      "source": "/pagos-en-linea",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/pagos-en-linea/",
+      "permanent": true
+    },
+    {
+      "source": "/servicios-en-linea/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/servicios-en-linea/",
+      "permanent": true
+    },
+    {
+      "source": "/servicios-en-linea",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/servicios-en-linea/",
+      "permanent": true
+    },
+    {
+      "source": "/servicios-abogados/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/servicios-especiales/",
+      "permanent": true
+    },
+    {
+      "source": "/servicios-abogados",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/servicios-especiales/",
+      "permanent": true
+    },
+    {
+      "source": "/servicios-investigativos/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/servicios/",
+      "permanent": true
+    },
+    {
+      "source": "/servicios-investigativos",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/servicios/",
+      "permanent": true
+    },
+    {
+      "source": "/terminos-y-condiciones/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/terminos-y-condiciones/",
+      "permanent": true
+    },
+    {
+      "source": "/terminos-y-condiciones",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/terminos-y-condiciones/",
+      "permanent": true
+    },
+    {
+      "source": "/confidencialidad-y-privacidad/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/politica-de-tratamiento-de-datos-y-privacidad/",
+      "permanent": true
+    },
+    {
+      "source": "/confidencialidad-y-privacidad",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/politica-de-tratamiento-de-datos-y-privacidad/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-penal/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-penal/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-penal",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-penal/",
+      "permanent": true
+    },
+    {
+      "source": "/abogado-penal-bogota/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-penal/",
+      "permanent": true
+    },
+    {
+      "source": "/abogado-penal-bogota",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-penal/",
+      "permanent": true
+    },
+    {
+      "source": "/abogados-penalistas-bogota/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-penal/",
+      "permanent": true
+    },
+    {
+      "source": "/abogados-penalistas-bogota",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-penal/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-de-familia/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-de-familia/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-de-familia",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-de-familia/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-familiar/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-de-familia/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-familiar",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-de-familia/",
+      "permanent": true
+    },
+    {
+      "source": "/abogado-de-familia-bogota/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-de-familia/",
+      "permanent": true
+    },
+    {
+      "source": "/abogado-de-familia-bogota",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-de-familia/",
+      "permanent": true
+    },
+    {
+      "source": "/abogados-divorcio-bogota/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-de-familia/",
+      "permanent": true
+    },
+    {
+      "source": "/abogados-divorcio-bogota",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-de-familia/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-civil/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-civil/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-civil",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-civil/",
+      "permanent": true
+    },
+    {
+      "source": "/abogados-civiles-bogota/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-civil/",
+      "permanent": true
+    },
+    {
+      "source": "/abogados-civiles-bogota",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-civil/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-laboral/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-laboral/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-laboral",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-laboral/",
+      "permanent": true
+    },
+    {
+      "source": "/abogado-laboral-bogota/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-laboral/",
+      "permanent": true
+    },
+    {
+      "source": "/abogado-laboral-bogota",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-laboral/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-comercial/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-comercial/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-comercial",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-comercial/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-administrativo/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-administrativo/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-administrativo",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-administrativo/",
+      "permanent": true
+    },
+    {
+      "source": "/derechoadministrativo/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-administrativo/",
+      "permanent": true
+    },
+    {
+      "source": "/derechoadministrativo",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-administrativo/",
+      "permanent": true
+    },
+    {
+      "source": "/abogado-administrativo-bogota/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-administrativo/",
+      "permanent": true
+    },
+    {
+      "source": "/abogado-administrativo-bogota",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-administrativo/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-constitucional/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-constitucional/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-constitucional",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-constitucional/",
+      "permanent": true
+    },
+    {
+      "source": "/derechoconstitucional/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-constitucional/",
+      "permanent": true
+    },
+    {
+      "source": "/derechoconstitucional",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-constitucional/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-de-propiedad-intelectual/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-de-propiedad-intelectual/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-de-propiedad-intelectual",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-de-propiedad-intelectual/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-de-autor/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-de-propiedad-intelectual/",
+      "permanent": true
+    },
+    {
+      "source": "/derecho-de-autor",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/derecho-de-propiedad-intelectual/",
+      "permanent": true
+    },
+    {
+      "source": "/customer-area/:path*/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/pagos-en-linea/",
+      "permanent": true
+    },
+    {
+      "source": "/customer-area/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/pagos-en-linea/",
+      "permanent": true
+    },
+    {
+      "source": "/login/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/login",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/login-2/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/login-2",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/registrarse/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/registrarse",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/profile/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/profile",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/forgot-password/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/forgot-password",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/:year/:month/:day/:slug/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/blog/:slug/",
+      "permanent": true
+    },
+    {
+      "source": "/:year/:month/:day/:slug",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/blog/:slug/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.abogadosbogotaespecializados.com"
+        }
+      ],
+      "destination": "https://www.inteligenciainvestigativa.com/asesoria-juridica/",
+      "permanent": true
+    },
+    {
       "source": "/mision/",
       "destination": "/nosotros/",
       "permanent": true

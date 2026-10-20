@@ -1,6 +1,7 @@
 ---
-title: "Ubicación de personas para notificación judicial"
-seoTitle: "Ubicación de personas para notificación judicial - Inteligencia Investigativa"
+title: "Búsqueda y localización de personas para notificación judicial"
+seoTitle: "Ubicación de personas para notificación judicial | CENIPSA"
+eyebrow: "Investigar"
 description: "A partir del nombre, número de identificación o número telefónico del investigado, realizamos labores de inteligencia para lograr su ubicación residencial y"
 type: service
 related:

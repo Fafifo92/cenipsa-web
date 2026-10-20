@@ -1,309 +1,229 @@
 ---
-/** Home — Inteligencia Investigativa CENIPSA. */
+/**
+ * Home — CENIPSA, firma de inteligencia forense e investigación jurídica.
+ * Orden (recomendaciones de la firma): propuesta de valor con bifurcación
+ * B2B/B2C → segmentos → diferenciador investigación + derecho → tres pilares →
+ * proceso → áreas del derecho → equipo → sellos de confianza → contenido
+ * experto → preguntas frecuentes → contacto confidencial.
+ */
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Icon from '@/components/Icon.astro';
 import PostCard from '@/components/PostCard.astro';
 import CtaBanner from '@/components/CtaBanner.astro';
-import { CONTACT } from '@/lib/site';
+import TrustSeals from '@/components/TrustSeals.astro';
+import HeroImage from '@/components/HeroImage.astro';
+import { SITE } from '@/lib/site';
+import { PILLARS_ES, SEGMENTS_ES, PROCESS_ES, LEGAL_AREAS_ES } from '@/lib/pillars';
 
 const posts = (await getCollection('blog'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 3);
 
-const services = [
-  {
-    icon: 'user-search',
-    title: 'Investigación personal',
-    text: 'Solucione sus problemas personales mediante herramientas investigativas y tecnológicas.',
-    href: '/investigacion-personal/',
-  },
-  {
-    icon: 'building',
-    title: 'Investigación corporativa',
-    text: '¿Su empresa ha sufrido de corrupción, dádivas, sobornos y fuga de información?',
-    href: '/investigacion-corporativa/',
-  },
-  {
-    icon: 'scale',
-    title: 'Asesoría y representación jurídica',
-    text: 'Resuelva sus derechos lesionados con nuestro equipo de abogados especializados.',
-    href: '/asesoria-juridica/',
-  },
-  {
-    icon: 'microscope',
-    title: 'Criminalística',
-    text: 'Servicios de investigación judicial con rigor científico y cadena de custodia.',
-    href: '/criminalistica/',
-  },
-  {
-    icon: 'satellite',
-    title: 'GPS rastreo satelital',
-    text: 'Conozca la plataforma satelital GPS y proteja sus vehículos de robos.',
-    href: '/plataforma-gps/',
-  },
-  {
-    icon: 'pulse',
-    title: 'Poligrafía',
-    text: 'Exámenes de polígrafo empresariales e investigativos con expertos certificados.',
-    href: '/examen-de-poligrafia/',
-  },
-];
+const HOME_FAQ_IDS = ['faq-6', 'faq-15', 'faq-12', 'faq-16'];
+const faqs = (await getCollection('faq'))
+  .filter((f) => HOME_FAQ_IDS.includes(f.data.id))
+  .sort((a, b) => HOME_FAQ_IDS.indexOf(a.data.id) - HOME_FAQ_IDS.indexOf(b.data.id));
 
-const legalSteps = [
-  { n: '01', title: 'Investigamos', text: 'Reunimos los hechos y la evidencia con métodos lícitos y cadena de custodia.' },
-  { n: '02', title: 'Valoramos jurídicamente', text: 'Nuestros abogados analizan qué se puede probar, qué vía procede y qué riesgos existen.' },
-  { n: '03', title: 'Actuamos y representamos', text: 'Denuncia, demanda, defensa o negociación: lo acompañamos hasta resolver el caso.' },
-];
+const segmentIcons: Record<string, string> = { empresas: 'building', personas: 'users', abogados: 'briefcase' };
 
-const legalAreas = [
-  { area: 'Derecho de familia', text: 'Divorcio, custodia, alimentos, unión marital y bienes ocultos.', via: 'Investigación personal', href: '/investigacion-personal/' },
-  { area: 'Derecho penal', text: 'Defensa y representación de víctimas: fraude, delitos informáticos, extorsión.', via: 'Criminalística', href: '/criminalistica/' },
-  { area: 'Derecho laboral', text: 'Procesos disciplinarios, despidos y pruebas de poligrafía con respaldo legal.', via: 'Polígrafo laboral', href: '/poligrafo-laboral/' },
-  { area: 'Derecho comercial y societario', text: 'Fraude interno, incumplimientos, disputas entre socios y protección de activos.', via: 'Investigación corporativa', href: '/investigacion-corporativa/' },
-  { area: 'Sucesiones', text: 'Herencias, herederos que no aparecen y patrimonio por localizar.', via: 'Abogados sucesiones Bogotá', href: '/abogados-sucesiones-bogota/' },
-  { area: 'Cobro y medidas cautelares', text: 'Ubicación de deudores, investigación patrimonial y notificación judicial.', via: 'Servicios para abogados', href: '/servicios-especiales/' },
-];
-
-const specialties = [
-  { label: 'Poligrafía empresarial e investigativa', href: '/examen-de-poligrafia/' },
-  { label: 'Investigación familiar patrimonial', href: '/investigacion-personal/' },
-  { label: 'Ubicación de personas o familias', href: '/ubicacion-de-personas-para-notificacion-judicial/' },
-  { label: 'Investigación para nacionalidad extranjera', href: '/investigacion-personal/' },
-  { label: 'Investigación antes de contraer compromiso familiar', href: '/investigacion-personal/' },
-  { label: 'Rastreador satelital GPS con micrófono', href: '/plataforma-gps/' },
-  { label: 'Investigación de homicidio y violencia intrafamiliar', href: '/criminalistica/' },
-  { label: 'Auditoría forense financiera', href: '/analisis-ejecutivo-de-informacion-financiera-bienes-raices-y-vehiculos/' },
-  { label: 'Investigación de hurtos y fraudes en empresas', href: '/investigacion-corporativa/' },
-  { label: 'Estudios de seguridad y gestión humana', href: '/investigacion-corporativa/' },
-  { label: 'Estudio de riesgo: precontratación', href: '/investigacion-corporativa/' },
-  { label: 'Investigación de infidelidad', href: '/infidelidad/' },
-  { label: 'Barrido electrónico', href: '/barrido-electronico/' },
-  { label: 'Seguimientos inteligentes', href: '/seguimientos-inteligentes/' },
-];
-
-const team = [
+const disciplines = [
   {
     n: '01',
-    title: 'Derecho',
-    text: 'Abogados especializados en derecho penal y sancionatorio, civil, familiar, administrativo, laboral, comercial e intelectual.',
+    title: 'Derecho penal y corporativo',
+    text: 'Abogados en derecho penal y sancionatorio, civil, de familia, administrativo, laboral, comercial y de propiedad intelectual.',
   },
   {
     n: '02',
     title: 'Investigación criminal y judicial',
-    text: 'Investigadores con conocimientos en criminalística, ciencias forenses, exactas y jurídicas; especialistas en dactilotecnia, balística, cadena de custodia y documentología.',
+    text: 'Investigadores formados en criminalística y ciencias forenses: dactiloscopia, balística, documentología y cadena de custodia.',
   },
   {
     n: '03',
-    title: 'Ciencias sociales',
-    text: 'Profesionales en sociología, trabajo social, antropología e historia, especialistas en investigación judicial, comportamiento social y derechos humanos.',
+    title: 'Ciencias sociales y comportamentales',
+    text: 'Sociología, trabajo social, psicología forense y antropología aplicadas a la investigación judicial y los derechos humanos.',
   },
   {
     n: '04',
-    title: 'Ingeniería electrónica y de comunicaciones',
-    text: 'Ingenieros capacitados en el manejo técnico de software y hardware especializados en investigación, al servicio del material probatorio.',
+    title: 'Ingeniería e informática técnica',
+    text: 'Ingenieros en electrónica y telecomunicaciones para análisis técnico, informática forense y soporte del material probatorio.',
   },
   {
     n: '05',
-    title: 'Peritaje forense',
-    text: 'Peritos con conocimientos científicos, técnicos y metodológicos para asesorar a jueces y tribunales.',
+    title: 'Peritaje técnico',
+    text: 'Peritos con conocimiento científico, técnico y metodológico para asesorar a jueces, tribunales y partes procesales.',
   },
-];
-
-const cities = [
-  { label: 'Detectives privados Bogotá', href: '/detectives-privados-bogota-2/', icon: 'map-pin' },
-  { label: 'Detectives privados en Medellín', href: '/detectives-privados-en-medellin/', icon: 'map-pin' },
-  { label: 'Detectives privados en Cali', href: '/detectives-privados-en-cali/', icon: 'map-pin' },
-  { label: 'Detectives privados Colombia', href: '/detectives-privados-colombia/', icon: 'globe' },
 ];
 ---
 
 <BaseLayout
-  title="Detectives privados Bogotá y abogados | CENIPSA Inteligencia Investigativa"
-  description="CENIPSA S.A.S.: detectives privados Bogotá y abogados con amplia trayectoria. Investigación personal y corporativa, poligrafía, criminalística, GPS y asesoría jurídica en Colombia."
+  title="CENIPSA | Investigación Forense y Asesoría Jurídica Especializada"
+  description="CENIPSA S.A.S.: inteligencia forense y asesoría legal especializada para empresas y personas en Colombia. Convertimos hechos complejos en evidencia útil y decisiones jurídicas claras."
   path="/"
   altLocalePath="/en/"
 >
   <!-- ============ HERO ============ -->
   <section class="relative flex min-h-[92vh] items-center overflow-hidden bg-ink-950 pt-32 pb-20">
-    <img src="/images/plaza-bolivar.jpg" alt="" width="1920" height="1440" fetchpriority="high" decoding="async" class="absolute inset-0 h-full w-full object-cover object-[center_35%]" />
-    <div class="absolute inset-0 bg-gradient-to-r from-ink-950/90 via-ink-950/65 to-ink-950/25" aria-hidden="true"></div>
+    <HeroImage name="plaza-bolivar" class="object-[center_35%]" />
+    <div class="absolute inset-0 bg-gradient-to-r from-ink-950/92 via-ink-950/70 to-ink-950/30" aria-hidden="true"></div>
     <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ink-950/70 to-transparent" aria-hidden="true"></div>
 
     <div class="container-site relative">
-      <p class="eyebrow text-brand-300" data-reveal>
+      <p class="eyebrow text-gold-300" data-reveal>
         <span class="h-px w-8 bg-gold-400" aria-hidden="true"></span>
-        Investigadores &amp; abogados en Colombia
+        {SITE.brand} · {SITE.descriptor}
       </p>
       <h1 class="mt-5 max-w-4xl font-display text-[2.6rem] leading-[1.08] font-semibold text-white sm:text-6xl md:text-[4.2rem]" data-reveal style="--reveal-delay:100ms">
         Investigamos la verdad.
-        <span class="mt-2 block bg-gradient-to-r from-gold-200 to-gold-400 bg-clip-text text-transparent">
-          Defendemos sus derechos.
-        </span>
+        <span class="mt-2 block text-gold-300">Defendemos sus derechos.</span>
       </h1>
       <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200 md:text-xl" data-reveal style="--reveal-delay:200ms">
-        Encontramos la verdad de los hechos investigados. Detectives privados y abogados con experiencia,
-        tecnología, idoneidad y confidencialidad, a su servicio en todo el territorio nacional.
-        <strong class="font-semibold text-white">Y en cada caso, con acompañamiento jurídico.</strong>
+        Convertimos hechos complejos en evidencia útil y decisiones jurídicas claras. Inteligencia forense y
+        asesoría legal especializada para empresas y personas en Colombia.
       </p>
       <div class="mt-9 flex flex-wrap items-center gap-4" data-reveal style="--reveal-delay:300ms">
-        <a href={CONTACT.whatsappHref} target="_blank" rel="noopener" class="btn-gold">
-          Cuéntanos tu caso
-          <svg class="h-4.5 w-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
-            <path d="M5 12h14m-6-6 6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
+        <a href="/servicios/#empresas" class="btn-gold">
+          <Icon name="building" class="h-5 w-5" />
+          Soluciones para empresas
         </a>
-        <a href="/asesoria-juridica/" class="btn-outline-light">Asesoría jurídica</a>
-        <a href="/servicios/" class="btn-outline-light">Conoce nuestros servicios</a>
+        <a href="/servicios/#personas" class="btn-outline-light">
+          <Icon name="users" class="h-5 w-5" />
+          Orientación para personas
+        </a>
       </div>
+      <p class="mt-6 flex flex-wrap gap-x-7 gap-y-2 text-[0.95rem]" data-reveal style="--reveal-delay:360ms">
+        <a href="/contacto/" class="link-underline font-semibold text-gold-300">Solicitar valoración confidencial</a>
+        <a href="#proceso" class="link-underline font-medium text-ink-200">¿Cómo trabajamos?</a>
+      </p>
 
-      <dl class="mt-16 grid max-w-3xl grid-cols-2 gap-6 border-t border-white/10 pt-8 sm:grid-cols-3" data-reveal style="--reveal-delay:420ms">
+      <dl class="mt-14 grid max-w-3xl grid-cols-1 gap-6 border-t border-white/10 pt-8 sm:grid-cols-3" data-reveal style="--reveal-delay:420ms">
         <div>
-          <dt class="text-[0.78rem] font-semibold tracking-[0.14em] text-ink-400 uppercase">Trayectoria</dt>
-          <dd class="mt-1.5 font-display text-3xl font-semibold text-white">+10 años</dd>
+          <dt class="text-[0.78rem] font-semibold tracking-[0.14em] text-ink-300 uppercase">Razón social</dt>
+          <dd class="mt-1.5 font-display text-lg leading-snug font-medium text-white">{SITE.legalName} <span class="block text-[0.9rem] text-ink-300">NIT {SITE.nit}</span></dd>
         </div>
         <div>
-          <dt class="text-[0.78rem] font-semibold tracking-[0.14em] text-ink-400 uppercase">Sello de calidad</dt>
+          <dt class="text-[0.78rem] font-semibold tracking-[0.14em] text-ink-300 uppercase">Sello de calidad</dt>
           <dd class="mt-1.5 font-display text-lg leading-snug font-medium text-white">Círculo de Afiliados <span class="text-gold-300">CCB</span></dd>
         </div>
         <div>
-          <dt class="text-[0.78rem] font-semibold tracking-[0.14em] text-ink-400 uppercase">Cobertura</dt>
-          <dd class="mt-1.5 font-display text-lg leading-snug font-medium text-white">Bogotá · Medellín · Cali</dd>
+          <dt class="text-[0.78rem] font-semibold tracking-[0.14em] text-ink-300 uppercase">Sede</dt>
+          <dd class="mt-1.5 font-display text-lg leading-snug font-medium text-white">Torre del Reloj, Bogotá <span class="block text-[0.9rem] text-ink-300">Cobertura nacional</span></dd>
         </div>
       </dl>
     </div>
   </section>
 
-  <!-- ============ QUIÉNES SOMOS ============ -->
-  <section class="section-pad" aria-labelledby="about-title">
+  <!-- ============ SEGMENTOS ============ -->
+  <section class="section-pad" aria-labelledby="segments-title">
+    <div class="container-site">
+      <div class="max-w-2xl" data-reveal>
+        <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>¿A quién servimos?</p>
+        <h2 id="segments-title" class="mt-4 font-display text-3xl font-semibold text-ink-950 md:text-4xl">
+          Soluciones según quién necesita la respuesta
+        </h2>
+      </div>
+      <ul class="mt-12 grid gap-6 lg:grid-cols-3">
+        {
+          SEGMENTS_ES.map((s, i) => (
+            <li class="flex flex-col rounded-2xl border border-ink-950/10 bg-white p-7 shadow-soft" data-reveal style={`--reveal-delay:${i * 90}ms`}>
+              <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-ink-950 text-gold-300">
+                <Icon name={segmentIcons[s.id]} class="h-6 w-6" />
+              </span>
+              <h3 class="mt-5 font-display text-xl font-semibold text-ink-950">{s.title}</h3>
+              <p class="mt-2.5 text-[0.94rem] leading-relaxed text-ink-700">{s.text}</p>
+              <ul class="mt-5 flex-1 space-y-2 border-t border-ink-100 pt-5 text-[0.92rem]">
+                {s.links.map((l) => (
+                  <li>
+                    <a href={l.href} class="group inline-flex items-center gap-2 font-medium text-brand-700 hover:text-brand-600">
+                      <span class="h-1.5 w-1.5 rounded-full bg-gold-500" aria-hidden="true" />
+                      {l.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <a href={`/servicios/#${s.id}`} class="btn-outline mt-6 self-start">Ver soluciones</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ DIFERENCIADOR: INVESTIGACIÓN + DERECHO ============ -->
+  <section class="bg-mist section-pad" aria-labelledby="legal-title">
     <div class="container-site grid items-center gap-14 lg:grid-cols-[1.05fr_1fr]">
       <div data-reveal="left">
-        <div class="relative">
-          <div class="absolute -top-6 -left-6 h-24 w-24 rounded-3xl border-2 border-gold-300" aria-hidden="true"></div>
-          <div class="relative overflow-hidden rounded-3xl bg-ink-950 p-10 shadow-lift md:p-14">
-            <img src="/images/despacho-juridico.jpg" alt="" width="1600" height="1067" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover" />
-            <div class="absolute inset-0 bg-gradient-to-t from-ink-950/90 via-ink-950/55 to-ink-950/10" aria-hidden="true"></div>
-            <p class="relative font-display text-2xl leading-snug font-medium text-white md:text-[1.7rem]">
-              «Nuestro principal objetivo es contribuir a la construcción de justicia, verdad y restablecimiento
-              de derechos de quienes han sido víctimas de diversas vulneraciones.»
-            </p>
-            <p class="relative mt-6 text-[0.85rem] font-semibold tracking-[0.16em] text-brand-300 uppercase">CENIPSA S.A.S.</p>
-          </div>
+        <div class="relative overflow-hidden rounded-3xl bg-ink-950 p-10 shadow-lift md:p-14">
+          <img src="/images/despacho-juridico.jpg" alt="" width="1600" height="1067" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-ink-950/92 via-ink-950/60 to-ink-950/15" aria-hidden="true"></div>
+          <p class="relative font-display text-2xl leading-snug font-medium text-white md:text-[1.7rem]">
+            «No entregamos solo un informe: la evidencia se obtiene pensando, desde el primer día, en cómo
+            sostenerla ante una autoridad.»
+          </p>
+          <p class="relative mt-6 text-[0.85rem] font-semibold tracking-[0.16em] text-gold-300 uppercase">{SITE.legalName}</p>
         </div>
       </div>
       <div data-reveal="right">
-        <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>Quiénes somos</p>
-        <h2 id="about-title" class="mt-4 font-display text-3xl font-semibold text-ink-950 md:text-4xl">
-          Confianza y trayectoria en la investigación judicial y el derecho
+        <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>Investigación + derecho</p>
+        <h2 id="legal-title" class="mt-4 font-display text-3xl font-semibold text-ink-950 md:text-4xl">
+          Cada investigación, con un abogado a su lado
         </h2>
         <p class="mt-5 leading-relaxed text-ink-700">
-          CENIPSA S.A.S. es una compañía con amplia trayectoria en el campo de las investigaciones privadas y el
-          derecho. Nuestro equipo de <a href="/detectives-privados-bogota-2/" class="font-medium text-brand-700 underline decoration-brand-300 underline-offset-4 hover:text-brand-600">detectives privados Bogotá</a>
-          experimentados brinda orientaciones técnicas en lo investigativo y judicial para que nuestros contratantes
-          prevengan y resuelvan sus conflictos presentes y puedan enfrentar los futuros.
+          La mayoría de firmas investiga o litiga. Nosotros hacemos ambas cosas bajo un mismo protocolo: los
+          abogados orientan la recolección de evidencia para que sea lícita y útil, y los investigadores
+          sustentan técnicamente cada actuación jurídica.
         </p>
-        <p class="mt-4 leading-relaxed text-ink-700">
-          Nuestras metodologías investigativas y jurídicas son la combinación perfecta entre experiencia, tecnología,
-          idoneidad y confidencialidad, con servicios como el
-          <a href="/gps-para-carros-bogota/" class="font-medium text-brand-700 underline decoration-brand-300 underline-offset-4 hover:text-brand-600">GPS para carros Bogotá</a>
-          y la <a href="/prueba-de-poligrafo-bogota/" class="font-medium text-brand-700 underline decoration-brand-300 underline-offset-4 hover:text-brand-600">prueba de polígrafo Bogotá</a>,
-          apoyados por <a href="/detectives-privados-colombia/" class="font-medium text-brand-700 underline decoration-brand-300 underline-offset-4 hover:text-brand-600">detectives privados Colombia</a>.
-        </p>
+        <ul class="mt-6 space-y-3 text-[0.95rem] text-ink-800">
+          <li class="flex gap-3"><Icon name="shield" class="mt-0.5 h-5 w-5 shrink-0 text-brand-700" />Evidencia obtenida por medios lícitos, con cadena de custodia.</li>
+          <li class="flex gap-3"><Icon name="scale" class="mt-0.5 h-5 w-5 shrink-0 text-brand-700" />Valoración jurídica de la prueba antes de actuar.</li>
+          <li class="flex gap-3"><Icon name="eye" class="mt-0.5 h-5 w-5 shrink-0 text-brand-700" />Reserva y confidencialidad en todo el proceso.</li>
+        </ul>
         <div class="mt-8 flex flex-wrap gap-4">
-          <a href="/nosotros/" class="btn-primary">Conócenos</a>
-          <a href="/garantias/" class="btn-outline">Nuestras garantías</a>
+          <a href="/asesoria-juridica/" class="btn-primary">Asesoría jurídica</a>
+          <a href="/nosotros/" class="btn-outline">Conozca la firma</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ SERVICIOS ============ -->
-  <section class="bg-mist section-pad" aria-labelledby="services-title">
+  <!-- ============ TRES PILARES ============ -->
+  <section class="section-pad" aria-labelledby="pillars-title">
     <div class="container-site">
       <div class="max-w-2xl" data-reveal>
-        <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>Servicios</p>
-        <h2 id="services-title" class="mt-4 font-display text-3xl font-semibold text-ink-950 md:text-4xl">
-          Soluciones investigativas y jurídicas integrales
+        <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>Nuestras soluciones</p>
+        <h2 id="pillars-title" class="mt-4 font-display text-3xl font-semibold text-ink-950 md:text-4xl">
+          Prevenir, investigar y defender
         </h2>
+        <p class="mt-4 leading-relaxed text-ink-700">
+          Tres momentos de un mismo problema. Intervenimos en el que usted lo necesite —o en los tres—.
+        </p>
       </div>
-      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <ul class="mt-12 grid gap-6 lg:grid-cols-3">
         {
-          services.map((s, i) => (
-            <a
-              href={s.href}
-              class="card-lift group relative flex flex-col overflow-hidden p-7"
-              data-reveal
-              style={`--reveal-delay:${(i % 3) * 100}ms`}
-            >
-              <span class="absolute top-0 left-0 h-1 w-full origin-left scale-x-0 bg-gradient-to-r from-brand-500 to-gold-400 transition-transform duration-500 [transition-timing-function:var(--ease-out-expo)] group-hover:scale-x-100" aria-hidden="true" />
-              <span class="flex h-13 w-13 items-center justify-center rounded-2xl bg-brand-50 text-brand-700 transition-all duration-500 group-hover:bg-brand-600 group-hover:text-white">
-                <Icon name={s.icon} class="h-6.5 w-6.5" />
-              </span>
-              <h3 class="mt-5 font-display text-[1.28rem] font-semibold text-ink-950 transition-colors group-hover:text-brand-700">
-                {s.title}
-              </h3>
-              <p class="mt-2.5 flex-1 text-[0.94rem] leading-relaxed text-ink-600">{s.text}</p>
-              <span class="mt-5 inline-flex items-center gap-2 text-[0.85rem] font-bold text-brand-700">
-                Ver más
-                <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          PILLARS_ES.map((p, i) => (
+            <li class="flex flex-col rounded-2xl bg-brand-700 p-8 text-white shadow-lift" data-reveal style={`--reveal-delay:${i * 100}ms`}>
+              <div class="flex items-center gap-4">
+                <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-gold-300">
+                  <Icon name={p.icon} class="h-6 w-6" />
+                </span>
+                <h3 class="font-display text-2xl font-semibold">{p.name}</h3>
+              </div>
+              <p class="mt-4 text-[0.95rem] leading-relaxed text-brand-100">{p.tagline}</p>
+              <ul class="mt-6 flex-1 space-y-2.5 border-t border-white/15 pt-6 text-[0.92rem]">
+                {p.items.map((it) => (
+                  <li>
+                    <a href={it.href} class="group flex items-start gap-2.5 text-white/90 transition-colors hover:text-gold-200">
+                      <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-400" aria-hidden="true" />
+                      {it.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <a href={`/servicios/#${p.id}`} class="mt-7 inline-flex items-center gap-2 text-[0.88rem] font-bold text-gold-300 hover:text-gold-200">
+                Ver {p.name.toLowerCase()}
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
                   <path d="M5 12h14m-6-6 6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-              </span>
-            </a>
-          ))
-        }
-      </div>
-      <p class="mt-10 text-center" data-reveal>
-        <a href="/servicios/" class="btn-primary">Todos los servicios</a>
-      </p>
-    </div>
-  </section>
-
-  <!-- ============ ACOMPAÑAMIENTO JURÍDICO ============ -->
-  <section class="section-pad" aria-labelledby="legal-title">
-    <div class="container-site">
-      <div class="grid gap-12 lg:grid-cols-[1fr_1.3fr]">
-        <div data-reveal="left">
-          <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>Acompañamiento jurídico</p>
-          <h2 id="legal-title" class="mt-4 font-display text-3xl font-semibold text-ink-950 md:text-4xl">
-            Cada investigación, con un abogado a su lado
-          </h2>
-          <p class="mt-5 leading-relaxed text-ink-700">
-            No entregamos solo un informe. Nuestros abogados trabajan junto a los investigadores desde el primer día
-            para que la evidencia sirva, y le representan en el proceso que siga: familia, penal, laboral, comercial,
-            sucesiones y cobro.
-          </p>
-          <div class="mt-8 flex flex-wrap gap-4">
-            <a href={CONTACT.whatsappLegalHref} target="_blank" rel="noopener" class="btn-primary">Consultar con un abogado</a>
-            <a href="/asesoria-juridica/" class="btn-outline">Asesoría y representación</a>
-          </div>
-        </div>
-        <ol class="space-y-1">
-          {
-            legalSteps.map((t, i) => (
-              <li class="group flex gap-6 rounded-2xl border-b border-ink-100 p-6 transition-colors duration-300 last:border-0 hover:bg-mist" data-reveal style={`--reveal-delay:${i * 80}ms`}>
-                <span class="font-display text-2xl font-semibold text-gold-600" aria-hidden="true">{t.n}</span>
-                <div>
-                  <h3 class="font-display text-lg font-semibold text-ink-950 transition-colors group-hover:text-brand-700">{t.title}</h3>
-                  <p class="mt-1.5 text-[0.93rem] leading-relaxed text-ink-600">{t.text}</p>
-                </div>
-              </li>
-            ))
-          }
-        </ol>
-      </div>
-
-      <ul class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {
-          legalAreas.map((a, i) => (
-            <li data-reveal style={`--reveal-delay:${(i % 3) * 100}ms`}>
-              <a href={a.href} class="card-lift group flex h-full flex-col p-7">
-                <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-50 text-brand-700 transition-all duration-500 group-hover:bg-brand-600 group-hover:text-white">
-                  <Icon name="scale" class="h-6 w-6" />
-                </span>
-                <h3 class="mt-5 font-display text-[1.2rem] font-semibold text-ink-950 transition-colors group-hover:text-brand-700">{a.area}</h3>
-                <p class="mt-2.5 flex-1 text-[0.93rem] leading-relaxed text-ink-600">{a.text}</p>
-                <span class="mt-5 text-[0.82rem] font-bold text-brand-700">Con respaldo de: {a.via}</span>
               </a>
             </li>
           ))
@@ -312,20 +232,55 @@ const cities = [
     </div>
   </section>
 
-  <!-- ============ ESPECIALIDADES (marquee) ============ -->
-  <section class="overflow-hidden border-y border-ink-100 bg-paper py-10" aria-label="Especialidades investigativas">
-    <div class="marquee-mask">
-      <ul class="flex w-max animate-marquee gap-3 motion-reduce:animate-none motion-reduce:flex-wrap motion-reduce:justify-center" data-marquee>
+  <!-- ============ PROCESO ============ -->
+  <section id="proceso" class="scroll-mt-28 bg-mist section-pad" aria-labelledby="process-title">
+    <div class="container-site">
+      <div class="max-w-2xl" data-reveal>
+        <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>¿Cómo trabajamos?</p>
+        <h2 id="process-title" class="mt-4 font-display text-3xl font-semibold text-ink-950 md:text-4xl">
+          Claridad antes de comprometerse
+        </h2>
+        <p class="mt-4 leading-relaxed text-ink-700">
+          Ninguna actuación empieza sin que usted conozca el alcance, los tiempos y los honorarios.
+        </p>
+      </div>
+      <ol class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {
-          [...specialties, ...specialties].map((sp, i) => (
-            <li aria-hidden={i >= specialties.length ? 'true' : undefined}>
-              <a
-                href={sp.href}
-                tabindex={i >= specialties.length ? -1 : undefined}
-                class="inline-flex items-center gap-2.5 rounded-lg border border-ink-200 bg-white px-5 py-2.5 text-[0.88rem] font-semibold whitespace-nowrap text-ink-700 shadow-soft transition-colors hover:border-brand-400 hover:text-brand-700"
-              >
-                <span class="h-1.5 w-1.5 rounded-full bg-gold-500" aria-hidden="true" />
-                {sp.label}
+          PROCESS_ES.map((s, i) => (
+            <li class="relative rounded-2xl border border-ink-950/10 bg-white p-7" data-reveal style={`--reveal-delay:${i * 90}ms`}>
+              <span class="font-display text-3xl font-semibold text-gold-600" aria-hidden="true">{s.n}</span>
+              <h3 class="mt-3 font-display text-lg font-semibold text-ink-950">{s.title}</h3>
+              <p class="mt-2 text-[0.93rem] leading-relaxed text-ink-700">{s.text}</p>
+            </li>
+          ))
+        }
+      </ol>
+      <p class="mt-10" data-reveal>
+        <a href="/contacto/" class="btn-primary">Solicitar valoración confidencial</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ ÁREAS DEL DERECHO ============ -->
+  <section class="section-pad" aria-labelledby="areas-title">
+    <div class="container-site">
+      <div class="flex flex-wrap items-end justify-between gap-6" data-reveal>
+        <div class="max-w-2xl">
+          <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>Defender · Áreas jurídicas</p>
+          <h2 id="areas-title" class="mt-4 font-display text-3xl font-semibold text-ink-950 md:text-4xl">
+            Asesoría y representación en las principales ramas del derecho
+          </h2>
+        </div>
+        <a href="/asesoria-juridica/" class="btn-outline">Asesoría jurídica</a>
+      </div>
+      <ul class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {
+          LEGAL_AREAS_ES.map((a, i) => (
+            <li data-reveal style={`--reveal-delay:${(i % 4) * 80}ms`}>
+              <a href={a.href} class="card-lift group flex h-full flex-col p-6">
+                <Icon name="scale" class="h-6 w-6 text-brand-700" />
+                <h3 class="mt-4 font-display text-[1.08rem] font-semibold text-ink-950 transition-colors group-hover:text-brand-700">{a.label}</h3>
+                <p class="mt-2 text-[0.88rem] leading-relaxed text-ink-600">{a.text}</p>
               </a>
             </li>
           ))
@@ -335,34 +290,27 @@ const cities = [
   </section>
 
   <!-- ============ EQUIPO INTERDISCIPLINAR ============ -->
-  <section class="section-pad" aria-labelledby="team-title">
+  <section class="bg-ink-950 section-pad" aria-labelledby="team-title">
     <div class="container-site">
       <div class="grid gap-12 lg:grid-cols-[1fr_1.4fr]">
         <div data-reveal="left">
-          <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>Equipo interdisciplinar</p>
-          <h2 id="team-title" class="mt-4 font-display text-3xl font-semibold text-ink-950 md:text-4xl">
-            Cinco disciplinas al servicio de la verdad
+          <p class="eyebrow text-gold-300"><span class="h-px w-8 bg-gold-400" aria-hidden="true"></span>Equipo interdisciplinar</p>
+          <h2 id="team-title" class="mt-4 font-display text-3xl font-semibold text-white md:text-4xl">
+            Cinco disciplinas, un mismo caso
           </h2>
-          <p class="mt-5 leading-relaxed text-ink-700">
-            Las investigaciones jurídicas de tipo personal o corporativo exigen la construcción de diversas
-            estrategias y metodologías investigativas. Nuestro equipo cuenta con la experticia e integralidad
-            necesaria a nivel epistemológico, teórico, metodológico, práctico y ético en la búsqueda de la verdad.
+          <p class="mt-5 leading-relaxed text-ink-200">
+            Los casos complejos no se resuelven desde una sola profesión. Nuestro equipo integra el derecho, la
+            investigación criminal, las ciencias sociales, la ingeniería y el peritaje técnico.
           </p>
-          <a href="/equipo-interdisciplinar/" class="btn-primary mt-8">Conoce nuestro equipo</a>
+          <a href="/equipo-interdisciplinar/" class="btn-gold mt-8">Conozca el equipo</a>
         </div>
-        <ol class="space-y-1">
+        <ol class="grid gap-4 sm:grid-cols-2">
           {
-            team.map((t, i) => (
-              <li
-                class="group flex gap-6 rounded-2xl border-b border-ink-100 p-6 transition-colors duration-300 last:border-0 hover:bg-mist"
-                data-reveal
-                style={`--reveal-delay:${i * 80}ms`}
-              >
-                <span class="font-display text-2xl font-semibold text-gold-600" aria-hidden="true">{t.n}</span>
-                <div>
-                  <h3 class="font-display text-lg font-semibold text-ink-950 transition-colors group-hover:text-brand-700">{t.title}</h3>
-                  <p class="mt-1.5 text-[0.93rem] leading-relaxed text-ink-600">{t.text}</p>
-                </div>
+            disciplines.map((t, i) => (
+              <li class:list={['rounded-2xl border border-white/10 bg-white/[0.04] p-6', i === 4 && 'sm:col-span-2']} data-reveal style={`--reveal-delay:${i * 80}ms`}>
+                <span class="font-display text-xl font-semibold text-gold-300" aria-hidden="true">{t.n}</span>
+                <h3 class="mt-2 font-display text-lg font-semibold text-white">{t.title}</h3>
+                <p class="mt-1.5 text-[0.9rem] leading-relaxed text-ink-300">{t.text}</p>
               </li>
             ))
           }
@@ -371,61 +319,40 @@ const cities = [
     </div>
   </section>
 
-  <!-- ============ COBERTURA ============ -->
-  <section class="relative overflow-hidden bg-ink-950 section-pad" aria-labelledby="coverage-title">
-    <div class="pointer-events-none absolute inset-0" aria-hidden="true">
-      <div class="absolute top-[-30%] left-1/3 h-[28rem] w-[28rem] rounded-full bg-brand-500/10 blur-3xl"></div>
-    </div>
-    <div class="container-site relative">
-      <div class="max-w-2xl" data-reveal>
-        <p class="eyebrow text-brand-300"><span class="h-px w-8 bg-gold-400" aria-hidden="true"></span>Cobertura nacional</p>
-        <h2 id="coverage-title" class="mt-4 font-display text-3xl font-semibold text-white md:text-4xl">
-          Detectives privados en las principales ciudades de Colombia
-        </h2>
-        <p class="mt-4 leading-relaxed text-ink-300">
-          Gracias a nuestras soluciones tecnológicas y canales virtuales de atención, disminuimos las barreras
-          geográficas, logísticas y operacionales para atender casos en todo el país.
-        </p>
+  <!-- ============ SELLOS DE CONFIANZA ============ -->
+  <section class="section-pad" aria-labelledby="trust-title">
+    <div class="container-site">
+      <div class="flex flex-wrap items-end justify-between gap-6" data-reveal>
+        <div class="max-w-2xl">
+          <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>Confianza verificable</p>
+          <h2 id="trust-title" class="mt-4 font-display text-3xl font-semibold text-ink-950 md:text-4xl">
+            Una firma que puede verificar
+          </h2>
+        </div>
+        <a href="/casos-de-exito/" class="btn-outline">Casos de éxito</a>
       </div>
-      <ul class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {
-          cities.map((c, i) => (
-            <li data-reveal style={`--reveal-delay:${i * 90}ms`}>
-              <a
-                href={c.href}
-                class="group flex h-full flex-col justify-between gap-8 rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all duration-400 hover:-translate-y-1.5 hover:border-brand-400/60 hover:bg-white/10"
-              >
-                <Icon name={c.icon} class="h-7 w-7 text-gold-300" />
-                <span class="font-display text-lg leading-snug font-semibold text-white transition-colors group-hover:text-brand-200">
-                  {c.label}
-                  <svg class="mt-3 h-4 w-4 text-brand-300 transition-transform duration-300 group-hover:translate-x-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-                    <path d="M5 12h14m-6-6 6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </span>
-              </a>
-            </li>
-          ))
-        }
-      </ul>
+      <div class="mt-10" data-reveal>
+        <TrustSeals tone="light" />
+      </div>
     </div>
   </section>
 
-  <!-- ============ BLOG ============ -->
+  <!-- ============ CONTENIDO EXPERTO ============ -->
   {
     posts.length > 0 && (
-      <section class="section-pad" aria-labelledby="blog-title">
+      <section class="bg-mist section-pad" aria-labelledby="blog-title">
         <div class="container-site">
           <div class="flex flex-wrap items-end justify-between gap-6" data-reveal>
             <div>
               <p class="eyebrow">
                 <span class="h-px w-8 bg-gold-500" aria-hidden="true" />
-                Blog
+                Contenido experto
               </p>
               <h2 id="blog-title" class="mt-4 font-display text-3xl font-semibold text-ink-950 md:text-4xl">
-                Noticias y actualizaciones
+                Análisis y guías de nuestro equipo
               </h2>
             </div>
-            <a href="/blog/" class="btn-outline">Ver todas las entradas</a>
+            <a href="/blog/" class="btn-outline">Ver todas las publicaciones</a>
           </div>
           <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {posts.map((post, i) => (
@@ -437,19 +364,36 @@ const cities = [
     )
   }
 
+  <!-- ============ PREGUNTAS FRECUENTES ============ -->
+  {
+    faqs.length > 0 && (
+      <section class="section-pad" aria-labelledby="faq-title">
+        <div class="container-site grid gap-12 lg:grid-cols-[1fr_1.6fr]">
+          <div data-reveal="left">
+            <p class="eyebrow">
+              <span class="h-px w-8 bg-gold-500" aria-hidden="true" />
+              Preguntas frecuentes
+            </p>
+            <h2 id="faq-title" class="mt-4 font-display text-3xl font-semibold text-ink-950 md:text-4xl">
+              Lo que suelen preguntarnos
+            </h2>
+            <a href="/faq/" class="btn-outline mt-8">Todas las preguntas</a>
+          </div>
+          <div class="divide-y divide-ink-100 border-y border-ink-100" data-reveal="right">
+            {faqs.map((f) => (
+              <details class="group py-5">
+                <summary class="flex cursor-pointer list-none items-start justify-between gap-6 font-display text-[1.08rem] font-semibold text-ink-950 marker:hidden">
+                  {f.data.question}
+                  <span class="mt-1 text-gold-600 transition-transform duration-300 group-open:rotate-45" aria-hidden="true">+</span>
+                </summary>
+                <div class="prose-site mt-3 text-[0.97rem]" set:html={f.data.answer} />
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
   <CtaBanner />
 </BaseLayout>
-
-<style>
-  .marquee-mask {
-    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .marquee-mask {
-      mask-image: none;
-    }
-    [data-marquee] {
-      width: 100% !important;
-    }
-  }
-</style>

@@ -1,6 +1,7 @@
 ---
-title: "Criminalística"
-seoTitle: "Criminalística - Inteligencia Investigativa"
+title: "Criminalística, peritaje y trazabilidad probatoria"
+seoTitle: "Criminalística y peritaje forense | CENIPSA"
+eyebrow: "Investigar"
 description: "En CENIPSA SAS, nuestros investigadores fundamentan sus acciones en estrategias de inteligencia con un soporte de las ciencias forenses, exactas, humanas y"
 type: service
 related:

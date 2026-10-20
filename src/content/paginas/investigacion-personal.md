@@ -1,6 +1,7 @@
 ---
-title: "Investigación personal"
-seoTitle: "Investigación personal - Inteligencia Investigativa"
+title: "Investigación personal, familiar y verificación patrimonial"
+seoTitle: "Investigación personal, familiar y patrimonial | CENIPSA"
+eyebrow: "Investigar"
 description: "Investigación personal para prevenir daños morales, problemas familiares o vulneraciones a sus derechos: soluciones tecnológicas, psicológicas y jurídicas."
 type: service
 related:

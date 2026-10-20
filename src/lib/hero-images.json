@@ -1,0 +1,30 @@
+{
+  "plaza-bolivar": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      1920
+    ],
+    "width": 1920,
+    "height": 1440
+  },
+  "despacho-juridico": {
+    "widths": [
+      640,
+      1024,
+      1200
+    ],
+    "width": 1200,
+    "height": 800
+  },
+  "bogota-edificios": {
+    "widths": [
+      640,
+      1024,
+      1280
+    ],
+    "width": 1280,
+    "height": 888
+  }
+}

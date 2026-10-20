@@ -2,11 +2,28 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
-import { writeFileSync } from 'node:fs';
+import { appendFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { redirects } from './redirects.config.mjs';
+import { redirects, legalDomainRedirects, LEGAL_DOMAIN, LEGAL_DOMAIN_FALLBACK } from './redirects.config.mjs';
 
-const SITE = 'https://exquisite-crostata-a53a97.netlify.app';
+/**
+ * Dominio canónico de producción: canonical, hreflang, JSON-LD y sitemap
+ * apuntan SIEMPRE aquí, también en staging (evita que el sitemap publique
+ * URLs *.netlify.app). SITE_URL solo para pruebas puntuales.
+ */
+const SITE = process.env.SITE_URL ?? 'https://www.inteligenciainvestigativa.com';
+
+/**
+ * Staging = cualquier build que no se sirve desde el dominio de producción.
+ * Netlify expone URL (dominio principal del sitio) y CONTEXT. En staging se
+ * emite X-Robots-Tag: noindex y un robots.txt que bloquea el rastreo.
+ * Se puede forzar con STAGING=true / STAGING=false.
+ */
+const IS_STAGING =
+  process.env.STAGING != null
+    ? process.env.STAGING === 'true'
+    : Boolean(process.env.NETLIFY) &&
+      (process.env.CONTEXT !== 'production' || !String(process.env.URL ?? '').includes('inteligenciainvestigativa.com'));
 
 /**
  * Rehype plugin para imágenes de markdown: loading="lazy" + decoding="async"
@@ -57,19 +74,40 @@ function rehypeLazyImages() {
 const NOINDEX_PATHS = new Set([`${SITE}/gracias/`, `${SITE}/en/thank-you/`, `${SITE}/404/`]);
 
 /**
- * Integración mínima: emite `_redirects` (Netlify/Cloudflare Pages) en dist/
- * a partir de redirects.config.mjs, para 301 reales en producción.
+ * Integración mínima de hosting (Netlify/Cloudflare Pages), en dist/:
+ * - `_redirects`: 301 por host desde el dominio jurídico antiguo hacia la
+ *   sección equivalente de este sitio + 301 internos (redirects.config.mjs).
+ * - En staging: X-Robots-Tag noindex en `_headers` y robots.txt bloqueante.
  */
-function emitRedirectsFile() {
+function emitHostingFiles() {
   return {
-    name: 'emit-redirects-file',
+    name: 'emit-hosting-files',
     hooks: {
       /** @param {{ dir: URL }} params */
       'astro:build:done': ({ dir }) => {
+        const out = dir.pathname.replace(/^\/([A-Za-z]:)/, '$1');
         const lines = Object.entries(redirects).map(([from, to]) => `${from}/ ${to}/ 301`);
         // variantes sin slash final también cubiertas
         const bare = Object.entries(redirects).map(([from, to]) => `${from} ${to}/ 301`);
-        writeFileSync(join(dir.pathname.replace(/^\/([A-Za-z]:)/, '$1'), '_redirects'), [...lines, ...bare, ''].join('\n'), 'utf8');
+
+        // Dominio antiguo (con y sin www): reglas por host, forzadas (`!`).
+        const legal = [];
+        for (const host of [LEGAL_DOMAIN, `www.${LEGAL_DOMAIN}`]) {
+          for (const [from, to] of Object.entries(legalDomainRedirects)) {
+            const target = `${SITE}${to}`;
+            if (from === '/' || from.endsWith('*')) legal.push(`https://${host}${from} ${target} 301!`);
+            else legal.push(`https://${host}${from}/ ${target} 301!`, `https://${host}${from} ${target} 301!`);
+          }
+          legal.push(`https://${host}/* ${SITE}${LEGAL_DOMAIN_FALLBACK} 301!`);
+        }
+
+        writeFileSync(join(out, '_redirects'), [...legal, ...lines, ...bare, ''].join('\n'), 'utf8');
+
+        if (IS_STAGING) {
+          appendFileSync(join(out, '_headers'), '\n/*\n  X-Robots-Tag: noindex, nofollow\n', 'utf8');
+          writeFileSync(join(out, 'robots.txt'), 'User-agent: *\nDisallow: /\n', 'utf8');
+          console.log('[hosting] build de STAGING: noindex + robots.txt bloqueante');
+        }
       },
     },
   };
@@ -100,7 +138,7 @@ export default defineConfig({
         return item;
       },
     }),
-    emitRedirectsFile(),
+    emitHostingFiles(),
   ],
   vite: {
     plugins: [tailwindcss()],

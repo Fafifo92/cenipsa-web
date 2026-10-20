@@ -1,12 +1,14 @@
 ---
-title: "Asesoría jurídica"
-seoTitle: "Asesoría Jurídica - Inteligencia Investigativa"
-description: "En Inteligencia Investigativa nos hemos preparado para asumir de principio a fin las investigaciones que usted o su empresa tengan que enfrentar, para ello"
+title: "Asesoría jurídica y representación legal"
+seoTitle: "Asesoría jurídica y representación legal | CENIPSA"
+eyebrow: "Defender"
+description: "Asesoría prejurídica y representación legal en Bogotá respaldada por investigación: derecho penal, familia, civil, laboral, comercial, administrativo, constitucional y propiedad intelectual."
 type: service
 related:
   - { label: "Abogados Bogotá", href: "/abogados-bogota/" }
   - { label: "Abogados sucesiones Bogotá", href: "/abogados-sucesiones-bogota/" }
-  - { label: "Asesoría y representación jurídica", href: "/asesoria-juridica/" }
+  - { label: "Derecho penal y sancionatorio", href: "/derecho-penal/" }
+  - { label: "Derecho de familia", href: "/derecho-de-familia/" }
   - { label: "Servicios especiales para abogados", href: "/servicios-especiales/" }
 order: 3
 icon: "scale"
@@ -18,13 +20,16 @@ Ofrecemos una atención completa y excepcional en representación legal a nuestr
 
 A través del tiempo, nuestra compañía ha desarrollado metodologías investigativas con los más altos estándares de calidad, que nos permite prestar servicios y soluciones dentro y fuera de los diferentes escenarios judiciales.
 
-[Visitar Sitio](https://abogadosbogotaespecializados.com/)
+### Áreas del derecho
 
-- Derecho de familia
-- Derecho penal
-- Derecho laboral
-- Derecho comercial
-- Derecho administrativo
+- [Derecho penal y sancionatorio](/derecho-penal/)
+- [Derecho de familia](/derecho-de-familia/)
+- [Derecho civil](/derecho-civil/)
+- [Derecho laboral y seguridad social](/derecho-laboral/)
+- [Derecho comercial y societario](/derecho-comercial/)
+- [Derecho administrativo](/derecho-administrativo/)
+- [Derecho constitucional](/derecho-constitucional/)
+- [Propiedad intelectual y derechos de autor](/derecho-de-propiedad-intelectual/)
 
 ### Servicios especiales para abogados y empresas de cobro de cartera morosa
 

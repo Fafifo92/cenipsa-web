@@ -135,6 +135,14 @@ const LEGAL_SUPPORT_EXCLUDED = new Set([
   'asesoria-juridica',
   'abogados-bogota',
   'abogados-sucesiones-bogota',
+  'derecho-penal',
+  'derecho-de-familia',
+  'derecho-civil',
+  'derecho-laboral',
+  'derecho-comercial',
+  'derecho-administrativo',
+  'derecho-constitucional',
+  'derecho-de-propiedad-intelectual',
   'en/legal-advice',
 ]);
 

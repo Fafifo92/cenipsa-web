@@ -1,6 +1,7 @@
 ---
-title: "Análisis ejecutivo de información financiera, bienes raíces y vehículos"
-seoTitle: "Análisis ejecutivo de información financiera, Bienes raíces y Vehículos - Inteligencia Investigativa"
+title: "Auditoría forense financiera y patrimonial"
+seoTitle: "Análisis de información financiera, bienes raíces y vehículos | CENIPSA"
+eyebrow: "Investigar"
 description: "Una vez compilada la información patrimonial, declaraciones de renta e historial contable de cada uno de los rubros que ejecutó el investigado en un"
 type: service
 related:

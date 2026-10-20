@@ -1,26 +1,59 @@
 ---
-/** English services index. */
-import { getCollection } from 'astro:content';
+/** English services index — three pillars + client profiles (mirrors /servicios/). */
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import PageHero from '@/components/PageHero.astro';
 import CtaBanner from '@/components/CtaBanner.astro';
-import LegalSupport from '@/components/LegalSupport.astro';
 import Icon from '@/components/Icon.astro';
 import { breadcrumbSchema } from '@/lib/seo';
-
-const services = (
-  await getCollection('paginas', (e) => e.data.type === 'service' && e.id.startsWith('en/'))
-).sort((a, b) => a.data.order - b.data.order);
+import { PILLARS_EN } from '@/lib/pillars';
 
 const crumbs = [
   { name: 'Home', path: '/en/' },
   { name: 'Services', path: '/en/services/' },
 ];
+
+const profiles = [
+  {
+    id: 'empresas',
+    icon: 'building',
+    title: 'Companies',
+    text: 'Partner and supplier due diligence, internal fraud, staff reliability, information security and corporate legal defense.',
+    links: [
+      { label: 'Corporate investigation', href: '/en/corporate-investigation/' },
+      { label: 'Reliability testing', href: '/en/polygraph/' },
+      { label: 'Electronic sweeps', href: '/en/electronic-sweep/' },
+    ],
+    cta: '/en/contact/?tipo=business',
+  },
+  {
+    id: 'personas',
+    icon: 'users',
+    title: 'Individuals & families',
+    text: 'Personal and asset verification in full confidence, with legal support in family, inheritance and criminal matters.',
+    links: [
+      { label: 'Personal & asset investigation', href: '/en/personal-investigation/' },
+      { label: 'Legal advice & representation', href: '/en/legal-advice/' },
+      { label: 'Online services', href: '/en/online-services/' },
+    ],
+    cta: '/en/contact/?tipo=personal',
+  },
+  {
+    id: 'abogados',
+    icon: 'briefcase',
+    title: 'Lawyers & firms',
+    text: 'Evidentiary support for litigation: locating people, asset investigation, expert reports and evidence assessment.',
+    links: [
+      { label: 'Services for lawyers', href: '/en/services-for-lawyers/' },
+      { label: 'Criminalistics & expert reports', href: '/en/criminalistics/' },
+    ],
+    cta: '/en/contact/?tipo=business',
+  },
+];
 ---
 
 <BaseLayout
-  title="Private investigation & legal services in Colombia | CENIPSA"
-  description="CENIPSA S.A.S. services: personal and corporate investigation, legal advice, criminalistics, polygraph testing and GPS satellite tracking in Bogotá, Colombia."
+  title="Forensic intelligence & legal services in Colombia | CENIPSA"
+  description="Prevent, investigate and defend: due diligence, corporate fraud, personal and asset investigation, criminalistics, digital forensic audits and legal advice in Colombia."
   path="/en/services/"
   altLocalePath="/servicios/"
   lang="en"
@@ -28,38 +61,75 @@ const crumbs = [
 >
   <PageHero
     eyebrow="Services"
-    title="Investigative and legal solutions"
-    description="Prevent and resolve your present and future conflicts with methodologies combining experience, technology and confidentiality. Every service comes with legal support."
+    title="Prevent, investigate and defend"
+    description="Forensic intelligence and specialized legal advice, organized around three moments of the same problem. Every service is backed by legal counsel."
     crumbs={crumbs}
     lang="en"
   />
 
-  <section class="section-pad">
+  <section class="section-pad" aria-labelledby="profiles-title-en">
     <div class="container-site">
-      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <h2 id="profiles-title-en" class="sr-only">Solutions by profile</h2>
+      <ul class="grid gap-6 lg:grid-cols-3">
         {
-          services.map((s, i) => (
-            <a href={`/${s.id}/`} class="card-lift group relative flex flex-col overflow-hidden p-7" data-reveal style={`--reveal-delay:${(i % 3) * 90}ms`}>
-              <span class="absolute top-0 left-0 h-1 w-full origin-left scale-x-0 bg-gradient-to-r from-brand-500 to-gold-400 transition-transform duration-500 [transition-timing-function:var(--ease-out-expo)] group-hover:scale-x-100" aria-hidden="true" />
-              <span class="flex h-13 w-13 items-center justify-center rounded-2xl bg-brand-50 text-brand-700 transition-all duration-500 group-hover:bg-brand-600 group-hover:text-white">
-                <Icon name={s.data.icon ?? 'fingerprint'} class="h-6.5 w-6.5" />
+          profiles.map((s, i) => (
+            <li id={s.id} class="flex scroll-mt-28 flex-col rounded-2xl border border-ink-950/10 bg-white p-7 shadow-soft target:ring-2 target:ring-gold-400" data-reveal style={`--reveal-delay:${i * 90}ms`}>
+              <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-ink-950 text-gold-300">
+                <Icon name={s.icon} class="h-6 w-6" />
               </span>
-              <h2 class="mt-5 font-display text-[1.22rem] leading-snug font-semibold text-ink-950 transition-colors group-hover:text-brand-700">{s.data.title}</h2>
-              <p class="mt-2.5 line-clamp-3 flex-1 text-[0.93rem] leading-relaxed text-ink-600">{s.data.description}</p>
-              <span class="mt-5 inline-flex items-center gap-2 text-[0.85rem] font-bold text-brand-700">
-                Learn more
-                <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-                  <path d="M5 12h14m-6-6 6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </span>
-            </a>
+              <h3 class="mt-5 font-display text-xl font-semibold text-ink-950">{s.title}</h3>
+              <p class="mt-2.5 text-[0.94rem] leading-relaxed text-ink-700">{s.text}</p>
+              <ul class="mt-5 flex-1 space-y-2 border-t border-ink-100 pt-5 text-[0.92rem]">
+                {s.links.map((l) => (
+                  <li>
+                    <a href={l.href} class="inline-flex items-center gap-2 font-medium text-brand-700 hover:text-brand-600">
+                      <span class="h-1.5 w-1.5 rounded-full bg-gold-500" aria-hidden="true" />
+                      {l.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <a href={s.cta} class="btn-primary mt-6 self-start">Request a confidential assessment</a>
+            </li>
           ))
         }
-      </div>
+      </ul>
     </div>
   </section>
 
-  <LegalSupport entryId="default" lang="en" />
+  {
+    PILLARS_EN.map((p, idx) => (
+      <section id={p.id} class:list={['scroll-mt-24 section-pad', idx % 2 === 0 && 'bg-mist']} aria-labelledby={`${p.id}-title-en`}>
+        <div class="container-site grid gap-10 lg:grid-cols-[1fr_1.6fr]">
+          <div data-reveal="left">
+            <p class="eyebrow">
+              <span class="h-px w-8 bg-gold-500" aria-hidden="true" />
+              Pillar {idx + 1} of 3
+            </p>
+            <h2 id={`${p.id}-title-en`} class="mt-4 flex items-center gap-4 font-display text-3xl font-semibold text-ink-950 md:text-4xl">
+              <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-700 text-gold-300">
+                <Icon name={p.icon} class="h-6 w-6" />
+              </span>
+              {p.name}
+            </h2>
+            <p class="mt-4 leading-relaxed text-ink-700">{p.tagline}</p>
+          </div>
+          <ul class="grid gap-4 sm:grid-cols-2">
+            {p.items.map((it, i) => (
+              <li data-reveal style={`--reveal-delay:${(i % 2) * 80}ms`}>
+                <a href={it.href} class="card-lift group flex h-full items-center justify-between gap-4 p-5">
+                  <span class="font-display text-[1.02rem] leading-snug font-semibold text-ink-950 transition-colors group-hover:text-brand-700">{it.label}</span>
+                  <svg class="h-4 w-4 shrink-0 text-gold-600 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                    <path d="M5 12h14m-6-6 6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    ))
+  }
 
   <CtaBanner lang="en" />
 </BaseLayout>

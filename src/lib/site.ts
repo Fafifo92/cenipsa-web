@@ -4,10 +4,15 @@ export const SITE = {
   url: 'https://www.inteligenciainvestigativa.com',
   name: 'Inteligencia Investigativa',
   legalName: 'CENIPSA S.A.S.',
-  brand: 'CENIPSA — Investigadores y Abogados',
+  /** Jerarquía de marca: marca CENIPSA · descriptor · eslogan. */
+  brand: 'CENIPSA',
+  descriptor: 'Inteligencia investigativa y jurídica',
+  descriptorEn: 'Investigative and legal intelligence',
   tagline: 'Investigamos la verdad. Defendemos sus derechos.',
+  taglineEn: 'We investigate the truth. We defend your rights.',
+  nit: '900.603.276-9',
   description:
-    'CENIPSA S.A.S. es una compañía con amplia trayectoria en investigación privada y derecho en Colombia: abogados y detectives privados que acompañan cada caso desde la investigación hasta la actuación jurídica, con poligrafía, criminalística y rastreo satelital GPS en Bogotá.',
+    'CENIPSA S.A.S. es una firma de inteligencia forense e investigación jurídica en Colombia: convertimos hechos complejos en evidencia útil y decisiones jurídicas claras para empresas y personas.',
   locale: 'es_CO',
   lang: 'es',
 } as const;
@@ -24,13 +29,20 @@ export const CONTACT = {
   pbxHref: 'tel:+576016290498',
   whatsapp: '317 4232502',
   whatsappIntl: '+573174232502',
+  /** Mensaje precargado corporativo (botón flotante y CTAs). */
   whatsappHref:
-    'https://api.whatsapp.com/send?phone=573174232502&text=Hola%2C%20quiero%20una%20asesor%C3%ADa%20con%20CENIPSA',
+    'https://api.whatsapp.com/send?phone=573174232502&text=Buen%20d%C3%ADa%2C%20quisiera%20solicitar%20una%20valoraci%C3%B3n%20confidencial%20con%20CENIPSA.',
+  whatsappHrefEn:
+    'https://api.whatsapp.com/send?phone=573174232502&text=Good%20day%2C%20I%20would%20like%20to%20request%20a%20confidential%20assessment%20with%20CENIPSA.',
   /** WhatsApp con mensaje prellenado para consultas jurídicas (acompañamiento legal). */
   whatsappLegalHref:
     'https://api.whatsapp.com/send?phone=573174232502&text=Hola%2C%20quiero%20acompa%C3%B1amiento%20jur%C3%ADdico%20para%20mi%20caso%20con%20CENIPSA',
   whatsappLegalHrefEn:
     'https://api.whatsapp.com/send?phone=573174232502&text=Hello%2C%20I%20need%20legal%20support%20for%20my%20case%20with%20CENIPSA',
+  /**
+   * PENDIENTE: la firma pidió migrar a correos del dominio CENIPSA. Cuando los
+   * buzones estén creados y confirmados, cambiar SOLO estas dos líneas.
+   */
   emailInfo: 'info@inteligenciainvestigativa.com',
   emailGerencia: 'gerencia@inteligenciainvestigativa.com',
   /** Coordenadas aproximadas de la sede (Torre del Reloj, Bogotá) */
@@ -65,32 +77,19 @@ export const THIRD_PARTY = {
  */
 export const CHAT_LAUNCHER_ENABLED = false;
 
-/** Servicios ofrecidos para el selector del formulario de contacto. */
-export const SERVICE_OPTIONS = {
-  es: [
-    'Investigación personal',
-    'Investigación corporativa',
-    'Asesoría y representación jurídica',
-    'Criminalística',
-    'GPS rastreo satelital',
-    'Poligrafía',
-    'Barrido electrónico',
-    'Investigación de infidelidad',
-    'Servicios para abogados',
-    'Otro / no estoy seguro',
-  ],
-  en: [
-    'Personal investigation',
-    'Corporate investigation',
-    'Legal advice & representation',
-    'Criminalistics',
-    'GPS satellite tracking',
-    'Polygraph testing',
-    'Electronic sweep',
-    'Infidelity investigation',
-    'Services for lawyers',
-    'Other / not sure',
-  ],
+/**
+ * Selectores del formulario de valoración confidencial: tipo de requerimiento
+ * (B2B / B2C) y fase requerida (los tres pilares). Datos mínimos a propósito.
+ */
+export const FORM_OPTIONS = {
+  es: {
+    type: ['Empresarial', 'Personal'],
+    phase: ['Prevención', 'Investigación', 'Asesoría legal', 'No estoy seguro'],
+  },
+  en: {
+    type: ['Business', 'Personal'],
+    phase: ['Prevention', 'Investigation', 'Legal advice', 'Not sure'],
+  },
 } as const;
 
 export interface NavLink {
@@ -116,13 +115,13 @@ export const NAV_ES: NavLink[] = [
     label: 'Servicios',
     href: '/servicios/',
     children: [
-      { label: 'Asesoría y representación jurídica', href: '/asesoria-juridica/' },
-      { label: 'Investigación personal', href: '/investigacion-personal/' },
-      { label: 'Investigación corporativa', href: '/investigacion-corporativa/' },
-      { label: 'Criminalística', href: '/criminalistica/' },
-      { label: 'GPS rastreo satelital', href: '/plataforma-gps/' },
-      { label: 'Poligrafía', href: '/examen-de-poligrafia/' },
-      { label: 'Barrido electrónico', href: '/barrido-electronico/' },
+      { label: 'Asesoría jurídica y litigio', href: '/asesoria-juridica/' },
+      { label: 'Investigación corporativa y fraude', href: '/investigacion-corporativa/' },
+      { label: 'Investigación personal y patrimonial', href: '/investigacion-personal/' },
+      { label: 'Criminalística y peritaje', href: '/criminalistica/' },
+      { label: 'Monitoreo técnico de activos', href: '/plataforma-gps/' },
+      { label: 'Pruebas de confiabilidad', href: '/examen-de-poligrafia/' },
+      { label: 'Auditoría forense digital', href: '/barrido-electronico/' },
       { label: 'Servicios para abogados', href: '/servicios-especiales/' },
       { label: 'Servicios en línea', href: '/servicios-en-linea/' },
     ],
@@ -150,13 +149,13 @@ export const NAV_EN: NavLink[] = [
     label: 'Services',
     href: '/en/services/',
     children: [
-      { label: 'Legal advice & representation', href: '/en/legal-advice/' },
-      { label: 'Personal investigation', href: '/en/personal-investigation/' },
-      { label: 'Corporate investigation', href: '/en/corporate-investigation/' },
-      { label: 'Criminalistics', href: '/en/criminalistics/' },
-      { label: 'GPS satellite tracking', href: '/en/gps-tracking/' },
-      { label: 'Polygraph testing', href: '/en/polygraph/' },
-      { label: 'Electronic sweep', href: '/en/electronic-sweep/' },
+      { label: 'Legal advice & litigation', href: '/en/legal-advice/' },
+      { label: 'Corporate & fraud investigation', href: '/en/corporate-investigation/' },
+      { label: 'Personal & asset investigation', href: '/en/personal-investigation/' },
+      { label: 'Criminalistics & expert reports', href: '/en/criminalistics/' },
+      { label: 'Technical asset monitoring', href: '/en/gps-tracking/' },
+      { label: 'Reliability testing', href: '/en/polygraph/' },
+      { label: 'Digital forensic audit', href: '/en/electronic-sweep/' },
       { label: 'Services for lawyers', href: '/en/services-for-lawyers/' },
       { label: 'Online services', href: '/en/online-services/' },
     ],
@@ -196,33 +195,8 @@ export function altLocaleFor(path: string): string | undefined {
   return Object.entries(I18N_PAIRS).find(([, en]) => en === path)?.[0];
 }
 
-/** Enlaces de interés (landing pages SEO) — footer. Slugs exactos del sitio original. */
-export const FOOTER_SEO_LINKS: NavLink[] = [
-  { label: 'Detectives privados Bogotá', href: '/detectives-privados-bogota-2/' },
-  { label: 'Investigadores privados Bogotá', href: '/investigadores-privados-bogota-2/' },
-  { label: 'Detectives privados en Medellín', href: '/detectives-privados-en-medellin/' },
-  { label: 'GPS Bogotá', href: '/gps-bogota/' },
-  { label: 'Detectives privados en Cali', href: '/detectives-privados-en-cali/' },
-  { label: 'GPS para carros Bogotá', href: '/gps-para-carros-bogota/' },
-  { label: 'Detectives privados Colombia', href: '/detectives-privados-colombia/' },
-  { label: 'Prueba de polígrafo Bogotá', href: '/prueba-de-poligrafo-bogota/' },
-  { label: 'Investigador privado Colombia', href: '/investigador-privado-colombia/' },
-  { label: 'Detectives privados Bogotá precios', href: '/detectives-privados-bogota-precios/' },
-  { label: 'Detectives privados', href: '/detectives-privados/' },
-  { label: 'Abogados Bogotá', href: '/abogados-bogota/' },
-  { label: 'Investigadores privados', href: '/investigadores-privados-2/' },
-  { label: 'Abogados sucesiones Bogotá', href: '/abogados-sucesiones-bogota/' },
-  { label: 'Polígrafo laboral', href: '/poligrafo-laboral/' },
-];
-
-export const FOOTER_SERVICES: NavLink[] = [
-  { label: 'Asesoría y representación jurídica', href: '/asesoria-juridica/' },
-  { label: 'Investigación personal', href: '/investigacion-personal/' },
-  { label: 'Investigación corporativa', href: '/investigacion-corporativa/' },
-  { label: 'Criminalística', href: '/criminalistica/' },
-  { label: 'GPS rastreo satelital', href: '/plataforma-gps/' },
-  { label: 'Servicios en línea', href: '/servicios-en-linea/' },
-  { label: 'Pagos en línea', href: '/pagos-en-linea/' },
-  { label: 'Servicios especiales para abogados', href: '/servicios-especiales/' },
-  { label: 'Barrido electrónico', href: '/barrido-electronico/' },
-];
+/*
+ * El antiguo bloque de «enlaces de interés» del footer (15 landings por keyword)
+ * se retiró a pedido de la firma: se percibía como granja de enlaces. Las
+ * landings siguen publicadas y en el sitemap; se enlazan desde el contenido.
+ */

@@ -1,6 +1,7 @@
 ---
-title: "Plataforma GPS"
-seoTitle: "Plataforma GPS - Inteligencia Investigativa"
+title: "Sistemas de monitoreo técnico y trazabilidad de activos"
+seoTitle: "Plataforma GPS: monitoreo y trazabilidad de activos | CENIPSA"
+eyebrow: "Prevenir"
 description: "Plataforma GPS propia con carácter investigativo: rastreo satelital en tiempo real, sonido ambiental, geocercas, alertas y app móvil CENIPSA TRACK."
 type: service
 related:

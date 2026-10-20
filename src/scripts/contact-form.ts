@@ -45,6 +45,15 @@ function initContactForm() {
   if (!form || form.dataset.bound === 'true') return;
   form.dataset.bound = 'true';
 
+  // Preselección desde los CTA B2B/B2C (p. ej. /contacto/?tipo=empresarial).
+  const tipo = new URLSearchParams(window.location.search).get('tipo')?.toLowerCase();
+  const tipoSelect = form.querySelector<HTMLSelectElement>('select[name="tipo"]');
+  if (tipo && tipoSelect) {
+    const isBusiness = tipo.startsWith('empresa') || tipo === 'business' || tipo === 'b2b';
+    const isPersonal = tipo.startsWith('personal') || tipo === 'b2c';
+    if (isBusiness || isPersonal) tipoSelect.selectedIndex = isBusiness ? 1 : 2;
+  }
+
   const siteKey = form.dataset.recaptcha ?? '';
   // Precarga reCAPTCHA al primer foco para que el token esté listo al enviar.
   if (siteKey) {
@@ -65,7 +74,8 @@ function initContactForm() {
         `Nombre: ${data.get('name') ?? ''}`,
         `Email: ${data.get('email') ?? ''}`,
         `Teléfono: ${data.get('phone') ?? ''}`,
-        `Servicio: ${data.get('service') ?? ''}`,
+        `Tipo de requerimiento: ${data.get('tipo') ?? ''}`,
+        `Fase requerida: ${data.get('fase') ?? ''}`,
         '',
         String(data.get('message') ?? ''),
       ].join('\n');

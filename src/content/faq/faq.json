@@ -68,7 +68,7 @@
   {
     "id": "faq-12",
     "question": "¿Ustedes tienen servicios jurídicos?",
-    "answer": "<p>Contamos con un departamento jurídico en diferentes áreas del derecho, puede visitarnos en <a href=\"https://abogadosbogotaespecializados.com\">https://abogadosbogotaespecializados.com</a></p>",
+    "answer": "<p>Sí. Nuestro equipo jurídico asesora y representa a personas y empresas en <a href=\"/derecho-penal/\">derecho penal</a>, <a href=\"/derecho-de-familia/\">familia</a>, <a href=\"/derecho-civil/\">civil</a>, <a href=\"/derecho-laboral/\">laboral</a>, <a href=\"/derecho-comercial/\">comercial</a>, <a href=\"/derecho-administrativo/\">administrativo</a>, <a href=\"/derecho-constitucional/\">constitucional</a> y <a href=\"/derecho-de-propiedad-intelectual/\">propiedad intelectual</a>. Consulte nuestra <a href=\"/asesoria-juridica/\">asesoría y representación jurídica</a>.</p>",
     "order": 12
   },
   {
@@ -130,5 +130,23 @@
     "question": "¿Cómo hago para ubicar una persona?",
     "answer": "<p>En cuanto a su solicitud, le comunico que nosotros empezamos a realizar labores de inteligencia, a partir de datos básicos como nombre completo y número de identificación. Es importante aportar número de identificación, para tener la plena identidad de la persona objeto de la investigación, pero si este dato no es suministrado, también podemos realizar labores más dispendiosas para lograr la identidad plena, consistentes en descartar homónimos, para lograr acercamientos partiendo de datos asociados al investigado y que lo diferenciarían de sus homónimos.</p>",
     "order": 22
+  },
+  {
+    "id": "faq-23",
+    "question": "¿Qué los diferencia de otras firmas de abogados?",
+    "answer": "<p>Trabajamos de la mano con nuestro propio equipo de investigadores, criminalistas y peritos. Así podemos obtener pruebas lícitas y verificar los hechos antes de actuar, lo que fortalece cada estrategia jurídica. <a href=\"/nosotros/\">Conozca la firma</a>.</p>",
+    "order": 12.1
+  },
+  {
+    "id": "faq-24",
+    "question": "¿La consulta jurídica tiene costo?",
+    "answer": "<p>Sí. El valor de la consulta se informa antes de agendarla y puede variar según la complejidad del asunto. Tras la valoración inicial le proponemos por escrito el alcance, los tiempos y los honorarios.</p>",
+    "order": 12.2
+  },
+  {
+    "id": "faq-25",
+    "question": "¿Enviar el formulario de contacto crea una relación abogado-cliente?",
+    "answer": "<p>No. El formulario sirve para una valoración inicial confidencial. La relación profesional inicia solo cuando se acuerda formalmente el alcance del servicio. Por seguridad, no incluya documentos, contraseñas, información financiera ni datos sensibles de terceros en el primer contacto.</p>",
+    "order": 12.3
   }
 ]

@@ -1,6 +1,7 @@
 ---
-title: "Investigación corporativa"
-seoTitle: "Investigación Corporativa - Inteligencia Investigativa"
+title: "Investigación corporativa, fraude y debida diligencia"
+seoTitle: "Investigación corporativa y fraude empresarial | CENIPSA"
+eyebrow: "Prevenir · Investigar"
 description: "◉ Investigación al interior de la Empresa en un eventual robo continuado de inventarios, donde podemos infiltrar nuestros detectives con cámaras ocultas,"
 type: service
 related:

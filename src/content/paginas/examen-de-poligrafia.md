@@ -1,6 +1,7 @@
 ---
-title: "Examen de poligrafía"
-seoTitle: "Examen de poligrafía - Inteligencia Investigativa"
+title: "Pruebas de confiabilidad y poligrafía"
+seoTitle: "Examen de poligrafía y pruebas de confiabilidad | CENIPSA"
+eyebrow: "Prevenir"
 description: "Es una evaluación voluntaria que requiere autorización por parte de la persona examinada, no invasiva y direccionada bajo estrictos parámetros de respeto a la"
 type: service
 related:

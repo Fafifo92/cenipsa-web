@@ -1,7 +1,9 @@
 ---
-/** Footer oscuro con columnas de navegación, contacto, redes y legales. */
+/** Footer corporativo: marca, la firma, soluciones (pilares), legal, contacto y sellos de confianza. */
 import Logo from './Logo.astro';
-import { SITE, CONTACT, SOCIAL, FOOTER_SEO_LINKS, FOOTER_SERVICES } from '@/lib/site';
+import TrustSeals from './TrustSeals.astro';
+import { SITE, CONTACT, SOCIAL } from '@/lib/site';
+import { PILLARS_ES, PILLARS_EN } from '@/lib/pillars';
 
 export interface Props {
   lang?: 'es' | 'en';
@@ -9,95 +11,69 @@ export interface Props {
 const { lang = 'es' } = Astro.props;
 const year = new Date().getFullYear();
 
-const t =
-  lang === 'es'
-    ? {
-        about: 'Nosotros',
-        services: 'Nuestros servicios',
-        links: 'Enlaces de interés',
-        contact: 'Contacto',
-        blurb:
-          'Contamos con amplia trayectoria en el campo de las investigaciones privadas y el derecho en Colombia.',
-        who: 'Quiénes somos',
-        blog: 'Blog',
-        faqs: 'Preguntas frecuentes',
-        terms: 'Términos y condiciones',
-        privacy: 'Política de tratamiento de datos',
-        team: 'Equipo interdisciplinar',
-        guarantees: 'Garantías',
-        cases: 'Casos de éxito',
-        rights: 'Todos los derechos reservados.',
-        affiliation: 'Empresa afiliada al Círculo de Afiliados de la Cámara de Comercio de Bogotá.',
-      }
-    : {
-        about: 'About us',
-        services: 'Our services',
-        links: 'Links of interest',
-        contact: 'Contact',
-        blurb: 'Extensive experience in private investigation and law across Colombia.',
-        who: 'Who we are',
-        blog: 'Blog',
-        faqs: 'FAQ',
-        terms: 'Terms and conditions',
-        privacy: 'Data processing policy',
-        team: 'Interdisciplinary team',
-        guarantees: 'Guarantees',
-        cases: 'Success stories',
-        rights: 'All rights reserved.',
-        affiliation: 'Member of the Bogotá Chamber of Commerce Affiliates Circle.',
-      };
-
 const isEs = lang === 'es';
 
-const aboutLinks = isEs
+const t = isEs
+  ? {
+      firm: 'La firma',
+      solutions: 'Soluciones',
+      legal: 'Legal y confianza',
+      blurb: 'Firma de inteligencia forense e investigación jurídica. Convertimos hechos complejos en evidencia útil y decisiones jurídicas claras.',
+      rights: 'Todos los derechos reservados.',
+      seals: 'Sellos de confianza',
+    }
+  : {
+      firm: 'The firm',
+      solutions: 'Solutions',
+      legal: 'Legal & trust',
+      blurb: 'Forensic intelligence and legal investigation firm. We turn complex facts into useful evidence and clear legal decisions.',
+      rights: 'All rights reserved.',
+      seals: 'Trust seals',
+    };
+
+const firmLinks = isEs
   ? [
-      { label: t.who, href: '/nosotros/' },
-      { label: t.team, href: '/equipo-interdisciplinar/' },
-      { label: t.guarantees, href: '/garantias/' },
-      { label: t.cases, href: '/casos-de-exito/' },
-      { label: t.blog, href: '/blog/' },
-      { label: t.faqs, href: '/faq/' },
+      { label: 'Quiénes somos', href: '/nosotros/' },
+      { label: 'Equipo interdisciplinar', href: '/equipo-interdisciplinar/' },
+      { label: 'Garantías de servicio', href: '/garantias/' },
+      { label: 'Casos de éxito', href: '/casos-de-exito/' },
+      { label: 'Blog', href: '/blog/' },
+      { label: 'Preguntas frecuentes', href: '/faq/' },
+      { label: 'Contacto', href: '/contacto/' },
     ]
   : [
-      { label: t.who, href: '/en/about-us/' },
-      { label: t.team, href: '/en/interdisciplinary-team/' },
-      { label: t.guarantees, href: '/en/guarantees/' },
-      { label: t.cases, href: '/en/success-stories/' },
-      { label: t.blog, href: '/en/blog/' },
-      { label: t.faqs, href: '/en/faq/' },
-    ];
-
-// Legales: solo existen en español; en EN se enlazan igual (contenido jurídico primario).
-const legalLinks = [
-  { label: t.terms, href: '/terminos-y-condiciones/' },
-  { label: t.privacy, href: '/politica-de-tratamiento-de-datos-y-privacidad/' },
-];
-
-// Servicios del footer, según idioma (en EN, rutas /en/…).
-const footerServices = isEs
-  ? FOOTER_SERVICES
-  : [
-      { label: 'Personal investigation', href: '/en/personal-investigation/' },
-      { label: 'Corporate investigation', href: '/en/corporate-investigation/' },
-      { label: 'Legal advice & representation', href: '/en/legal-advice/' },
-      { label: 'Criminalistics', href: '/en/criminalistics/' },
-      { label: 'GPS satellite tracking', href: '/en/gps-tracking/' },
-      { label: 'Online services', href: '/en/online-services/' },
-      { label: 'Payments', href: '/en/payments/' },
-      { label: 'Services for lawyers', href: '/en/services-for-lawyers/' },
-      { label: 'Electronic sweep', href: '/en/electronic-sweep/' },
-    ];
-
-// Cuarta columna: en ES, landings SEO; en EN, recursos rápidos (evita enlazar a slugs en español).
-const resourceLinks = isEs
-  ? null
-  : [
-      { label: 'Services', href: '/en/services/' },
+      { label: 'Who we are', href: '/en/about-us/' },
+      { label: 'Interdisciplinary team', href: '/en/interdisciplinary-team/' },
+      { label: 'Guarantees', href: '/en/guarantees/' },
+      { label: 'Success stories', href: '/en/success-stories/' },
       { label: 'Blog', href: '/en/blog/' },
       { label: 'FAQ', href: '/en/faq/' },
-      { label: 'Payments', href: '/en/payments/' },
       { label: 'Contact', href: '/en/contact/' },
     ];
+
+const pillars = isEs ? PILLARS_ES : PILLARS_EN;
+const servicesPath = isEs ? '/servicios/' : '/en/services/';
+const solutionLinks = [
+  ...pillars.map((p) => ({ label: p.name, href: `${servicesPath}#${p.id}` })),
+  ...(isEs
+    ? [
+        { label: 'Asesoría jurídica y litigio', href: '/asesoria-juridica/' },
+        { label: 'Servicios para abogados', href: '/servicios-especiales/' },
+        { label: 'Servicios en línea', href: '/servicios-en-linea/' },
+      ]
+    : [
+        { label: 'Legal advice & litigation', href: '/en/legal-advice/' },
+        { label: 'Services for lawyers', href: '/en/services-for-lawyers/' },
+        { label: 'Online services', href: '/en/online-services/' },
+      ]),
+];
+
+// Legales: solo existen en español; en EN se enlazan igual (texto jurídico primario).
+const legalLinks = [
+  { label: isEs ? 'Términos y condiciones' : 'Terms and conditions', href: '/terminos-y-condiciones/' },
+  { label: isEs ? 'Política de tratamiento de datos (Habeas Data)' : 'Data processing policy (Habeas Data)', href: '/politica-de-tratamiento-de-datos-y-privacidad/' },
+  { label: isEs ? 'Pagos seguros en línea' : 'Secure online payments', href: isEs ? '/pagos-en-linea/' : '/en/payments/' },
+];
 
 const socials = [
   {
@@ -124,14 +100,14 @@ const socials = [
   <div class="pointer-events-none absolute -bottom-32 -left-24 h-96 w-96 rounded-full bg-gold-500/5 blur-3xl" aria-hidden="true"></div>
 
   <div class="container-site relative section-pad">
-    <div class="grid gap-12 lg:grid-cols-[1.3fr_1fr_1.2fr_1.2fr]">
+    <div class="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
       <!-- Marca -->
       <div>
-        <a href={lang === 'es' ? '/' : '/en/'} aria-label="CENIPSA — Inteligencia Investigativa">
+        <a href={isEs ? '/' : '/en/'} aria-label={`${SITE.brand} — ${isEs ? SITE.descriptor : SITE.descriptorEn}`}>
           <Logo variant="light" full class="h-20 md:h-24" />
         </a>
         <p class="mt-5 max-w-xs text-[0.92rem] leading-relaxed text-ink-300">{t.blurb}</p>
-        <p class="mt-4 max-w-xs text-[0.8rem] leading-relaxed text-ink-400">{t.affiliation}</p>
+        <p class="mt-3 max-w-xs font-display text-[0.95rem] text-gold-300 italic">{isEs ? SITE.tagline : SITE.taglineEn}</p>
         <div class="mt-6 flex gap-3">
           {socials.map((s) => (
             <a
@@ -149,66 +125,32 @@ const socials = [
         </div>
       </div>
 
-      <!-- Nosotros -->
-      <nav aria-label={t.about}>
-        <h2 class="font-display text-[0.95rem] font-semibold tracking-wide text-white">{t.about}</h2>
-        <ul class="mt-5 space-y-2.5 text-[0.9rem]">
-          {aboutLinks.map((l) => (
-            <li>
-              <a href={l.href} class="text-ink-300 transition-colors hover:text-gold-300">{l.label}</a>
-            </li>
-          ))}
-          {legalLinks.map((l) => (
-            <li>
-              <a href={l.href} class="text-ink-300 transition-colors hover:text-gold-300">{l.label}</a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-
-      <!-- Servicios -->
-      <nav aria-label={t.services}>
-        <h2 class="font-display text-[0.95rem] font-semibold tracking-wide text-white">{t.services}</h2>
-        <ul class="mt-5 space-y-2.5 text-[0.9rem]">
-          {footerServices.map((l) => (
-            <li>
-              <a href={l.href} class="text-ink-300 transition-colors hover:text-gold-300">{l.label}</a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-
-      <div class="space-y-10">
-        <nav aria-label={t.links}>
-          <h2 class="font-display text-[0.95rem] font-semibold tracking-wide text-white">{t.links}</h2>
-          <ul class="mt-5 columns-1 space-y-2.5 text-[0.9rem]">
-            {(resourceLinks ?? FOOTER_SEO_LINKS.slice(0, 8)).map((l) => (
+      {[
+        { title: t.firm, links: firmLinks },
+        { title: t.solutions, links: solutionLinks },
+        { title: t.legal, links: legalLinks },
+      ].map((col) => (
+        <nav aria-label={col.title}>
+          <h2 class="font-display text-[0.95rem] font-semibold tracking-wide text-white">{col.title}</h2>
+          <ul class="mt-5 space-y-2.5 text-[0.9rem]">
+            {col.links.map((l) => (
               <li>
                 <a href={l.href} class="text-ink-300 transition-colors hover:text-gold-300">{l.label}</a>
               </li>
             ))}
           </ul>
         </nav>
-      </div>
+      ))}
     </div>
 
-    <!-- Más enlaces de interés SEO (solo ES: son landings orientadas a búsquedas en español) -->
-    {
-      isEs && (
-        <nav class="mt-10 border-t border-white/10 pt-8" aria-label={`${t.links} 2`}>
-          <ul class="flex flex-wrap gap-x-7 gap-y-2.5 text-[0.85rem]">
-            {FOOTER_SEO_LINKS.slice(8).map((l) => (
-              <li>
-                <a href={l.href} class="text-ink-400 transition-colors hover:text-gold-300">{l.label}</a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      )
-    }
+    <!-- Sellos de confianza -->
+    <div class="mt-12 border-t border-white/10 pt-8">
+      <h2 class="sr-only">{t.seals}</h2>
+      <TrustSeals lang={lang} tone="dark" />
+    </div>
 
     <!-- Contacto -->
-    <div class="mt-10 grid gap-6 border-t border-white/10 pt-8 text-[0.9rem] sm:grid-cols-2 lg:grid-cols-4">
+    <div class="mt-10 grid gap-6 border-t border-white/10 pt-8 text-[0.9rem] sm:grid-cols-2 lg:grid-cols-3">
       <p class="flex items-start gap-3">
         <svg class="mt-0.5 h-4 w-4 shrink-0 text-gold-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M12 2a7.5 7.5 0 0 0-7.5 7.5c0 5.25 7.5 12.5 7.5 12.5s7.5-7.25 7.5-12.5A7.5 7.5 0 0 0 12 2Zm0 10a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z" />
@@ -225,14 +167,10 @@ const socials = [
         <a href={`mailto:${CONTACT.emailInfo}`} class="break-all transition-colors hover:text-gold-300">{CONTACT.emailInfo}</a>
         <a href={`mailto:${CONTACT.emailGerencia}`} class="break-all transition-colors hover:text-gold-300">{CONTACT.emailGerencia}</a>
       </p>
-      <p class="text-ink-400">
-        {lang === 'es' ? 'Pagos seguros en línea con' : 'Secure online payments with'}
-        <a href="/pagos-en-linea/" class="font-semibold text-white transition-colors hover:text-gold-300">PayU</a>
-      </p>
     </div>
 
     <div class="mt-10 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-[0.8rem] text-ink-400 sm:flex-row">
-      <p>© {year} {SITE.legalName} — {SITE.name}. {t.rights}</p>
+      <p>© {year} {SITE.legalName} · NIT {SITE.nit}. {t.rights}</p>
       <p>Bogotá · Medellín · Cali · Colombia</p>
     </div>
   </div>

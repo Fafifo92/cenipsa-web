@@ -1,6 +1,7 @@
 ---
-title: "Consejos de seguridad"
-seoTitle: "Consejos de seguridad - Inteligencia Investigativa"
+title: "Consejos de seguridad al contratar una investigación"
+seoTitle: "Consejos de seguridad para contratar una investigación | CENIPSA"
+eyebrow: "Recursos"
 description: "Para un servicio investigativo, por su seguridad, tenga en cuenta lo siguiente:"
 type: info
 related:

@@ -37,3 +37,64 @@ export const redirects = {
   '/busqueda': '/blog',
   '/formulario-prueba': '/contacto',
 };
+
+/**
+ * Dominio jurídico antiguo (abogadosbogotaespecializados.com) integrado en este
+ * sitio. Redirects 301 URL a URL hacia la sección equivalente — nunca todo a la
+ * home. Requiere que el dominio apunte a este mismo hosting como alias (Netlify:
+ * Domain management → domain alias); ver README.md § Migración de dominios.
+ */
+export const LEGAL_DOMAIN = 'abogadosbogotaespecializados.com';
+
+export const legalDomainRedirects = {
+  '/': '/asesoria-juridica/',
+  '/blog': '/blog/',
+  '/abogados-en-bogota': '/abogados-bogota/',
+  '/firma-de-abogados-en-colombia': '/abogados-bogota/',
+  '/firmas-de-abogados-en-bogota': '/abogados-bogota/',
+  '/areas-de-practica': '/asesoria-juridica/',
+  '/beneficios': '/garantias/',
+  '/contact-us': '/contacto/',
+  '/contacto': '/contacto/',
+  '/la-firma': '/nosotros/',
+  '/nosotros': '/nosotros/',
+  '/faq': '/faq/',
+  '/pagos-en-linea': '/pagos-en-linea/',
+  '/servicios-en-linea': '/servicios-en-linea/',
+  '/servicios-abogados': '/servicios-especiales/',
+  '/servicios-investigativos': '/servicios/',
+  '/terminos-y-condiciones': '/terminos-y-condiciones/',
+  '/confidencialidad-y-privacidad': '/politica-de-tratamiento-de-datos-y-privacidad/',
+  '/derecho-penal': '/derecho-penal/',
+  '/abogado-penal-bogota': '/derecho-penal/',
+  '/abogados-penalistas-bogota': '/derecho-penal/',
+  '/derecho-de-familia': '/derecho-de-familia/',
+  '/derecho-familiar': '/derecho-de-familia/',
+  '/abogado-de-familia-bogota': '/derecho-de-familia/',
+  '/abogados-divorcio-bogota': '/derecho-de-familia/',
+  '/derecho-civil': '/derecho-civil/',
+  '/abogados-civiles-bogota': '/derecho-civil/',
+  '/derecho-laboral': '/derecho-laboral/',
+  '/abogado-laboral-bogota': '/derecho-laboral/',
+  '/derecho-comercial': '/derecho-comercial/',
+  '/derecho-administrativo': '/derecho-administrativo/',
+  '/derechoadministrativo': '/derecho-administrativo/',
+  '/abogado-administrativo-bogota': '/derecho-administrativo/',
+  '/derecho-constitucional': '/derecho-constitucional/',
+  '/derechoconstitucional': '/derecho-constitucional/',
+  '/derecho-de-propiedad-intelectual': '/derecho-de-propiedad-intelectual/',
+  '/derecho-de-autor': '/derecho-de-propiedad-intelectual/',
+  // área de clientes / login del WordPress antiguo (sin equivalente público)
+  '/customer-area/*': '/pagos-en-linea/',
+  '/login': '/contacto/',
+  '/login-2': '/contacto/',
+  '/registrarse': '/contacto/',
+  '/profile': '/contacto/',
+  '/forgot-password': '/contacto/',
+  // posts: /AAAA/MM/DD/slug/ → /blog/slug/ (los 44 artículos se migraron con el mismo slug)
+  '/:year/:month/:day/:slug': '/blog/:slug/',
+};
+
+/** Destino para cualquier otra URL del dominio jurídico antiguo. */
+export const LEGAL_DOMAIN_FALLBACK = '/asesoria-juridica/';
+

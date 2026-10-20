@@ -1,6 +1,7 @@
 ---
-/** Hero interior: fondo tinta con motivo de huella, eyebrow, H1 y descripción. */
+/** Hero interior: fondo azul jurídico (o foto con velo), eyebrow, H1 y descripción. */
 import Breadcrumbs, { type Crumb } from './Breadcrumbs.astro';
+import HeroImage from './HeroImage.astro';
 
 export interface Props {
   eyebrow?: string;
@@ -15,7 +16,7 @@ const { eyebrow, title, description, crumbs, lang = 'es', image } = Astro.props;
 ---
 
 <section class="relative overflow-hidden bg-ink-950 pt-36 pb-16 md:pt-44 md:pb-20">
-  {image && <img src={image} alt="" width="1600" height="1067" fetchpriority="high" decoding="async" class="absolute inset-0 h-full w-full object-cover" />}
+  {image && <HeroImage name={image} />}
   {image && <div class="absolute inset-0 bg-gradient-to-r from-ink-950/90 via-ink-950/60 to-ink-950/20" aria-hidden="true"></div>}
   {!image && (<div class="pointer-events-none absolute inset-0" aria-hidden="true">
     <div class="absolute -top-40 right-[-10%] h-[30rem] w-[30rem] rounded-full bg-brand-500/10 blur-3xl"></div>

@@ -4,7 +4,9 @@
  * Uso: node scripts/gen-vercel.mjs  (ejecutar tras cambiar redirects o CSP)
  */
 import { writeFileSync, readFileSync } from 'node:fs';
-import { redirects } from '../redirects.config.mjs';
+import { redirects, legalDomainRedirects, LEGAL_DOMAIN, LEGAL_DOMAIN_FALLBACK } from '../redirects.config.mjs';
+
+const SITE = 'https://www.inteligenciainvestigativa.com';
 
 const headersFile = readFileSync('public/_headers', 'utf8');
 const csp = headersFile.match(/Content-Security-Policy: (.+)/)?.[1]?.trim();
@@ -26,10 +28,26 @@ const vercel = {
   trailingSlash: true,
   // Vercel hace matching estricto del path: hay que cubrir la forma con y sin
   // slash final (las URLs indexadas de WordPress usan slash final).
-  redirects: Object.entries(redirects).flatMap(([source, destination]) => [
-    { source: `${source}/`, destination: `${destination}/`, permanent: true },
-    { source, destination: `${destination}/`, permanent: true },
-  ]),
+  redirects: [
+    // Dominio jurídico antiguo: 301 por host hacia la sección equivalente.
+    ...[LEGAL_DOMAIN, `www.${LEGAL_DOMAIN}`].flatMap((host) => [
+      ...Object.entries(legalDomainRedirects).flatMap(([from, to]) => {
+        const has = [{ type: 'host', value: host }];
+        const destination = `${SITE}${to}`;
+        if (from === '/') return [{ source: '/', has, destination, permanent: true }];
+        const source = from.endsWith('/*') ? from.replace(/\/\*$/, '/:path*') : from;
+        return [
+          { source: `${source}/`, has, destination, permanent: true },
+          { source, has, destination, permanent: true },
+        ];
+      }),
+      { source: '/:path*', has: [{ type: 'host', value: host }], destination: `${SITE}${LEGAL_DOMAIN_FALLBACK}`, permanent: true },
+    ]),
+    ...Object.entries(redirects).flatMap(([source, destination]) => [
+      { source: `${source}/`, destination: `${destination}/`, permanent: true },
+      { source, destination: `${destination}/`, permanent: true },
+    ]),
+  ],
   headers: [
     { source: '/(.*)', headers: securityHeaders },
     {
@@ -40,4 +58,4 @@ const vercel = {
 };
 
 writeFileSync('vercel.json', JSON.stringify(vercel, null, 2) + '\n', 'utf8');
-console.log(`vercel.json generado: ${Object.keys(redirects).length} redirects, ${securityHeaders.length} headers`);
+console.log(`vercel.json generado: ${vercel.redirects.length} reglas de redirect, ${securityHeaders.length} headers`);

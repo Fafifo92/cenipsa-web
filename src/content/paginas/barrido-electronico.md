@@ -1,6 +1,7 @@
 ---
-title: "Barrido electrónico empresarial"
-seoTitle: "Barrido electrónico - Inteligencia Investigativa"
+title: "Auditoría forense digital y barridos electrónicos de seguridad"
+seoTitle: "Barrido electrónico y auditoría forense digital | CENIPSA"
+eyebrow: "Prevenir"
 description: "Barrido electrónico empresarial: detección de micrófonos, cámaras y dispositivos espía con sistemas de alta precisión para proteger la privacidad empresarial."
 type: service
 related:

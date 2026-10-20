@@ -65,4 +65,4 @@ Recomendamos que, si desea realizar un testamento para repartir todos sus bienes
 
 Recuerde que es un proceso arduo, pero que siempre recibirá el consejo de los **abogados sucesiones Bogotá** de la firma de CENIPSA, donde contamos con equipos de profesionales especializados que no sólo lo defenderán en el tribunal, sino que le permitirán encontrar las pruebas necesarias para interponer una demanda que ayude a incrementar la justicia del trato y evitar fraudes dentro de la sucesión.
 
-Además, usted podrá comunicarse con nosotros al PBX (601) 7561583 y al correo [juridico@abogadosbogotaespecializados.com](mailto:juridico@abogadosbogotaespecializados.com) o visite nuestro sitio web dónde podrá conocer todos nuestros servicios [https://abogadosbogotaespecializados.com/](https://abogadosbogotaespecializados.com/)
+Para conocer la vía adecuada en su caso, [solicite una valoración confidencial](/contacto/) o consulte nuestra área de [derecho de familia y sucesiones](/derecho-de-familia/).

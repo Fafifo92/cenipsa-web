@@ -1,6 +1,7 @@
 ---
-title: "Servicios especiales"
-seoTitle: "Servicios especiales - Inteligencia Investigativa"
+title: "Valoración probatoria y servicios para abogados"
+seoTitle: "Servicios especiales para abogados y firmas de cobranza | CENIPSA"
+eyebrow: "Defender"
 description: "Aliado estratégico de abogados y empresas de cobro de cartera: notificación judicial, investigación patrimonial para medidas cautelares y análisis ejecutivo."
 type: service
 related:

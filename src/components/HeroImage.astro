@@ -1,0 +1,44 @@
+---
+/**
+ * Foto de fondo de hero como <picture> responsivo (AVIF → WebP → JPG) a partir
+ * de las variantes de scripts/gen-hero-images.mjs. Acepta el nombre
+ * («plaza-bolivar») o la ruta pública («/images/plaza-bolivar.jpg»); si la foto
+ * no tiene variantes generadas, cae a un <img> simple.
+ */
+import manifest from '@/lib/hero-images.json';
+
+export interface Props {
+  /** Nombre de la foto o ruta pública del JPG original. */
+  name: string;
+  class?: string;
+  /** true (por defecto): imagen LCP — prioridad alta, sin lazy. */
+  priority?: boolean;
+}
+const { name, class: className = '', priority = true } = Astro.props;
+const key = name.replace(/^\/images\//, '').replace(/\.jpe?g$/, '');
+const entry = (manifest as Record<string, { widths: number[]; width: number; height: number }>)[key];
+const fallback = name.startsWith('/') ? name : `/images/${key}.jpg`;
+const srcset = (ext: string) => entry?.widths.map((w) => `/images/hero/${key}-${w}.${ext} ${w}w`).join(', ');
+const imgClass = `absolute inset-0 h-full w-full object-cover ${className}`;
+---
+
+{
+  entry ? (
+    <picture>
+      <source type="image/avif" srcset={srcset('avif')} sizes="100vw" />
+      <source type="image/webp" srcset={srcset('webp')} sizes="100vw" />
+      <img
+        src={fallback}
+        alt=""
+        width={entry.width}
+        height={entry.height}
+        fetchpriority={priority ? 'high' : 'auto'}
+        loading={priority ? 'eager' : 'lazy'}
+        decoding="async"
+        class={imgClass}
+      />
+    </picture>
+  ) : (
+    <img src={fallback} alt="" width="1600" height="1067" fetchpriority={priority ? 'high' : 'auto'} decoding="async" class={imgClass} />
+  )
+}

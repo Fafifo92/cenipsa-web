@@ -5,7 +5,7 @@
  * invisible (si hay PUBLIC_RECAPTCHA_SITE_KEY) y validación nativa.
  * Sin endpoint, degrada a mailto: prellenado.
  */
-import { THIRD_PARTY, CONTACT, SERVICE_OPTIONS } from '@/lib/site';
+import { THIRD_PARTY, CONTACT, FORM_OPTIONS } from '@/lib/site';
 
 export interface Props {
   lang?: 'es' | 'en';
@@ -13,7 +13,7 @@ export interface Props {
 const { lang = 'es' } = Astro.props;
 const hasEndpoint = Boolean(THIRD_PARTY.formEndpoint);
 const recaptchaKey = THIRD_PARTY.recaptchaSiteKey;
-const services = SERVICE_OPTIONS[lang];
+const options = FORM_OPTIONS[lang];
 
 const t =
   lang === 'es'
@@ -21,12 +21,17 @@ const t =
         name: 'Nombre',
         email: 'Correo electrónico',
         phone: 'Teléfono (opcional)',
-        service: 'Servicio de interés',
-        servicePlaceholder: 'Selecciona un servicio…',
-        message: 'Cuéntanos tu caso',
+        type: 'Tipo de requerimiento',
+        phase: 'Fase requerida',
+        placeholder: 'Selecciona…',
+        message: 'Describe brevemente el tipo de situación',
+        messageHelp:
+          'No incluyas documentos, contraseñas, información financiera ni datos sensibles de terceros. Te pediremos lo necesario de forma segura si el caso avanza.',
+        noRelationship:
+          'El envío de este formulario no crea una relación abogado-cliente ni de prestación de servicios; esta inicia solo cuando se acuerda formalmente el alcance.',
         privacy: 'He leído y acepto la',
         privacyLink: 'política de tratamiento de datos y privacidad',
-        submit: 'Enviar mensaje',
+        submit: 'Solicitar valoración confidencial',
         sending: 'Enviando…',
         note: 'Tus datos se tratan con absoluta confidencialidad.',
         error: 'No pudimos enviar el mensaje. Intenta de nuevo o escríbenos por WhatsApp.',
@@ -40,12 +45,17 @@ const t =
         name: 'Name',
         email: 'Email',
         phone: 'Phone (optional)',
-        service: 'Service of interest',
-        servicePlaceholder: 'Select a service…',
-        message: 'Tell us about your case',
+        type: 'Type of request',
+        phase: 'Required phase',
+        placeholder: 'Select…',
+        message: 'Briefly describe the type of situation',
+        messageHelp:
+          'Do not include documents, passwords, financial information or sensitive data about third parties. We will request what is needed securely if the case moves forward.',
+        noRelationship:
+          'Submitting this form does not create an attorney-client or service relationship; that begins only once the scope is formally agreed.',
         privacy: 'I have read and accept the',
         privacyLink: 'data processing and privacy policy',
-        submit: 'Send message',
+        submit: 'Request a confidential assessment',
         sending: 'Sending…',
         note: 'Your information is handled with absolute confidentiality.',
         error: 'We could not send your message. Please try again or reach us on WhatsApp.',
@@ -90,21 +100,30 @@ const privacyHref = lang === 'es' ? '/politica-de-tratamiento-de-datos-y-privaci
 
   <div class="grid gap-5 sm:grid-cols-2">
     <div>
-      <label for="cf-phone" class="field-label">{t.phone}</label>
-      <input id="cf-phone" name="phone" type="tel" autocomplete="tel" maxlength="30" class="field" />
+      <label for="cf-type" class="field-label">{t.type} *</label>
+      <select id="cf-type" name="tipo" required class="field field-select">
+        <option value="">{t.placeholder}</option>
+        {options.type.map((o) => <option value={o}>{o}</option>)}
+      </select>
     </div>
     <div>
-      <label for="cf-service" class="field-label">{t.service}</label>
-      <select id="cf-service" name="service" class="field field-select">
-        <option value="">{t.servicePlaceholder}</option>
-        {services.map((s) => <option value={s}>{s}</option>)}
+      <label for="cf-phase" class="field-label">{t.phase}</label>
+      <select id="cf-phase" name="fase" class="field field-select">
+        <option value="">{t.placeholder}</option>
+        {options.phase.map((o) => <option value={o}>{o}</option>)}
       </select>
     </div>
   </div>
 
+  <div class="sm:w-1/2 sm:pr-2.5">
+    <label for="cf-phone" class="field-label">{t.phone}</label>
+    <input id="cf-phone" name="phone" type="tel" autocomplete="tel" maxlength="30" class="field" />
+  </div>
+
   <div>
     <label for="cf-message" class="field-label">{t.message} *</label>
-    <textarea id="cf-message" name="message" required rows="5" maxlength="4000" class="field resize-y"></textarea>
+    <textarea id="cf-message" name="message" required rows="4" maxlength="1500" aria-describedby="cf-message-help" class="field resize-y"></textarea>
+    <p id="cf-message-help" class="mt-1.5 text-[0.8rem] leading-relaxed text-ink-600">{t.messageHelp}</p>
   </div>
 
   <div class="flex items-start gap-3">
@@ -120,7 +139,8 @@ const privacyHref = lang === 'es' ? '/politica-de-tratamiento-de-datos-y-privaci
   <button type="submit" class="btn-primary w-full sm:w-auto" data-label={t.submit} data-sending={t.sending}>
     {t.submit}
   </button>
-  <p class="text-[0.8rem] text-ink-500">{t.note}</p>
+  <p class="text-[0.8rem] text-ink-600">{t.note}</p>
+  <p class="text-[0.78rem] leading-relaxed text-ink-500">{t.noRelationship}</p>
 
   {
     recaptchaKey && (
