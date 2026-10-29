@@ -1,0 +1,31 @@
+---
+/**
+ * Flujograma del proceso de atención (reemplaza «Casos de éxito»: los
+ * contratantes son confidenciales). Horizontal en escritorio, vertical en móvil.
+ */
+export interface Props {
+  steps: { n: string; title: string; text: string }[];
+}
+const { steps } = Astro.props;
+---
+
+<ol class="relative grid gap-6 lg:grid-cols-4 lg:gap-5">
+  {
+    steps.map((s, i) => (
+      <li class="relative flex gap-5 lg:block" data-reveal style={`--reveal-delay:${i * 110}ms`}>
+        <div class="flex flex-col items-center lg:flex-row">
+          <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-ink-950 font-display text-xl font-semibold text-gold-400 ring-4 ring-gold-400/25">
+            {s.n}
+          </span>
+          {i < steps.length - 1 && (
+            <span class="my-2 w-px flex-1 bg-gradient-to-b from-gold-400 to-gold-400/20 lg:mx-3 lg:my-0 lg:h-px lg:w-auto lg:bg-gradient-to-r" aria-hidden="true" />
+          )}
+        </div>
+        <div class="pb-2 lg:mt-5 lg:pr-4">
+          <h3 class="font-display text-lg font-semibold text-ink-950">{s.title}</h3>
+          <p class="mt-2 text-[0.94rem] leading-relaxed text-ink-700">{s.text}</p>
+        </div>
+      </li>
+    ))
+  }
+</ol>

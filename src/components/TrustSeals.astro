@@ -29,6 +29,7 @@ const seals = [
   },
   {
     icon: 'landmark',
+    img: '/images/sello-ccb-afiliados-2026.png',
     title: isEs ? 'Círculo de Afiliados CCB' : 'Bogotá Chamber of Commerce',
     text: isEs ? 'Cámara de Comercio de Bogotá' : 'Affiliates Circle member',
     href: isEs ? '/nosotros/#ccb-title' : '/en/about-us/',
@@ -63,14 +64,18 @@ const dark = tone === 'dark';
               : 'border-ink-950/10 bg-white hover:border-gold-400',
           ]}
         >
+          {s.img ? (
+            <img src={s.img} width="254" height="254" alt="" loading="lazy" decoding="async" class="h-11 w-11 shrink-0" />
+          ) : (
           <span
-            class:list={[
-              'flex h-9 w-9 shrink-0 items-center justify-center rounded-lg',
-              dark ? 'bg-gold-400/10 text-gold-300' : 'bg-ink-950 text-gold-300',
-            ]}
-          >
-            <Icon name={s.icon} class="h-4.5 w-4.5" />
-          </span>
+              class:list={[
+                'flex h-9 w-9 shrink-0 items-center justify-center rounded-lg',
+                dark ? 'bg-gold-400/10 text-gold-400' : 'bg-ink-950 text-gold-400',
+              ]}
+            >
+              <Icon name={s.icon} class="h-4.5 w-4.5" />
+            </span>
+          )}
           <span class="min-w-0">
             <span class:list={['block text-[0.86rem] leading-snug font-semibold', dark ? 'text-white' : 'text-ink-950']}>{s.title}</span>
             <span class:list={['mt-0.5 block text-[0.78rem] leading-snug', dark ? 'text-ink-300' : 'text-ink-600']}>{s.text}</span>

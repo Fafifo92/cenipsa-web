@@ -286,7 +286,7 @@
           "value": "abogadosbogotaespecializados.com"
         }
       ],
-      "destination": "https://www.inteligenciainvestigativa.com/servicios-en-linea/",
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
       "permanent": true
     },
     {
@@ -297,7 +297,7 @@
           "value": "abogadosbogotaespecializados.com"
         }
       ],
-      "destination": "https://www.inteligenciainvestigativa.com/servicios-en-linea/",
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
       "permanent": true
     },
     {
@@ -1254,7 +1254,7 @@
           "value": "www.abogadosbogotaespecializados.com"
         }
       ],
-      "destination": "https://www.inteligenciainvestigativa.com/servicios-en-linea/",
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
       "permanent": true
     },
     {
@@ -1265,7 +1265,7 @@
           "value": "www.abogadosbogotaespecializados.com"
         }
       ],
-      "destination": "https://www.inteligenciainvestigativa.com/servicios-en-linea/",
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
       "permanent": true
     },
     {
@@ -2111,12 +2111,12 @@
     },
     {
       "source": "/seguimiento-de-infidelidad/",
-      "destination": "/infidelidad/",
+      "destination": "/investigacion-personal/",
       "permanent": true
     },
     {
       "source": "/seguimiento-de-infidelidad",
-      "destination": "/infidelidad/",
+      "destination": "/investigacion-personal/",
       "permanent": true
     },
     {
@@ -2207,6 +2207,56 @@
     {
       "source": "/formulario-prueba",
       "destination": "/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/infidelidad/",
+      "destination": "/investigacion-personal/",
+      "permanent": true
+    },
+    {
+      "source": "/infidelidad",
+      "destination": "/investigacion-personal/",
+      "permanent": true
+    },
+    {
+      "source": "/casos-de-exito/",
+      "destination": "/como-trabajamos/",
+      "permanent": true
+    },
+    {
+      "source": "/casos-de-exito",
+      "destination": "/como-trabajamos/",
+      "permanent": true
+    },
+    {
+      "source": "/servicios-en-linea/",
+      "destination": "/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/servicios-en-linea",
+      "destination": "/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/en/success-stories/",
+      "destination": "/en/how-we-work/",
+      "permanent": true
+    },
+    {
+      "source": "/en/success-stories",
+      "destination": "/en/how-we-work/",
+      "permanent": true
+    },
+    {
+      "source": "/en/online-services/",
+      "destination": "/en/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/en/online-services",
+      "destination": "/en/contact/",
       "permanent": true
     }
   ],

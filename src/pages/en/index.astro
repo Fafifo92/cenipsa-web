@@ -33,7 +33,6 @@ const segments = [
     links: [
       { label: 'Personal & asset investigation', href: '/en/personal-investigation/' },
       { label: 'Legal advice & representation', href: '/en/legal-advice/' },
-      { label: 'Online services', href: '/en/online-services/' },
     ],
   },
   {
@@ -66,17 +65,17 @@ const disciplines = [
 >
   <!-- ============ HERO ============ -->
   <section class="relative flex min-h-[92vh] items-center overflow-hidden bg-ink-950 pt-32 pb-20">
-    <HeroImage name="plaza-bolivar" class="object-[center_35%]" />
-    <div class="absolute inset-0 bg-gradient-to-r from-ink-950/92 via-ink-950/70 to-ink-950/30" aria-hidden="true"></div>
-    <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ink-950/70 to-transparent" aria-hidden="true"></div>
+    <HeroImage name="plaza-bolivar" class="object-[center_35%] brightness-110 saturate-[1.08]" />
+    <div class="absolute inset-0 bg-gradient-to-r from-ink-950/80 via-ink-950/45 to-transparent" aria-hidden="true"></div>
+    <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-ink-950/50 to-transparent" aria-hidden="true"></div>
     <div class="container-site relative">
-      <p class="eyebrow text-gold-300" data-reveal>
+      <p class="eyebrow text-gold-400" data-reveal>
         <span class="h-px w-8 bg-gold-400" aria-hidden="true"></span>
         {SITE.brand} · {SITE.descriptorEn}
       </p>
       <h1 class="mt-5 max-w-4xl font-display text-[2.6rem] leading-[1.08] font-semibold text-white sm:text-6xl md:text-[4.2rem]" data-reveal style="--reveal-delay:100ms">
         We investigate the truth.
-        <span class="mt-2 block text-gold-300">We defend your rights.</span>
+        <span class="mt-2 block text-gold-400">We defend your rights.</span>
       </h1>
       <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200 md:text-xl" data-reveal style="--reveal-delay:200ms">
         We turn complex facts into useful evidence and clear legal decisions. Forensic intelligence and specialized
@@ -93,7 +92,7 @@ const disciplines = [
         </a>
       </div>
       <p class="mt-6 flex flex-wrap gap-x-7 gap-y-2 text-[0.95rem]" data-reveal style="--reveal-delay:360ms">
-        <a href="/en/contact/" class="link-underline font-semibold text-gold-300">Request a confidential assessment</a>
+        <a href="/en/contact/" class="link-underline font-semibold text-gold-400">Request a confidential assessment</a>
         <a href="#process" class="link-underline font-medium text-ink-200">How do we work?</a>
       </p>
       <dl class="mt-14 grid max-w-3xl grid-cols-1 gap-6 border-t border-white/10 pt-8 sm:grid-cols-3" data-reveal style="--reveal-delay:420ms">
@@ -103,7 +102,7 @@ const disciplines = [
         </div>
         <div>
           <dt class="text-[0.78rem] font-semibold tracking-[0.14em] text-ink-300 uppercase">Quality seal</dt>
-          <dd class="mt-1.5 font-display text-lg leading-snug font-medium text-white">Bogotá Chamber of Commerce <span class="text-gold-300">Affiliates</span></dd>
+          <dd class="mt-1.5 font-display text-lg leading-snug font-medium text-white">Bogotá Chamber of Commerce <span class="text-gold-400">Affiliates</span></dd>
         </div>
         <div>
           <dt class="text-[0.78rem] font-semibold tracking-[0.14em] text-ink-300 uppercase">Office</dt>
@@ -126,7 +125,7 @@ const disciplines = [
         {
           segments.map((s, i) => (
             <li class="flex flex-col rounded-2xl border border-ink-950/10 bg-white p-7 shadow-soft" data-reveal style={`--reveal-delay:${i * 90}ms`}>
-              <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-ink-950 text-gold-300">
+              <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-ink-950 text-gold-400">
                 <Icon name={s.icon} class="h-6 w-6" />
               </span>
               <h3 class="mt-5 font-display text-xl font-semibold text-ink-950">{s.title}</h3>
@@ -160,7 +159,7 @@ const disciplines = [
             «We don't just hand over a report: evidence is gathered from day one with a view to how it will stand
             before an authority.»
           </p>
-          <p class="relative mt-6 text-[0.85rem] font-semibold tracking-[0.16em] text-gold-300 uppercase">{SITE.legalName}</p>
+          <p class="relative mt-6 text-[0.85rem] font-semibold tracking-[0.16em] text-gold-400 uppercase">{SITE.legalName}</p>
         </div>
       </div>
       <div data-reveal="right">
@@ -200,7 +199,7 @@ const disciplines = [
           PILLARS_EN.map((p, i) => (
             <li class="flex flex-col rounded-2xl bg-brand-700 p-8 text-white shadow-lift" data-reveal style={`--reveal-delay:${i * 100}ms`}>
               <div class="flex items-center gap-4">
-                <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-gold-300">
+                <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-gold-400">
                   <Icon name={p.icon} class="h-6 w-6" />
                 </span>
                 <h3 class="font-display text-2xl font-semibold">{p.name}</h3>
@@ -216,7 +215,7 @@ const disciplines = [
                   </li>
                 ))}
               </ul>
-              <a href={`/en/services/#${p.id}`} class="mt-7 inline-flex items-center gap-2 text-[0.88rem] font-bold text-gold-300 hover:text-gold-200">
+              <a href={`/en/services/#${p.id}`} class="mt-7 inline-flex items-center gap-2 text-[0.88rem] font-bold text-gold-400 hover:text-gold-200">
                 {p.name}
                 <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
                   <path d="M5 12h14m-6-6 6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
@@ -259,7 +258,7 @@ const disciplines = [
     <div class="container-site">
       <div class="grid gap-12 lg:grid-cols-[1fr_1.4fr]">
         <div data-reveal="left">
-          <p class="eyebrow text-gold-300"><span class="h-px w-8 bg-gold-400" aria-hidden="true"></span>Interdisciplinary team</p>
+          <p class="eyebrow text-gold-400"><span class="h-px w-8 bg-gold-400" aria-hidden="true"></span>Interdisciplinary team</p>
           <h2 id="team-title-en" class="mt-4 font-display text-3xl font-semibold text-white md:text-4xl">Five disciplines, one case</h2>
           <p class="mt-5 leading-relaxed text-ink-200">
             Complex cases are not solved from a single profession. Our team brings together law, criminal
@@ -271,7 +270,7 @@ const disciplines = [
           {
             disciplines.map((t, i) => (
               <li class:list={['rounded-2xl border border-white/10 bg-white/[0.04] p-6', i === 4 && 'sm:col-span-2']} data-reveal style={`--reveal-delay:${i * 80}ms`}>
-                <span class="font-display text-xl font-semibold text-gold-300" aria-hidden="true">{t.n}</span>
+                <span class="font-display text-xl font-semibold text-gold-400" aria-hidden="true">{t.n}</span>
                 <h3 class="mt-2 font-display text-lg font-semibold text-white">{t.title}</h3>
                 <p class="mt-1.5 text-[0.9rem] leading-relaxed text-ink-300">{t.text}</p>
               </li>
@@ -290,7 +289,7 @@ const disciplines = [
           <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>Verifiable trust</p>
           <h2 id="trust-title-en" class="mt-4 font-display text-3xl font-semibold text-ink-950 md:text-4xl">A firm you can verify</h2>
         </div>
-        <a href="/en/success-stories/" class="btn-outline">Success stories</a>
+        <a href="/en/guarantees/" class="btn-outline">Our guarantees</a>
       </div>
       <div class="mt-10" data-reveal>
         <TrustSeals lang="en" tone="light" />

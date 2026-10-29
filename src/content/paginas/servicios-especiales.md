@@ -1,8 +1,8 @@
 ---
-title: "Valoración probatoria y servicios para abogados"
-seoTitle: "Servicios especiales para abogados y firmas de cobranza | CENIPSA"
+title: "Servicios y soluciones estratégicas para abogados"
+seoTitle: "Servicios para abogados y firmas legales | Investigación probatoria y peritajes | CENIPSA"
 eyebrow: "Defender"
-description: "Aliado estratégico de abogados y empresas de cobro de cartera: notificación judicial, investigación patrimonial para medidas cautelares y análisis ejecutivo."
+description: "El aliado probativo de litigantes y firmas: recolección de evidencia, peritajes y contra-peritajes, inteligencia patrimonial, ubicación de deudores y herederos, informática forense y operativos de campo."
 type: service
 related:
   - { label: "Abogados Bogotá", href: "/abogados-bogota/" }
@@ -13,47 +13,40 @@ order: 8
 icon: "briefcase"
 ---
 
-Somos el aliado estratégico de diversos colectivos de abogados, pues facilitamos servicios y asesorías investigativas tendientes a superar las dificultades jurídicas que presentan los abogados por la falta de evidencia en los juicios.
+## El aliado probativo e investigativo para litigantes y firmas de abogados
 
-## Notificación judicial
+En CENIPSA S.A.S. actuamos como la extensión investigativa y técnica que los abogados litigantes requieren para robustecer su teoría del caso. Entendemos que en el ejercicio del derecho —sea penal, civil, familiar, laboral o administrativo— la solidez de una pretensión o de una defensa depende de la calidad y oportunidad de los elementos materiales probatorios y evidencia física que se aporten al juzgador.
 
-Comprendemos los diversos problemas al momento de notificar a las personas, por tanto, contamos con diferentes herramientas que posibilitan la notificación judicial.
+Ponemos a disposición de abogados y firmas legales un equipo interdisciplinario compuesto por peritos auxiliares de justicia, criminalistas, auditores forenses e ingenieros, respaldados por metodologías de investigación científica y tecnología de vanguardia.
 
-A partir del nombre, número de identificación o número telefónico del investigado, realizamos labores de inteligencia para lograr su ubicación residencial y laboral, con el fin de posibilitar y dar curso con la notificación, dentro de un proceso judicial y/o administrativo.
+## Servicios de apoyo para abogados y firmas
 
-## Investigación patrimonial para medidas cautelares
+### 1. Investigación probatoria y recolección de evidencia judicial
 
-Es determinante porque agilizará procesos jurídicos de diversa naturaleza. Además, usted obtendrá información real y material probatorio contundente.
+- **Construcción y blindaje probatorio:** búsqueda, recolección y aseguramiento de evidencia física y testimonial para sustentar la teoría del caso en litigios penales, civiles, laborales y administrativos.
+- **Ubicación y entrevistas técnicas a testigos:** búsqueda e identificación de testigos clave, desarrollo de entrevistas de campo verificables e investigación de idoneidad y antecedentes de los mismos.
+- **Cadena de custodia y reserva técnica:** garantía de protocolos rigurosos en el manejo y conservación de la evidencia para evitar tachas o inadmisiones procesales.
 
-**“Para realizar este servicio se requiere la autorización escrita del investigado.”**
+### 2. Peritajes forenses y dictámenes técnicos de parte
 
-Realizamos un barrido a nivel nacional teniendo en cuenta los siguientes parámetros:
+- **Dictámenes periciales especializados:** elaboración de peritajes en áreas como grafología, documentología, dactiloscopia, balística y reconstrucción técnica de accidentes o hechos delictivos.
+- **Contra-peritajes y auditoría probatoria:** evaluación crítica, refutación técnica e impugnación de dictámenes periciales presentados por la contraparte o entidades públicas.
+- **Sustentación de peritos en audiencia:** acompañamiento y comparecencia de nuestros peritos expertos ante los estrados judiciales para interrogar, contrainterrogar y sustentar los informes ante el juez.
 
-**– Bienes Inmuebles:**
+### 3. Inteligencia patrimonial, búsqueda de bienes y deudores
 
-Relacionamos descripción del predio con cédula catastral, dirección de ubicación, último propietario y demás anotaciones relacionadas en el certificado de tradición y libertad.
+- **Rastreo e investigación de activos:** localización e identificación de bienes inmuebles, vehículos, títulos de propiedad y participaciones societarias mediante fuentes legítimas y registros públicos, con el fin de respaldar medidas cautelares, ejecuciones civiles, procesos comerciales o incidentes de reparación dentro del marco legal.
+- **Ubicación de deudores morosos y herederos ausentes:** búsqueda e investigación demográfica para la notificación procesal de deudores o herederos cuyo paradero sea desconocido en trámites de sucesión o liquidación. Ver [ubicación de partes procesales](/ubicacion-de-personas-para-notificacion-judicial/).
+- **Detección de maniobras de insolvencia fraudulenta:** levantamiento de pruebas sobre simulación de actos jurídicos o traspaso irregular de activos para ocultar patrimonio ante obligaciones alimentarias o comerciales.
 
-**– Vehículos:**
+### 4. Informática forense y análisis de evidencia digital
 
-Relacionamos descripción, características y propietario del vehículo.
+- **Extracción y preservación de prueba digital:** inspección técnica y copiado forense en dispositivos móviles, computadores, servidores, correos electrónicos y mensajería instantánea.
+- **Autenticidad e integridad de pruebas electrónicas:** verificación de metadatos, detección de alteración o manipulación en archivos de audio, video o documentos digitales.
+- **Auditoría forense a sistemas y redes:** identificación de accesos no autorizados, fugas de información confidencial y delitos informáticos dentro de empresas litigantes o clientes corporativos.
 
-**– Sistema Financiero Nacional:**
+### 5. Investigaciones de campo y pruebas de confiabilidad
 
-Entregamos informe de cuentas de ahorro, cuentas corrientes, tarjetas de crédito, endeudamiento y comportamientos de pago.
-
-## Análisis ejecutivo de información patrimonial
-
-Auditoría especializada al historial patrimonial, en la que podrá comprender y evidenciar con precisión, posibles delitos, como: evasión, lavado de activos o acción irregular asociada a su actividad económica.
-
-Una vez compilada la información patrimonial, declaraciones de renta e historial contable de cada uno de los rubros que ejecutó el investigado en un determinado periodo fiscal, procedemos a realizar cruce de información de patrimonio declarado, para determinar si sus activos, pasivos y patrimonio corresponden a su actividad económica y establecer con precisión posibles delitos como evasión, lavado de activos o alguna acción irregular asociada a su actividad económica.
-
-## Servicios especiales para abogados y empresas de cobro de cartera morosa
-
-- [Ubicación de personas para notificación judicial](/ubicacion-de-personas-para-notificacion-judicial/)
-- [Investigación patrimonial para medidas cautelares](/investigacion-patrimonial-para-medidas-cautelares/) – **Para realizar este servicio se requiere la autorización escrita del investigado.**
-- [Análisis ejecutivo de información financiera, Bienes raíces y Vehículos](/analisis-ejecutivo-de-informacion-financiera-bienes-raices-y-vehiculos/)
-- Material probatorio
-- Ubicación laboral para medidas cautelares
-- Cadena de custodia
-- Entrevista
-- Núcleo Familiar
+- **Verificación técnica de campo y recolección de evidencias:** operativos de campo especializados y asistidos por herramientas tecnológicas para documentar y verificar hechos en procesos de competencia desleal, infracción de propiedad intelectual, derechos de autor e irregularidades en el entorno laboral, garantizando la validez probatoria del material recaudado.
+- **Evaluaciones de confiabilidad y poligrafía corporativa:** aplicación de pruebas de poligrafía e inspecciones de confiabilidad bajo estricto consentimiento informado, dirigidas a la evaluación de personal clave, testigos o partes interesadas para orientar la toma de decisiones estratégicas dentro del equipo jurídico.
+- **Análisis de riesgo procesal y verificación documental:** verificación e integración de información de carácter público y bases de datos oficiales (judiciales y corporativas) para la evaluación de riesgos, idoneidad de las partes y consistencia de la información aportada en litigios.

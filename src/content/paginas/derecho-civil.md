@@ -1,12 +1,12 @@
 ---
-title: "Derecho civil"
+title: "Derecho civil y responsabilidad patrimonial"
 seoTitle: "Abogados civiles en Bogotá | Contratos, procesos ejecutivos y responsabilidad civil | CENIPSA"
 description: "Abogados civiles en Bogotá: contratos civiles y comerciales, procesos declarativos y ejecutivos, responsabilidad civil, cobro de cartera y conciliaciones."
 type: service
 eyebrow: "Defender · Área jurídica"
 focusKeyword: "abogados civiles Bogotá"
 heroImage: "/images/despacho-juridico.jpg"
-icon: "scale"
+icon: "contract"
 order: 22
 related:
   - { label: "Investigación patrimonial para medidas cautelares", href: "/investigacion-patrimonial-para-medidas-cautelares/" }
@@ -15,29 +15,15 @@ related:
   - { label: "Puntos clave de las licencias de construcción", href: "/blog/puntos-clave-de-las-licencias-de-construccion-en-colombia/" }
 ---
 
-## Las relaciones patrimoniales de todos los días
+## Estrategia jurídica e investigación técnica en asuntos civiles
 
-El derecho civil regula buena parte de la vida cotidiana: lo que compramos y vendemos, los contratos que firmamos, la propiedad y la posesión de los bienes, las deudas y los daños que causamos o sufrimos. Le asesoramos para **prevenir riesgos** antes de un negocio y le representamos cuando el conflicto ya existe.
+Ofrecemos representación y consultoría técnica en materia civil para personas naturales y jurídicas, garantizando la protección del patrimonio y el cumplimiento de las obligaciones contractuales. Articulamos el litigio civil con auditorías patrimoniales e investigación para la ubicación de bienes y deudores.
 
-Nuestra ventaja es la evidencia: si necesita ubicar a un deudor, verificar sus bienes o documentar un incumplimiento, nuestro equipo de investigación trabaja junto a los abogados para que la demanda llegue mejor soportada.
+### Servicios en derecho civil
 
-## Qué hacemos
+- **Responsabilidad civil contractual y extracontractual:** representación en litigios orientados a la indemnización de perjuicios por incumplimiento de contratos o daños patrimoniales causados a terceros.
+- **Recuperación de cartera e inteligencia patrimonial:** investigación y rastreo técnico de activos, inmuebles y cuentas para la efectividad de procesos ejecutivos y la búsqueda de deudores morosos o en estado de insolvencia. Ver [investigación patrimonial para medidas cautelares](/investigacion-patrimonial-para-medidas-cautelares/).
+- **Redacción, estudio y auditoría de contratos civiles:** elaboración y revisión de contratos de compraventa, arrendamiento, mutuo y garantías, previniendo litigios o clausulados perjudiciales.
+- **Procesos de consignación y posesión:** defensa y reclamación judicial de derechos reales, acciones reivindicatorias y litigios sobre propiedad de inmuebles.
 
-- **Contratos civiles y comerciales:** elaboración, revisión y negociación.
-- **Procesos declarativos**, en los que se busca el reconocimiento de un derecho.
-- **Procesos ejecutivos**, cuando el derecho ya consta en un título valor o documento que presta mérito ejecutivo.
-- **Responsabilidad civil contractual y extracontractual:** reclamación o defensa frente a daños y perjuicios.
-- **Cobro de cartera** prejurídico y jurídico, con estudio previo de la factibilidad de las garantías y apoyo de nuestra [investigación patrimonial para medidas cautelares](/investigacion-patrimonial-para-medidas-cautelares/).
-- **Liquidación de sociedades civiles y comerciales** ante juez o Superintendencia de Sociedades.
-- **Actuaciones ante la Superintendencia de Industria y Comercio y la Superintendencia Financiera.**
-- **Trámites notariales y conciliaciones**, uno de los mecanismos más eficaces para resolver conflictos sin un juicio largo.
-- **Acciones populares y de grupo** para la protección de derechos colectivos.
-
-## Cómo trabajamos su caso
-
-1. **Recibimos su solicitud** y revisamos los documentos del caso.
-2. **Valoración inicial:** viabilidad, riesgos y vías posibles —negociación, conciliación o demanda—.
-3. **Propuesta** de alcance, tiempos y honorarios.
-4. **Actuación** extrajudicial o judicial hasta la solución del conflicto.
-
-> Enviar una solicitud no crea por sí misma una relación abogado-cliente; esta inicia cuando se acuerda formalmente el servicio.
+> La información que comparta con nosotros se trata de forma confidencial. Enviar una solicitud no crea por sí misma una relación abogado-cliente; esta inicia cuando se acuerda formalmente el servicio.

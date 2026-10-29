@@ -1,67 +1,43 @@
 ---
 title: "Interdisciplinary team"
-seoTitle: "Interdisciplinary Investigation Team | CENIPSA"
-description: "Meet CENIPSA's interdisciplinary team in Bogota, Colombia: lawyers, engineers, forensic experts and psychologists working to uncover the truth."
+seoTitle: "Interdisciplinary team: lawyers, investigators and forensic experts | CENIPSA"
+description: "CENIPSA's interdisciplinary team: specialized law and litigation, criminal and judicial investigation, social sciences, cybersecurity and digital forensics, and forensic expert work."
 type: info
+eyebrow: "About us"
 order: 20
 related:
   - { label: "Who we are", href: "/en/about-us/" }
   - { label: "Guarantees", href: "/en/guarantees/" }
-  - { label: "Success stories", href: "/en/success-stories/" }
+  - { label: "How we work", href: "/en/how-we-work/" }
 ---
 
-Every investigation carries a high level of complexity, because each person's context and problems demand tailored solutions. That is why CENIPSA, based in Bogota, Colombia, offers a comprehensive approach to understanding the facts behind infidelity or disloyal and criminal conduct. Our interdisciplinary team brings together lawyers, electronic and communications engineers, forensic experts, psychologists and investigators who work systemically to find the truth. Below is the role each of our specialists plays in the investigative process.
+Legal investigations — both corporate and personal — face complex technical, legal and human challenges. When there is psychological harm, moral damage or violations of fundamental rights, the search for the truth demands rigorous, methodical investigative strategies adapted to each case in order to achieve full reparation.
 
-## Lawyers
+At CENIPSA we have an interdisciplinary team that combines solid theoretical grounding, scientific rigor, practical precision and strict professional ethics. We provide comprehensive support in building evidentiary strategy and clarifying the facts for investigative and judicial proceedings.
 
-Our specialized lawyers provide legal work of high quality and intellectual rigor across the different areas of law, adapting to each client's requirements, projects and businesses. CENIPSA operates within a framework of integrity, supported by a genuine team of advisors and counselors ready to guide any case or consultation.
+## Our areas of practice and interdisciplinary intervention
 
-## Electronic and communications engineers
+### Specialized law and litigation
 
-Our engineers are essential to every case. They put Information and Communication Technologies (ICT) at your disposal and are trained in the technical handling of software and hardware, allowing us to obtain stronger, higher-quality evidence. Technology improves the coherence of the evidentiary material, which is decisive to the success of judicial rulings.
+Our lawyers are highly specialized in criminal and disciplinary, civil, family, administrative, commercial, labor and intellectual property law. We advise and represent individuals and companies with legal rigor, ensuring a technical, well-founded defense of their rights and interests.
 
-## Forensic experts
+### Criminal and judicial investigation
 
-Our forensic experts hold specialized scientific, technical and professional knowledge to advise judges and courts. Their toolkit includes observation, interviews, mental examination and testing. Their profiles include:
+CENIPSA's investigators combine knowledge in criminalistics, forensic science, exact sciences and legal science, with specialization in criminology, victimology, fingerprint analysis, ballistics, chain-of-custody management and document examination, providing technical advice and expert intervention in the analytical reconstruction of events.
 
-### Expert witness psychologist
+### Social sciences and human rights
 
-Clinical therapist, patient care, reference witness and clinical history.
+We understand the human dimension of the evidentiary process. Our professionals in sociology, social work, anthropology and history specialize in judicial investigation, analysis of social behavior and the protection of human rights.
 
-### Forensic psychophysiologists - Polygraph examiners
+### Cybersecurity and digital forensics
 
-Our forensic psychophysiologists and polygraph examiners study how the mind interacts with the human body. By analyzing mental processes, they identify involuntary physiological reactions that reveal whether a person is concealing information relevant to a line of questioning.
+We provide advanced solutions for the prevention, mitigation and technical investigation of cybercrime and security breaches. Our engineers carry out digital forensic analysis, acquisition and preservation of electronic evidence, and the investigation of complex incidents (data leaks, corporate fraud, identity theft and network intrusions), in strict compliance with the digital chain of custody and international electronic-evidence standards. See our [cybersecurity and digital forensics](/en/cybersecurity-digital-forensics/) service.
 
-They understand the physiological responses produced by organs of the autonomic nervous system when a person lies or constructs a lie, reactions observed and analyzed through the polygraph. Using interview techniques and skilled questioning, our professionals work to surface the truth a subject may be voluntarily hiding.
+### Specialized forensic expert work
 
-During the interview, they observe non-verbal behavior, micro-expressions and the subject's ability to create or recall events. They then formulate direct questions, evaluated through monitoring of the cardiovascular, respiratory and electrodermal systems recorded by the polygraph, in order to determine whether the statements are truthful. Their core functions are user care, judicial appearances and expert reports.
+We contribute decisive scientific, technical and methodological knowledge to inform judges and courts, using systematic observation, in-depth interviews, mental-state examination and specialized testing:
 
-### Judicial police psychologist
-
-Judicial police orders, judicial interviews, clarification of the facts and laboratory or field reports.
-
-### Investigators
-
-Highly experienced, continuously trained and selected within investigative environments, our investigators apply modern and advanced methods to find the truth. Backed by cutting-edge technological and physical resources, they guarantee effectiveness in every assignment and are, above all, committed to confidentiality, the core value of our company.
-
-## Clinical psychology
-
-We built a clinical psychology department after finding that a large number of clients consulted us about personal problems with their partners, most often infidelity. Many arrived experiencing high levels of anxiety, depression and psychosomatic illness, situations that deeply harm their social wellbeing and quality of life.
-
-The physical and mental deterioration of the people reaching our offices became a genuine concern for the team. We therefore chose to work with psychologists specialized in various methodologies, helping people overcome the emotional disorders that arise in tense situations and cope with the truth of the facts.
-
-Once clients learn the truth through the evidence gathered in an investigation, and depending on the problem and its impact, they may be referred to our psychology department, which addresses the many dimensions affecting physical and emotional health. Our services include:
-
-- **Psycho-consultation:** professionals carry out a diagnosis to establish the emotional or affective issues involved and determine the appropriate treatment.
-- **Couples psychotherapy:** identifying, confronting and resolving the problems that fracture or threaten a relationship, so the couple can recognize itself as an integral unit with the emotional strengths to build healthier ways of relating.
-
-Psychotherapy is a fundamental part of resolving these problems. Through specialized diagnosis and emotional guidance, people genuinely reconnect with their identity and context, giving space to the perceptions, feelings and memories of their life story. With the right support from our interdisciplinary team, these disorders can be addressed and overcome.
-
-## Products and services
-
-- [Personal investigation](/en/personal-investigation/)
-- [Corporate investigation](/en/corporate-investigation/)
-- [Legal advice](/en/legal-advice/)
-- [Criminalistics](/en/criminalistics/)
-- [Polygraph](/en/polygraph/)
-- [Services for lawyers](/en/services-for-lawyers/)
+- **Clinical and forensic psychology (reference witness):** therapeutic care, assessment of psychophysical harm, review of clinical history and testimony as reference witnesses in court.
+- **Forensic psychophysiology and polygraph:** advanced interview techniques and expert reports that identify involuntary physiological reactions linked to the concealment of key information.
+- **Judicial police psychology:** experts in judicial police orders, specialized judicial interviews, fact-finding and field and laboratory expert reports.
+- **Expert investigators:** professionals with extensive experience in criminal investigation and criminal-policy analysis, with modern technology and methodology to ensure confidentiality and effectiveness.

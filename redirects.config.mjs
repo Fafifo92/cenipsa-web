@@ -26,7 +26,7 @@ export const redirects = {
   // consolidación temática
   '/prueba-de-poligrafo': '/prueba-de-poligrafo-bogota',
   '/poligrafia': '/prueba-de-poligrafo-bogota',
-  '/seguimiento-de-infidelidad': '/infidelidad',
+  '/seguimiento-de-infidelidad': '/investigacion-personal',
   '/galeria': '/nosotros',
   '/cosas-de-interes': '/blog',
   '/productos-servicios': '/servicios',
@@ -36,6 +36,13 @@ export const redirects = {
   '/seguridad': '/servicios',
   '/busqueda': '/blog',
   '/formulario-prueba': '/contacto',
+  // retiradas a pedido de la firma (oct. 2026): no manejan infidelidad; los
+  // contratantes son confidenciales (sin «casos de éxito»); sin servicios en línea
+  '/infidelidad': '/investigacion-personal',
+  '/casos-de-exito': '/como-trabajamos',
+  '/servicios-en-linea': '/contacto',
+  '/en/success-stories': '/en/how-we-work',
+  '/en/online-services': '/en/contact',
 };
 
 /**
@@ -60,7 +67,7 @@ export const legalDomainRedirects = {
   '/nosotros': '/nosotros/',
   '/faq': '/faq/',
   '/pagos-en-linea': '/pagos-en-linea/',
-  '/servicios-en-linea': '/servicios-en-linea/',
+  '/servicios-en-linea': '/contacto/',
   '/servicios-abogados': '/servicios-especiales/',
   '/servicios-investigativos': '/servicios/',
   '/terminos-y-condiciones': '/terminos-y-condiciones/',

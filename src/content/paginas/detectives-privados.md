@@ -71,12 +71,6 @@ En momentos de angustia o duda, contar con el apoyo de un investigador privado e
 
 Nos dedicamos a solventar problemas que afectan su vida familiar y personal, de una manera segura y confiable.
 
-### Investigaciones de infidelidad
-
-La sospecha de infidelidad puede generar impactos psicológicos y morales. Sin embargo, contando con nuestro equipo de investigadores privados en Colombia, es posible obtener pruebas verificadas con la máxima discreción posible para confirmar o descartar sospechas de comportamientos irregulares.
-
-A través de los informes comprobables que contribuyen en la toma de decisiones informadas, se puede proteger la estabilidad emocional de cada uno de nuestros clientes.
-
 ### Comprobación de conductas
 
 Nuestros detectives se encargan de comprobar comportamientos determinados que estén generando situaciones preocupantes. Para ello, se realizan procesos investigativos que garanticen seguridad, detecten malas compañías o comprueben sospechas con pruebas precisas.

@@ -25,7 +25,6 @@ Para un servicio investigativo, por su seguridad, tenga en cuenta lo siguiente:
 
 ## Productos y servicios
 
-- [Infidelidad](/infidelidad/)
 - [Investigación corporativa](/investigacion-corporativa/)
 - [Asesoría jurídica](/asesoria-juridica/)
 - [Criminalística](/criminalistica/)

@@ -1,8 +1,8 @@
 ---
-title: "Pruebas de confiabilidad y poligrafía"
-seoTitle: "Examen de poligrafía y pruebas de confiabilidad | CENIPSA"
+title: "Estudios de seguridad y pruebas de confiabilidad"
+seoTitle: "Estudios de seguridad y poligrafía empresarial | Pruebas de confiabilidad | CENIPSA"
 eyebrow: "Prevenir"
-description: "Es una evaluación voluntaria que requiere autorización por parte de la persona examinada, no invasiva y direccionada bajo estrictos parámetros de respeto a la"
+description: "Estudios de seguridad pre-empleo, poligrafía empresarial (ingreso, rutina y específica), debida diligencia para cargos de alta dirección y verificación de personal doméstico y de custodia."
 type: service
 related:
   - { label: "Prueba de polígrafo Bogotá", href: "/prueba-de-poligrafo-bogota/" }
@@ -12,38 +12,33 @@ order: 6
 icon: "pulse"
 ---
 
-Es una evaluación voluntaria que requiere autorización por parte de la persona examinada, no invasiva y direccionada bajo estrictos parámetros de respeto a la dignidad humana. Se evalúan las reacciones fisiológicas indicadoras de engaño colectadas a través de gráficas, con base en un protocolo de preguntas específicamente elaboradas y así obtener una respuesta concreta que permite evaluar si una persona miente o dice la verdad, frente a cuestionamientos de interés para la compañía.
+## Acompañamiento estratégico a gestión humana y prevención del riesgo operacional
 
-## Tipos de examen:
+En CENIPSA S.A.S. apoyamos a las áreas de gestión humana, talento humano y direcciones de seguridad corporativa en la toma de decisiones informadas y seguras para la vinculación y permanencia de personal. Articulamos el análisis jurídico, la psicología organizacional y la investigación técnica para mitigar riesgos de fraude, vulneración de secreto industrial y pérdida de activos.
 
-- ***Exámenes de pre-empleo***: Permite obtener información de historia laboral, antecedentes judiciales, preparación y certificación académica, hábitos personales respecto a consumos de alcohol y drogas ilegales, participación en actividades ilícitas, vínculos con personas al margen de la Ley, estado financiero, planes de infiltración y veracidad en la información aportada en la hoja de vida, entre otros.
-- ***Exámenes de rutina***: Actividad que permite analizar la confiabilidad y honestidad de las personas que trabajan al interior de una compañía, teniendo en cuenta sus funciones y niveles de riesgo. Se busca conocer comprometimientos en hurtos continuos, desfalcos, manipulación de inventarios, falsificación de facturas o documentos contables, corrupción administrativa u operativa, así como conocer situaciones irregulares dentro de la empresa.
-- ***Exámenes específicos o de investigaciones***: Acción que permite corroborar la veracidad de la versión suministrada por las personas implicadas en un hecho específico. Así mismo es una herramienta importante que ayuda a aportar información útil en el desarrollo de una investigación penal, administrativa, disciplinaria o para descartar o corroborar una infidelidad.
+Todas nuestras evaluaciones se realizan bajo estrictos protocolos de ética profesional, consentimiento informado y protección de la información personal del candidato o colaborador.
 
-## Ventajas de la evaluación poligráfica:
+## Servicios en estudios de seguridad y confiabilidad
 
-Teniendo en cuenta que la poligrafía debe ser una herramienta que ofrezca confiabilidad, confianza, confidencialidad y rapidez en la respuesta, la empresa contará con:
+### 1. Estudios de seguridad para procesos de selección (pre-empleo)
 
-- Información que le permitirá proteger la imagen corporativa de su empresa ante irregularidades cometidas por sus empleados.
-- Un procedimiento metodológico avalado y respaldado legalmente.
-- Información para resolver asuntos complejos cuando no hay pruebas o indicios sobre el particular.
-- Un método eficaz, confiable, económico y rápido en función del tiempo para resolver un asunto.
-- Informaciones que permitan minimizar y/o prevenir el riesgo, ya que protege los recursos e intereses de las empresas.
-- Un procedimiento confiable para verificar la información aportada por los aspirantes.
-- Una base de datos de candidatos poligrafiados, que garantizarán la seguridad y el prestigio empresarial.
-- Información oportuna para eliminar dudas razonables acerca del personal que tiene acceso a información sensible.
+- **Verificación documental y de idoneidad:** comprobación rigurosa de títulos académicos, licencias profesionales, certificaciones laborales e historial de desempeño.
+- **Análisis de antecedentes en fuentes públicas y oficiales:** verificación cruzada en bases de datos judiciales, disciplinarias, fiscales y corporativas de acceso legítimo.
+- **Visita domiciliaria técnica y entorno socio-familiar:** evaluación presencial o virtual realizada por profesionales en trabajo social o investigación para validar el entorno residencial, hábitos de vida y consistencia de la información aportada.
 
-## Psicología clínica:
+### 2. Evaluaciones de poligrafía empresarial e investigativa
 
-Nuestro objetivo es brindar una atención psicológica oportuna, eficaz e idónea a nuestros clientes, por medio de procesos de asistencia inmediata, orientados a mejorar su calidad de vida y de sus allegados.
+- **Poligrafía de pre-empleo (ingreso):** evaluación de confiabilidad para verificar la veracidad de la hoja de vida y descartar vínculos con conductas irregulares o antecedentes no declarados.
+- **Poligrafía de rutina o permanencia:** pruebas periódicas de mantenimiento de confianza para personal que ocupa cargos críticos, de alta responsabilidad o manejo de valores y datos sensibles.
+- **Poligrafía específica (investigación de incidentes):** evaluación técnica con fines esclarecedores ante eventos puntuales de fuga de información, faltantes de inventario o irregularidades internas.
 
-Algunos de nuestros servicios para Usted, sus familiares y/o amigos:
+### 3. Debida diligencia para cargos de alta dirección y confianza
 
-1. Psico consulta: Acceda a consulta psicoterapéutica para usted o alguien conocido, con el fin de establecer las afectaciones emocionales o afectivas que lo aquejan y así determinar el tratamiento correspondiente a su trastorno.
-2. Psico terapia de pareja
-3. Trastornos de ansiedad
-4. Trastornos relacionados con sustancias
-5. Trastornos del estado de ánimo
-6. Depresión
+- **Estudio de seguridad reforzado:** evaluación integral para directivos, administradores y personal con acceso a secretos comerciales o firmas autorizadas.
+- **Análisis de riesgo reputacional y conflictos de interés:** verificación de participaciones societarias, nexos comerciales externos e incompatibilidades con la organización.
 
-Contamos con un equipo especializado en evaluación clínica y tratamiento de trastornos emocionales y afectivos.
+### 4. Verificación de confiabilidad para el entorno personal y familiar
+
+- **Estudios de seguridad para personal de apoyo doméstico y custodia:** verificación de idoneidad, antecedentes e historial laboral para enfermeros, cuidadores de adultos mayores o menores de edad, conductores y personal de seguridad privada familiar.
+
+Conozca también la [prueba de polígrafo en Bogotá](/prueba-de-poligrafo-bogota/) y el [polígrafo laboral](/poligrafo-laboral/).

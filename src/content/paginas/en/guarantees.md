@@ -1,47 +1,44 @@
 ---
 title: "Guarantees"
-seoTitle: "Guarantees & Confidentiality | CENIPSA"
-description: "Absolute confidentiality and a legally compliant investigative process in Bogotá, Colombia. See how CENIPSA protects your case from start to finish."
+seoTitle: "Guarantees: Legal Standing & Confidentiality | CENIPSA"
+eyebrow: "About us"
+description: "The legal basis of private investigation in Colombia, CENIPSA S.A.S.'s legal standing, chain of custody and a system of confidentiality, digital security and evidence admissibility guarantees."
 type: info
-
 order: 21
-heroImage: "/images/despacho-juridico.jpg"
 related:
   - { label: "Who we are", href: "/en/about-us/" }
   - { label: "Interdisciplinary team", href: "/en/interdisciplinary-team/" }
-  - { label: "Success stories", href: "/en/success-stories/" }
+  - { label: "How we work", href: "/en/how-we-work/" }
 ---
 
-We understand the sensitivity of your case. Every engagement is protected by strict confidentiality standards and a legal framework designed to keep your information secure and your evidence admissible before Colombian courts.
+## I. Legal basis and procedural legitimacy of private investigation
 
-## Our confidentiality commitment
+### 1. The private investigator as a strategic collaborator of justice
 
-- We guarantee absolute reserve and a confidentiality clause under which [CENIPSA SAS](/en/) commits never to use your information for any purpose beyond your case. At the close of each engagement, the resulting material is delivered to you, and no copies are kept or disclosed.
-- Our personnel are bound by this confidentiality clause for the benefit of the client. All work is coordinated from Bogotá to eliminate the risk of information leaks.
-- Our team is trained and qualified for this type of assignment.
-- **For your security:** our field personnel are not authorized to communicate directly with clients, receive payments, or conduct any commercial transaction. If you ever encounter such conduct, please notify us immediately.
+Under Colombian law, private investigation is not an informal activity; it is a fundamental technical pillar for exercising the right of defense, the right to challenge evidence and effective judicial protection (Article 257 of the Political Constitution, Article 85(21) of Law 270 of 1996 and Law 446 of 1998).
 
-## Legal basis for private investigation in Colombia
+With the adversarial criminal system (Law 906 of 2004) and the General Code of Procedure (Law 1564 of 2012), the burden of gathering evidence now falls on the parties, who must bring their own investigators and party-appointed experts. Pre-trial investigation has therefore become decisive for the outcome of litigation.
 
-The private investigator is, by nature, a collaborator with the justice system (Article 257 of the Political Constitution of Colombia, Article 85(21) of Law 270 of 1996, and Law 446 of 1998).
+### 2. Legal standing of CENIPSA S.A.S.
 
-Under the Accusatory Criminal System (Law 906) and the General Code of Procedure governing civil, labor, and administrative matters, evidentiary practice in Colombia has changed radically. Responsibility for gathering evidence no longer rests with judges: the parties themselves must arrive at trial with the evidence they intend to rely on, already collected. The former roster of court-appointed experts has also disappeared, so each party must bring its own experts. This strengthens the pre-litigation investigative process and closely links private investigators, forensic experts, and attorneys, who must now work jointly to relieve the burden on the courts.
+For evidence provided by an investigative firm to be fully admissible, the law requires that "Private Investigations" be part of the company's registered corporate purpose. CENIPSA S.A.S. is legally incorporated before the Bogotá Chamber of Commerce with a corporate purpose expressly covering private investigation and forensic consulting.
 
-**CENIPSA SAS** advises the defense on chain of custody, covering the legality, authenticity, integrity, preservation, security, storage, continuity, and registration of the physical and intangible evidence relevant to each case.
+### 3. Chain-of-custody audit
 
-The General Code of Procedure also requires that, for evidence to be admissible, private investigation firms include "Private Investigations" within their corporate purpose. **CENIPSA SAS** is a legally constituted company whose incorporation document, registered with the Bogotá Chamber of Commerce, expressly lists this activity as its corporate purpose, fully meeting every legal requirement for firms of this kind.
+We advise on and audit the chain of custody of physical evidence and evidentiary materials, verifying legality and authenticity, integrity and traceability, to prevent any risk of evidence being excluded at trial.
 
-## Products and services
+## II. Our confidentiality commitment and client guarantees
 
-- [Personal investigation](/en/personal-investigation/)
-- [Corporate investigation](/en/corporate-investigation/)
-- [Legal advice](/en/legal-advice/)
-- [Criminalistics](/en/criminalistics/)
-- [Polygraph](/en/polygraph/)
-- [Services for lawyers](/en/services-for-lawyers/)
+- **Professional secrecy:** all actions, consultations and files are protected by constitutional professional secrecy (Article 74 of the Political Constitution), which persists indefinitely, even after the engagement ends.
+- **Non-disclosure agreements (NDA):** before receiving any sensitive document or testimony, we sign an NDA binding the firm and every expert assigned to the case.
+- **Digital security:** standards aligned with ISO/IEC 27001 — encrypted storage, need-to-know access and handling of digital evidence under ISO/IEC 27037.
+- **Lawfulness and admissibility:** every procedure respects human rights and constitutional guarantees, so the evidence meets the principles of relevance, conduciveness and usefulness.
+- **Personal data protection (Habeas Data):** full compliance with Law 1581 of 2012, with anonymization when the defense strategy or the protection of the parties requires it.
 
-### Specialized services for lawyers and debt-collection firms
-
-- Locating individuals for judicial notification
-- Asset investigation for precautionary measures
-- Executive analysis of financial information, real estate, and vehicles
+| Guarantee | Legal / technical basis | Direct benefit to the client |
+| --- | --- | --- |
+| Legal reserve | Art. 74 Political Constitution / professional secrecy | Full protection against disclosure to third parties. |
+| Contractual protection | Non-disclosure agreements (NDA) | Indefinite legal commitment to confidentiality. |
+| Evidence security | ISO/IEC 27001 and 27037 protocols | Encrypted, tamper-proof digital custody of your documents. |
+| Validity in court | Registered corporate purpose / CGP / adversarial system | Legally admissible evidence with no risk of nullity. |
+| Ethics and lawfulness | Constitutional guarantees and due process | Transparent actions that strengthen your position. |

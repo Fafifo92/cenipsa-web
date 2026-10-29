@@ -59,10 +59,6 @@ Con gusto podemos responder a cualquier inquietud que tengas con respecto a nues
 
 ## Preguntas frecuentes sobre [detectives privados en Medellín](/detectives-privados-en-medellin/)
 
-### ¿Es legal contratar detectives privados para casos de infidelidad?
-
-Es legal siempre que las pruebas tengan sustento jurídico y no vulneren los derechos de la contraparte. Las pruebas obtenidas por CENIPSA son creadas para tener validez en cada proceso y faciliten encontrar la verdad de los hechos.
-
 ### ¿Qué tan discreta es la [investigación corporativa](/investigacion-corporativa/) en Medellín?
 
 La confidencialidad es nuestro pilar clave. El control de la información está realmente protegido por protocolos de seguridad que garantizan que los actores implicados nunca puedan detectar la presencia de nuestros agentes, llegando a proteger la reputación de las empresas.

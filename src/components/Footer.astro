@@ -36,7 +36,7 @@ const firmLinks = isEs
       { label: 'Quiénes somos', href: '/nosotros/' },
       { label: 'Equipo interdisciplinar', href: '/equipo-interdisciplinar/' },
       { label: 'Garantías de servicio', href: '/garantias/' },
-      { label: 'Casos de éxito', href: '/casos-de-exito/' },
+      { label: 'Cómo trabajamos', href: '/como-trabajamos/' },
       { label: 'Blog', href: '/blog/' },
       { label: 'Preguntas frecuentes', href: '/faq/' },
       { label: 'Contacto', href: '/contacto/' },
@@ -45,7 +45,7 @@ const firmLinks = isEs
       { label: 'Who we are', href: '/en/about-us/' },
       { label: 'Interdisciplinary team', href: '/en/interdisciplinary-team/' },
       { label: 'Guarantees', href: '/en/guarantees/' },
-      { label: 'Success stories', href: '/en/success-stories/' },
+      { label: 'How we work', href: '/en/how-we-work/' },
       { label: 'Blog', href: '/en/blog/' },
       { label: 'FAQ', href: '/en/faq/' },
       { label: 'Contact', href: '/en/contact/' },
@@ -59,12 +59,12 @@ const solutionLinks = [
     ? [
         { label: 'Asesoría jurídica y litigio', href: '/asesoria-juridica/' },
         { label: 'Servicios para abogados', href: '/servicios-especiales/' },
-        { label: 'Servicios en línea', href: '/servicios-en-linea/' },
+        { label: 'Ciberseguridad e informática forense', href: '/ciberseguridad-e-informatica-forense/' },
       ]
     : [
         { label: 'Legal advice & litigation', href: '/en/legal-advice/' },
         { label: 'Services for lawyers', href: '/en/services-for-lawyers/' },
-        { label: 'Online services', href: '/en/online-services/' },
+        { label: 'Cybersecurity & digital forensics', href: '/en/cybersecurity-digital-forensics/' },
       ]),
 ];
 
@@ -107,7 +107,7 @@ const socials = [
           <Logo variant="light" full class="h-20 md:h-24" />
         </a>
         <p class="mt-5 max-w-xs text-[0.92rem] leading-relaxed text-ink-300">{t.blurb}</p>
-        <p class="mt-3 max-w-xs font-display text-[0.95rem] text-gold-300 italic">{isEs ? SITE.tagline : SITE.taglineEn}</p>
+        <p class="mt-3 max-w-xs font-display text-[0.95rem] text-gold-400 italic">{isEs ? SITE.tagline : SITE.taglineEn}</p>
         <div class="mt-6 flex gap-3">
           {socials.map((s) => (
             <a

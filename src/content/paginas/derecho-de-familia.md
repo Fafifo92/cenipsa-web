@@ -6,7 +6,7 @@ type: service
 eyebrow: "Defender · Área jurídica"
 focusKeyword: "abogado de familia Bogotá"
 heroImage: "/images/despacho-juridico.jpg"
-icon: "scale"
+icon: "family"
 order: 21
 related:
   - { label: "Abogados de sucesiones en Bogotá", href: "/abogados-sucesiones-bogota/" }
@@ -15,36 +15,36 @@ related:
   - { label: "¿Qué pasa si un padre no cumple con la cuota alimentaria?", href: "/blog/que-pasa-si-un-padre-no-cumple-con-la-cuota-alimentaria-de-su-hijo/" }
 ---
 
-## Asuntos sensibles, en manos de especialistas
+## Servicios en derecho de familia
 
-Los asuntos de familia tocan las fibras más sensibles de las personas. Por eso los abordamos con un equipo que combina abogados de familia, psicólogos y trabajadores sociales: buscamos soluciones jurídicas sólidas y, en lo posible, acuerdos que protejan a los hijos y eviten procesos largos y desgastantes.
+En CENIPSA S.A.S. comprendemos que los procesos de familia requieren un manejo ético, humano y técnicamente riguroso. Nuestro equipo de abogados especialistas en derecho de familia trabaja en articulación con investigadores privados y peritos forenses, lo que nos permite abordar litigios complejos con evidencias sólidas sobre capacidad financiera, ocultamiento de activos y ubicación de personas.
 
-Cuando el caso requiere pruebas —ingresos ocultos, bienes no declarados, incumplimientos o el paradero de una persona—, nuestra [investigación personal y verificación patrimonial](/investigacion-personal/) aporta la evidencia, siempre obtenida por medios lícitos.
+### 1. Divorcios, liquidación de sociedad conyugal y unión marital
 
-## Qué hacemos
+- **Tramitación notarial y judicial:** representación en divorcios de mutuo acuerdo o contenciosos, así como en la cesación de efectos civiles del matrimonio religioso y disolución de uniones de hecho.
+- **Investigación patrimonial y auditoría de activos:** rastreos financieros e inmobiliarios para detectar la ocultación o simulación de bienes por parte de cónyuges o compañeros permanentes, garantizando una partición justa y equitativa.
 
-- **Divorcio y cesación de efectos civiles**, de mutuo acuerdo o contencioso, y disolución de uniones maritales de hecho.
-- **Liquidación de la sociedad conyugal o patrimonial**, con análisis de los bienes y deudas de la pareja.
-- **Custodia, cuidado personal y régimen de visitas.**
-- **Alimentos:** fijación, aumento, disminución y procesos por incumplimiento de la cuota alimentaria.
-- **Filiación:** reconocimiento o impugnación de la paternidad o la maternidad.
-- **Patria potestad:** suspensión, privación o rehabilitación.
-- **Interdicción y apoyos** para la toma de decisiones.
-- **Sucesiones:** herencias, testamentos, particiones e indignidad sucesoral, con nuestros [abogados de sucesiones](/abogados-sucesiones-bogota/).
-- **Trámites notariales:** capitulaciones, escrituras, donaciones, cambios de nombre y matrimonios.
-- **Mecanismos alternativos:** conciliación, mediación y negociación antes de llegar al juez.
+### 2. Procesos de sucesión, liquidación de herencias y ubicación de herederos
 
-## Un enfoque que protege a la familia
+- **Gestión de sucesiones:** tramitación notarial o representación en juicio de sucesión intestada o testada para la adjudicación de bienes. Ver [abogados de sucesiones](/abogados-sucesiones-bogota/).
+- **Búsqueda e investigación de herederos ausentes:** despliegue de investigación demográfica y rastreo de antecedentes para la ubicación de herederos cuyo paradero se desconozca.
+- **Investigación y rastreo de masa hereditaria:** identificación e inventario técnico de activos, inmuebles y derechos patrimoniales pertenecientes a la masa sucesoral.
 
-Las familias se conforman de muchas maneras —matrimonio, unión marital de hecho, parejas del mismo sexo— y todas tienen protección legal. Nuestra prioridad es el interés superior de los niños, niñas y adolescentes: incluso cuando la pareja se separa, los padres siguen siendo padres, y el proceso debe reflejarlo.
+### 3. Cuotas alimentarias, custodia y régimen de visitas
 
-Si el cliente lo requiere, ofrecemos **acompañamiento psicosocial** durante el trámite.
+- **Fijación, incremento, disminución y exoneración de alimentos:** asistencia legal en la fijación o regulación de cuotas alimentarias para menores de edad o dependientes.
+- **Verificación de capacidad económica:** auditoría e investigación de ingresos reales del obligado alimentario ante maniobras de insolvencia deliberada.
+- **Regulación de custodia, cuidado personal y visitas:** concertación técnica y representación en estrados judiciales para velar por el interés superior del menor.
 
-## Cómo trabajamos su caso
+### 4. Protección de derechos y violencia intrafamiliar
 
-1. **Recibimos su solicitud** con total reserva.
-2. **Valoración inicial** de la situación familiar y patrimonial.
-3. **Propuesta** de vía —acuerdo, conciliación o proceso judicial—, tiempos y honorarios.
-4. **Acompañamiento** hasta la sentencia o el acuerdo, y su cumplimiento.
+- **Atención jurídica y recolección probatoria:** acompañamiento ante comisarías de familia y la Fiscalía General de la Nación en casos de violencia física, psicológica o patrimonial.
+- **Medidas de protección urgentes:** tramitación de medidas cautelares y de protección para salvaguardar la integridad de los integrantes del núcleo familiar.
 
-> Enviar una solicitud no crea por sí misma una relación abogado-cliente; esta inicia cuando se acuerda formalmente el servicio.
+### 5. Investigaciones familiares preventivas y filiación
+
+- **Investigación pre-compromiso marital y patrimonial:** auditorías informativas y verificación de antecedentes patrimoniales o personales antes de formalizar vínculos civiles o societarios.
+- **Filiación e impugnación de maternidad/paternidad:** acompañamiento en procesos de reconocimiento e impugnación respaldados por pruebas genéticas y peritajes.
+- **Búsqueda de antepasados y genealogía:** investigaciones documentales para la tramitación de nacionalidades extranjeras o reconstrucción del árbol genealógico.
+
+> La información que comparta con nosotros se trata de forma confidencial. Enviar una solicitud no crea por sí misma una relación abogado-cliente; esta inicia cuando se acuerda formalmente el servicio.

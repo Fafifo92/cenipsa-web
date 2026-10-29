@@ -1,12 +1,12 @@
 ---
-title: "Propiedad intelectual y derechos de autor"
+title: "Propiedad intelectual, marcas y derechos de autor"
 seoTitle: "Abogados de propiedad intelectual en Bogotá | Marcas, patentes y derechos de autor | CENIPSA"
 description: "Protección de la propiedad intelectual en Bogotá: registro y vigilancia de marcas, patentes, derechos de autor, contratos y licencias, y defensa frente a plagio y piratería."
 type: service
 eyebrow: "Defender · Área jurídica"
 focusKeyword: "abogados propiedad intelectual Bogotá"
 heroImage: "/images/despacho-juridico.jpg"
-icon: "scale"
+icon: "bulb"
 order: 27
 related:
   - { label: "Derecho comercial y societario", href: "/derecho-comercial/" }
@@ -14,30 +14,15 @@ related:
   - { label: "La importancia de un abogado para proteger su propiedad intelectual", href: "/blog/la-importancia-de-un-abogado-para-proteger-su-propiedad-intelectual/" }
 ---
 
-## Proteja lo que su empresa crea
+## Protección, registro y blindaje probatorio de activos intangibles
 
-Marcas, logotipos, software, contenidos, diseños e invenciones son activos con valor económico. La propiedad intelectual protege esas creaciones y se divide en dos grandes categorías:
+Brindamos asesoría estratégica para el registro, defensa y explotación comercial de signos distintivos, creaciones intelectuales y desarrollos tecnológicos. Integramos la gestión legal con la investigación privada para combatir la competencia desleal, la piratería y la falsificación de productos.
 
-- **Propiedad industrial:** marcas, patentes, modelos de utilidad, diseños industriales, secretos empresariales, obtenciones vegetales e indicaciones geográficas.
-- **Derechos de autor y conexos:** obras literarias, artísticas, musicales, audiovisuales, fotografías, programas de computador y bases de datos.
+### Portafolio de servicios en propiedad intelectual
 
-Acompañamos a empresas, artistas y creadores de contenido para registrar, explotar y defender estos activos. Cuando hay infracción —plagio, piratería o fuga de información—, nuestro equipo de [investigación corporativa](/investigacion-corporativa/) documenta los hechos para la acción legal.
+- **Registro de marcas, patentes y signos distintivos:** tramitación integral ante la Superintendencia de Industria y Comercio (SIC) para el depósito y concesión de marcas, lemas comerciales, nombres de establecimiento y patentes de invención o modelos de utilidad.
+- **Protección de derechos de autor y licenciamiento de software:** registro y custodia legal de obras literarias, artísticas, científicas, plataformas digitales y código fuente ante la Dirección Nacional de Derecho de Autor (DNDA).
+- **Investigación de competencia desleal y usurpación de marcas:** operativos de investigación de campo para detectar y recopilar pruebas sobre falsificación, piratería comercial, violación de secretos industriales y uso no autorizado de marcas.
+- **Litigios, oposiciones y acciones de cancelación:** interposición de oposiciones contra solicitudes de registro de terceros, demandas de cancelación por no uso y acciones judiciales por infracción a derechos de propiedad industrial.
 
-## Qué hacemos
-
-- **Registro, seguimiento y defensa** de marcas, patentes y obras.
-- **Vigilancia marcaria** para detectar solicitudes que puedan afectar sus signos.
-- **Oposiciones** y defensa de derechos marcarios, de propiedad industrial y de autor.
-- **Registro de obras** artísticas y de creaciones informáticas y contenidos digitales: software, interfaces y sitios web.
-- **Registro de contratos** ante la Dirección Nacional de Derecho de Autor.
-- **Contratos y licencias** sobre activos de propiedad intelectual: cesiones, licencias de uso y regalías.
-- **Acciones frente a plagio, piratería y copias no autorizadas**, y competencia desleal.
-
-## Cómo trabajamos su caso
-
-1. **Recibimos su solicitud** y verificamos el tipo de activo.
-2. **Valoración inicial:** antecedentes registrales, riesgos y estrategia de protección.
-3. **Propuesta** de alcance, tiempos y honorarios.
-4. **Gestión** del registro, el contrato o la acción de defensa.
-
-> Enviar una solicitud no crea por sí misma una relación abogado-cliente; esta inicia cuando se acuerda formalmente el servicio.
+> La información que comparta con nosotros se trata de forma confidencial. Enviar una solicitud no crea por sí misma una relación abogado-cliente; esta inicia cuando se acuerda formalmente el servicio.

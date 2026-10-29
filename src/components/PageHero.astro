@@ -16,8 +16,8 @@ const { eyebrow, title, description, crumbs, lang = 'es', image } = Astro.props;
 ---
 
 <section class="relative overflow-hidden bg-ink-950 pt-36 pb-16 md:pt-44 md:pb-20">
-  {image && <HeroImage name={image} />}
-  {image && <div class="absolute inset-0 bg-gradient-to-r from-ink-950/90 via-ink-950/60 to-ink-950/20" aria-hidden="true"></div>}
+  {image && <HeroImage name={image} class="brightness-110" />}
+  {image && <div class="absolute inset-0 bg-gradient-to-r from-ink-950/82 via-ink-950/45 to-transparent" aria-hidden="true"></div>}
   {!image && (<div class="pointer-events-none absolute inset-0" aria-hidden="true">
     <div class="absolute -top-40 right-[-10%] h-[30rem] w-[30rem] rounded-full bg-brand-500/10 blur-3xl"></div>
     <div class="absolute bottom-[-40%] left-[-5%] h-[26rem] w-[26rem] rounded-full bg-gold-500/8 blur-3xl"></div>

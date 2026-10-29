@@ -16,7 +16,7 @@ Sin duda, se trata de una de las realidades a las que se enfrentan muchas person
 
 ## El nuevo perfil del detective privado
 
-Los investigadores privados a los que se puede acceder, en la actualidad, cuentan con el dominio de herramientas tecnológicas adecuadas para trabajar con mayor eficiencia en cualquier caso, desde infidelidades, ubicación de familiares hasta delitos digitales.
+Los investigadores privados a los que se puede acceder, en la actualidad, cuentan con el dominio de herramientas tecnológicas adecuadas para trabajar con mayor eficiencia en cualquier caso, desde la ubicación de familiares hasta delitos digitales.
 
 En el análisis de los casos complejos, constantemente se están adquiriendo nuevas herramientas y actualizando sistemas en procura de identificar y contrarrestar comportamientos delictivos.
 

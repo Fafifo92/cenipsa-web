@@ -15,7 +15,7 @@ A polygraph examination is a voluntary, non-invasive assessment that requires th
 
 - **Pre-employment examinations**: Verify a candidate's employment history, criminal background, academic credentials, alcohol and illegal drug use, involvement in illicit activities, ties to criminal organizations, financial standing, possible infiltration plans, and the accuracy of the information provided in their résumé.
 - **Routine examinations**: Assess the reliability and honesty of existing employees according to their roles and risk levels. These tests help detect ongoing theft, embezzlement, inventory manipulation, falsification of invoices or accounting documents, administrative or operational corruption, and other irregularities within the company.
-- **Specific or investigative examinations**: Corroborate the version of events given by individuals involved in a specific incident. They are also a valuable source of information in criminal, administrative or disciplinary investigations, and can confirm or rule out suspicions of infidelity in [personal matters](/en/personal-investigation/).
+- **Specific or investigative examinations**: Corroborate the version of events given by individuals involved in a specific incident. They are also a valuable source of information in criminal, administrative or disciplinary investigations.
 
 ## Advantages of polygraph testing
 

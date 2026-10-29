@@ -53,7 +53,6 @@ Los servicios de un detective privado se reconocen por ser un brazo de apoyo nec
 - Seguridad jurídica.
 - Litigios civiles.
 - Estados financieros.
-- Infidelidad.
 
 ### Servicios a aseguradoras
 
@@ -70,7 +69,7 @@ En CENIPSA, como firma de [**abogados Bogotá**](/abogados-bogota/)**,** nos car
 
 ## ¿Qué tipo de casos maneja un investigador privado?
 
-Los detectives privados manejan una amplia variedad de casos, en los que se incluyen investigaciones laborales (fraudes internos y verificación de antecedentes), asuntos personales (infidelidades y custodia de menores) y localización de personas desaparecidas.
+Los detectives privados manejan una amplia variedad de casos, en los que se incluyen investigaciones laborales (fraudes internos y verificación de antecedentes), asuntos personales y familiares (custodia de menores y verificación patrimonial) y localización de personas desaparecidas.
 
 ### Investigaciones laborales
 
@@ -78,7 +77,7 @@ Dentro de los campos más comunes donde actúan los investigadores, vienen siend
 
 ### Asuntos personales
 
-En el sector de las investigaciones personales, los detectives son necesarios para solventar casos de localización de personas, infidelidades e investigaciones de custodia de menores. Son casos donde se necesita de un alto nivel de profesionalismo y sensibilidad, porque comúnmente se trata de situaciones delicadas y emocionales.
+En el sector de las investigaciones personales, los detectives son necesarios para solventar casos de localización de personas, verificación patrimonial e investigaciones de custodia de menores. Son casos donde se necesita de un alto nivel de profesionalismo y sensibilidad, porque comúnmente se trata de situaciones delicadas y emocionales.
 
 ### Adaptación a la era digital
 
@@ -114,7 +113,7 @@ Lo más conveniente es contar con una agencia o compañía que ofrezca servicios
 
 ### Validar la experiencia
 
-Entre los aspectos a considerar, también se encuentra el hecho de asegurarse de que el investigador privado tenga experiencia verificada en este ámbito. Las agencias o compañías con experiencia ofrecen varios servicios especializados, como en el caso de la investigación de infidelidades, fraudes corporativos, detección de cámaras ocultas y micrófonos, entre otros.
+Entre los aspectos a considerar, también se encuentra el hecho de asegurarse de que el investigador privado tenga experiencia verificada en este ámbito. Las agencias o compañías con experiencia ofrecen varios servicios especializados, como en el caso de la investigación patrimonial, fraudes corporativos, detección de cámaras ocultas y micrófonos, entre otros.
 
 Se recomiendan preguntas por casos anteriores o testimonios de contratantes referidos, con el fin de conocer la experiencia con la que cuentan. En caso de que la agencia tenga una trayectoria sólida, es un buen indicador de que es confiable.
 
@@ -128,7 +127,7 @@ El costo de los servicios de un detective privado depende de varios factores, co
 
 ### Tipo de investigación
 
-Los diversos servicios que se pueden ofrecer en una firma de **abogados en Bogotá** con expertos en investigación privada incluyen algunos como investigación de infidelidades, corporativas, búsqueda de personas, entre otros.
+Los diversos servicios que se pueden ofrecer en una firma de **abogados en Bogotá** con expertos en investigación privada incluyen algunos como investigación personal y patrimonial, corporativa, búsqueda de personas, entre otros.
 
 Cada uno de esos tiene un costo asociado que dependerá de la especialización y el tiempo requerido.
 

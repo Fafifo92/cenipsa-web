@@ -5,7 +5,6 @@ description: "Productos de espionaje ◉ Equipos GPS ◉ Cámaras de largo alcan
 type: service
 related:
   - { label: "Investigación personal", href: "/investigacion-personal/" }
-  - { label: "Investigación de infidelidad", href: "/infidelidad/" }
   - { label: "Seguimientos inteligentes", href: "/seguimientos-inteligentes/" }
 order: 15
 icon: "users"

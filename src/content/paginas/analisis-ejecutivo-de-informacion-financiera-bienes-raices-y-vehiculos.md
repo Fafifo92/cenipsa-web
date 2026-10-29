@@ -1,8 +1,8 @@
 ---
-title: "Auditoría forense financiera y patrimonial"
-seoTitle: "Análisis de información financiera, bienes raíces y vehículos | CENIPSA"
+title: "Auditoría forense y contable-financiera"
+seoTitle: "Auditoría forense contable y financiera | Dictámenes periciales | CENIPSA"
 eyebrow: "Investigar"
-description: "Una vez compilada la información patrimonial, declaraciones de renta e historial contable de cada uno de los rubros que ejecutó el investigado en un"
+description: "Auditoría forense: detección de fraude financiero, reconstrucción de flujos, dictámenes periciales contables de parte y auditoría en litigios societarios y de familia."
 type: service
 related:
   - { label: "Investigación patrimonial para medidas cautelares", href: "/investigacion-patrimonial-para-medidas-cautelares/" }
@@ -13,18 +13,15 @@ order: 14
 icon: "chart"
 ---
 
-Una vez compilada la información patrimonial, declaraciones de renta e historial contable de cada uno de los rubros que ejecutó el investigado en un determinado periodo fiscal, procedemos a realizar cruce de información de patrimonio declarado, para determinar si sus activos, pasivos y patrimonio corresponden a su actividad económica y establecer con precisión posibles delitos como evasión, lavado de activos o alguna acción irregular asociada a su actividad económica.
+## Investigación financiera, detección de irregularidades y prueba técnica
 
-## Servicios especiales para abogados y empresas de cartera
+En CENIPSA S.A.S. combinamos la ciencia contable y financiera con la investigación jurídica y criminalística para examinar registros económicos, transacciones y libros de comercio. Nuestro equipo de auditores forenses y contadores peritos analiza estructuras financieras complejas para identificar, documentar y probar irregularidades patrimoniales o delitos económicos.
 
-Información y datos:
+Elaboramos dictámenes contables e informes técnicos con estricta cadena de custodia, diseñados para sustentar acciones judiciales ante jueces civiles, penales, laborales o tribunales arbitrales.
 
-- Ubicación de personas para notificación
-- Bienes
-- Vehículos
-- Cuentas
-- Tarjetas de crédito
-- Últimas consultas de Datacrédito
-- Comportamientos de pago
-- Celulares
-- DIAN
+## Servicios en auditoría forense
+
+- **Investigación y detección de fraude financiero:** identificación de maniobras de malversación de fondos, apropiación indebida, alteración de registros contables, sobrefacturación y conflictos de interés en entornos corporativos o personales.
+- **Análisis contable y reconstrucción de flujos financieros:** inspección metódica e ingeniería inversa de estados financieros, movimientos bancarios y balances para rastrear el origen, destino y trazabilidad de recursos económicos.
+- **Dictámenes periciales contables de parte:** elaboración de informes periciales independientes y técnicamente fundamentados para determinar cuantías de perjuicios, liquidación de daños emergentes, lucros cesantes o desequilibrios contractuales.
+- **Auditoría forense en litigios societarios y de familia:** evaluación técnica de estados financieros e inventarios de activos en procesos de disolución de sociedades comerciales, divorcios, liquidación de sociedad conyugal y controversias entre socios.

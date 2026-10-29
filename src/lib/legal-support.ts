@@ -17,10 +17,6 @@ const ES: Record<string, LegalSupportEntry> = {
     text: 'Cuando la investigación revela hechos con consecuencias legales, nuestros abogados le acompañan para convertir los hallazgos en una actuación jurídica: desde la asesoría inicial hasta la representación ante la autoridad competente.',
     areas: ['Derecho de familia', 'Sucesiones y herencias', 'Derecho civil', 'Derecho penal'],
   },
-  infidelidad: {
-    text: 'Una investigación de infidelidad suele terminar en decisiones legales. Le orientamos sobre cómo usar lo hallado de forma lícita y le representamos en los procesos de familia que se deriven.',
-    areas: ['Divorcio y cesación de efectos civiles', 'Custodia y alimentos', 'Liquidación de sociedad conyugal o patrimonial', 'Unión marital de hecho'],
-  },
   'investigacion-corporativa': {
     text: 'Detectar el fraude es la mitad del camino. Nuestros abogados llevan la actuación legal que sigue: denuncia, proceso disciplinario o laboral, y recuperación de activos, con la evidencia obtenida de forma legítima.',
     areas: ['Derecho laboral y procesos disciplinarios', 'Denuncia penal por fraude, abuso de confianza y corrupción', 'Litigios comerciales y societarios', 'Protección de activos'],
@@ -48,10 +44,6 @@ const ES: Record<string, LegalSupportEntry> = {
   'servicios-comunidad-lgtb': {
     text: 'Acompañamos jurídicamente a personas y parejas LGTB con atención respetuosa y confidencial, en la protección de sus derechos y en los procesos que necesiten.',
     areas: ['Protección de derechos fundamentales', 'Derecho de familia', 'Denuncias por discriminación o violencia', 'Sucesiones'],
-  },
-  'servicios-en-linea': {
-    text: 'La asesoría jurídica también es virtual: puede consultar a nuestros abogados desde cualquier lugar del país o del exterior, y agendar su cita según disponibilidad.',
-    areas: ['Derecho de familia', 'Derecho penal', 'Derecho laboral', 'Derecho comercial'],
   },
   'servicios-especiales': {
     text: 'Además de la evidencia, ofrecemos a abogados y casas de cobro respaldo jurídico en la estrategia del proceso, incluidas las medidas cautelares y la notificación.',
@@ -119,10 +111,6 @@ const EN: Record<string, LegalSupportEntry> = {
   'en/services-for-lawyers': {
     text: 'Beyond evidence, we give lawyers and collection firms legal backing on case strategy, including precautionary measures and service of process.',
     areas: ['Enforcement & debt collection', 'Precautionary measures', 'Judicial notification', 'Evidence strategy'],
-  },
-  'en/online-services': {
-    text: 'Legal advice is also available online: consult our lawyers from anywhere in Colombia or abroad and book your appointment according to availability.',
-    areas: ['Family law', 'Criminal law', 'Labor law', 'Commercial law'],
   },
   default: {
     text: 'Every investigation can end in legal action. Our lawyers support your case from day one: they guide evidence gathering so it holds up, and represent you when it is time to act.',

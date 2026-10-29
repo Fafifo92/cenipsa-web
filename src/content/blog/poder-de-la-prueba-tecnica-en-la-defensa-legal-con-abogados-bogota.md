@@ -38,7 +38,6 @@ Nuestros expertos en este campo llevan a cabo la extracción y preservación de 
 Para que un especialista en [**asesoría y representación jurídica**](/asesoria-juridica/) pueda conseguir sus objetivos, es sumamente importante contar con servicios de una compañía con amplia experiencia, como CENIPSA que puede manejar con precisión técnica:
 
 - Peritaje técnico y criminalístico. Desarrollo de informes para ser presentados debidamente como prueba de parte.
-- Investigación de infidelidad. Obtener pruebas contundentes para la toma de decisiones personales.
 - Localización de personas y activos. Rastreo de deudores morosos y socios que han desviado fondos de una compañía o empresa.
 - Debida Diligencia (Due Diligence). Comprobación de antecedentes y reputación de socios potenciales para impedir riesgos legales a futuro.
 
@@ -47,7 +46,7 @@ Para que un especialista en [**asesoría y representación jurídica**](/asesori
 | Especialidad | Técnica utilizada | Aplicación para abogados en Bogotá |
 | --- | --- | --- |
 | **Forense digital** | Extracción mediante software especializado. | Casos de fraude, acoso o suplantación. |
-| **Monitoreo** | Inspección efectuada utilizando equipos en tecnología de posicionamiento global | Procesos de familia, custodia e infidelidad. |
+| **Monitoreo** | Inspección efectuada utilizando equipos en tecnología de posicionamiento global | Procesos de familia y custodia. |
 | **Peritaje contable** | Análisis de flujos de caja y detección de desvíos. | Litigios corporativos y fraudes financieros. |
 | **Grafología** | Estudio de firmas y documentos manuscritos. | Verificación de autenticidad en contratos y pagarés. |
 

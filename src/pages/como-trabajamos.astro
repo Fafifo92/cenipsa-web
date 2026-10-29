@@ -1,0 +1,84 @@
+---
+/**
+ * Cómo trabajamos — reemplaza «Casos de éxito» (la firma no publica sus
+ * contratantes por confidencialidad). El flujograma definitivo lo enviará la
+ * firma; mientras tanto se muestra el proceso de atención acordado.
+ */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import CtaBanner from '@/components/CtaBanner.astro';
+import ProcessFlow from '@/components/ProcessFlow.astro';
+import Icon from '@/components/Icon.astro';
+import { breadcrumbSchema } from '@/lib/seo';
+import { PROCESS_ES } from '@/lib/pillars';
+
+const crumbs = [
+  { name: 'Inicio', path: '/' },
+  { name: 'Nosotros', path: '/nosotros/' },
+  { name: 'Cómo trabajamos', path: '/como-trabajamos/' },
+];
+
+const principles = [
+  { icon: 'lock', title: 'Confidencialidad', text: 'Secreto profesional, acuerdos de no divulgación y acceso a la información solo para el equipo asignado.' },
+  { icon: 'scale', title: 'Licitud de la prueba', text: 'Cada evidencia se obtiene por medios legales y con cadena de custodia, para que sea admisible.' },
+  { icon: 'users', title: 'Equipo interdisciplinario', text: 'Abogados, investigadores, peritos e ingenieros trabajan el caso bajo un mismo protocolo.' },
+  { icon: 'eye', title: 'Transparencia', text: 'Conoce el alcance, los tiempos y los honorarios antes de cualquier actuación.' },
+];
+---
+
+<BaseLayout
+  title="Cómo trabajamos | Proceso de atención confidencial | CENIPSA"
+  description="Así atendemos cada caso en CENIPSA: recibimos su solicitud, verificamos el tipo de caso, realizamos una valoración inicial y proponemos alcance, tiempos y honorarios, con absoluta reserva."
+  path="/como-trabajamos/"
+  altLocalePath="/en/how-we-work/"
+  schemas={[breadcrumbSchema(crumbs)]}
+>
+  <PageHero
+    eyebrow="Nosotros"
+    title="Cómo trabajamos"
+    description="Por confidencialidad no publicamos a nuestros contratantes. Lo que sí mostramos es cómo trabajamos: un proceso claro, reservado y con respaldo jurídico desde el primer contacto."
+    crumbs={crumbs}
+  />
+
+  <section class="section-pad" aria-labelledby="flow-title">
+    <div class="container-site">
+      <div class="max-w-2xl" data-reveal>
+        <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>Proceso de atención</p>
+        <h2 id="flow-title" class="mt-4 font-display text-3xl font-semibold text-ink-950 md:text-4xl">
+          De la solicitud a la propuesta, en cuatro pasos
+        </h2>
+      </div>
+      <div class="mt-12">
+        <ProcessFlow steps={PROCESS_ES} />
+      </div>
+      <p class="mt-12" data-reveal>
+        <a href="/contacto/" class="btn-primary">Solicitar valoración confidencial</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-mist section-pad" aria-labelledby="principles-title">
+    <div class="container-site">
+      <div class="max-w-2xl" data-reveal>
+        <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>Durante todo el caso</p>
+        <h2 id="principles-title" class="mt-4 font-display text-3xl font-semibold text-ink-950 md:text-4xl">Lo que garantizamos en cada etapa</h2>
+      </div>
+      <ul class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {
+          principles.map((p, i) => (
+            <li class="rounded-2xl border border-ink-950/10 bg-white p-6" data-reveal style={`--reveal-delay:${i * 80}ms`}>
+              <Icon name={p.icon} class="h-7 w-7 text-brand-700" />
+              <h3 class="mt-4 font-display text-lg font-semibold text-ink-950">{p.title}</h3>
+              <p class="mt-2 text-[0.92rem] leading-relaxed text-ink-700">{p.text}</p>
+            </li>
+          ))
+        }
+      </ul>
+      <p class="mt-10" data-reveal>
+        <a href="/garantias/" class="btn-outline">Ver nuestras garantías</a>
+      </p>
+    </div>
+  </section>
+
+  <CtaBanner />
+</BaseLayout>

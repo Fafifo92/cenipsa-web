@@ -133,10 +133,6 @@ Puede conseguir una cotización confidencial y sin compromiso.
 
 Nuestro equipo entrega informes precisos y metodológicos, material multimedia (fotos y videos) con cadena de custodia, y en ciertos casos, informes periciales validados para ser presentados en instancias jurídicas.
 
-### ¿Investigan casos de infidelidad en el ámbito familiar?
-
-Sí. Dentro de nuestra especialidad en el ámbito familiar, llevamos a cabo investigaciones de este tipo. Sin embargo, nuestro enfoque principal es la obtención de pruebas contundentes para procesos legales, como litigios de custodia, entre otros.
-
 ### ¿Cómo garantizan la confidencialidad de mi caso?
 
 La confidencialidad es un pilar fundamental en CENIPSA SAS. Nuestro equipo de detectives privados está sujeto a rigurosos acuerdos éticos y de confidencialidad profesional.

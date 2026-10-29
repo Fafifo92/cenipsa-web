@@ -1,8 +1,8 @@
 ---
-title: "Criminalística, peritaje y trazabilidad probatoria"
-seoTitle: "Criminalística y peritaje forense | CENIPSA"
+title: "Criminalística, ciencias forenses y análisis probativo"
+seoTitle: "Criminalística, ciencias forenses y peritaje técnico | CENIPSA"
 eyebrow: "Investigar"
-description: "En CENIPSA SAS, nuestros investigadores fundamentan sus acciones en estrategias de inteligencia con un soporte de las ciencias forenses, exactas, humanas y"
+description: "Peritaje técnico y criminalística: hurtos vehiculares, fraudes en propiedad horizontal, análisis químico-forense, documentología, dactiloscopia, balística, informática forense y contra-peritajes."
 type: service
 related:
   - { label: "Investigación corporativa", href: "/investigacion-corporativa/" }
@@ -13,36 +13,41 @@ order: 4
 icon: "microscope"
 ---
 
-**En CENIPSA SAS**, nuestros investigadores son especialistas en la obtención y aducción de material probatorio a los procesos del sistema penal acusatorio, fundamentan su accionar profesional mediante principios teóricos y prácticos de las ciencias forenses, exactas, humanas y sociales. Somos conscientes de la complejidad de los hechos punibles y vulneración de derechos en la sociedad colombiana. Por tanto, el derecho articulado con la criminalística ha sido fundamental para encontrar la verdad procesal y real en los hechos punibles, el restablecimiento de derechos vulnerados en los ciudadanos y el fortalecimiento de justicia.
+## Investigación científica, peritaje técnico e identificación probativa al servicio de la verdad judicial
 
-Nuestros investigadores y abogados son auxiliares de la justicia, esto permite un trabajo mancomunado con la administración de justicia, descongestiona los estrados judiciales, fortalece la actividad del juez y logra la reparación de los derechos vulnerados.
+En CENIPSA S.A.S. integramos la ciencia forense y la criminalística de campo con la estrategia jurídica y la defensa legal. Contamos con un equipo multidisciplinario de peritos auxiliares de justicia, criminalistas, químicos forenses, auditores e ingenieros encargados de recolectar, analizar y reconstruir elementos materiales probatorios bajo estrictos protocolos científicos.
 
-## Investigación de delitos contra la vida y la familia
+Nuestra labor técnica aporta claridad y solidez probatoria en procesos penales, civiles, laborales, comerciales y de propiedad horizontal, garantizando que cada evidencia cumpla con la cadena de custodia y las exigencias del ordenamiento jurídico colombiano.
 
-En CENIPSA estamos comprometidos con aquellos casos en los cuales existe una conculcación de los derechos a la vida y a la familia, en consideración al daño hecho a la persona, su núcleo familiar y, por ende, a toda la sociedad; utilizamos diferentes herramientas investigativas, jurídicas y psicológicas con el fin de escudriñar y coadyuvar en el esclarecimiento de los hechos materia de investigación.
+## Servicios en criminalística
 
-## Investigación de fraudes a comunidades
+### 1. Investigación de hurtos vehiculares y delitos patrimoniales
 
-Personas inescrupulosas aprovechan la buena fe de las comunidades rurales, hacen suplantación de identidad, las engañan con falsas promesas, vulneran sus terrenos y afectan sus presupuestos destinados al mejoramiento de vías, servicios públicos o energías renovables.
+- **Investigación e inspección técnica en hurtos de vehículos:** análisis de la escena del hecho, verificación de modalidades de apoderamiento, inspección de sistemas de identificación automotriz (improntas, números de chasis y motor) y trazabilidad de autopartes.
+- **Reconstrucción e informes para aseguradoras y procesos penales:** levantamiento de evidencia física y documental para desvirtuar o sustentar reclamaciones de cobertura de seguro y respaldar investigaciones penales ante la Fiscalía General de la Nación.
 
-Ante estas problemáticas, ofrecemos servicios investigativos y jurídicos, a fin de evitar situaciones que revictimicen a las personas, y así mismo exista una respectiva reparación por daños y perjuicios.
+### 2. Investigación de fraudes a comunidades y propiedad horizontal
 
-## Investigación de hurtos a vehículos
+- **Auditoría e investigación de fraudes comunitarios:** análisis e investigación técnica ante sospechas de malversación de fondos, cobros irregulares, alteración de estados financieros y falsificación de firmas o actas en administraciones de propiedad horizontal, conjuntos residenciales, cooperativas y comunidades organizadas.
+- **Aseguramiento probatorio y acción legal:** identificación de responsables y elaboración de dictámenes de auditoría forense listos para sustentar denuncias penales por abuso de confianza o administración desleal y demandas de reparación patrimonial.
 
-Nuestros abogados e investigadores tienen amplio conocimiento en el modus operandi de las organizaciones criminales dedicadas al hurto vehículos, las formas criminales evolucionaron a nuevas formas de hurto, pues son asesoradas en vacíos jurídicos por abogados corruptos; ejemplo, para hurtar un vehículo engañan a la víctima con un contrato de alquiler, después fundamentan su accionar mediante un abuso de confianza y de esta forma evaden la justicia.
+### 3. Análisis químico-forense e investigación de sustancias
 
-Este es un fenómeno delictual con alto índice de impunidad, por ello, brindamos asesoría investigativa y jurídica a fin de recaudar el caudal probatorio necesario, esclarecer los hechos ante la Fiscalía General de la Nación y/o ante las reclamaciones de las aseguradoras.
+- **Identificación y caracterización de sustancias químicas y botánicas:** pruebas de laboratorio e inspección técnica para la determinación de componentes, alteración, adulteración de productos comerciales o presencia de sustancias no autorizadas.
+- **Análisis toxicológico y pruebas forenses:** peritajes especializados en muestras biológicas o físicas para determinar presencia de tóxicos, medicamentos, alcohol o drogas de síntesis en investigaciones penales, laborales (accidentes de trabajo) o procesos de custodia y familia.
 
-## Investigación a documentos
+### 4. Peritajes técnicos tradicionales y dictámenes de parte
 
-Las organizaciones criminales dedicadas a la estafa presentan información falsa de visas, diplomas, estudios académicos, libretas militares, contratos e incluso utilizan documentos de personas fallecidas.
+- **Documentología y grafología forense:** análisis técnico de firmas, manuscritos y documentos para determinar falsedades, suplantaciones o alteraciones en contratos, títulos valores y escrituras.
+- **Dactiloscopia y lofoscopia:** revelado, trasplante y cotejo técnico de huellas dactilares para la filiación de personas o identificación de presencia en escenas del hecho.
+- **Balística forense y reconstrucción de hechos:** estudios técnicos sobre trayectoria de proyectiles, operatividad de armas de fuego y reconstrucción tridimensional de la escena del crimen.
 
-Ante ello, nuestros peritos están capacitados en encontrar incongruencias de los datos entregados por terceros y determinar la veracidad de estos.
+### 5. Informática forense y análisis de evidencia digital
 
-## Investigación lofoscopía y dactilotecnia
+- **Adquisición y preservación de prueba electrónica:** extracción forense de datos en teléfonos móviles, computadores, servidores y unidades de almacenamiento.
+- **Autenticidad e integridad de archivos digitales:** verificación de metadatos y análisis de no manipulación en grabaciones de audio, video, correos electrónicos y mensajería instantánea.
 
-Estas técnicas hacen parte de las especializaciones de nuestros investigadores, quienes analizan la escena de los hechos e identifican eventuales elementos probatorios, entre otros: huellas, fluidos, vestigios ocultos; aunado esto, con la ciencia biométrica, que nos permite mayor identificación, individualización y análisis de los actores implicados en la comisión de un delito.
+### 6. Auditoría probativa, contra-peritajes y sustentación en audiencia
 
-## Investigación de sustancias
-
-Nuestros peritos investigadores son expertos en el análisis de bebidas adulteradas, psicoactivos, fluidos biológicos, entre otros. Lo anterior es determinante en las investigaciones judiciales.
+- **Evaluación e impugnación de dictámenes (contra-peritajes):** examen crítico de los informes periciales presentados por entidades estatales o contrapartes para desvirtuar inconsistencias técnicas.
+- **Defensa de peritajes en juicio oral:** intervención activa de nuestros peritos en estrados judiciales para sustentar y defender los dictámenes ante interrogatorios y contrainterrogatorios.

@@ -24,10 +24,10 @@ export const PILLARS_ES: Pillar[] = [
     icon: 'shield',
     items: [
       { label: 'Debida diligencia de socios y proveedores', href: '/investigacion-corporativa/' },
-      { label: 'Pruebas de confiabilidad laboral y poligrafía', href: '/examen-de-poligrafia/' },
-      { label: 'Análisis técnico de instalaciones y barridos electrónicos', href: '/barrido-electronico/' },
-      { label: 'Sistemas de monitoreo técnico y trazabilidad de activos', href: '/plataforma-gps/' },
-      { label: 'Estudios de seguridad y gestión del riesgo corporativo', href: '/investigacion-corporativa/' },
+      { label: 'Estudios de seguridad y pruebas de confiabilidad', href: '/examen-de-poligrafia/' },
+      { label: 'Barrido electrónico y contramedidas (TSCM)', href: '/barrido-electronico/' },
+      { label: 'Ciberseguridad y diagnóstico de vulnerabilidades', href: '/ciberseguridad-e-informatica-forense/' },
+      { label: 'Monitoreo satelital y control de activos', href: '/plataforma-gps/' },
     ],
   },
   {
@@ -36,11 +36,12 @@ export const PILLARS_ES: Pillar[] = [
     tagline: 'Convertimos hechos complejos en evidencia útil, lícita y verificable.',
     icon: 'fingerprint',
     items: [
-      { label: 'Investigación de fraude corporativo', href: '/investigacion-corporativa/' },
-      { label: 'Investigación personal, familiar y verificación patrimonial', href: '/investigacion-personal/' },
-      { label: 'Auditoría forense financiera y patrimonial', href: '/analisis-ejecutivo-de-informacion-financiera-bienes-raices-y-vehiculos/' },
-      { label: 'Búsqueda y localización de personas y activos', href: '/ubicacion-de-personas-para-notificacion-judicial/' },
-      { label: 'Criminalística, peritaje y trazabilidad probatoria', href: '/criminalistica/' },
+      { label: 'Investigación corporativa y prevención del fraude', href: '/investigacion-corporativa/' },
+      { label: 'Investigación personal, familiar y patrimonial', href: '/investigacion-personal/' },
+      { label: 'Auditoría forense contable y financiera', href: '/analisis-ejecutivo-de-informacion-financiera-bienes-raices-y-vehiculos/' },
+      { label: 'Informática forense y evidencia digital', href: '/ciberseguridad-e-informatica-forense/' },
+      { label: 'Ubicación de partes procesales y herederos', href: '/ubicacion-de-personas-para-notificacion-judicial/' },
+      { label: 'Criminalística y ciencias forenses', href: '/criminalistica/' },
     ],
   },
   {
@@ -69,7 +70,8 @@ export const PILLARS_EN: Pillar[] = [
       { label: 'Partner and supplier due diligence', href: '/en/corporate-investigation/' },
       { label: 'Workplace reliability testing and polygraph', href: '/en/polygraph/' },
       { label: 'Technical site analysis and electronic sweeps', href: '/en/electronic-sweep/' },
-      { label: 'Technical monitoring and asset traceability', href: '/en/gps-tracking/' },
+      { label: 'Satellite monitoring and asset control', href: '/en/gps-tracking/' },
+      { label: 'Cybersecurity and vulnerability assessment', href: '/en/cybersecurity-digital-forensics/' },
     ],
   },
   {
@@ -79,6 +81,7 @@ export const PILLARS_EN: Pillar[] = [
     icon: 'fingerprint',
     items: [
       { label: 'Corporate fraud investigation', href: '/en/corporate-investigation/' },
+      { label: 'Forensic accounting audit', href: '/en/forensic-accounting/' },
       { label: 'Personal, family and asset verification', href: '/en/personal-investigation/' },
       { label: 'Criminalistics, expert reports and evidence traceability', href: '/en/criminalistics/' },
       { label: 'Locating people and assets', href: '/en/services-for-lawyers/' },
@@ -92,21 +95,20 @@ export const PILLARS_EN: Pillar[] = [
     items: [
       { label: 'Pre-litigation advice and legal representation', href: '/en/legal-advice/' },
       { label: 'Evidence assessment and services for lawyers', href: '/en/services-for-lawyers/' },
-      { label: 'Online legal services', href: '/en/online-services/' },
     ],
   },
 ];
 
 /** Áreas del derecho (pilar Defender) — contenido integrado de abogadosbogotaespecializados.com. */
-export const LEGAL_AREAS_ES: (NavLink & { text: string })[] = [
-  { label: 'Derecho penal y sancionatorio', href: '/derecho-penal/', text: 'Defensa técnica, representación de víctimas, procesos disciplinarios.' },
-  { label: 'Derecho de familia', href: '/derecho-de-familia/', text: 'Divorcio, custodia, alimentos, filiación y sucesiones.' },
-  { label: 'Derecho civil', href: '/derecho-civil/', text: 'Contratos, procesos ejecutivos, responsabilidad civil y cobro.' },
-  { label: 'Derecho laboral', href: '/derecho-laboral/', text: 'Empresas y trabajadores: disciplinarios, despidos, acoso, pensiones.' },
-  { label: 'Derecho comercial y societario', href: '/derecho-comercial/', text: 'Sociedades, contratos mercantiles, insolvencia y litigios.' },
-  { label: 'Derecho administrativo', href: '/derecho-administrativo/', text: 'Demandas contra el Estado, sancionatorios, contratación pública.' },
-  { label: 'Derecho constitucional', href: '/derecho-constitucional/', text: 'Tutela, petición, hábeas corpus y hábeas data.' },
-  { label: 'Propiedad intelectual', href: '/derecho-de-propiedad-intelectual/', text: 'Marcas, patentes, derechos de autor y licencias.' },
+export const LEGAL_AREAS_ES: (NavLink & { text: string; icon: string })[] = [
+  { label: 'Derecho penal y sancionatorio', href: '/derecho-penal/', text: 'Defensa técnica, representación de víctimas, procesos disciplinarios.', icon: 'gavel' },
+  { label: 'Derecho de familia', href: '/derecho-de-familia/', text: 'Divorcio, custodia, alimentos, filiación y sucesiones.', icon: 'family' },
+  { label: 'Derecho civil', href: '/derecho-civil/', text: 'Contratos, procesos ejecutivos, responsabilidad civil y cobro.', icon: 'contract' },
+  { label: 'Derecho laboral', href: '/derecho-laboral/', text: 'Empresas y trabajadores: disciplinarios, despidos, acoso, pensiones.', icon: 'hardhat' },
+  { label: 'Derecho comercial y societario', href: '/derecho-comercial/', text: 'Sociedades, contratos mercantiles, insolvencia y litigios.', icon: 'store' },
+  { label: 'Derecho administrativo', href: '/derecho-administrativo/', text: 'Demandas contra el Estado, sancionatorios, contratación pública.', icon: 'columns' },
+  { label: 'Derecho constitucional', href: '/derecho-constitucional/', text: 'Tutela, petición, hábeas corpus y hábeas data.', icon: 'book' },
+  { label: 'Propiedad intelectual', href: '/derecho-de-propiedad-intelectual/', text: 'Marcas, patentes, derechos de autor y licencias.', icon: 'bulb' },
 ];
 
 /** Segmentos de cliente (bifurcación B2B / B2C + abogados). */
@@ -130,7 +132,7 @@ export const SEGMENTS_ES = [
       { label: 'Investigación personal y patrimonial', href: '/investigacion-personal/' },
       { label: 'Derecho de familia', href: '/derecho-de-familia/' },
       { label: 'Derecho penal', href: '/derecho-penal/' },
-      { label: 'Servicios en línea', href: '/servicios-en-linea/' },
+      { label: 'Ubicación de personas y herederos', href: '/ubicacion-de-personas-para-notificacion-judicial/' },
     ],
   },
   {
