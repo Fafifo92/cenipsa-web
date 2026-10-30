@@ -18,11 +18,11 @@ Nuestros servicios serán divulgados a las personas y compañías de forma respo
 - **CENIPSA SAS** asesora a la defensa en materia de cadena de custodia, proyectada en la valoración de la legalidad, autenticidad, integridad, preservación, seguridad, almacenamiento, continuidad y registro de los elementos materiales e intangibles probatorios y evidencia física para el caso.
 - Dentro de los requisitos mencionados por el nuevo Código General del Proceso, en materia de la legalidad de las pruebas aportadas, se exige que las empresas de detectives privados tengan dentro de su objeto social la actividad de «Investigaciones Privadas»; como se podrá constatar que **CENIPSA SAS**, es una empresa legalmente constituida y que en el documento privado de constitución, registrado ante la Cámara de Comercio de Bogotá, figura esta actividad como nuestro objeto social, para cumplir cabalmente con todos los parámetros que enmarca la ley para este tipo de empresas.
 
-## Medios de pago electrónicos
+## Medios de pago
 
-- Contamos con una pasarela de pagos **PAYU** con protección antifraude, está totalmente prohibido ingresar información fraudulenta o irregularidades que afecten a terceros, si encontramos anomalías serán informadas a las entidades competentes. Cabe aclarar, los datos ingresados de nombres, correos electrónicos, teléfonos y direcciones, serán utilizados solo para emitir la respectiva factura del servicio o producto contratado.
+- Por seguridad, **CENIPSA SAS** no recibe pagos a través del sitio web. Los pagos se realizan únicamente mediante transferencia bancaria a cuentas a nombre de la persona jurídica **CENIPSA S.A.S.**; nunca consigne a personas naturales ni mediante giros informales. Los datos de nombres, correos electrónicos, teléfonos y direcciones se utilizan solo para emitir la respectiva factura del servicio contratado.
 
-## Servicios en línea
+## Atención virtual
 
 - Los enlaces de reunión se enviarán desde correos corporativos seguros, evite correos maliciosos, nunca solicitaremos números de tarjeta o verificación de datos por correo electrónico o vía telefónica.
 - Para el ingreso a la plataforma satelital, favor realizarlo desde la página y los servidores seguros indicados por el equipo profesional.

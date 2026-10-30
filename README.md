@@ -55,7 +55,7 @@ Todas se definen en `.env` (ver `.env.example`). Son `PUBLIC_*` (llegan al clien
 | Variable | Para qué | Si se deja vacía |
 |---|---|---|
 | `PUBLIC_GTM_ID` | Google Tag Manager (analítica) | No carga GTM |
-| `PUBLIC_TAWK_ID` | Chat en vivo Tawk.to (`propertyId/widgetId`) | No carga el chat ni su botón (ver también `CHAT_LAUNCHER_ENABLED` en § Chat en vivo) |
+| `PUBLIC_TAWK_ID` | Chat en vivo Tawk.to (`propertyId/widgetId`) | No carga el chat (ver también `CHAT_ENABLED` en § Chat en vivo) |
 | `PUBLIC_FORM_ENDPOINT` | Endpoint del formulario (Formspree u otro) | El formulario abre `mailto:` |
 | `PUBLIC_RECAPTCHA_SITE_KEY` | reCAPTCHA v3 invisible (clave de sitio) | Solo honeypot antispam |
 
@@ -73,73 +73,16 @@ abogado-cliente. Los correos de destino históricos del CF7 de WordPress eran `i
 
 ## Chat en vivo
 
-**Estado actual: DESACTIVADO (segunda vez).** `CHAT_LAUNCHER_ENABLED = false` en `src/lib/site.ts` — es el
-interruptor maestro; en `false`, ni se renderiza el botón ni se carga el script de Tawk (cero peticiones de red),
-sin tocar código. El fix de recuperación de orfandad descrito abajo se implementó y se verificó en un ciclo
-controlado (`npm run dev`, Chromium vía CDP: abrir → navegar → abrir, 3 veces seguidas, todas exitosas), pero en
-uso real (dispositivos/condiciones reales) sigue fallando con frecuencia. Queda desactivado hasta poder
-implementarlo de forma más sólida — posiblemente reconsiderando el enfoque (forzar recarga completa de página en
-vez de navegación SPA mientras el chat está activo, o evaluar un proveedor de chat distinto) — o diagnosticar
-con acceso a un dispositivo real. Todo el código y el trabajo de investigación quedan intactos para retomarlo.
+**Estado: ACTIVO.** Widget nativo de tawk.to (`CHAT_ENABLED` en `src/lib/site.ts`; ID en `PUBLIC_TAWK_ID`),
+cargado de forma diferida por `src/scripts/thirdparty.ts`.
 
-Cuando está activo, el sitio usa un **launcher propio** (`ChatLauncher.astro`) con la estética del sitio y
-animaciones de entrada, hover y apertura/cierre; controla el panel de Tawk.to vía `Tawk_API.toggle()` (el botón
-por defecto de Tawk queda oculto). GTM se difiere a producción (evita pageviews falsos en dev); Tawk **no** se
-difiere — probarlo en local es necesario y no distorsiona ningún informe de tráfico.
+Historial: el chat fallaba porque el sitio usaba navegación SPA (`<ClientRouter />` de Astro), que reemplaza el
+`<body>` en cada navegación y destruía el widget que Tawk inyecta en tiempo de ejecución. Se retiró
+`<ClientRouter />` (las páginas cargan de forma normal) y con eso el widget nativo funciona en cada página. Se
+eliminó el botón propio (`ChatLauncher`).
 
-### Bug diagnosticado y parcialmente corregido: el botón dejaba de responder tras navegar
-
-**Síntoma reportado:** en algunos navegadores móviles el panel a veces no se cerraba correctamente y el botón
-dejaba de responder a los toques ("la ventana sigue abierta de algún modo y el botón ya no lo ejecuta").
-
-**Causa raíz confirmada** (investigación con verificación adversarial, incluyendo lectura del código fuente real
-de Astro, `swap-functions.js`, no solo inferida): el sitio usa `<ClientRouter />` (`astro:transitions`) para
-navegación SPA. En cada navegación same-site, Astro reemplaza el `<body>` completo
-(`oldElement.replaceWith(newElement)`) y solo conserva los nodos marcados con `transition:persist` — ninguno lo
-está en este proyecto. El widget de Tawk (su iframe/contenedor) lo inyecta el script embed directamente como hijo
-de `document.body` **en tiempo de ejecución**, fuera del árbol que Astro renderiza por SSR, así que **nunca
-podría persistir** aunque se marcara `#chat-launcher`. Resultado: tras la primera navegación SPA posterior a usar
-el chat, el DOM real del widget quedaba huérfano (destruido), pero `window.Tawk_API` seguía existiendo en
-memoria con sus métodos intactos — el botón llamaba `toggle()` sobre una referencia "zombie" sin ningún widget
-real que mover, sin error visible y sin caer nunca al fallback de WhatsApp.
-
-**Fix aplicado** (`src/scripts/thirdparty.ts` + `ChatLauncher.astro`):
-1. **Detección determinista de orfandad.** Se escucha el evento de ciclo de vida `astro:after-swap` (se dispara
-   justo después de que Astro reemplaza el `<body>`): si el widget ya estaba listo (`onLoad` había disparado)
-   cuando ocurre el swap, se marca `tawkOrphaned = true`. No se depende de heurísticas sobre el DOM interno de
-   Tawk (una caja negra) — se reacciona al evento del propio framework que causa el problema.
-2. **Recuperación automática.** `requestToggle()` ahora comprueba `!isTawkOrphaned()` antes de confiar en
-   `Tawk_API.toggle`; si el widget está huérfano, se trata igual que "aún no cargó": se hace `teardownTawk()`
-   y se reinyecta limpio, reutilizando el mismo flujo de `pendingOpen`/`tawk:ready` que ya existía para la
-   primera carga. El teardown no solo borra `window.Tawk_API`/`Tawk_LoadStart`: Tawk deja además varios
-   globales internos propios (motor, socket, registro de sus chunks — `$__TawkEngine`, `$__TawkSocket`,
-   `tawkJsonp`, `$_Tawk*`) que, si sobreviven, hacen que el script reinyectado detecte "ya estoy
-   inicializado" y reutilice el motor huérfano en vez de crear un widget nuevo — se barren todos por patrón
-   (`/tawk/i` sobre las claves de `window`), no por lista fija, porque son un detalle interno de Tawk que
-   puede cambiar entre versiones. Sin este barrido completo, la recuperación parecía funcionar (el script se
-   reinyectaba) pero `Tawk_API.toggle` nunca volvía a aparecer.
-3. **Red de seguridad (riesgos secundarios no verificables).** Tras cada `toggle()` se arma un watchdog de
-   2.5 s: si no llega confirmación (`tawk:maximized`/`tawk:minimized`) — p. ej. por un overlay de Tawk con
-   z-index de terceros tapando el botón, o una animación interrumpida por el teclado virtual en iOS Safari,
-   riesgos que no podemos verificar ni controlar directamente — se marca huérfano igualmente y, si el intento
-   era de **abrir**, se cae a WhatsApp; si era de **cerrar**, solo se prepara la reconexión limpia para el
-   próximo intento (sin redirigir de forma sorpresiva a un cierre fallido). El timeout de "primera carga en
-   frío" (`pendingOpen` → `tawk:ready`) se subió de 6 s a 10 s: una recarga completa del widget implica
-   ~15-20 peticiones (chunks JS, idiomas, fuentes, sonido) y 6 s podían agotarse antes de que Tawk terminara,
-   cayendo a WhatsApp por error incluso cuando el chat sí iba a cargar bien un par de segundos después.
-
-**Verificado en navegador** (Chromium vía CDP, `npm run dev`): ciclo completo abrir → cerrar → navegar (SPA,
-clic real en enlaces del sitio, no recarga completa) → abrir de nuevo, repetido en 3 navegaciones consecutivas
-(`/` → `/nosotros/` → `/servicios/`), confirmando en cada parada que `Tawk_API.toggle` se recupera y el panel
-llega a `data-state="open"`.
-
-**Pero en uso real sigue fallando con frecuencia.** El ciclo controlado de arriba no cubre todo lo que puede
-pasar en un dispositivo real: overlay/z-index del panel de Tawk en iOS Safari, animaciones interrumpidas por el
-teclado virtual, condiciones de red variables, u otros comportamientos internos de Tawk que no son observables
-sin probar en el dispositivo real donde se reportan los fallos. La red de seguridad (punto 3) amortigua el
-síntoma (cae a WhatsApp en vez de quedar colgado) pero no elimina la causa de fondo en esos casos. Por eso queda
-desactivado en vez de "arreglado": hace falta diagnosticar con un dispositivo real antes de reactivarlo con
-confianza.
+El asistente virtual de preguntas frecuentes y la configuración del bot en Tawk y WhatsApp están en
+[`docs/chatbot.md`](docs/chatbot.md).
 
 ## Despliegue
 

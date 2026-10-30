@@ -10,6 +10,7 @@ related:
   - { label: "Legal advice & litigation", href: "/en/legal-advice/" }
 order: 5
 icon: "chart"
+heroImage: "/images/servicio-auditoria-forense.jpg"
 ---
 
 ## Financial investigation, detection of irregularities and technical evidence

@@ -11,6 +11,7 @@ related:
   - { label: "Investigadores privados Bogotá", href: "/investigadores-privados-bogota-2/" }
 order: 12
 icon: "map-pin"
+heroImage: "/images/servicio-ubicacion-personas.jpg"
 ---
 
 ## Investigación técnico-documental, ubicación de partes procesales y búsqueda de herederos

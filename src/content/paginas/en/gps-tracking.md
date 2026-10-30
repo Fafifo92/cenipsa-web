@@ -7,6 +7,7 @@ eyebrow: "Services"
 order: 5
 icon: "satellite"
 related: []
+heroImage: "/images/servicio-monitoreo-gps.jpg"
 ---
 
 CENIPSA operates its own GPS platform in Bogotá, Colombia, built specifically for investigative work: real-time satellite tracking, ambient audio, geofences and mobile alerts, all integrated with our [private investigation services](/en/services/).

@@ -5,7 +5,7 @@ description: "Abogados de derecho administrativo en Bogotá: derechos de petici�
 type: service
 eyebrow: "Defender · Área jurídica"
 focusKeyword: "abogado administrativo Bogotá"
-heroImage: "/images/despacho-juridico.jpg"
+heroImage: "/images/derecho-administrativo.jpg"
 icon: "columns"
 order: 25
 related:

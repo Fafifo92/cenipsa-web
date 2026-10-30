@@ -8,6 +8,7 @@ related:
   - { label: "Prueba de polígrafo Bogotá", href: "/prueba-de-poligrafo-bogota/" }
   - { label: "Examen de poligrafía", href: "/examen-de-poligrafia/" }
   - { label: "Investigación corporativa", href: "/investigacion-corporativa/" }
+heroImage: "/images/servicio-estudios-seguridad.jpg"
 ---
 
 El [**polígrafo laboral**](/blog/la-poligrafia-laboral-y-su-considerable-utilidad-para-las-empresas/) es un servicio usado por empresas en Bogotá para comprobar la honestidad en procesos de selección, auditorías o investigaciones internas. En CENIPSA, un poligrafista certificado se encarga de llevar a cabo una entrevista y conecta sensores que permiten medir respuestas fisiológicas, definiendo con alta fiabilidad si la persona responde con veracidad.

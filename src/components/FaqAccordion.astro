@@ -1,8 +1,12 @@
 ---
 /** Acordeón de preguntas frecuentes con <details>/<summary> nativos mejorados. */
+import { CONTACT } from '@/lib/site';
+
 export interface FaqItem {
   question: string;
   answer: string; // HTML permitido (contenido curado propio)
+  /** Acciones sugeridas; href 'whatsapp' se resuelve al enlace de WhatsApp. */
+  links?: { label: string; href: string }[];
 }
 export interface Props {
   items: FaqItem[];
@@ -10,6 +14,8 @@ export interface Props {
   openFirst?: boolean;
 }
 const { items, openFirst = false } = Astro.props;
+const resolve = (href: string) => (href === 'whatsapp' ? CONTACT.whatsappHref : href);
+const isExternal = (href: string) => href === 'whatsapp' || href.startsWith('http');
 ---
 
 <div class="space-y-3.5">
@@ -29,7 +35,23 @@ const { items, openFirst = false } = Astro.props;
             </svg>
           </span>
         </summary>
-        <div class="faq-answer px-6 pb-6 text-[0.98rem] leading-relaxed text-ink-700" set:html={item.answer} />
+        <div class="faq-answer px-6 pb-6 text-[0.98rem] leading-relaxed text-ink-700">
+          <div set:html={item.answer} />
+          {item.links && item.links.length > 0 && (
+            <p class="mt-4 flex flex-wrap gap-2.5">
+              {item.links.map((l) => (
+                <a
+                  href={resolve(l.href)}
+                  {...(isExternal(l.href) ? { target: '_blank', rel: 'noopener' } : {})}
+                  class="faq-action inline-flex items-center gap-1.5 rounded-lg border border-ink-950/15 bg-paper px-3.5 py-2 text-[0.85rem] font-semibold text-ink-950 no-underline transition-colors hover:border-gold-400 hover:bg-gold-50"
+                >
+                  {l.label}
+                  <span class="text-gold-600" aria-hidden="true">→</span>
+                </a>
+              ))}
+            </p>
+          )}
+        </div>
       </details>
     ))
   }
@@ -59,7 +81,7 @@ const { items, openFirst = false } = Astro.props;
   .faq-answer :global(p + p) {
     margin-top: 0.75rem;
   }
-  .faq-answer :global(a) {
+  .faq-answer :global(a:not(.faq-action)) {
     color: var(--color-brand-700);
     font-weight: 500;
     text-decoration: underline;

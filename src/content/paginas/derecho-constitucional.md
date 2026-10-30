@@ -5,7 +5,7 @@ description: "Defensa de los derechos fundamentales en Bogotá: acciones de tute
 type: service
 eyebrow: "Defender · Área jurídica"
 focusKeyword: "acción de tutela Bogotá"
-heroImage: "/images/despacho-juridico.jpg"
+heroImage: "/images/derecho-constitucional.jpg"
 icon: "book"
 order: 26
 related:

@@ -3,14 +3,13 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import PageHero from '@/components/PageHero.astro';
 import CtaBanner from '@/components/CtaBanner.astro';
-import FaqAccordion from '@/components/FaqAccordion.astro';
+import FaqPageBody from '@/components/FaqPageBody.astro';
+import type { FaqEntry } from '@/lib/faq';
 import { faqSchema, breadcrumbSchema } from '@/lib/seo';
-import { CONTACT } from '@/lib/site';
 import faqEn from '@/data/faq.en.json';
 
-const items = [...faqEn]
-  .sort((a, b) => a.order - b.order)
-  .map((f) => ({ question: f.question, answer: f.answer }));
+const entries = ([...faqEn] as FaqEntry[]).sort((a, b) => a.order - b.order);
+const items = entries.map((f) => ({ question: f.question, answer: f.answer }));
 
 const stripHtml = (html: string) => html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 
@@ -39,29 +38,7 @@ const crumbs = [
     lang="en"
   />
 
-  <section class="section-pad">
-    <div class="container-site">
-      <div class="grid gap-y-12 lg:grid-cols-[minmax(0,1fr)_19rem] lg:gap-x-14 xl:gap-x-20">
-        <div class="min-w-0">
-          <FaqAccordion items={items} openFirst />
-        </div>
-        <aside class="lg:sticky lg:top-28 lg:self-start">
-          <div class="overflow-hidden rounded-3xl bg-ink-950 p-6 text-white">
-            <h2 class="font-display text-xl font-semibold">Didn't find your answer?</h2>
-            <p class="mt-2 text-[0.9rem] leading-relaxed text-ink-300">
-              Write to us and an advisor will handle your case personally and confidentially.
-            </p>
-            <div class="mt-5 flex flex-col gap-2.5">
-              <a href={CONTACT.whatsappHref} target="_blank" rel="noopener" class="btn-gold w-full text-[0.9rem]">
-                WhatsApp consultation
-              </a>
-              <a href="/en/contact/" class="btn-outline-light w-full text-[0.9rem]">Contact us</a>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </div>
-  </section>
+  <FaqPageBody entries={entries} lang="en" />
 
   <CtaBanner
     lang="en"

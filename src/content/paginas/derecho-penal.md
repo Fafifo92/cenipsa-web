@@ -5,7 +5,7 @@ description: "Asesoría y representación en derecho penal en Bogotá: defensa t
 type: service
 eyebrow: "Defender · Área jurídica"
 focusKeyword: "abogados penalistas Bogotá"
-heroImage: "/images/despacho-juridico.jpg"
+heroImage: "/images/derecho-penal.jpg"
 icon: "gavel"
 order: 20
 related:

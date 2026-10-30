@@ -4,12 +4,12 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import PageHero from '@/components/PageHero.astro';
 import CtaBanner from '@/components/CtaBanner.astro';
-import FaqAccordion from '@/components/FaqAccordion.astro';
+import FaqPageBody from '@/components/FaqPageBody.astro';
+import type { FaqEntry } from '@/lib/faq';
 import { faqSchema, breadcrumbSchema } from '@/lib/seo';
-import { CONTACT } from '@/lib/site';
 
-const faqs = (await getCollection('faq')).sort((a, b) => a.data.order - b.data.order);
-const items = faqs.map((f) => ({ question: f.data.question, answer: f.data.answer }));
+const entries: FaqEntry[] = (await getCollection('faq')).map((f) => f.data).sort((a, b) => a.order - b.order);
+const items = entries.map((f) => ({ question: f.question, answer: f.answer }));
 
 const stripHtml = (html: string) => html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 
@@ -21,7 +21,7 @@ const crumbs = [
 
 <BaseLayout
   title="Preguntas frecuentes | CENIPSA Inteligencia Investigativa"
-  description="Resolvemos las dudas más comunes sobre investigación privada, detectives, poligrafía, GPS satelital y asesoría jurídica en Colombia. Consulte nuestras preguntas frecuentes."
+  description="Preguntas frecuentes sobre legalidad y confidencialidad, investigación personal y familiar, servicios empresariales, servicios para abogados, precios, tiempos y citas. Asistente virtual de CENIPSA."
   path="/faq/"
   altLocalePath="/en/faq/"
   schemas={[
@@ -36,29 +36,7 @@ const crumbs = [
     crumbs={crumbs}
   />
 
-  <section class="section-pad">
-    <div class="container-site">
-      <div class="grid gap-y-12 lg:grid-cols-[minmax(0,1fr)_19rem] lg:gap-x-14 xl:gap-x-20">
-        <div class="min-w-0">
-          <FaqAccordion items={items} openFirst />
-        </div>
-        <aside class="lg:sticky lg:top-28 lg:self-start">
-          <div class="overflow-hidden rounded-3xl bg-ink-950 p-6 text-white">
-            <h2 class="font-display text-xl font-semibold">¿No encuentras la respuesta?</h2>
-            <p class="mt-2 text-[0.9rem] leading-relaxed text-ink-300">
-              Escríbenos y un asesor resolverá tu caso de forma personalizada y confidencial.
-            </p>
-            <div class="mt-5 flex flex-col gap-2.5">
-              <a href={CONTACT.whatsappHref} target="_blank" rel="noopener" class="btn-gold w-full text-[0.9rem]">
-                Asesoría por WhatsApp
-              </a>
-              <a href="/contacto/" class="btn-outline-light w-full text-[0.9rem]">Contáctanos</a>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </div>
-  </section>
+  <FaqPageBody entries={entries} />
 
   <CtaBanner
     title="¿No encuentras la respuesta que buscas?"

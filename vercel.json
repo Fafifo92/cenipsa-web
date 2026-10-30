@@ -264,7 +264,7 @@
           "value": "abogadosbogotaespecializados.com"
         }
       ],
-      "destination": "https://www.inteligenciainvestigativa.com/pagos-en-linea/",
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
       "permanent": true
     },
     {
@@ -275,7 +275,7 @@
           "value": "abogadosbogotaespecializados.com"
         }
       ],
-      "destination": "https://www.inteligenciainvestigativa.com/pagos-en-linea/",
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
       "permanent": true
     },
     {
@@ -814,7 +814,7 @@
           "value": "abogadosbogotaespecializados.com"
         }
       ],
-      "destination": "https://www.inteligenciainvestigativa.com/pagos-en-linea/",
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
       "permanent": true
     },
     {
@@ -825,7 +825,7 @@
           "value": "abogadosbogotaespecializados.com"
         }
       ],
-      "destination": "https://www.inteligenciainvestigativa.com/pagos-en-linea/",
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
       "permanent": true
     },
     {
@@ -1232,7 +1232,7 @@
           "value": "www.abogadosbogotaespecializados.com"
         }
       ],
-      "destination": "https://www.inteligenciainvestigativa.com/pagos-en-linea/",
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
       "permanent": true
     },
     {
@@ -1243,7 +1243,7 @@
           "value": "www.abogadosbogotaespecializados.com"
         }
       ],
-      "destination": "https://www.inteligenciainvestigativa.com/pagos-en-linea/",
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
       "permanent": true
     },
     {
@@ -1782,7 +1782,7 @@
           "value": "www.abogadosbogotaespecializados.com"
         }
       ],
-      "destination": "https://www.inteligenciainvestigativa.com/pagos-en-linea/",
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
       "permanent": true
     },
     {
@@ -1793,7 +1793,7 @@
           "value": "www.abogadosbogotaespecializados.com"
         }
       ],
-      "destination": "https://www.inteligenciainvestigativa.com/pagos-en-linea/",
+      "destination": "https://www.inteligenciainvestigativa.com/contacto/",
       "permanent": true
     },
     {
@@ -2256,6 +2256,26 @@
     },
     {
       "source": "/en/online-services",
+      "destination": "/en/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/pagos-en-linea/",
+      "destination": "/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/pagos-en-linea",
+      "destination": "/contacto/",
+      "permanent": true
+    },
+    {
+      "source": "/en/payments/",
+      "destination": "/en/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/en/payments",
       "destination": "/en/contact/",
       "permanent": true
     }

@@ -7,6 +7,7 @@ eyebrow: "Services"
 order: 3
 icon: "scale"
 related: []
+heroImage: "/images/servicio-asesoria-juridica.jpg"
 ---
 
 CENIPSA is a firm of lawyers and private investigators providing complete legal representation in Bogotá, Colombia — before courts and tribunals as well as in commercial matters. Over the years we have developed investigative methodologies with the highest quality standards, allowing us to deliver solutions inside and outside the courtroom, for both local and international clients.

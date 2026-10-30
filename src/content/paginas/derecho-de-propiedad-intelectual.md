@@ -5,7 +5,7 @@ description: "Protección de la propiedad intelectual en Bogotá: registro y vig
 type: service
 eyebrow: "Defender · Área jurídica"
 focusKeyword: "abogados propiedad intelectual Bogotá"
-heroImage: "/images/despacho-juridico.jpg"
+heroImage: "/images/derecho-propiedad-intelectual.jpg"
 icon: "bulb"
 order: 27
 related:

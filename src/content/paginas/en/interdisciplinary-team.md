@@ -9,6 +9,7 @@ related:
   - { label: "Who we are", href: "/en/about-us/" }
   - { label: "Guarantees", href: "/en/guarantees/" }
   - { label: "How we work", href: "/en/how-we-work/" }
+heroImage: "/images/nosotros-equipo.jpg"
 ---
 
 Legal investigations — both corporate and personal — face complex technical, legal and human challenges. When there is psychological harm, moral damage or violations of fundamental rights, the search for the truth demands rigorous, methodical investigative strategies adapted to each case in order to achieve full reparation.

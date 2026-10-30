@@ -10,6 +10,7 @@ related:
   - { label: "Investigación corporativa", href: "/investigacion-corporativa/" }
 order: 6
 icon: "pulse"
+heroImage: "/images/servicio-estudios-seguridad.jpg"
 ---
 
 ## Acompañamiento estratégico a gestión humana y prevención del riesgo operacional

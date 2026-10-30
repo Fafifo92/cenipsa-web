@@ -10,6 +10,7 @@ related:
   - { label: "Derecho penal y sancionatorio", href: "/derecho-penal/" }
 order: 7
 icon: "cpu"
+heroImage: "/images/servicio-ciberseguridad.jpg"
 ---
 
 ## Blindaje de activos digitales, respuesta a incidentes y evidencia electrónica

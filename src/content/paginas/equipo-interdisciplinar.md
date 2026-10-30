@@ -9,6 +9,7 @@ related:
   - { label: "Garantías", href: "/garantias/" }
   - { label: "Cómo trabajamos", href: "/como-trabajamos/" }
 order: 20
+heroImage: "/images/nosotros-equipo.jpg"
 ---
 
 Las investigaciones jurídicas —tanto corporativas como personales— enfrentan complejos desafíos técnicos, legales y humanos. Cuando existen afectaciones psicológicas, daños morales o vulneraciones a los derechos fundamentales, la búsqueda de la verdad exige estrategias investigativas rigurosas, metódicas y adaptadas a cada caso para lograr una efectiva reparación integral.

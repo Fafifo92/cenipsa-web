@@ -49,8 +49,12 @@ const faq = defineCollection({
   schema: z.object({
     id: z.string(),
     question: z.string(),
+    /** Categoría (base de conocimiento del asistente): legalidad · personal · empresas · abogados · precios. */
+    category: z.enum(['legalidad', 'personal', 'empresas', 'abogados', 'precios']),
     /** HTML curado propio. */
     answer: z.string(),
+    /** Acciones sugeridas («botones» del asistente). href = 'whatsapp' abre WhatsApp. */
+    links: z.array(z.object({ label: z.string(), href: z.string() })).default([]),
     order: z.number(),
   }),
 });

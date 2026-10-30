@@ -5,7 +5,7 @@ description: "Abogados laborales en Bogotá para empresas y trabajadores: contra
 type: service
 eyebrow: "Defender · Área jurídica"
 focusKeyword: "abogado laboral Bogotá"
-heroImage: "/images/despacho-juridico.jpg"
+heroImage: "/images/derecho-laboral.jpg"
 icon: "hardhat"
 order: 23
 related:

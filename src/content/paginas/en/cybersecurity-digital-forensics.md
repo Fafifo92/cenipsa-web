@@ -10,6 +10,7 @@ related:
   - { label: "Legal advice & litigation", href: "/en/legal-advice/" }
 order: 7
 icon: "cpu"
+heroImage: "/images/servicio-ciberseguridad.jpg"
 ---
 
 ## Protecting digital assets, incident response and electronic evidence

@@ -1,7 +1,7 @@
 ---
 /**
  * Sellos de confianza verificables (home + footer): razón social y NIT, sede
- * física, afiliación a la CCB, pagos seguros y política de datos (Habeas Data).
+ * física, afiliación a la CCB, pagos solo a nombre de la sociedad y política de datos.
  */
 import Icon from './Icon.astro';
 import { SITE } from '@/lib/site';
@@ -37,8 +37,8 @@ const seals = [
   {
     icon: 'shield',
     title: isEs ? 'Pagos seguros' : 'Secure payments',
-    text: isEs ? 'Pasarela PayU' : 'PayU gateway',
-    href: isEs ? '/pagos-en-linea/' : '/en/payments/',
+    text: isEs ? 'Solo a cuentas de CENIPSA S.A.S.' : 'Only to CENIPSA S.A.S. accounts',
+    href: isEs ? '/faq/#legalidad' : '/en/faq/#legalidad',
   },
   {
     icon: 'eye',

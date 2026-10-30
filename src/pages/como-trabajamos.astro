@@ -1,16 +1,15 @@
 ---
 /**
- * Cómo trabajamos — reemplaza «Casos de éxito» (la firma no publica sus
- * contratantes por confidencialidad). El flujograma definitivo lo enviará la
- * firma; mientras tanto se muestra el proceso de atención acordado.
+ * Cómo trabajamos — reemplaza «Casos de éxito» (la firma no publica a sus
+ * contratantes por confidencialidad). Contenido y flujograma metodológico
+ * enviados por la firma (PÁGINA WEB OBSERVACIONES, nov. 2026).
  */
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import PageHero from '@/components/PageHero.astro';
 import CtaBanner from '@/components/CtaBanner.astro';
-import ProcessFlow from '@/components/ProcessFlow.astro';
-import Icon from '@/components/Icon.astro';
+import MethodFlow from '@/components/MethodFlow.astro';
 import { breadcrumbSchema } from '@/lib/seo';
-import { PROCESS_ES } from '@/lib/pillars';
+import { CONTACT } from '@/lib/site';
 
 const crumbs = [
   { name: 'Inicio', path: '/' },
@@ -18,67 +17,94 @@ const crumbs = [
   { name: 'Cómo trabajamos', path: '/como-trabajamos/' },
 ];
 
-const principles = [
-  { icon: 'lock', title: 'Confidencialidad', text: 'Secreto profesional, acuerdos de no divulgación y acceso a la información solo para el equipo asignado.' },
-  { icon: 'scale', title: 'Licitud de la prueba', text: 'Cada evidencia se obtiene por medios legales y con cadena de custodia, para que sea admisible.' },
-  { icon: 'users', title: 'Equipo interdisciplinario', text: 'Abogados, investigadores, peritos e ingenieros trabajan el caso bajo un mismo protocolo.' },
-  { icon: 'eye', title: 'Transparencia', text: 'Conoce el alcance, los tiempos y los honorarios antes de cualquier actuación.' },
+const stages = [
+  {
+    title: 'Etapa 1: Investigación y análisis forense',
+    tag: 'Prevenir y colectar',
+    text: 'Inicia con la delimitación del caso y la recepción de insumos aportados por el contratante. A través de metodología OSINT, análisis de fuentes abiertas y peritaje informático o de campo, nuestro equipo construye la cronología forense, perfila a los sujetos de interés y elabora grafos de vinculación relacional. Todo el proceso se adelanta bajo estrictos protocolos de cadena de custodia e ISO/IEC 27037.',
+    result: 'Entregable fase 1: acervo probatorio inicial, indicadores verificados y mapa de vinculaciones relacionales.',
+  },
+  {
+    title: 'Etapa 2: Sustentación y evaluación probatoria',
+    tag: 'Analizar y filtrar',
+    text: 'Se adelantan diligencias de entrevistas técnico-forenses con contexto e interrogatorios especializados. Posteriormente, los abogados penalistas y especialistas corporativos de CENIPSA someten la evidencia a un filtro estricto de pertinencia, conducencia, utilidad y legalidad procesal, estructurando las hipótesis delictivas u operativas con fundamentación jurídica.',
+    result: 'Entregable fase 2: matriz de evidencia legalmente sustentada y ponderación de riesgos procesales.',
+  },
+  {
+    title: 'Etapa 3: Dictamen prejurídico y socialización estratégica',
+    tag: 'Decidir y actuar',
+    text: 'Consolidación del informe pericial forense escrito con sus respectivos anexos digitales. El área jurídica emite el dictamen prejurídico motivado, donde analiza la eventual adecuación típica de conductas (por ejemplo, acceso abusivo a sistemas, fraude, falsedad o abuso de confianza), la vocación de éxito ante las autoridades y las recomendaciones de actuación. Finalmente, se realiza una sesión de socialización ejecutiva con el cliente.',
+    result: 'Resultado final: decisiones jurídicas claras para interponer denuncia penal, iniciar defensa o aplicar medidas preventivas corporativas.',
+  },
 ];
 ---
 
 <BaseLayout
-  title="Cómo trabajamos | Proceso de atención confidencial | CENIPSA"
-  description="Así atendemos cada caso en CENIPSA: recibimos su solicitud, verificamos el tipo de caso, realizamos una valoración inicial y proponemos alcance, tiempos y honorarios, con absoluta reserva."
+  title="Cómo trabajamos | Paso a paso de una investigación forense y prejurídica | CENIPSA"
+  description="Conozca el paso a paso de una investigación forense y prejurídica profesional en CENIPSA: investigación y análisis forense, evaluación probatoria y dictamen prejurídico."
   path="/como-trabajamos/"
   altLocalePath="/en/how-we-work/"
   schemas={[breadcrumbSchema(crumbs)]}
 >
   <PageHero
-    eyebrow="Nosotros"
-    title="Cómo trabajamos"
-    description="Por confidencialidad no publicamos a nuestros contratantes. Lo que sí mostramos es cómo trabajamos: un proceso claro, reservado y con respaldo jurídico desde el primer contacto."
+    eyebrow="Cómo trabajamos"
+    title="Conozca el paso a paso de una investigación forense y prejurídica profesional"
     crumbs={crumbs}
   />
 
-  <section class="section-pad" aria-labelledby="flow-title">
+  <section class="section-pad" aria-labelledby="intro-title">
     <div class="container-site">
-      <div class="max-w-2xl" data-reveal>
-        <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>Proceso de atención</p>
-        <h2 id="flow-title" class="mt-4 font-display text-3xl font-semibold text-ink-950 md:text-4xl">
-          De la solicitud a la propuesta, en cuatro pasos
+      <div class="max-w-3xl" data-reveal>
+        <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>Introducción</p>
+        <h2 id="intro-title" class="mt-4 font-display text-3xl font-semibold text-ink-950 md:text-4xl">
+          La importancia del rigor procesal en la investigación
         </h2>
+        <p class="mt-5 text-[1.05rem] leading-relaxed text-ink-700">
+          En el entorno corporativo y personal actual, enfrentar una sospecha de fraude, un conflicto patrimonial o una
+          vulneración de derechos exige actuar con absoluta precisión. Presentar pruebas obtenidas de forma empírica o al
+          margen de la ley puede anular cualquier acción judicial o generar responsabilidades penales adicionales. En
+          CENIPSA S.A.S., combinamos la inteligencia investigativa de campo con la evaluación de abogados penalistas y
+          corporativos para garantizar que cada elemento de prueba sea lícito, pertinente y legalmente conducente.
+        </p>
       </div>
-      <div class="mt-12">
-        <ProcessFlow steps={PROCESS_ES} />
-      </div>
-      <p class="mt-12" data-reveal>
-        <a href="/contacto/" class="btn-primary">Solicitar valoración confidencial</a>
-      </p>
     </div>
   </section>
 
-  <section class="bg-mist section-pad" aria-labelledby="principles-title">
+  <section class="bg-mist section-pad" aria-labelledby="flow-title">
     <div class="container-site">
-      <div class="max-w-2xl" data-reveal>
-        <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>Durante todo el caso</p>
-        <h2 id="principles-title" class="mt-4 font-display text-3xl font-semibold text-ink-950 md:text-4xl">Lo que garantizamos en cada etapa</h2>
+      <div class="max-w-3xl" data-reveal>
+        <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>Infografía oficial</p>
+        <h2 id="flow-title" class="mt-4 font-display text-3xl font-semibold text-ink-950 md:text-4xl">Flujograma metodológico CENIPSA</h2>
       </div>
-      <ul class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="mx-auto mt-10 max-w-5xl">
+        <MethodFlow />
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad" aria-labelledby="stages-title">
+    <div class="container-site">
+      <div class="max-w-3xl" data-reveal>
+        <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>Explicación detallada</p>
+        <h2 id="stages-title" class="mt-4 font-display text-3xl font-semibold text-ink-950 md:text-4xl">Las etapas metodológicas</h2>
+      </div>
+      <ol class="mt-10 space-y-6">
         {
-          principles.map((p, i) => (
-            <li class="rounded-2xl border border-ink-950/10 bg-white p-6" data-reveal style={`--reveal-delay:${i * 80}ms`}>
-              <Icon name={p.icon} class="h-7 w-7 text-brand-700" />
-              <h3 class="mt-4 font-display text-lg font-semibold text-ink-950">{p.title}</h3>
-              <p class="mt-2 text-[0.92rem] leading-relaxed text-ink-700">{p.text}</p>
+          stages.map((s, i) => (
+            <li class="rounded-2xl border border-ink-950/10 bg-white p-7 md:p-9" data-reveal style={`--reveal-delay:${i * 80}ms`}>
+              <p class="text-[0.78rem] font-semibold tracking-[0.14em] text-brand-700 uppercase">{s.tag}</p>
+              <h3 class="mt-2 font-display text-xl font-semibold text-ink-950 md:text-2xl">{s.title}</h3>
+              <p class="mt-4 leading-relaxed text-ink-700">{s.text}</p>
+              <p class="mt-5 border-l-4 border-gold-400 bg-paper px-5 py-3 font-semibold text-ink-950">{s.result}</p>
             </li>
           ))
         }
-      </ul>
-      <p class="mt-10" data-reveal>
-        <a href="/garantias/" class="btn-outline">Ver nuestras garantías</a>
-      </p>
+      </ol>
     </div>
   </section>
 
-  <CtaBanner />
+  <CtaBanner
+    title="¿Requiere una evaluación confidencial para su empresa o situación personal?"
+    text={`En CENIPSA S.A.S. convertimos hechos complejos en evidencia útil y decisiones jurídicas claras. Contáctenos para una orientación inicial reservada con nuestro equipo multidisciplinario. ${CONTACT.emailInfo} · ${CONTACT.whatsapp}`}
+  />
 </BaseLayout>

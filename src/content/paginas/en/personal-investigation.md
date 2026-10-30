@@ -7,6 +7,7 @@ eyebrow: "Services"
 order: 1
 icon: "user-search"
 related: []
+heroImage: "/images/servicio-investigacion-personal.jpg"
 ---
 
 Our personal investigation services are designed for people who have suffered — or want to prevent — emotional harm, family disputes or violations of their rights. CENIPSA combines investigative, technological, psychological and legal resources so you can resolve your situation and establish the truth, in Bogotá and throughout Colombia. For an overview of everything we offer, see our [services](/en/services/) page or [contact us](/en/contact/) for a confidential consultation.

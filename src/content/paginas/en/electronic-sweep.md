@@ -9,6 +9,7 @@ related:
   - { label: "GPS satellite tracking", href: "/en/gps-tracking/" }
   - { label: "Corporate investigation", href: "/en/corporate-investigation/" }
   - { label: "Criminalistics", href: "/en/criminalistics/" }
+heroImage: "/images/servicio-barrido-electronico.jpg"
 ---
 
 At **CENIPSA SAS** we develop preventive and corrective technological solutions to corporate security and privacy problems. Using advanced, high-precision electronic systems, we locate intrusive devices irregularly installed inside your company's premises. Our service prevents information leaks, protects corporate privacy and uncovers potential irregularities.

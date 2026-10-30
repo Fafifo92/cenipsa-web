@@ -1,12 +1,10 @@
 ---
 /** Layout raíz: head SEO, header, footer, WhatsApp flotante, scripts globales. */
-import { ClientRouter } from 'astro:transitions';
 import BaseHead, { type Props as HeadProps } from '@/components/BaseHead.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import WhatsAppButton from '@/components/WhatsAppButton.astro';
-import ChatLauncher from '@/components/ChatLauncher.astro';
-import { THIRD_PARTY, CHAT_LAUNCHER_ENABLED } from '@/lib/site';
+import { THIRD_PARTY, CHAT_ENABLED } from '@/lib/site';
 
 export interface Props extends HeadProps {}
 
@@ -18,17 +16,14 @@ const skipLabel = lang === 'es' ? 'Saltar al contenido principal' : 'Skip to mai
 // analítica real. Tawk NO se difiere: probar el chat en local es necesario y,
 // a diferencia de GTM, no distorsiona ningún informe de tráfico.
 const gtmId = import.meta.env.PROD ? THIRD_PARTY.gtmId : '';
-// CHAT_LAUNCHER_ENABLED (lib/site.ts) es el interruptor maestro del chat: en
-// `false`, sin data-tawk-id, thirdparty.ts nunca carga el script — cero
-// peticiones de red y el botón ni se renderiza (línea de abajo).
-const tawkId = CHAT_LAUNCHER_ENABLED ? THIRD_PARTY.tawkId : '';
+// Chat de tawk.to (widget nativo). CHAT_ENABLED en lib/site.ts es el interruptor maestro.
+const tawkId = CHAT_ENABLED ? THIRD_PARTY.tawkId : '';
 ---
 
 <!doctype html>
 <html lang={lang === 'es' ? 'es-CO' : 'en'}>
   <head>
     <BaseHead {...props} />
-    <ClientRouter />
   </head>
   <body data-gtm-id={gtmId} data-tawk-id={tawkId}>
     {
@@ -51,7 +46,6 @@ const tawkId = CHAT_LAUNCHER_ENABLED ? THIRD_PARTY.tawkId : '';
     </main>
     <Footer lang={lang} />
     <WhatsAppButton lang={lang} />
-    {CHAT_LAUNCHER_ENABLED && THIRD_PARTY.tawkId && <ChatLauncher lang={lang} />}
     <script>
       import '@/scripts/reveal';
       import '@/scripts/thirdparty';

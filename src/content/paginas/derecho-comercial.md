@@ -5,7 +5,7 @@ description: "Asesoría jurídica empresarial en Bogotá: constitución y reform
 type: service
 eyebrow: "Defender · Área jurídica"
 focusKeyword: "derecho comercial Bogotá"
-heroImage: "/images/despacho-juridico.jpg"
+heroImage: "/images/derecho-comercial.jpg"
 icon: "store"
 order: 24
 related:

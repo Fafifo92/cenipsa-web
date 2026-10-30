@@ -66,16 +66,13 @@ export const THIRD_PARTY = {
 } as const;
 
 /**
- * Chat en vivo (launcher + widget de Tawk) DESACTIVADO de nuevo: el fix de
- * recuperación de orfandad (ver README.md § Chat en vivo) se verificó en
- * dev/Chromium, pero en uso real sigue fallando con frecuencia. El código
- * (thirdparty.ts, ChatLauncher.astro) queda intacto — incluido el trabajo
- * de diagnóstico ya hecho — para retomarlo con una implementación más
- * sólida (o un proveedor de chat distinto) en el futuro. Cambiar a `true`
- * para reactivarlo; en `false` no se renderiza el botón ni se hace ninguna
- * petición de red a Tawk.
+ * Chat en vivo de tawk.to: widget NATIVO de Tawk (su propio botón, abajo a la
+ * derecha; WhatsApp queda abajo a la izquierda). Funciona de forma fiable
+ * porque el sitio ya no usa navegación SPA (<ClientRouter />), que era lo que
+ * destruía el widget en cada cambio de página. `false` = no se carga Tawk.
+ * Idioma, colores, horarios y el chatbot se configuran en el panel de Tawk.
  */
-export const CHAT_LAUNCHER_ENABLED = false;
+export const CHAT_ENABLED = true;
 
 /**
  * Selectores del formulario de valoración confidencial: tipo de requerimiento
@@ -129,7 +126,6 @@ export const NAV_ES: NavLink[] = [
   },
   { label: 'Blog', href: '/blog/' },
   { label: 'FAQ', href: '/faq/' },
-  { label: 'Pagos en línea', href: '/pagos-en-linea/' },
   { label: 'Contáctenos', href: '/contacto/' },
 ];
 
@@ -164,7 +160,6 @@ export const NAV_EN: NavLink[] = [
   },
   { label: 'Blog', href: '/en/blog/' },
   { label: 'FAQ', href: '/en/faq/' },
-  { label: 'Payments', href: '/en/payments/' },
   { label: 'Contact', href: '/en/contact/' },
 ];
 
@@ -175,7 +170,6 @@ export const I18N_PAIRS: Record<string, string> = {
   '/servicios/': '/en/services/',
   '/contacto/': '/en/contact/',
   '/faq/': '/en/faq/',
-  '/pagos-en-linea/': '/en/payments/',
   '/blog/': '/en/blog/',
   '/investigacion-personal/': '/en/personal-investigation/',
   '/investigacion-corporativa/': '/en/corporate-investigation/',

@@ -1,0 +1,284 @@
+---
+/**
+ * Asistente virtual de preguntas frecuentes (chatbot guiado, sin IA): sigue
+ * el flujo enviado por la firma — bienvenida, menú de 6 opciones, preguntas
+ * por categoría, respuestas con botones sugeridos y paso a un asesor humano
+ * (abre el chat de tawk.to si ya cargó; si no, WhatsApp). Funciona igual en
+ * móvil. Sin JavaScript se oculta y queda el acordeón de la página.
+ */
+import { CONTACT } from '@/lib/site';
+import { FAQ_CATEGORIES, type FaqEntry } from '@/lib/faq';
+
+export interface Props {
+  entries: FaqEntry[];
+  lang?: 'es' | 'en';
+}
+const { entries, lang = 'es' } = Astro.props;
+const isEs = lang === 'es';
+
+const t = isEs
+  ? {
+      name: 'Asistente virtual CENIPSA',
+      status: 'Respuestas inmediatas',
+      welcome:
+        '¡Hola! Bienvenido a CENIPSA S.A.S. / Inteligencia Investigativa. Somos especialistas en investigación privada, peritaje forense y asesoría legal con más de 13 años de experiencia.',
+      ask: '¿En qué puedo ayudarle hoy? Seleccione una opción:',
+      location: 'Ubicación y agendar cita confidencial',
+      human: 'Hablar con un asesor humano',
+      pick: 'Estas son las preguntas sobre',
+      back: 'Menú principal',
+      more: 'Otra pregunta de este tema',
+      handoff: 'Le comunico con un asesor. Si el chat no se abre, le llevamos a WhatsApp.',
+      book: 'Agendar cita confidencial',
+      reset: 'Reiniciar conversación',
+    }
+  : {
+      name: 'CENIPSA virtual assistant',
+      status: 'Instant answers',
+      welcome:
+        'Hello! Welcome to CENIPSA S.A.S. / Inteligencia Investigativa. We specialize in private investigation, forensic expert work and legal advice, with more than 13 years of experience.',
+      ask: 'How can I help you today? Choose an option:',
+      location: 'Location and confidential appointment',
+      human: 'Talk to a human advisor',
+      pick: 'Here are the questions about',
+      back: 'Main menu',
+      more: 'Another question on this topic',
+      handoff: 'Connecting you with an advisor. If the chat does not open, we will take you to WhatsApp.',
+      book: 'Book a confidential appointment',
+      reset: 'Restart conversation',
+    };
+
+const data = {
+  t,
+  categories: FAQ_CATEGORIES[lang],
+  entries: entries.map(({ id, category, question, answer, links }) => ({ id, category, question, answer, links })),
+  // Opción 6 del menú: ubicación + cita (preguntas de la categoría «precios»).
+  locationIds: ['precios-3', 'precios-4'],
+  whatsapp: isEs ? CONTACT.whatsappHref : CONTACT.whatsappHrefEn,
+  contact: isEs ? '/contacto/' : '/en/contact/',
+};
+---
+
+<section class="faq-assistant overflow-hidden rounded-3xl border border-ink-950/10 bg-white shadow-lift" aria-label={t.name} data-faq-assistant data-requires-js>
+  <header class="flex items-center justify-between gap-4 bg-ink-950 px-5 py-4 text-white">
+    <div class="flex items-center gap-3">
+      <span class="flex h-10 w-10 items-center justify-center rounded-full bg-gold-400 font-display text-lg font-bold text-ink-950" aria-hidden="true">C</span>
+      <div>
+        <p class="font-semibold leading-tight">{t.name}</p>
+        <p class="flex items-center gap-1.5 text-[0.78rem] text-ink-300">
+          <span class="h-2 w-2 rounded-full bg-[#25d366]" aria-hidden="true"></span>{t.status}
+        </p>
+      </div>
+    </div>
+    <button type="button" class="rounded-lg border border-white/20 px-3 py-1.5 text-[0.78rem] font-semibold text-white hover:border-gold-400" data-fa-reset>{t.reset}</button>
+  </header>
+  <div class="faq-assistant-log max-h-[34rem] min-h-[22rem] space-y-3 overflow-y-auto bg-paper px-4 py-5 sm:px-6" data-fa-log aria-live="polite"></div>
+  <script type="application/json" data-fa-data set:html={JSON.stringify(data)} />
+</section>
+
+<style>
+  :global(html:not(.js)) [data-requires-js] {
+    display: none;
+  }
+  .faq-assistant-log :global(.fa-msg) {
+    max-width: 88%;
+    border-radius: 1rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    animation: fa-in 0.3s var(--ease-out-expo);
+  }
+  .faq-assistant-log :global(.fa-bot) {
+    background: #fff;
+    color: var(--color-ink-800);
+    border: 1px solid rgb(11 37 56 / 0.08);
+    border-top-left-radius: 0.25rem;
+  }
+  .faq-assistant-log :global(.fa-user) {
+    margin-left: auto;
+    background: var(--color-ink-950);
+    color: #fff;
+    border-top-right-radius: 0.25rem;
+  }
+  .faq-assistant-log :global(.fa-msg p + p) {
+    margin-top: 0.5rem;
+  }
+  .faq-assistant-log :global(.fa-msg ul) {
+    margin-top: 0.4rem;
+    padding-left: 1.2rem;
+    list-style: disc;
+  }
+  .faq-assistant-log :global(.fa-msg a) {
+    color: var(--color-brand-700);
+    text-decoration: underline;
+  }
+  .faq-assistant-log :global(.fa-options) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .faq-assistant-log :global(.fa-opt) {
+    border: 1px solid rgb(11 37 56 / 0.18);
+    background: #fff;
+    border-radius: 0.6rem;
+    padding: 0.5rem 0.85rem;
+    font-size: 0.87rem;
+    font-weight: 600;
+    color: var(--color-ink-950);
+    text-align: left;
+    transition: border-color 0.2s, background-color 0.2s;
+  }
+  .faq-assistant-log :global(.fa-opt:hover),
+  .faq-assistant-log :global(.fa-opt:focus-visible) {
+    border-color: var(--color-gold-400);
+    background: var(--color-gold-50);
+  }
+  .faq-assistant-log :global(.fa-opt-primary) {
+    background: var(--color-gold-400);
+    border-color: var(--color-gold-400);
+  }
+  .faq-assistant-log :global(.fa-opt-human) {
+    background: #25d366;
+    border-color: #25d366;
+    color: #fff;
+  }
+  @keyframes fa-in {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .faq-assistant-log :global(.fa-msg) {
+      animation: none;
+    }
+  }
+</style>
+
+<script>
+  interface Entry {
+    id: string;
+    category: string;
+    question: string;
+    answer: string;
+    links: { label: string; href: string }[];
+  }
+  interface Data {
+    t: Record<string, string>;
+    categories: { id: string; label: string }[];
+    entries: Entry[];
+    locationIds: string[];
+    whatsapp: string;
+    contact: string;
+  }
+  type Action = { label: string; kind?: 'primary' | 'human'; run?: () => void; href?: string };
+
+  function initFaqAssistant() {
+    const root = document.querySelector<HTMLElement>('[data-faq-assistant]');
+    if (!root || root.dataset.bound === 'true') return;
+    root.dataset.bound = 'true';
+    const log = root.querySelector<HTMLElement>('[data-fa-log]')!;
+    const data = JSON.parse(root.querySelector('[data-fa-data]')!.textContent || '{}') as Data;
+    const { t } = data;
+
+    const scroll = () => log.scrollTo({ top: log.scrollHeight, behavior: 'smooth' });
+
+    const bubble = (html: string, who: 'bot' | 'user') => {
+      const div = document.createElement('div');
+      div.className = `fa-msg fa-${who}`;
+      if (who === 'user') div.textContent = html;
+      else div.innerHTML = html; // contenido curado propio (faq.json)
+      log.appendChild(div);
+      return div;
+    };
+
+    const options = (actions: Action[]) => {
+      const wrap = document.createElement('div');
+      wrap.className = 'fa-options';
+      actions.forEach((a) => {
+        const external = a.href && (a.href.startsWith('http') || a.href === 'whatsapp');
+        const el = a.href ? document.createElement('a') : document.createElement('button');
+        el.className = `fa-opt${a.kind ? ` fa-opt-${a.kind}` : ''}`;
+        el.textContent = a.label;
+        if (el instanceof HTMLAnchorElement) {
+          el.href = a.href === 'whatsapp' ? data.whatsapp : a.href!;
+          if (external) {
+            el.target = '_blank';
+            el.rel = 'noopener';
+          }
+        } else {
+          (el as HTMLButtonElement).type = 'button';
+          el.addEventListener('click', () => {
+            wrap.querySelectorAll('button').forEach((b) => ((b as HTMLButtonElement).disabled = true));
+            a.run?.();
+          });
+        }
+        wrap.appendChild(el);
+      });
+      log.appendChild(wrap);
+      scroll();
+    };
+
+    const human = () => {
+      bubble(t.human, 'user');
+      bubble(`<p>${t.handoff}</p>`, 'bot');
+      const tawk = (window as unknown as { Tawk_API?: { maximize?: () => void } }).Tawk_API;
+      if (tawk && typeof tawk.maximize === 'function') tawk.maximize();
+      else window.open(data.whatsapp, '_blank', 'noopener');
+      menuButtons();
+    };
+
+    const humanAction: Action = { label: t.human, kind: 'human', run: human };
+
+    const showAnswer = (e: Entry, fromCategory?: string) => {
+      bubble(e.question, 'user');
+      bubble(e.answer, 'bot');
+      const actions: Action[] = e.links.map((l) => ({ label: l.label, href: l.href }));
+      if (fromCategory) actions.push({ label: t.more, run: () => showCategory(fromCategory, false) });
+      actions.push({ label: t.back, run: () => menu(false) }, humanAction);
+      options(actions);
+    };
+
+    const showCategory = (catId: string, echo = true) => {
+      const cat = data.categories.find((c) => c.id === catId)!;
+      if (echo) bubble(cat.label, 'user');
+      bubble(`<p>${t.pick} <strong>${cat.label.toLowerCase()}</strong>:</p>`, 'bot');
+      const qs = data.entries.filter((e) => e.category === catId);
+      options([...qs.map((q) => ({ label: q.question, run: () => showAnswer(q, catId) })), { label: t.back, run: () => menu(false) }]);
+    };
+
+    const showLocation = () => {
+      bubble(t.location, 'user');
+      data.locationIds
+        .map((id) => data.entries.find((e) => e.id === id))
+        .forEach((e) => e && bubble(e.answer, 'bot'));
+      options([{ label: t.book, kind: 'primary', href: data.contact }, { label: t.back, run: () => menu(false) }, humanAction]);
+    };
+
+    const menuButtons = () =>
+      options([
+        ...data.categories.map((c, i) => ({ label: `${i + 1}. ${c.label}`, run: () => showCategory(c.id) })),
+        { label: `6. ${t.location}`, run: showLocation },
+        humanAction,
+      ]);
+
+    const menu = (welcome: boolean) => {
+      if (welcome) bubble(`<p>${t.welcome}</p>`, 'bot');
+      bubble(`<p>${t.ask}</p>`, 'bot');
+      menuButtons();
+    };
+
+    root.querySelector('[data-fa-reset]')?.addEventListener('click', () => {
+      log.innerHTML = '';
+      menu(true);
+    });
+
+    menu(true);
+  }
+
+  initFaqAssistant();
+</script>

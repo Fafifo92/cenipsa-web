@@ -7,6 +7,7 @@ eyebrow: "Services"
 order: 4
 icon: "microscope"
 related: []
+heroImage: "/images/servicio-criminalistica.jpg"
 ---
 
 At CENIPSA SAS, our investigators specialize in obtaining and introducing evidentiary material into proceedings under Colombia's accusatory criminal justice system. Their work is grounded in the theoretical and practical principles of the forensic, exact, human and social sciences. By combining law with criminalistics, we help establish both the procedural and factual truth of criminal acts, restore violated rights and strengthen the administration of justice in Colombia.

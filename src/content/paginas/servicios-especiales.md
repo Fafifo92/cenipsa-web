@@ -11,6 +11,7 @@ related:
   - { label: "Ubicación de personas para notificación judicial", href: "/ubicacion-de-personas-para-notificacion-judicial/" }
 order: 8
 icon: "briefcase"
+heroImage: "/images/servicio-abogados.jpg"
 ---
 
 ## El aliado probativo e investigativo para litigantes y firmas de abogados

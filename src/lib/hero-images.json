@@ -26,5 +26,203 @@
     ],
     "width": 1280,
     "height": 888
+  },
+  "nosotros-equipo": {
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "width": 1600,
+    "height": 1067
+  },
+  "garantias-acuerdo": {
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "width": 1600,
+    "height": 1067
+  },
+  "contacto-mundo": {
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "width": 1600,
+    "height": 1063
+  },
+  "servicio-asesoria-juridica": {
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "width": 1600,
+    "height": 1067
+  },
+  "servicio-investigacion-corporativa": {
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "width": 1600,
+    "height": 1067
+  },
+  "servicio-investigacion-personal": {
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "width": 1600,
+    "height": 1199
+  },
+  "servicio-ubicacion-personas": {
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "width": 1600,
+    "height": 1067
+  },
+  "servicio-criminalistica": {
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "width": 1600,
+    "height": 1067
+  },
+  "servicio-auditoria-forense": {
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "width": 1600,
+    "height": 1067
+  },
+  "servicio-ciberseguridad": {
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "width": 1600,
+    "height": 1068
+  },
+  "servicio-barrido-electronico": {
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "width": 1600,
+    "height": 1201
+  },
+  "servicio-monitoreo-gps": {
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "width": 1600,
+    "height": 980
+  },
+  "servicio-estudios-seguridad": {
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "servicio-abogados": {
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "width": 1600,
+    "height": 1067
+  },
+  "derecho-penal": {
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "width": 1600,
+    "height": 1067
+  },
+  "derecho-familia": {
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "width": 1600,
+    "height": 1067
+  },
+  "derecho-civil": {
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "width": 1600,
+    "height": 1202
+  },
+  "derecho-laboral": {
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "width": 1600,
+    "height": 1067
+  },
+  "derecho-comercial": {
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "derecho-administrativo": {
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "width": 1600,
+    "height": 1200
+  },
+  "derecho-constitucional": {
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "width": 1600,
+    "height": 1067
+  },
+  "derecho-propiedad-intelectual": {
+    "widths": [
+      640,
+      1024,
+      1600
+    ],
+    "width": 1600,
+    "height": 1067
   }
 }

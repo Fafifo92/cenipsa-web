@@ -35,7 +35,7 @@ Fuente de contenido: `content-source/` (export WXR parseado + contenido recupera
 | `/servicios/` | Índice de servicios | servicios.body.html |
 | `/blog/` | Índice del blog | posts.json (23 posts) |
 | `/faq/` | Preguntas frecuentes | faq.body.html (canónica) |
-| `/pagos-en-linea/` | Pagos en línea (PayU) | pagos-en-linea.body.html |
+| ~~`/pagos-en-linea/`~~ | Retirada (nov. 2026): 301 a `/contacto/`; pagos solo por transferencia | — |
 | `/contacto/` | Contacto | contacto.body.html + form CF7 |
 | `/gracias/` | Gracias (noindex) | gracias.body.html |
 

@@ -10,6 +10,7 @@ related:
   - { label: "Abogados Bogotá", href: "/abogados-bogota/" }
 order: 2
 icon: "building"
+heroImage: "/images/servicio-investigacion-corporativa.jpg"
 ---
 
 ## Protección integral de activos, auditoría forense y gestión del riesgo corporativo

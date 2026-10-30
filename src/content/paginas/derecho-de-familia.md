@@ -5,7 +5,7 @@ description: "Abogados de familia en Bogotá: divorcio y liquidación de socieda
 type: service
 eyebrow: "Defender · Área jurídica"
 focusKeyword: "abogado de familia Bogotá"
-heroImage: "/images/despacho-juridico.jpg"
+heroImage: "/images/derecho-familia.jpg"
 icon: "family"
 order: 21
 related:

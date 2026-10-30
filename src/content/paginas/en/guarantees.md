@@ -9,6 +9,7 @@ related:
   - { label: "Who we are", href: "/en/about-us/" }
   - { label: "Interdisciplinary team", href: "/en/interdisciplinary-team/" }
   - { label: "How we work", href: "/en/how-we-work/" }
+heroImage: "/images/garantias-acuerdo.jpg"
 ---
 
 ## I. Legal basis and procedural legitimacy of private investigation

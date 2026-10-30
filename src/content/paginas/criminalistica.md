@@ -11,6 +11,7 @@ related:
   - { label: "Investigación patrimonial", href: "/investigacion-patrimonial-para-medidas-cautelares/" }
 order: 4
 icon: "microscope"
+heroImage: "/images/servicio-criminalistica.jpg"
 ---
 
 ## Investigación científica, peritaje técnico e identificación probativa al servicio de la verdad judicial

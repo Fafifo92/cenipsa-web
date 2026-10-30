@@ -7,7 +7,34 @@ import sharp from 'sharp';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-export const HERO_IMAGES = ['plaza-bolivar', 'despacho-juridico', 'bogota-edificios'];
+/** Fotos de hero. Las de servicios/áreas son de Unsplash (licencia libre, uso comercial; ver docs/fotos.md). */
+export const HERO_IMAGES = [
+  'plaza-bolivar',
+  'despacho-juridico',
+  'bogota-edificios',
+  'nosotros-equipo',
+  'garantias-acuerdo',
+  'contacto-mundo',
+  'servicio-asesoria-juridica',
+  'servicio-investigacion-corporativa',
+  'servicio-investigacion-personal',
+  'servicio-ubicacion-personas',
+  'servicio-criminalistica',
+  'servicio-auditoria-forense',
+  'servicio-ciberseguridad',
+  'servicio-barrido-electronico',
+  'servicio-monitoreo-gps',
+  'servicio-estudios-seguridad',
+  'servicio-abogados',
+  'derecho-penal',
+  'derecho-familia',
+  'derecho-civil',
+  'derecho-laboral',
+  'derecho-comercial',
+  'derecho-administrativo',
+  'derecho-constitucional',
+  'derecho-propiedad-intelectual',
+];
 export const HERO_WIDTHS = [640, 1024, 1600, 1920];
 
 const root = join(import.meta.dirname, '..', 'public', 'images');

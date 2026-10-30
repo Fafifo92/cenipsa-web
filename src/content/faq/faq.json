@@ -1,146 +1,249 @@
 [
   {
-    "id": "faq-1",
-    "question": "¿Dónde están ubicados?",
-    "answer": "<p>Lo invitamos a nuestras oficinas para que conozca la oferta de productos y servicios de acuerdo con su caso.</p><p><strong>Dirección:</strong> Carrera 62 # 103 – 44, Edificio Torre del Reloj, Oficina 403, Sede Norte, Bogotá</p><p><strong>WhatsApp:</strong> <a href=\"https://api.whatsapp.com/send?phone=573174232502\">317 423 2502</a></p><p><strong>PBX:</strong> <a href=\"tel:+576016290498\">+57 (601) 6290498</a></p>",
+    "id": "legal-1",
+    "category": "legalidad",
+    "question": "¿Es legal contratar a un detective privado en Colombia?",
+    "answer": "<p>Sí, es 100 % legal en Colombia. Operamos amparados bajo la Constitución Política, la Ley 906 (Sistema Penal Acusatorio – figura de acusador privado) y el Código General del Proceso. Además, CENIPSA S.A.S. es una empresa legalmente constituida con objeto social habilitado para investigaciones privadas.</p>",
+    "links": [
+      {
+        "label": "¿Qué pruebas entregan?",
+        "href": "/garantias/"
+      },
+      {
+        "label": "Agendar consulta",
+        "href": "/contacto/"
+      }
+    ],
     "order": 1
   },
   {
-    "id": "faq-2",
-    "question": "¿A qué correos puedo escribir para solicitar información de servicios o productos?",
-    "answer": "<p><a href=\"mailto:info@inteligenciainvestigativa.com\">info@inteligenciainvestigativa.com</a></p>",
+    "id": "legal-2",
+    "category": "legalidad",
+    "question": "¿Cómo garantizan la confidencialidad de mi caso?",
+    "answer": "<p>La reserva absoluta es nuestra piedra angular. Todas las consultas y proyectos se firman bajo acuerdos de confidencialidad (NDA) y están amparados por el secreto profesional y las leyes de protección de datos (Habeas Data). Su información nunca será compartida con terceros.</p>",
+    "links": [
+      {
+        "label": "Ver garantías legales",
+        "href": "/garantias/"
+      },
+      {
+        "label": "Hablar con un asesor",
+        "href": "whatsapp"
+      }
+    ],
     "order": 2
   },
   {
-    "id": "faq-3",
-    "question": "¿Puedo asistir sin cita previa a las instalaciones de la empresa?",
-    "answer": "<p>No, de acuerdo con nuestras políticas de confidencialidad, seguridad y privacidad, usted podrá agendar su cita vía telefónica para asesoría investigativa o jurídica.</p>",
+    "id": "legal-3",
+    "category": "legalidad",
+    "question": "¿Cómo evitar caer en estafas o empresas fachada de investigación?",
+    "answer": "<p><strong>Consejos de seguridad CENIPSA:</strong></p><ul><li>Consigne siempre a nombre de la persona jurídica (CENIPSA S.A.S.), nunca a personas naturales ni mediante giros informales.</li><li>Exija cita en una oficina física real y verifique la razón social en el RUES / Cámara de Comercio.</li><li>No acepte citas en vía pública ni en oficinas virtuales por horas.</li></ul>",
+    "links": [
+      {
+        "label": "Verificar datos de CENIPSA en el RUES",
+        "href": "https://www.rues.org.co/"
+      },
+      {
+        "label": "Agendar cita presencial",
+        "href": "/contacto/"
+      }
+    ],
     "order": 3
   },
   {
-    "id": "faq-4",
-    "question": "¿Puedo solicitar una asesoría investigativa virtual?",
-    "answer": "<p>Sí, debe comunicarse con nosotros para informarle de la logística y agendar su cita, según disponibilidad de agenda.</p>",
+    "id": "legal-4",
+    "category": "legalidad",
+    "question": "¿Qué los diferencia de otras firmas de abogados o de investigación?",
+    "answer": "<p>Trabajamos con nuestro propio equipo de abogados, investigadores, criminalistas y peritos bajo un mismo protocolo. Así obtenemos pruebas lícitas y verificamos los hechos antes de actuar, lo que fortalece cada estrategia jurídica.</p>",
+    "links": [
+      {
+        "label": "Conocer el equipo",
+        "href": "/equipo-interdisciplinar/"
+      }
+    ],
     "order": 4
   },
   {
-    "id": "faq-5",
-    "question": "¿Qué experiencia tienen en el campo de las investigaciones privadas?",
-    "answer": "<p>Empresa pionera en el campo de las investigaciones privadas y jurídicas, con amplia experticia desde hace 10 años en diversas problemáticas judiciales, que afectan a los ciudadanos; mediante la metodología de casuística, estudios de caso y acompañamiento directo a nuestros contratantes encontramos la verdad de los hechos investigados.</p>",
+    "id": "legal-5",
+    "category": "legalidad",
+    "question": "¿Enviar el formulario de contacto crea una relación abogado-cliente?",
+    "answer": "<p>No. El formulario sirve para una valoración inicial confidencial. La relación profesional inicia solo cuando se acuerda formalmente el alcance del servicio. Por seguridad, no incluya documentos, contraseñas, información financiera ni datos sensibles de terceros en el primer contacto.</p>",
+    "links": [
+      {
+        "label": "Ir al formulario",
+        "href": "/contacto/"
+      }
+    ],
     "order": 5
   },
   {
-    "id": "faq-6",
-    "question": "¿Cómo garantizan la confidencialidad?",
-    "answer": "<p>Aplicamos protocolos legales, mediante acuerdos de confidencialidad, en procura de la protección de sus datos personales, manejamos absoluta reserva. En <strong>CENIPSA SAS</strong> es fundamental la privacidad y el respeto por el secreto profesional.</p>",
+    "id": "personal-1",
+    "category": "personal",
+    "question": "¿Pueden ayudarme a ubicar a un deudor o a un familiar desaparecido?",
+    "answer": "<p>Sí. Contamos con métodos avanzados de inteligencia digital (OSINT) y verificación de campo para rastrear deudores morosos, bienes ocultos, herederos o familiares de los que se perdió el rastro.</p>",
+    "links": [
+      {
+        "label": "Ubicar a un deudor",
+        "href": "/ubicacion-de-personas-para-notificacion-judicial/"
+      },
+      {
+        "label": "Reencuentro familiar",
+        "href": "/investigacion-personal/"
+      },
+      {
+        "label": "Cotizar caso",
+        "href": "/contacto/"
+      }
+    ],
     "order": 6
   },
   {
-    "id": "faq-7",
-    "question": "¿Cuáles son sus principales servicios en el ámbito personal?",
-    "answer": "<ul><li>Ubicación de personas o familias.</li><li>Investigación familiar y patrimonial.</li><li>Investigación familiar para solicitar nacionalidad extranjera.</li><li>Investigación antes de contraer compromiso matrimonial.</li><li>Psicología Clínica.</li></ul>",
+    "id": "personal-2",
+    "category": "personal",
+    "question": "¿Realizan investigaciones personales?",
+    "answer": "<p>Sí, realizamos investigaciones familiares con máxima discreción. Nuestro enfoque principal es aportar evidencia objetiva y contundente que sirva en procesos legales como litigios de custodia, fijación de cuotas alimentarias o separación de bienes.</p>",
+    "links": [
+      {
+        "label": "Investigación patrimonial",
+        "href": "/investigacion-personal/"
+      },
+      {
+        "label": "Hablar con un asesor",
+        "href": "whatsapp"
+      }
+    ],
     "order": 7
   },
   {
-    "id": "faq-8",
-    "question": "¿Ustedes ofrecen servicios de GPS?",
-    "answer": "<p>Sí, contamos con nuestra plataforma satelital y aplicación de monitoreo <strong>CENIPSA Track</strong>, allí podrá en tiempo real mantener el control del vehículo, conocer historiales de recorrido y el GPS cuenta con micrófono oculto dentro del vehículo para escuchar los sonidos o voces que se produzcan en el interior de este.</p>",
+    "id": "personal-3",
+    "category": "personal",
+    "question": "¿Qué otros servicios ofrecen para personas particulares?",
+    "answer": "<ul><li>Investigación familiar y patrimonial.</li><li>Investigación para solicitud de nacionalidad extranjera (búsqueda de antepasados).</li><li>Verificación previa al compromiso matrimonial.</li></ul>",
+    "links": [
+      {
+        "label": "Ver servicios",
+        "href": "/investigacion-personal/"
+      },
+      {
+        "label": "Agendar asesoría",
+        "href": "/contacto/?tipo=personal"
+      }
+    ],
     "order": 8
   },
   {
-    "id": "faq-9",
-    "question": "¿Cuál es su experiencia en el ámbito corporativo?",
-    "answer": "<p>Nosotros contamos con un departamento especializado en auditoría de vulnerabilidades, prevención de riesgos o delitos corporativos. Nuestros profesionales son altamente calificados en áreas de investigación corporativa, que realizan acompañamiento integral, a partir de un diagnóstico especializado de la situación, planeación y desarrollo de la investigación. Finalmente, contribuimos a la resolución efectiva del caso.</p>",
+    "id": "empresas-1",
+    "category": "empresas",
+    "question": "¿Qué servicios brindan para empresas y prevención de fraudes?",
+    "answer": "<p>Protegemos el patrimonio empresarial mediante:</p><ul><li><strong>Auditoría forense:</strong> detección de fugas de dinero, duplicación de facturas y fraude interno.</li><li><strong>Estudios de seguridad y precontratación:</strong> verificación de perfil laboral y antecedentes de socios o empleados.</li><li><strong>Poligrafía laboral:</strong> exámenes preempleo y de rutina.</li><li><strong>Barrido electrónico:</strong> detección de micrófonos o cámaras ocultas en oficinas.</li></ul>",
+    "links": [
+      {
+        "label": "Cotizar servicio corporativo",
+        "href": "/contacto/?tipo=empresarial"
+      },
+      {
+        "label": "Agendar auditoría",
+        "href": "/analisis-ejecutivo-de-informacion-financiera-bienes-raices-y-vehiculos/"
+      }
+    ],
     "order": 9
   },
   {
-    "id": "faq-10",
-    "question": "¿Cuáles son sus principales servicios corporativos?",
-    "answer": "<ul><li>Estudios precontratación.</li><li>Estudios patrimoniales y financieros.</li><li>Investigación de hurtos y fraudes.</li><li>Acompañamiento al área de gestión humana.</li><li>Poligrafía</li><li>Barrido electrónico.</li></ul>",
+    "id": "empresas-2",
+    "category": "empresas",
+    "question": "¿Tienen servicio de rastreo GPS y tecnología forense?",
+    "answer": "<p>Sí. Contamos con CENIPSA Track, nuestra plataforma de monitoreo satelital GPS en tiempo real para vehículos, que incluye micrófono ambiental e historial de rutas. También realizamos auditoría forense a dispositivos móviles para recuperar información borrada o manipulada.</p>",
+    "links": [
+      {
+        "label": "Saber más sobre GPS",
+        "href": "/plataforma-gps/"
+      },
+      {
+        "label": "Forense digital",
+        "href": "/ciberseguridad-e-informatica-forense/"
+      }
+    ],
     "order": 10
   },
   {
-    "id": "faq-11",
-    "question": "¿Ustedes tienen servicios especiales para abogados?",
-    "answer": "<p>Constantemente trabajamos para diversos colectivos de abogados, prestamos servicios de notificación judicial, cobro de cartera, investigación patrimonial para medidas cautelares, análisis ejecutivo de información financiera y asesoría en prueba.</p>",
+    "id": "abogados-1",
+    "category": "abogados",
+    "question": "¿Cómo trabajan en conjunto con abogados y despachos?",
+    "answer": "<p>Actuamos como el brazo investigador y técnico del abogado. Realizamos recolección de pruebas con cadena de custodia, búsqueda de testigos, auditoría a investigaciones previas, investigación patrimonial para embargos y elaboración de dictámenes periciales válidos en juicio.</p>",
+    "links": [
+      {
+        "label": "Ver servicios para abogados",
+        "href": "/servicios-especiales/"
+      },
+      {
+        "label": "Hablar con un perito",
+        "href": "whatsapp"
+      }
+    ],
     "order": 11
   },
   {
-    "id": "faq-12",
-    "question": "¿Ustedes tienen servicios jurídicos?",
-    "answer": "<p>Sí. Nuestro equipo jurídico asesora y representa a personas y empresas en <a href=\"/derecho-penal/\">derecho penal</a>, <a href=\"/derecho-de-familia/\">familia</a>, <a href=\"/derecho-civil/\">civil</a>, <a href=\"/derecho-laboral/\">laboral</a>, <a href=\"/derecho-comercial/\">comercial</a>, <a href=\"/derecho-administrativo/\">administrativo</a>, <a href=\"/derecho-constitucional/\">constitucional</a> y <a href=\"/derecho-de-propiedad-intelectual/\">propiedad intelectual</a>. Consulte nuestra <a href=\"/asesoria-juridica/\">asesoría y representación jurídica</a>.</p>",
+    "id": "abogados-2",
+    "category": "abogados",
+    "question": "¿Qué tipos de peritajes forenses realizan?",
+    "answer": "<p>Contamos con peritos expertos en:</p><ul><li>Psicología clínica y forense / policía judicial.</li><li>Psicofisiología forense y poligrafía.</li><li>Criminalística: balística, dactilotecnia, documentología y reconstrucción 3D de hechos.</li></ul>",
+    "links": [
+      {
+        "label": "Agendar consulta pericial",
+        "href": "/contacto/"
+      }
+    ],
     "order": 12
   },
   {
-    "id": "faq-13",
-    "question": "¿Qué servicios de criminalística ofrecen?",
-    "answer": "<ul><li>Ubicación de personas desaparecidas.</li><li>Investigación de delitos contra la vida y la familia.</li><li>Investigación de fraudes a comunidades.</li><li>Investigación de hurtos a vehículos.</li><li>Investigación de bebidas adulteradas.</li></ul>",
+    "id": "precios-1",
+    "category": "precios",
+    "question": "¿Cuánto cuesta una investigación o peritaje?",
+    "answer": "<p>El costo depende de la complejidad, la duración y los recursos técnicos requeridos para cada caso. Tras una primera revisión confidencial de su situación, le emitimos una propuesta comercial transparente y sin compromiso.</p>",
+    "links": [
+      {
+        "label": "Solicitar cotización",
+        "href": "/contacto/"
+      },
+      {
+        "label": "Hablar con un asesor",
+        "href": "whatsapp"
+      }
+    ],
     "order": 13
   },
   {
-    "id": "faq-14",
-    "question": "¿Qué medios de pago reciben?",
-    "answer": "<p>Brindamos diferentes facilidades, contamos con integración a Banco Internacional Payu, por tanto, usted podrá cancelar con cualquier medio de pago (PSE, Efecty, Baloto, tarjetas y recibos en banco, entre otros). Asimismo, tenemos pagos por redes sociales.</p>",
+    "id": "precios-2",
+    "category": "precios",
+    "question": "¿Cuánto tiempo tarda una investigación?",
+    "answer": "<p>Un caso estándar suele resolverse entre 5 y 15 días hábiles. En investigaciones de mayor complejidad o rastreo internacional, el tiempo se determina en el plan estratégico inicial.</p>",
+    "links": [],
     "order": 14
   },
   {
-    "id": "faq-15",
-    "question": "¿Cuánto cuesta una investigación personal o corporativa?",
-    "answer": "<p>Los precios dependen de la complejidad del caso específico, por ello, primero debe contarnos su caso y enviaremos una propuesta comercial a partir del diagnóstico de su problemática o conflicto.</p>",
+    "id": "precios-3",
+    "category": "precios",
+    "question": "¿Puedo asistir sin cita previa a sus instalaciones?",
+    "answer": "<p>No. Por estrictos protocolos de confidencialidad, seguridad y reserva de nuestros clientes, la atención presencial es únicamente con cita previa agendada. También ofrecemos la opción de asesoría virtual.</p>",
+    "links": [
+      {
+        "label": "Agendar cita",
+        "href": "/contacto/"
+      }
+    ],
     "order": 15
   },
   {
-    "id": "faq-16",
-    "question": "¿Ustedes trabajan en todo el territorio nacional?",
-    "answer": "<p>Nuestras investigaciones son a nivel nacional.</p>",
+    "id": "precios-4",
+    "category": "precios",
+    "question": "¿Dónde están ubicados y qué medios de pago aceptan?",
+    "answer": "<p><strong>Dirección:</strong> Carrera 62 # 103 – 44, Edificio Torre del Reloj, Oficina 403, Sede Norte, Bogotá.</p><p><strong>Medios de pago:</strong> transferencias bancarias a nombre de CENIPSA S.A.S.</p><p><strong>Cobertura:</strong> operamos a nivel nacional e internacional.</p>",
+    "links": [
+      {
+        "label": "Ver contacto y ubicación",
+        "href": "/contacto/"
+      }
+    ],
     "order": 16
-  },
-  {
-    "id": "faq-17",
-    "question": "¿Si tomo la decisión de un servicio investigativo, por mi seguridad, qué debo tener en cuenta en el momento de la contratación?",
-    "answer": "<p>Nunca entregue plata en la calle, ni a cuentas de personas naturales.</p><p>No acepte citas a ciegas con desconocidos y en sitios públicos. Este se constituye en el escenario perfecto para estafas.</p><ul><li><strong>SIEMPRE CONSIGNE A NOMBRE DE LA PERSONA JURIDICA</strong>. Recuerde que las empresas para contar con el apoyo de los bancos colombianos, estos previo, tuvieron que hacer un estudio de la empresa, así como visitas a las instalaciones físicas y demás protocolo de seguridad, para garantizar que sean legales en todas sus formas y no fachadas.</li><li>Que cumplan con los requisitos de una empresa legalmente constituida.</li></ul><p>En cuanto al certificado de la Cámara de Comercio. Tener en cuenta lo siguiente.</p><ul><li>Registro en Cámara de Comercio en donde coincida la dirección con el sitio que le ponen la cita.</li><li>Que la oficina física no sea virtual. (Oficinas contratadas por horas). Fachadas.</li><li>Compruebe que la experiencia en tiempo que dicen tener en la página, corresponda a la antigüedad de inscripción en el registro de la Cámara de Comercio.</li><li>Constate que el representante legal exista y coincida la cédula con el nombre. Pida hablar con él.</li><li>Recuerde que Ud. Puede ingresar a efectuar estas constataciones a (consulta REGISTRO UNICO EMPRESARIAL. CON SIGLA RUE. Ud. puede consultar por NIT o por nombre de la empresa)</li><li>Que la empresa cuente con una página seria y esmerada y no con plantillas hechas de momento con claras pretensiones de estafa.</li></ul>",
-    "order": 17
-  },
-  {
-    "id": "faq-19",
-    "question": "¿Qué debo hacer para contactar un servicio de seguimiento?",
-    "answer": "<p>La visita de los clientes a nuestra oficina es fundamental y muy importante, pues cada uno de ellos es un caso especial, allí encuentran un grupo de personas idóneas y calificadas que están dispuestas a:</p><ul><li>Escucharlos</li><li>Asesorarlos</li><li>Orientarlos</li><li>Ayudarlos a encontrar la mejor estrategia para descubrir la verdad, a través de nuestros medios tecnológicos y físicos.</li></ul>",
-    "order": 19
-  },
-  {
-    "id": "faq-20",
-    "question": "¿Puedo recuperar datos borrados de un celular como llamadas, fotos, WhatsApp, etc.?",
-    "answer": "<p>En cuanto a su solicitud, le comunico que nosotros realizamos un análisis forense al equipo móvil, que consiste en escanear toda la actividad borrada en el equipo y recuperar chat de whatsapp, mensajes de audio, fotos, videos, registro de números entrantes y salientes, mensajes de texto, contactos y demás actividades generadas desde el celular. Este es un estudio realizado con equipos especializados durante cinco días, la información obtenida se entrega en USB.</p>",
-    "order": 20
-  },
-  {
-    "id": "faq-21",
-    "question": "¿Me voy a casar y sospecho que mi pareja en Colombia me dice mentiras, quiero verificar sus datos, estado civil, hijos, empleo, escolaridad, etc.?",
-    "answer": "<p>En cuanto a su solicitud, le comunico que nosotros en primera instancia, realizamos una investigación electrónica, para lograr su verdadera ubicación residencial, laboral y su núcleo familiar. Seguidamente procedemos a investigar el entorno en el que se desarrolla, desplazando nuestros investigadores de manera encubierta para lograr registrar en video y fotografía, todos los eventos que presente el investigado. Luego de culminar nuestra labor de inteligencia, le presentamos un informe escrito, adjuntando el material probatorio, de los resultados obtenidos en la investigación.</p>",
-    "order": 21
-  },
-  {
-    "id": "faq-22",
-    "question": "¿Cómo hago para ubicar una persona?",
-    "answer": "<p>En cuanto a su solicitud, le comunico que nosotros empezamos a realizar labores de inteligencia, a partir de datos básicos como nombre completo y número de identificación. Es importante aportar número de identificación, para tener la plena identidad de la persona objeto de la investigación, pero si este dato no es suministrado, también podemos realizar labores más dispendiosas para lograr la identidad plena, consistentes en descartar homónimos, para lograr acercamientos partiendo de datos asociados al investigado y que lo diferenciarían de sus homónimos.</p>",
-    "order": 22
-  },
-  {
-    "id": "faq-23",
-    "question": "¿Qué los diferencia de otras firmas de abogados?",
-    "answer": "<p>Trabajamos de la mano con nuestro propio equipo de investigadores, criminalistas y peritos. Así podemos obtener pruebas lícitas y verificar los hechos antes de actuar, lo que fortalece cada estrategia jurídica. <a href=\"/nosotros/\">Conozca la firma</a>.</p>",
-    "order": 12.1
-  },
-  {
-    "id": "faq-24",
-    "question": "¿La consulta jurídica tiene costo?",
-    "answer": "<p>Sí. El valor de la consulta se informa antes de agendarla y puede variar según la complejidad del asunto. Tras la valoración inicial le proponemos por escrito el alcance, los tiempos y los honorarios.</p>",
-    "order": 12.2
-  },
-  {
-    "id": "faq-25",
-    "question": "¿Enviar el formulario de contacto crea una relación abogado-cliente?",
-    "answer": "<p>No. El formulario sirve para una valoración inicial confidencial. La relación profesional inicia solo cuando se acuerda formalmente el alcance del servicio. Por seguridad, no incluya documentos, contraseñas, información financiera ni datos sensibles de terceros en el primer contacto.</p>",
-    "order": 12.3
   }
 ]

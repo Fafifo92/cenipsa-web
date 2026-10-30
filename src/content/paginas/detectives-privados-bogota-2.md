@@ -104,7 +104,7 @@ Nuestro equipo de profesionales en Bogotá trabaja con acuerdos éticos y de con
 
 Existe una disminución de los tiempos en su resolución; las demoras en la solución afectan de forma grave, pueden desaparecer pruebas e incrementar la impunidad. Por esta razón, la celeridad es fundamental para descongestionar el aparato judicial y lograr resultados eficientes.
 
-## Contrata el mejor servicio con [**detectives privados Bogotá**](/pagos-en-linea/)
+## Contrata el mejor servicio con [**detectives privados Bogotá**](/contacto/)
 
 En CENIPSA contamos con [**detectives privados Bogotá**](/faq/) que ofrecen las herramientas necesarias para una toma de decisiones asertiva, asegurando el acceso a la justicia y la reconstrucción de la verdad.
 

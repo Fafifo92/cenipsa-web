@@ -8,6 +8,7 @@ related:
   - { label: "Polígrafo laboral", href: "/poligrafo-laboral/" }
   - { label: "Examen de poligrafía", href: "/examen-de-poligrafia/" }
   - { label: "Investigación corporativa", href: "/investigacion-corporativa/" }
+heroImage: "/images/servicio-estudios-seguridad.jpg"
 ---
 
 En CENIPSA SAS contamos con expertos en la aplicación de procesos de confiabilidad y gestión del talento humano, una de las herramientas orientadoras en estos procesos es la **prueba de polígrafo Bogotá,** las compañías contratan estos servicios con el fin de evitar corrupción y fortalecer la transparencia en el ejercicio laboral de los empleados, a su vez requieren de encontrar personal idóneo y ético para las vacantes, y solucionar problemas corporativos de irregularidades, amenazas y delitos.

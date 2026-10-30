@@ -9,6 +9,7 @@ related:
   - { label: "GPS para carros Bogotá", href: "/gps-para-carros-bogota/" }
 order: 5
 icon: "satellite"
+heroImage: "/images/servicio-monitoreo-gps.jpg"
 ---
 
 ## Tecnología de localización, protección de cargas y gestión de flotas corporativas

@@ -48,4 +48,4 @@ Por ello, la importancia de un acompañamiento interdisciplinario investigativo 
 
 Lo invitamos a conocer a profundidad nuestra plataforma o indagar sobre las diferentes soluciones de servicios pensados en su caso, puede escribirnos a [info@inteligenciainvestigativa.com](mailto:info@inteligenciainvestigativa.com) para agendar su cita presencial o virtual con nuestros investigadores especializados.
 
-También puede visitarnos en nuestra página oficial [www.inteligenciainvestigativa.com](/) y escribirnos en el chat virtual, allí recibiremos sus diferentes inquietudes o dudas. Además, en CENIPSA SAS pensamos en el fácil acceso de nuestros productos y servicios, por tanto, contamos con la plataforma internacional PAYU; usted podrá solicitarle a su asesor el link de pago y así accederá fácilmente al servicio de GPS-TRACK.
+También puede visitarnos en nuestra página oficial [www.inteligenciainvestigativa.com](/) y escribirnos en el chat virtual, allí recibiremos sus diferentes inquietudes o dudas.

@@ -5,7 +5,7 @@ description: "Abogados civiles en Bogotá: contratos civiles y comerciales, proc
 type: service
 eyebrow: "Defender · Área jurídica"
 focusKeyword: "abogados civiles Bogotá"
-heroImage: "/images/despacho-juridico.jpg"
+heroImage: "/images/derecho-civil.jpg"
 icon: "contract"
 order: 22
 related:

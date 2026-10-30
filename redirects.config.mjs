@@ -43,6 +43,9 @@ export const redirects = {
   '/servicios-en-linea': '/contacto',
   '/en/success-stories': '/en/how-we-work',
   '/en/online-services': '/en/contact',
+  // pagos en línea retirados por seguridad (nov. 2026): pagos solo por transferencia a CENIPSA S.A.S.
+  '/pagos-en-linea': '/contacto',
+  '/en/payments': '/en/contact',
 };
 
 /**
@@ -66,7 +69,7 @@ export const legalDomainRedirects = {
   '/la-firma': '/nosotros/',
   '/nosotros': '/nosotros/',
   '/faq': '/faq/',
-  '/pagos-en-linea': '/pagos-en-linea/',
+  '/pagos-en-linea': '/contacto/',
   '/servicios-en-linea': '/contacto/',
   '/servicios-abogados': '/servicios-especiales/',
   '/servicios-investigativos': '/servicios/',
@@ -92,7 +95,7 @@ export const legalDomainRedirects = {
   '/derecho-de-propiedad-intelectual': '/derecho-de-propiedad-intelectual/',
   '/derecho-de-autor': '/derecho-de-propiedad-intelectual/',
   // área de clientes / login del WordPress antiguo (sin equivalente público)
-  '/customer-area/*': '/pagos-en-linea/',
+  '/customer-area/*': '/contacto/',
   '/login': '/contacto/',
   '/login-2': '/contacto/',
   '/registrarse': '/contacto/',

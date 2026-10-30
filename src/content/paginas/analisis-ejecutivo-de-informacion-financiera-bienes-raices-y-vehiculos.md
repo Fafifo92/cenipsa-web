@@ -11,6 +11,7 @@ related:
   - { label: "Barrido electrónico", href: "/barrido-electronico/" }
 order: 14
 icon: "chart"
+heroImage: "/images/servicio-auditoria-forense.jpg"
 ---
 
 ## Investigación financiera, detección de irregularidades y prueba técnica

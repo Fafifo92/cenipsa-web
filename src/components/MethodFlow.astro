@@ -1,0 +1,154 @@
+---
+/**
+ * Flujograma metodológico CENIPSA (investigación y evaluación prejurídica),
+ * reconstruido en HTML a partir de la infografía oficial de la firma: nítido a
+ * cualquier tamaño, legible en móvil, accesible e indexable. Colores por etapa
+ * como en el original: verde petróleo (1), azul jurídico (2), dorado (3).
+ */
+import { SITE } from '@/lib/site';
+
+export interface Props {
+  lang?: 'es' | 'en';
+}
+const { lang = 'es' } = Astro.props;
+const isEs = lang === 'es';
+
+const stages = isEs
+  ? [
+      {
+        title: 'Etapa 1: Investigación y análisis forense',
+        tone: 'green',
+        steps: [
+          ['1.1 Recepción e insumos', 'Aportes del cliente, documentos, antecedentes y delimitación del caso.'],
+          ['1.2 Recolección y trazabilidad', 'Inteligencia investigativa, fuentes abiertas OSINT y análisis técnico.'],
+          ['1.3 Análisis forense y cadena', 'Perfilamiento, grafos relacionales y reconstrucción cronológica de hechos.'],
+        ],
+        deliverable: 'Entregable fase 1: acervo probatorio inicial, grafos relacionales e indicadores verificados',
+      },
+      {
+        title: 'Etapa 2: Sustentación y evaluación probatoria',
+        tone: 'navy',
+        steps: [
+          ['2.1 Indagación y entrevistas', 'Entrevistas técnico-forenses, interrogatorios y verificación de contexto.'],
+          ['2.2 Valoración jurídica', 'Análisis de penalistas y corporativos: hipótesis delictivas y responsabilidad.'],
+          ['2.3 Filtro de legalidad', 'Evaluación de pertinencia, conducencia, utilidad y validez procesal de la prueba.'],
+        ],
+        deliverable: 'Entregable fase 2: matriz de evidencia legalmente sustentada y ponderación de riesgos',
+      },
+      {
+        title: 'Etapa 3: Dictamen prejurídico y socialización estratégica',
+        tone: 'gold',
+        steps: [
+          ['3.1 Informe pericial', 'Consolidación de informe forense escrito con anexos y cadena de custodia.'],
+          ['3.2 Dictamen prejurídico', 'Tipificación de conductas penales, vocación de éxito y recomendaciones.'],
+          ['3.3 Cierre y socialización', 'Sesión ejecutiva con el cliente para contextualizar hallazgos y decisiones.'],
+        ],
+        deliverable: 'Resultado final: decisiones jurídicas claras | denuncia penal, defensa o gestión preventiva',
+      },
+    ]
+  : [
+      {
+        title: 'Stage 1: Investigation and forensic analysis',
+        tone: 'green',
+        steps: [
+          ['1.1 Intake and inputs', 'Client materials, documents, background and scoping of the case.'],
+          ['1.2 Collection and traceability', 'Investigative intelligence, OSINT open sources and technical analysis.'],
+          ['1.3 Forensic analysis and custody', 'Profiling, relationship graphs and chronological reconstruction of events.'],
+        ],
+        deliverable: 'Phase 1 deliverable: initial body of evidence, relationship graphs and verified indicators',
+      },
+      {
+        title: 'Stage 2: Evidentiary support and assessment',
+        tone: 'navy',
+        steps: [
+          ['2.1 Inquiry and interviews', 'Technical-forensic interviews, questioning and context verification.'],
+          ['2.2 Legal assessment', 'Review by criminal and corporate lawyers: hypotheses and liability.'],
+          ['2.3 Legality filter', 'Assessment of relevance, conduciveness, usefulness and procedural validity.'],
+        ],
+        deliverable: 'Phase 2 deliverable: legally supported evidence matrix and procedural risk weighting',
+      },
+      {
+        title: 'Stage 3: Pre-litigation opinion and strategic briefing',
+        tone: 'gold',
+        steps: [
+          ['3.1 Expert report', 'Written forensic report with annexes and chain of custody.'],
+          ['3.2 Pre-litigation opinion', 'Legal classification of conduct, likelihood of success and recommendations.'],
+          ['3.3 Closing and briefing', 'Executive session with the client to put findings and decisions in context.'],
+        ],
+        deliverable: 'Final result: clear legal decisions | criminal complaint, defense or preventive action',
+      },
+    ];
+
+const pillars = isEs
+  ? [
+      ['Pilar 1: Prevenir', 'Debida diligencia, poligrafía, barrido y estudios de seguridad.', 'green'],
+      ['Pilar 2: Investigar', 'Fraude, auditoría forense, búsqueda patrimonial y de personas.', 'navy'],
+      ['Pilar 3: Defender', 'Asesoría especializada, representación judicial y acompañamiento probatorio.', 'gold'],
+    ]
+  : [
+      ['Pillar 1: Prevent', 'Due diligence, polygraph, sweeps and security studies.', 'green'],
+      ['Pillar 2: Investigate', 'Fraud, forensic audit, asset and people tracing.', 'navy'],
+      ['Pillar 3: Defend', 'Specialized advice, court representation and evidentiary support.', 'gold'],
+    ];
+
+const tone = {
+  green: { border: 'border-brand-700', head: 'bg-brand-700 text-white', box: 'border-brand-700/70', deliver: 'bg-brand-700 text-white' },
+  navy: { border: 'border-ink-950', head: 'bg-ink-950 text-white', box: 'border-ink-950/70', deliver: 'bg-ink-950 text-white' },
+  gold: { border: 'border-gold-400', head: 'bg-gold-400 text-ink-950', box: 'border-gold-400', deliver: 'bg-gold-400 text-ink-950' },
+} as const;
+---
+
+<figure class="method-flow">
+  <div class="rounded-2xl border border-gold-400 bg-ink-950 px-6 py-8 text-center text-white md:py-10">
+    <p class="font-display text-2xl font-semibold md:text-3xl">{SITE.legalName}</p>
+    <p class="mt-2 font-semibold text-gold-400 md:text-lg">{isEs ? SITE.tagline : SITE.taglineEn}</p>
+    <p class="mt-3 text-[0.8rem] font-semibold tracking-[0.12em] uppercase md:text-[0.9rem]">
+      {isEs ? 'Flujograma metodológico: etapa de investigación y evaluación prejurídica' : 'Methodological flowchart: investigation and pre-litigation assessment'}
+    </p>
+  </div>
+
+  {
+    stages.map((st, i) => {
+      const c = tone[st.tone as keyof typeof tone];
+      return (
+        <>
+          <div class="flex justify-center py-3" aria-hidden="true">
+            <svg class="h-10 w-6 text-gold-400" viewBox="0 0 24 40" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M12 2v34m-7-7 7 8 7-8" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <section class:list={['overflow-hidden rounded-2xl border-2 bg-white', c.border]} data-reveal style={`--reveal-delay:${i * 80}ms`}>
+            <h3 class:list={['px-5 py-4 text-[0.95rem] font-bold tracking-wide uppercase md:px-8 md:text-lg', c.head]}>{st.title}</h3>
+            <ol class="grid gap-4 p-4 md:grid-cols-3 md:p-6">
+              {st.steps.map(([h, p]) => (
+                <li class:list={['rounded-xl border bg-paper p-5 text-center', c.box]}>
+                  <p class="font-bold text-ink-950">{h}</p>
+                  <p class="mt-3 text-[0.9rem] leading-relaxed text-ink-700">{p}</p>
+                </li>
+              ))}
+            </ol>
+            <p class:list={['mx-4 mb-5 rounded-xl px-5 py-4 text-center text-[0.9rem] font-bold md:mx-12 md:mb-7', c.deliver]}>{st.deliverable}</p>
+          </section>
+        </>
+      );
+    })
+  }
+
+  <ul class="mt-6 grid gap-4 md:grid-cols-3">
+    {
+      pillars.map(([h, p, k]) => (
+        <li class:list={['rounded-xl border border-gold-400 p-5 text-center', tone[k as keyof typeof tone].head]}>
+          <p class="font-bold tracking-wide uppercase">{h}</p>
+          <p class="mt-2 text-[0.88rem] leading-relaxed opacity-90">{p}</p>
+        </li>
+      ))
+    }
+  </ul>
+
+  <figcaption class="mt-5 flex flex-col items-center justify-between gap-3 text-center text-[0.88rem] text-ink-600 sm:flex-row sm:text-left">
+    <span>{isEs ? 'Gráfica 1. Ruta metodológica de investigación forense y valoración prejurídica (CENIPSA S.A.S.).' : 'Figure 1. Methodological route for forensic investigation and pre-litigation assessment (CENIPSA S.A.S.).'}</span>
+    <a href="/images/flujograma-metodologico-cenipsa.png" target="_blank" rel="noopener" class="shrink-0 font-semibold text-brand-700 underline underline-offset-4">
+      {isEs ? 'Ver infografía en alta resolución' : 'View high-resolution infographic'}
+    </a>
+  </figcaption>
+</figure>

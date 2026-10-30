@@ -7,6 +7,7 @@ eyebrow: "Services"
 order: 6
 icon: "pulse"
 related: []
+heroImage: "/images/servicio-estudios-seguridad.jpg"
 ---
 
 A polygraph examination is a voluntary, non-invasive assessment that requires the written consent of the person being examined and is conducted under strict standards of respect for human dignity. At CENIPSA in Bogotá, Colombia, our certified examiners measure the physiological responses associated with deception, recorded through polygraph charts and guided by a carefully structured question protocol. The result is a concrete, reliable answer as to whether a person is being truthful about matters of interest to your company or case.

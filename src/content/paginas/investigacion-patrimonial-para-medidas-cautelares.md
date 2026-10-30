@@ -10,6 +10,7 @@ related:
   - { label: "Análisis ejecutivo de información financiera", href: "/analisis-ejecutivo-de-informacion-financiera-bienes-raices-y-vehiculos/" }
 order: 13
 icon: "landmark"
+heroImage: "/images/servicio-auditoria-forense.jpg"
 ---
 
 ## Inteligencia patrimonial para procesos ejecutivos y medidas cautelares

@@ -11,6 +11,7 @@ related:
   - { label: "Servicios para abogados", href: "/servicios-especiales/" }
 order: 3
 icon: "scale"
+heroImage: "/images/servicio-asesoria-juridica.jpg"
 ---
 
 ## Servicios en derecho penal y sancionatorio

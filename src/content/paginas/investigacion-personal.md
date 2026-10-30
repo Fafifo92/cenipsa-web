@@ -10,6 +10,7 @@ related:
   - { label: "Investigadores privados Bogotá", href: "/investigadores-privados-bogota-2/" }
 order: 1
 icon: "user-search"
+heroImage: "/images/servicio-investigacion-personal.jpg"
 ---
 
 ## Verificación técnica, claridad probativa y estricta confidencialidad

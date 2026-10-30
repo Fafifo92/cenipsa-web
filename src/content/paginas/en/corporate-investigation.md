@@ -7,6 +7,7 @@ eyebrow: "Services"
 order: 2
 icon: "building"
 related: []
+heroImage: "/images/servicio-investigacion-corporativa.jpg"
 ---
 
 Companies face internal and external vulnerabilities that threaten their management, structure and assets. The most common offenses include asset loss, theft of databases and patents, inventory theft, information leaks, unfair competition, breach of trust, board-level corruption, fraudulent sick leave and conspiracy.

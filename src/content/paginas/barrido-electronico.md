@@ -10,6 +10,7 @@ related:
   - { label: "Investigadores privados Bogotá", href: "/investigadores-privados-bogota-2/" }
 order: 7
 icon: "radar"
+heroImage: "/images/servicio-barrido-electronico.jpg"
 ---
 
 ## Auditoría técnica de seguridad, detección de vulnerabilidades y protección de espacios estratégicos

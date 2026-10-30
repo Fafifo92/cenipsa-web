@@ -9,6 +9,7 @@ related:
   - { label: "Legal advice & representation", href: "/en/legal-advice/" }
   - { label: "Corporate investigation", href: "/en/corporate-investigation/" }
   - { label: "Polygraph testing", href: "/en/polygraph/" }
+heroImage: "/images/servicio-abogados.jpg"
 ---
 
 We are the strategic ally of law firms and legal teams across Colombia. From our base in Bogotá, we provide investigative services and advisory support designed to overcome the legal difficulties that arise when there is insufficient evidence to sustain a case in court.

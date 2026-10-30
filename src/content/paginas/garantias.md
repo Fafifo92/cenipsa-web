@@ -9,6 +9,7 @@ related:
   - { label: "Equipo interdisciplinar", href: "/equipo-interdisciplinar/" }
   - { label: "Cómo trabajamos", href: "/como-trabajamos/" }
 order: 21
+heroImage: "/images/garantias-acuerdo.jpg"
 ---
 
 ## I. Fundamentos jurídicos y legitimidad procesal de la investigación privada

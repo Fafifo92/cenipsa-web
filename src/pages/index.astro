@@ -20,7 +20,7 @@ const posts = (await getCollection('blog'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 3);
 
-const HOME_FAQ_IDS = ['faq-6', 'faq-15', 'faq-12', 'faq-16'];
+const HOME_FAQ_IDS = ['legal-1', 'legal-2', 'precios-1', 'precios-2'];
 const faqs = (await getCollection('faq'))
   .filter((f) => HOME_FAQ_IDS.includes(f.data.id))
   .sort((a, b) => HOME_FAQ_IDS.indexOf(a.data.id) - HOME_FAQ_IDS.indexOf(b.data.id));
