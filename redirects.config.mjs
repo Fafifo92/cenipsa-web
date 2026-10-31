@@ -46,6 +46,11 @@ export const redirects = {
   // pagos en línea retirados por seguridad (nov. 2026): pagos solo por transferencia a CENIPSA S.A.S.
   '/pagos-en-linea': '/contacto',
   '/en/payments': '/en/contact',
+  // sin seguimientos, vigilancia de personas ni equipos espía (oct. 2026)
+  '/seguimientos-inteligentes': '/investigacion-personal',
+  '/servicios-comunidad-lgtb': '/servicios',
+  '/blog/gps-para-carros-en-bogota-para-investigaciones-personales': '/plataforma-gps',
+  '/blog/herramientas-modernas-para-la-vigilancia-con-detectives-privados': '/blog',
 };
 
 /**

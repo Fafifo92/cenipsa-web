@@ -40,7 +40,7 @@ En CENIPSA, nuestro equipo cuenta con la capacidad para cubrir las áreas vulner
 
 ### Investigación de fraude laboral y desfalco
 
-Estamos enfocados en la auditoría forense y la vigilancia legal para tener la oportunidad de documentar actos de desfalco empresarial en Cali. Al respecto, consideramos la comprobación de cuentas, el rastreo de bienes desviados y el reconocimiento de redes de hurto interno.
+Estamos enfocados en la auditoría forense y la verificación legal para tener la oportunidad de documentar actos de desfalco empresarial en Cali. Al respecto, consideramos la comprobación de cuentas, el rastreo de bienes desviados y el reconocimiento de redes de hurto interno.
 
 La evidencia recolectada es sumamente importante para los procesos legales o despidos justificados.
 
@@ -65,7 +65,7 @@ Nuestra metodología está apegada a la legislación colombiana, garantizando qu
 3. Procesamiento legal. Estructuración de la evidencia a través de un informe final.
 4. Entrega y asesoría. Presentación del informe y acompañamiento en los pasos legales que se deben cumplir.
 
-El tiempo es uno de los mayores enemigos cuando se trata de pérdidas empresariales. Cada retraso que existe en la investigación es un día más de fuga de información o desfalco. Confía en [la experiencia y el profesionalismo](/blog/herramientas-modernas-para-la-vigilancia-con-detectives-privados/) de CENIPSA.
+El tiempo es uno de los mayores enemigos cuando se trata de pérdidas empresariales. Cada retraso que existe en la investigación es un día más de fuga de información o desfalco. Confía en [la experiencia y el profesionalismo](/investigacion-corporativa/) de CENIPSA.
 
 Estamos conformados por los mejores detectives o investigadores privados para asuntos corporativos.
 
@@ -88,4 +88,4 @@ Sí, es completamente legal, siempre que la evidencia obtenida no viole los dere
 
 ### ¿Qué diferencia a un detective privado de un auditor interno?
 
-Un auditor interno se encarga de examinar los libros y procesos financieros. Mientras que un detective privado va más allá de esto, es decir, usa métodos de investigación de campo y vigilancia para descubrir la intención y la acción detrás de las irregularidades.
+Un auditor interno se encarga de examinar los libros y procesos financieros. Mientras que un detective privado va más allá de esto, es decir, usa métodos de investigación de campo y análisis documental para descubrir la intención y la acción detrás de las irregularidades.

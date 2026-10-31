@@ -1,0 +1,40 @@
+---
+/**
+ * Mapa de ubicación de la sede (Google Maps embebido, carga diferida).
+ * La CSP permite frame-src https://www.google.com.
+ */
+import { CONTACT } from '@/lib/site';
+
+export interface Props {
+  lang?: 'es' | 'en';
+}
+const { lang = 'es' } = Astro.props;
+const isEs = lang === 'es';
+const query = 'CENIPSA S.A.S., Carrera 62 #103-44, Edificio Torre del Reloj, Bogotá, Colombia';
+const embed = `https://www.google.com/maps?q=${encodeURIComponent(query)}&hl=${lang}&z=16&output=embed`;
+const directions = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(query)}`;
+---
+
+<section class="section-pad pt-0" aria-labelledby="map-title">
+  <div class="container-site">
+    <div class="flex flex-wrap items-end justify-between gap-4" data-reveal>
+      <div>
+        <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>{isEs ? 'Ubicación' : 'Location'}</p>
+        <h2 id="map-title" class="mt-3 font-display text-2xl font-semibold text-ink-950 md:text-3xl">
+          {isEs ? 'Sede Norte · Edificio Torre del Reloj' : 'North Office · Torre del Reloj Building'}
+        </h2>
+        <p class="mt-2 text-[0.95rem] text-ink-700">{CONTACT.address.street}, {CONTACT.address.city}. {isEs ? 'Atención con cita previa.' : 'By appointment only.'}</p>
+      </div>
+      <a href={directions} target="_blank" rel="noopener" class="btn-outline">{isEs ? 'Cómo llegar' : 'Get directions'}</a>
+    </div>
+    <div class="mt-8 overflow-hidden rounded-2xl border border-ink-950/10 shadow-soft" data-reveal>
+      <iframe
+        src={embed}
+        title={isEs ? 'Mapa de ubicación de CENIPSA S.A.S. en Bogotá' : 'Map of CENIPSA S.A.S. location in Bogotá'}
+        class="block h-[22rem] w-full md:h-[26rem]"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,24 @@
+---
+/** Site map (HTML), English. */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import SiteMapBody from '@/components/SiteMapBody.astro';
+import { breadcrumbSchema } from '@/lib/seo';
+
+const crumbs = [
+  { name: 'Home', path: '/en/' },
+  { name: 'Site Map', path: '/en/sitemap/' },
+];
+---
+
+<BaseLayout
+  title="Site Map | CENIPSA"
+  description="CENIPSA S.A.S. site map: firm, services, resources, contact and legal pages."
+  path="/en/sitemap/"
+  altLocalePath="/mapa-del-sitio/"
+  lang="en"
+  schemas={[breadcrumbSchema(crumbs)]}
+>
+  <PageHero eyebrow="Navigation" title="Site Map" crumbs={crumbs} lang="en" />
+  <SiteMapBody lang="en" />
+</BaseLayout>

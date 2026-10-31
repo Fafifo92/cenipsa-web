@@ -2278,6 +2278,46 @@
       "source": "/en/payments",
       "destination": "/en/contact/",
       "permanent": true
+    },
+    {
+      "source": "/seguimientos-inteligentes/",
+      "destination": "/investigacion-personal/",
+      "permanent": true
+    },
+    {
+      "source": "/seguimientos-inteligentes",
+      "destination": "/investigacion-personal/",
+      "permanent": true
+    },
+    {
+      "source": "/servicios-comunidad-lgtb/",
+      "destination": "/servicios/",
+      "permanent": true
+    },
+    {
+      "source": "/servicios-comunidad-lgtb",
+      "destination": "/servicios/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/gps-para-carros-en-bogota-para-investigaciones-personales/",
+      "destination": "/plataforma-gps/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/gps-para-carros-en-bogota-para-investigaciones-personales",
+      "destination": "/plataforma-gps/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/herramientas-modernas-para-la-vigilancia-con-detectives-privados/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/herramientas-modernas-para-la-vigilancia-con-detectives-privados",
+      "destination": "/blog/",
+      "permanent": true
     }
   ],
   "headers": [

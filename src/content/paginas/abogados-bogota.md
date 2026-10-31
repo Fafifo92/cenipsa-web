@@ -7,7 +7,7 @@ focusKeyword: "abogados Bogotá"
 related:
   - { label: "Abogados sucesiones Bogotá", href: "/abogados-sucesiones-bogota/" }
   - { label: "Asesoría y representación jurídica", href: "/asesoria-juridica/" }
-  - { label: "Servicios especiales para abogados", href: "/servicios-especiales/" }
+  - { label: "Servicios para Firmas de Abogados y Departamentos Jurídicos", href: "/servicios-especiales/" }
 ---
 
 En CENIPSA comprendemos la urgencia y el nivel de complejidad que puedan tener los casos legales. Somos una compañía conformada por [**abogados**](/blog/como-trabajan-juntos-los-abogados-y-los-investigadores-privados/) **en Bogotá** que integra la asesoría legal experta en investigación privada y apoyo jurídico para el manejo de estrategias sólidas en pruebas irrefutables, protegiendo los derechos de todos nuestros clientes.

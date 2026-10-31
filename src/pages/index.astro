@@ -65,10 +65,10 @@ const disciplines = [
   <!-- ============ HERO ============ -->
   <section class="relative flex min-h-[92vh] items-center overflow-hidden bg-ink-950 pt-32 pb-20">
     <HeroImage name="plaza-bolivar" class="object-[center_35%] brightness-110 saturate-[1.08]" />
-    <div class="absolute inset-0 bg-gradient-to-r from-ink-950/80 via-ink-950/45 to-transparent" aria-hidden="true"></div>
-    <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-ink-950/50 to-transparent" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-ink-950/65 via-ink-950/25 to-transparent" aria-hidden="true"></div>
+    <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ink-950/45 to-transparent" aria-hidden="true"></div>
 
-    <div class="container-site relative">
+    <div class="container-site text-on-photo relative">
       <p class="eyebrow text-gold-400" data-reveal>
         <span class="h-px w-8 bg-gold-400" aria-hidden="true"></span>
         {SITE.brand} · {SITE.descriptor}
@@ -77,7 +77,7 @@ const disciplines = [
         Investigamos la verdad.
         <span class="mt-2 block text-gold-400">Defendemos sus derechos.</span>
       </h1>
-      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200 md:text-xl" data-reveal style="--reveal-delay:200ms">
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-white/90 md:text-xl" data-reveal style="--reveal-delay:200ms">
         Convertimos hechos complejos en evidencia útil y decisiones jurídicas claras. Inteligencia forense y
         asesoría legal especializada para empresas y personas en Colombia.
       </p>
@@ -93,21 +93,21 @@ const disciplines = [
       </div>
       <p class="mt-6 flex flex-wrap gap-x-7 gap-y-2 text-[0.95rem]" data-reveal style="--reveal-delay:360ms">
         <a href="/contacto/" class="link-underline font-semibold text-gold-400">Solicitar valoración confidencial</a>
-        <a href="#proceso" class="link-underline font-medium text-ink-200">¿Cómo trabajamos?</a>
+        <a href="#proceso" class="link-underline font-medium text-white/90">¿Cómo trabajamos?</a>
       </p>
 
       <dl class="mt-14 grid max-w-3xl grid-cols-1 gap-6 border-t border-white/10 pt-8 sm:grid-cols-3" data-reveal style="--reveal-delay:420ms">
         <div>
-          <dt class="text-[0.78rem] font-semibold tracking-[0.14em] text-ink-300 uppercase">Razón social</dt>
-          <dd class="mt-1.5 font-display text-lg leading-snug font-medium text-white">{SITE.legalName} <span class="block text-[0.9rem] text-ink-300">NIT {SITE.nit}</span></dd>
+          <dt class="text-[0.78rem] font-semibold tracking-[0.14em] text-white/80 uppercase">Razón social</dt>
+          <dd class="mt-1.5 font-display text-lg leading-snug font-medium text-white">{SITE.legalName} <span class="block text-[0.9rem] text-white/80">NIT {SITE.nit}</span></dd>
         </div>
         <div>
-          <dt class="text-[0.78rem] font-semibold tracking-[0.14em] text-ink-300 uppercase">Sello de calidad</dt>
+          <dt class="text-[0.78rem] font-semibold tracking-[0.14em] text-white/80 uppercase">Sello de calidad</dt>
           <dd class="mt-1.5 font-display text-lg leading-snug font-medium text-white">Círculo de Afiliados <span class="text-gold-400">CCB</span></dd>
         </div>
         <div>
-          <dt class="text-[0.78rem] font-semibold tracking-[0.14em] text-ink-300 uppercase">Sede</dt>
-          <dd class="mt-1.5 font-display text-lg leading-snug font-medium text-white">Torre del Reloj, Bogotá <span class="block text-[0.9rem] text-ink-300">Cobertura nacional</span></dd>
+          <dt class="text-[0.78rem] font-semibold tracking-[0.14em] text-white/80 uppercase">Sede</dt>
+          <dd class="mt-1.5 font-display text-lg leading-snug font-medium text-white">Torre del Reloj, Bogotá <span class="block text-[0.9rem] text-white/80">Cobertura nacional</span></dd>
         </div>
       </dl>
     </div>
@@ -155,7 +155,7 @@ const disciplines = [
       <div data-reveal="left">
         <div class="relative overflow-hidden rounded-3xl bg-ink-950 p-10 shadow-lift md:p-14">
           <img src="/images/despacho-juridico.jpg" alt="" width="1600" height="1067" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover" />
-          <div class="absolute inset-0 bg-gradient-to-t from-ink-950/92 via-ink-950/60 to-ink-950/15" aria-hidden="true"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-ink-950/35 to-transparent" aria-hidden="true"></div>
           <p class="relative font-display text-2xl leading-snug font-medium text-white md:text-[1.7rem]">
             «No entregamos solo un informe: la evidencia se obtiene pensando, desde el primer día, en cómo
             sostenerla ante una autoridad.»
@@ -290,15 +290,15 @@ const disciplines = [
   </section>
 
   <!-- ============ EQUIPO INTERDISCIPLINAR ============ -->
-  <section class="bg-ink-950 section-pad" aria-labelledby="team-title">
+  <section class="bg-white section-pad" aria-labelledby="team-title">
     <div class="container-site">
       <div class="grid gap-12 lg:grid-cols-[1fr_1.4fr]">
         <div data-reveal="left">
-          <p class="eyebrow text-gold-400"><span class="h-px w-8 bg-gold-400" aria-hidden="true"></span>Equipo interdisciplinar</p>
-          <h2 id="team-title" class="mt-4 font-display text-3xl font-semibold text-white md:text-4xl">
+          <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>Equipo interdisciplinar</p>
+          <h2 id="team-title" class="mt-4 font-display text-3xl font-semibold text-ink-950 md:text-4xl">
             Cinco disciplinas, un mismo caso
           </h2>
-          <p class="mt-5 leading-relaxed text-ink-200">
+          <p class="mt-5 leading-relaxed text-ink-700">
             Los casos complejos no se resuelven desde una sola profesión. Nuestro equipo integra el derecho, la
             investigación criminal, las ciencias sociales, la ingeniería y el peritaje técnico.
           </p>
@@ -307,10 +307,10 @@ const disciplines = [
         <ol class="grid gap-4 sm:grid-cols-2">
           {
             disciplines.map((t, i) => (
-              <li class:list={['rounded-2xl border border-white/10 bg-white/[0.04] p-6', i === 4 && 'sm:col-span-2']} data-reveal style={`--reveal-delay:${i * 80}ms`}>
-                <span class="font-display text-xl font-semibold text-gold-400" aria-hidden="true">{t.n}</span>
-                <h3 class="mt-2 font-display text-lg font-semibold text-white">{t.title}</h3>
-                <p class="mt-1.5 text-[0.9rem] leading-relaxed text-ink-300">{t.text}</p>
+              <li class:list={['rounded-2xl border-l-4 border-gold-400 bg-paper p-6', i === 4 && 'sm:col-span-2']} data-reveal style={`--reveal-delay:${i * 80}ms`}>
+                <span class="font-display text-xl font-semibold text-gold-600" aria-hidden="true">{t.n}</span>
+                <h3 class="mt-2 font-display text-lg font-semibold text-ink-950">{t.title}</h3>
+                <p class="mt-1.5 text-[0.9rem] leading-relaxed text-ink-700">{t.text}</p>
               </li>
             ))
           }

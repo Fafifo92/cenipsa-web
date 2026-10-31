@@ -33,7 +33,7 @@ En ciertas investigaciones de fraude en empresas o abuso de confianza, una plata
 
 En el caso de menores o adultos mayores que pueden correr riesgos, si se llegan a perder, la implementación del GPS ayuda a conocer su paradero en todo momento, ofreciendo tranquilidad y seguridad a las familias.
 
-### Vigilancia en situaciones legales
+### Cumplimiento de acuerdos en situaciones legales
 
 En conflictos legales, el GPS contribuye en el monitoreo de cumplimiento de acuerdos establecidos sobre horarios, visitas y desplazamientos. Este control garantiza que las normativas acordadas se puedan cumplir cabalmente y que, de lo contrario, el GPS otorga pruebas de gran confiabilidad para documentar y abordar cualquier tipo de inconveniente.
 

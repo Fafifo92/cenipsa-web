@@ -10,7 +10,7 @@ related:
   - { label: "Detectives privados Bogotá", href: "/detectives-privados-bogota-2/" }
 ---
 
-Si buscas un sistema completo de monitoreo a través de la función “seguimiento”, entonces puedes contar con la mejor tecnología que ofrece [**GPS Bogotá**](/blog/es-ideal-usar-un-sistema-gps-para-carros-bogota-en-procesos-de-investigacion/) a través del sistema CENIPSA TRACK. Es un servicio que cuenta con rastreo satelital con enfoque investigativo para flotas y vehículos.
+Si buscas un sistema completo de monitoreo en tiempo real, entonces puedes contar con la mejor tecnología que ofrece [**GPS Bogotá**](/blog/es-ideal-usar-un-sistema-gps-para-carros-bogota-en-procesos-de-investigacion/) a través del sistema CENIPSA TRACK. Es un servicio que cuenta con rastreo satelital con enfoque investigativo para flotas y vehículos.
 
 Este sistema incluye dispositivos discretos y una plataforma app que facilita el monitoreo en tiempo real, adecuado para logística, seguridad y obtención de pruebas legales. Sin duda, es más que un rastreador, es una solución satelital ideal facilita la prevención de riesgos y el esclarecimiento de situaciones irregulares en el contexto empresarial y particular en Colombia.
 
@@ -23,16 +23,16 @@ Un sistema más compacto, liviano e imperceptible, con una plataforma intuitiva 
 El sistema GPS-CENIPSA TRACK fue concebido a partir de la alta demanda de investigaciones en delitos y prevención de riesgos de las empresas. A partir de este contexto, nuestro laboratorio de ingeniería de medidas o contramedidas desarrolló un sistema de GPS con elementos diferenciadores. Se caracteriza básicamente por:
 
 - **Diseño inteligente y discreto**. En su diseño y tamaño es mucho más pequeño, liviano e imperceptible; debido a su estética, puede camuflarse como una parte más del vehículo.
-- **Rendimiento superior**. La batería tiene mayor duración, sencilla instalación y, para casos específicos de investigación, posee un sonido ambiental (micrófono).
+- **Rendimiento superior**. La batería tiene mayor duración y la instalación es sencilla.
 - **Plataforma de acceso total**. La plataforma satelital puede ser descargada en sus dispositivos celulares mediante aplicación móvil; de esta forma tendrá acceso ilimitado desde cualquier sitio. Además, las alertas del sistema llegan también a correos electrónicos o mensajes de texto.
 - **Soporte especializado**. Contamos con profesionales que lo asistirán de forma técnica frente a cualquier duda o inquietud.
 
 ## Ventajas del rastreador satelital CENIPSA TRACK
 
-Este dispositivo [**GPS Bogotá**](/blog/gps-para-carros-en-bogota-para-investigaciones-personales/) cuenta con múltiples ventajas, como son:
+Este dispositivo [**GPS Bogotá**](/plataforma-gps/) cuenta con múltiples ventajas, como son:
 
 - Ayuda a evitar delitos por parte de los empleados en una empresa.
-- Otorga mayor control y vigilancia absoluto sobre las rutas de trabajo.
+- Otorga mayor control sobre las rutas de trabajo de los vehículos de la empresa.
 - Permite verificar historiales; implementan geocercas para conocer si el vehículo salió de las rutas de trabajo.
 
 Diversas compañías nos contratan con el fin de brindarles estrategias y medidas de seguridad antihurto; por ello, el **GPS Bogotá** es una excelente solución debido a que cuenta con una plataforma inteligente satelital de acceso exclusivo.
@@ -53,7 +53,7 @@ Pues, es un sistema satelital que envía alertas que llegan a sus dispositivos e
 
 El sistema GPS como herramienta ideal en investigaciones privadas. Los GPS son primordiales en las investigaciones privadas y procesos jurídicos. Permiten una auditoría constante y, gracias a su sistema de guardar los historiales, el contratante podrá verificar y esclarecer hechos o situaciones anormales. Incluso logran reducción de tiempos por su contundencia en los hallazgos encontrados en las investigaciones.
 
-Las empresas que no han adquirido sistemas de GPS presentan varias problemáticas, delitos y amenazas, pues carecen de seguimiento e inspección en cuanto a los vehículos, es decir:
+Las empresas que no han adquirido sistemas de GPS presentan varias problemáticas, delitos y amenazas, pues carecen de monitoreo e inspección de sus vehículos, es decir:
 
 - Tiempos de llegada irregulares.
 - Desconocimiento de la ubicación.
@@ -64,7 +64,7 @@ Estas condiciones con el tiempo generan un profundo detrimento en el patrimonio 
 
 ## ¿Quiénes pueden ser beneficiados con el **GPS Bogotá** CENIPSA TRACK?
 
-Los GPS están disponibles para diversos grupos poblacionales y ello ha hecho que las personas accedan a tecnologías sofisticadas en la solución de sus problemas en seguridad y vigilancia. El uso de la tecnología satelital se extiende a:
+Los GPS están disponibles para diversos grupos poblacionales y ello ha hecho que las personas accedan a tecnologías sofisticadas en la solución de sus problemas de seguridad. El uso de la tecnología satelital se extiende a:
 
 ### Bandas delictivas y esclarecimiento judicial
 
@@ -104,12 +104,6 @@ Puedes contactarnos a través de los diversos canales de comunicación como:
 El costo de implementación y monitoreo del sistema GPS CENIPSA TRACK no es estándar, porque depende de cada caso, la duración del contrato y las funcionalidades específicas que se requieren.
 
 Te invitamos a solicitar una cotización confidencial a través de nuestro formulario o chat en línea.
-
-### ¿El dispositivo GPS de CENIPSA incluye micrófono?
-
-Sí, el departamento de ingeniería y desarrollo de CENIPSA SAS ofrece un sistema satelital con carácter investigativo GPS-CENIPSA TRACK, compuesto por un software de monitoreo y micrófonos para vehículos.
-
-Esta alternativa es totalmente discreta y legal para casos específicos permitidos jurídicamente y bajo el marco de una investigación o necesidad de seguridad particular, siempre respetando las leyes colombianas y los principios éticos de la compañía.
 
 ### ¿Cómo es el proceso de instalación del GPS?
 

@@ -15,7 +15,7 @@ Los **investigadores privados Bogotá** del Centro Nacional de Investigaciones P
 
 ![Investigadores privados Bogotá](/images/uploads/2021_03_cenipsa.jpg)
 
-Al contratar investigadores de nuestra empresa, el contratante tendrá absoluta confianza de que el personal interdisciplinar protegerá, recaudará, procesará y direccionará la información del caso de forma segura, pues esta requiere de un control y vigilancia absoluta.
+Al contratar investigadores de nuestra empresa, el contratante tendrá absoluta confianza de que el personal interdisciplinar protegerá, recaudará, procesará y direccionará la información del caso de forma segura, pues esta requiere de un control y una reserva absolutos.
 
 A nuestra compañía han llegado contratantes víctimas de estafas que entregaron la información de sus casos a manos equivocadas, ello implicó innumerables consecuencias o riesgos a su integridad personal, familiar y económica. Por lo anterior, gracias al acompañamiento y asesoría de nuestro equipo de trabajo, las contratantes víctimas lograron superar estos daños a su integridad.
 

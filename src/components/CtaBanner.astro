@@ -26,10 +26,10 @@ const contactHref = lang === 'es' ? '/contacto/' : '/en/contact/';
   <div class="container-site">
     <div class="relative overflow-hidden rounded-3xl bg-ink-950 px-7 py-14 md:px-16 md:py-16" data-reveal="zoom">
       <HeroImage name="bogota-edificios" priority={false} />
-      <div class="absolute inset-0 bg-gradient-to-r from-ink-950/90 via-ink-950/65 to-ink-950/15" aria-hidden="true"></div>
-      <div class="relative max-w-2xl">
+      <div class="absolute inset-0 bg-gradient-to-r from-ink-950/75 via-ink-950/40 to-transparent" aria-hidden="true"></div>
+      <div class="text-on-photo relative max-w-2xl">
         <h2 class="font-display text-3xl font-semibold leading-tight text-white md:text-4xl">{title}</h2>
-        <p class="mt-4 text-[1.02rem] leading-relaxed text-ink-200">{text}</p>
+        <p class="mt-4 text-[1.02rem] leading-relaxed text-white/90">{text}</p>
         <div class="mt-8 flex flex-wrap gap-4">
           <a href={contactHref} class="btn-gold">{ctaContact}</a>
           <a href={whatsHref} target="_blank" rel="noopener" class="btn-outline-light">
@@ -39,7 +39,7 @@ const contactHref = lang === 'es' ? '/contacto/' : '/en/contact/';
             {ctaWhats}
           </a>
         </div>
-        <p class="mt-6 text-[0.85rem] text-ink-400">
+        <p class="mt-6 text-[0.85rem] text-white/80">
           PBX {CONTACT.pbx} · WhatsApp {CONTACT.whatsapp} · {CONTACT.emailInfo}
         </p>
       </div>

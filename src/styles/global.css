@@ -144,6 +144,13 @@
   @apply py-16 md:py-24;
 }
 
+/* Texto sobre fotografía: sombra suave que garantiza legibilidad con velos ligeros */
+@utility text-on-photo {
+  text-shadow:
+    0 1px 2px rgb(11 37 56 / 0.55),
+    0 2px 18px rgb(11 37 56 / 0.5);
+}
+
 /* Etiqueta pequeña sobre títulos de sección */
 @utility eyebrow {
   @apply inline-flex items-center gap-2.5 text-[0.8rem] font-semibold uppercase tracking-[0.18em] text-brand-700;

@@ -1,19 +1,19 @@
 ---
-title: "Investigación patrimonial para medidas cautelares"
+title: "Investigación Patrimonial para Medidas Cautelares"
 seoTitle: "Investigación patrimonial para medidas cautelares | CENIPSA"
 eyebrow: "Investigar"
 description: "Rastreo e investigación de activos en fuentes legítimas y registros públicos para respaldar medidas cautelares, procesos ejecutivos y la detección de insolvencia fraudulenta."
 type: service
 related:
   - { label: "Asesoría y representación jurídica", href: "/asesoria-juridica/" }
-  - { label: "Servicios especiales para abogados", href: "/servicios-especiales/" }
+  - { label: "Servicios para Firmas de Abogados y Departamentos Jurídicos", href: "/servicios-especiales/" }
   - { label: "Análisis ejecutivo de información financiera", href: "/analisis-ejecutivo-de-informacion-financiera-bienes-raices-y-vehiculos/" }
 order: 13
 icon: "landmark"
 heroImage: "/images/servicio-auditoria-forense.jpg"
 ---
 
-## Inteligencia patrimonial para procesos ejecutivos y medidas cautelares
+## Inteligencia Patrimonial para Procesos Ejecutivos y Medidas Cautelares
 
 Cuando una obligación no se cumple, la efectividad del proceso depende de identificar a tiempo los bienes del obligado. En CENIPSA S.A.S. integramos la investigación patrimonial con el trabajo de nuestros abogados para que las medidas cautelares se soliciten con información verificada y obtenida por medios lícitos.
 

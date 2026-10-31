@@ -16,7 +16,7 @@ El Centro Nacional de Investigaciones Privadas, CENIPSA SAS, se permite presenta
 
 Los GPS son fundamentales en las investigaciones corporativas, pues previenen riesgos o por el contrario facilitan la comprensión de hechos o conductas irregulares ocurridos al interior de las compañías. Los GPS se convirtieron en una herramienta cotidiana en los contratantes corporativos, por los diversos riesgos o amenazas del contexto que atentan contra el patrimonio y activos de la empresa.
 
-El desarrollo de **GPS para Carros Bogotá** es diferente en comparación a otras ofertas del mercado, porque tienen otros aspectos debido a su condición imperceptible, es decir, que es adaptado a partir de las finalidades investigativas. Por ejemplo: tiene un micrófono incorporado en el que podrá tener escucha ambiental de su vehículo y, aparte de ello, es mucho más pequeño en relación con otros estilos de GPS.
+El desarrollo de **GPS para Carros Bogotá** es diferente en comparación a otras ofertas del mercado, porque fue diseñado a partir de necesidades corporativas de seguridad y control de activos, y es más pequeño y de instalación más sencilla que otros equipos GPS.
 
 En CENIPSA SAS, nos preocupamos por el avance y desarrollo tecnológico de nuestros productos o servicios, por ello, al acceder a nuestro Sistema de Posicionamiento Global, tendrá orientación de investigadores, lo que permitirá comprender mejor el funcionamiento de la plataforma; incluso, le brindarán asesorías para que usted o la persona autorizada puedan revisar en tiempo real el estado de sus vehículos.
 
@@ -30,13 +30,13 @@ Por consiguiente, es necesario incentivar compañías seguras comprometidas con 
 
 ## Ventajas y soluciones del rastreador GPS Track
 
-En síntesis, las ventajas del servicio son diversas. Le permitirán la ubicación exacta, tendrá a su disposición historiales de recorridos, audios y rutina diaria por medio de fotografías y mapas satelitales; podrá configurar alertas desde su celular, determinar horas de entrada y salida de los sitios más frecuentes; escuchará voces de personas que ingresaron al vehículo. Otros beneficios de alertas son: gasolina, movimiento, apertura de puertas, velocidad, choques, entre otros.
+En síntesis, las ventajas del servicio son diversas. Le permitirán la ubicación exacta, tendrá a su disposición historiales de recorridos por medio de mapas satelitales; podrá configurar alertas desde su celular, determinar horas de entrada y salida de los sitios más frecuentes; escuchará voces de personas que ingresaron al vehículo. Otros beneficios de alertas son: gasolina, movimiento, apertura de puertas, velocidad, choques, entre otros.
 
 Además, usted contará con acceso ilimitado a la plataforma las 24 horas del día para que pueda monitorear sus vehículos de forma constante, desde cualquier parte del país. Igualmente, tendrá un usuario con contraseña y, a su vez, se integrará su correo corporativo, allí llegarán las alertas de la plataforma, es decir, que según la compañía y necesidades particulares se configura el sistema de **GPS para Carros Bogotá**, pues cada caso tiene aspectos diferentes de configuración y complejidad.
 
 Al momento de contratar los servicios de GPS, usted podrá comunicarse a nuestros canales de atención, donde resolveremos cualquier solicitud, dificultad o desconfiguración que presente con el sistema.
 
-El GPS es una herramienta de prevención, al poder configurar un sistema de geocercas, usted logrará saber cuándo el vehículo está saliendo de las rutas habituales o se encuentra en zonas peligrosas, la pronta respuesta del equipo y vigilancia constante del contratante evitan situaciones de riesgo.
+El GPS es una herramienta de prevención, al poder configurar un sistema de geocercas, usted logrará saber cuándo el vehículo está saliendo de las rutas habituales o se encuentra en zonas peligrosas, la pronta respuesta del equipo y el monitoreo constante del contratante evitan situaciones de riesgo.
 
 Actualmente, el GPS se convirtió en una necesidad inherente a las prácticas empresariales o profesionales de diferentes ciencias, la evolución de la tecnología y compañías generó que cada día sea más habitual la implementación de los sistemas satelitales en diferentes áreas, ya sea la geodesia, geología, geografía, agronomía, zootecnia, ingenierías transportes, y militares, etc.
 

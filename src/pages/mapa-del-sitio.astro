@@ -1,0 +1,23 @@
+---
+/** Mapa del sitio (HTML). El sitemap XML para buscadores está en /sitemap-index.xml. */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import SiteMapBody from '@/components/SiteMapBody.astro';
+import { breadcrumbSchema } from '@/lib/seo';
+
+const crumbs = [
+  { name: 'Inicio', path: '/' },
+  { name: 'Mapa del Sitio', path: '/mapa-del-sitio/' },
+];
+---
+
+<BaseLayout
+  title="Mapa del Sitio | CENIPSA"
+  description="Mapa del sitio de CENIPSA S.A.S.: firma, servicios, áreas del derecho, recursos, contacto y páginas legales."
+  path="/mapa-del-sitio/"
+  altLocalePath="/en/sitemap/"
+  schemas={[breadcrumbSchema(crumbs)]}
+>
+  <PageHero eyebrow="Navegación" title="Mapa del Sitio" crumbs={crumbs} />
+  <SiteMapBody />
+</BaseLayout>

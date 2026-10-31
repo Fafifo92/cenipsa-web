@@ -1,104 +1,44 @@
 ---
-title: "Corporate investigation"
-seoTitle: "Corporate Investigation in Bogotá, Colombia | CENIPSA"
-description: "Corporate investigators in Bogotá, Colombia. Fraud, theft and asset investigations, background checks and forensic audits. Confidential consultation."
+title: "Corporate Investigation and Fraud Prevention"
+seoTitle: "Corporate Investigation & Fraud Prevention in Colombia | CENIPSA"
+description: "Forensic audit, internal fraud detection, data leaks, unfair competition, due diligence and reliability testing for companies in Colombia."
 type: service
-eyebrow: "Services"
+eyebrow: "Prevent · Investigate"
 order: 2
 icon: "building"
-related: []
+related:
+  - { label: "Forensic accounting", href: "/en/forensic-accounting/" }
+  - { label: "Security & reliability studies", href: "/en/polygraph/" }
 heroImage: "/images/servicio-investigacion-corporativa.jpg"
 ---
 
-Companies face internal and external vulnerabilities that threaten their management, structure and assets. The most common offenses include asset loss, theft of databases and patents, inventory theft, information leaks, unfair competition, breach of trust, board-level corruption, fraudulent sick leave and conspiracy.
+## Comprehensive Asset Protection, Forensic Audit and Corporate Risk Management
 
-At CENIPSA SAS, based in Bogotá, Colombia, we operate a specialized investigative and legal department dedicated to detecting corporate crime and preventing business risk — making us a strategic ally for decision-making and organizational governance, whether your company operates in Colombia or abroad.
+At CENIPSA S.A.S. we combine corporate legal consulting with forensic private investigation and technical auditing, giving companies, executives and boards strategic solutions to detect, document and mitigate internal fraud, data leaks, unfair competition and criminal conduct within the organization.
 
-Below are our main corporate investigation services:
+Our multidisciplinary team — corporate lawyers, forensic auditors, IT experts and investigators — acts promptly to protect your company's assets and reputation.
 
-## Pre-contract risk assessment
+## Our Corporate and Fraud Investigation Services
 
-Business owners are constantly exposed to scams, fraud, theft and other economic crimes during negotiations. These situations can be prevented through vulnerability studies, criminal record analysis, information screening, document audits, and investigative and legal support throughout the contracting process.
+### 1. Forensic Audit and Internal Fraud Detection
 
-## Asset investigation and forensic financial audit
+- **Investigation of irregular conduct:** technical detection of misappropriation, falsified financial statements, over-invoicing, conflicts of interest and diversion of corporate resources.
+- **Forensic accounting and document analysis:** technical review of accounting records, books, invoices and contracts to identify inconsistencies or concealment.
+- **Reports with evidentiary value:** expert and technical reports backed by chain of custody, ready to support criminal complaints or civil claims.
 
-This investigation consolidates and audits a company's financial behavior to verify whether its reported assets are genuine. Some companies fraudulently conceal insolvency, launder assets or pursue illicit enrichment in order to defraud creditors and evade legal responsibility. The purpose of this study is to determine whether the information provided matches the reality of the facts.
+### 2. Protection of Confidential Information and Unfair Competition
 
-## Investigation of theft and fraud within companies
+- **Data and trade-secret leak investigations:** identification of vulnerabilities and technical evidence when intellectual property, databases or business secrets are taken or disclosed without authorization.
+- **Unfair competition:** documentation of unfair practices by competitors or former employees (diversion of clients, confusion, misuse of trademarks).
+- **Corporate security audits:** technical diagnosis to protect intangible assets and strategic information networks.
 
-Corporate corruption affects both private and public sectors, causing economic harm and systematic violations of individual and collective rights. Our professionals, with extensive experience in economic crime, apply investigative, technological and legal strategies to gather physical evidence and probative material, identify those responsible and establish the truth of the facts.
+### 3. Corporate Due Diligence and Business Intelligence
 
-## Security studies: support for HR departments
+- **Background checks on partners and counterparties:** verification of the suitability, solvency and reputation of potential partners, suppliers or investors before mergers, acquisitions or alliances.
+- **Risk and compliance analysis:** assessment of exposure to money laundering, internal corruption and corporate criminal liability.
+- **Checks for senior positions:** due diligence on candidates for key roles, with informed consent and in compliance with data protection law.
 
-We specialize in verifying the information provided in résumés: personal, employment and academic references, and document authenticity. We also determine whether candidates or current employees have a criminal record or are under investigation, particularly for crimes against economic assets or public trust.
+### 4. Reliability Testing and Workplace Risk Management
 
-## Corporate and investigative polygraph
-
-Polygraph interviews, conducted by experts in human behavior and judicial investigation, are essential for detecting deception or truthfulness regarding a specific situation. Learn more about our [polygraph services](/en/polygraph/).
-
-- **Pre-employment polygraph interviews:** used for candidates filling vacancies, gathering information on personal habits, family and work history, criminal records, academic credentials and financial situation.
-- **Routine polygraph interviews:** assess the reliability and honesty of current employees according to their duties and risk levels, detecting involvement in ongoing theft, embezzlement, inventory manipulation, invoice or accounting fraud, and administrative or operational corruption.
-- **Specific and investigative polygraph interviews:** corroborate the version given by people involved in a specific incident, providing relevant information for criminal, administrative or disciplinary investigations.
-
-## Personnel security studies for hiring
-
-CENIPSA S.A.S. provides a professional investigation service with highly qualified staff, operating ethically and in full compliance with Colombian regulations.
-
-These studies verify résumé information; run general background searches (criminal, disciplinary and contractual); screen for links to drug trafficking, subversion, terrorism or criminal organizations; and verify personal, employment and academic references — always with the prior authorization of the person under review.
-
-### Home visits
-
-Our psychologists and professional investigators conduct specialized home visits, verifying aspects such as:
-
-- Identity documents and place of residence.
-- Household members and family background.
-- General profile of the candidate and role within the family.
-- Security conditions of the neighborhood and neighborhood feedback.
-- Condition, layout and general state of the home.
-- Verification of academic certificates, employment history and personal references.
-- Conclusions, final assessment, reliability study and photographic analysis of the home and surrounding area.
-
-### Background checks
-
-- Attorney General's Office (Procuraduría) records.
-- UN sanctions list (terrorism).
-- Traffic and vehicle records (Simit, Movilidad, Runt).
-- OFAC (Clinton list) screening.
-- Cargo theft (land piracy) records.
-- National Registry ID validity.
-- Police records.
-
-## Technical surveillance of employees
-
-Conducted under the direction of field detectives who, using technological and audiovisual tools, document the facts and verify the integrity of the employees working in your company.
-
-## Asset investigation and analysis
-
-Provides detailed information on the financial assets of the person under investigation:
-
-- Personal data, address and phone history, and family unit.
-- Social security records.
-- Nationwide bank account report.
-- Debt exposure across the financial, insurance and cooperative sectors, including current obligations and classified global debt.
-- Vehicles owned (plates, chassis number and other details, nationwide).
-- Real estate holdings nationwide, including title certificates.
-
-## Locating people
-
-Through legal and technological intelligence strategies, clients obtain identifying information about individuals of interest. We also locate biological parents and registered children nationwide, for cases involving adoption, kinship disputes, unfulfilled parental obligations and parental custody.
-
-## Immigration record analysis
-
-We obtain travel histories of entries and exits for national and international destinations.
-
-## Legal advice and representation
-
-Our [legal team](/en/legal-advice/) advises on:
-
-- Civil, criminal, administrative, procedural and commercial law
-- Family law and inheritance
-- Breach of contract
-- Accident compensation
-- Debt recovery
-
-Need a confidential corporate investigation in Bogotá or anywhere in Colombia? [Contact us](/en/contact/) for a private consultation.
+- **Corporate polygraph:** pre-employment and periodic reliability tests for staff handling custody or strategic assets, always with the examinee's consent.
+- **Investigation of workplace incidents:** verification of recurring sick leave, suspicious workplace accidents or fraudulent claims.

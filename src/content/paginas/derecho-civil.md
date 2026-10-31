@@ -1,5 +1,5 @@
 ---
-title: "Derecho civil y responsabilidad patrimonial"
+title: "Derecho Civil y Responsabilidad Patrimonial"
 seoTitle: "Abogados civiles en Bogotá | Contratos, procesos ejecutivos y responsabilidad civil | CENIPSA"
 description: "Abogados civiles en Bogotá: contratos civiles y comerciales, procesos declarativos y ejecutivos, responsabilidad civil, cobro de cartera y conciliaciones."
 type: service
@@ -15,15 +15,15 @@ related:
   - { label: "Puntos clave de las licencias de construcción", href: "/blog/puntos-clave-de-las-licencias-de-construccion-en-colombia/" }
 ---
 
-## Estrategia jurídica e investigación técnica en asuntos civiles
+## Estrategia Jurídica e Investigación Técnica en Asuntos Civiles
 
 Ofrecemos representación y consultoría técnica en materia civil para personas naturales y jurídicas, garantizando la protección del patrimonio y el cumplimiento de las obligaciones contractuales. Articulamos el litigio civil con auditorías patrimoniales e investigación para la ubicación de bienes y deudores.
 
-### Servicios en derecho civil
+### Servicios en Derecho Civil
 
-- **Responsabilidad civil contractual y extracontractual:** representación en litigios orientados a la indemnización de perjuicios por incumplimiento de contratos o daños patrimoniales causados a terceros.
-- **Recuperación de cartera e inteligencia patrimonial:** investigación y rastreo técnico de activos, inmuebles y cuentas para la efectividad de procesos ejecutivos y la búsqueda de deudores morosos o en estado de insolvencia. Ver [investigación patrimonial para medidas cautelares](/investigacion-patrimonial-para-medidas-cautelares/).
-- **Redacción, estudio y auditoría de contratos civiles:** elaboración y revisión de contratos de compraventa, arrendamiento, mutuo y garantías, previniendo litigios o clausulados perjudiciales.
-- **Procesos de consignación y posesión:** defensa y reclamación judicial de derechos reales, acciones reivindicatorias y litigios sobre propiedad de inmuebles.
+- **Responsabilidad Civil Contractual y Extracontractual:** representación en litigios orientados a la indemnización de perjuicios por incumplimiento de contratos o daños patrimoniales causados a terceros.
+- **Recuperación de Cartera e Inteligencia Patrimonial:** investigación y rastreo técnico de activos, inmuebles y cuentas para la efectividad de procesos ejecutivos y la búsqueda de deudores morosos o en estado de insolvencia. Ver [investigación patrimonial para medidas cautelares](/investigacion-patrimonial-para-medidas-cautelares/).
+- **Redacción, Estudio y Auditoría de Contratos Civiles:** elaboración y revisión de contratos de compraventa, arrendamiento, mutuo y garantías, previniendo litigios o clausulados perjudiciales.
+- **Procesos de consignación y Posesión:** defensa y reclamación judicial de derechos reales, acciones reivindicatorias y litigios sobre propiedad de inmuebles.
 
 > La información que comparta con nosotros se trata de forma confidencial. Enviar una solicitud no crea por sí misma una relación abogado-cliente; esta inicia cuando se acuerda formalmente el servicio.

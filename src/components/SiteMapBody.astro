@@ -1,0 +1,81 @@
+---
+/** Mapa del sitio (HTML) para personas: todas las secciones agrupadas. */
+import { getCollection } from 'astro:content';
+import { NAV_ES, NAV_EN, type NavLink } from '@/lib/site';
+import { LEGAL_AREAS_ES } from '@/lib/pillars';
+
+export interface Props {
+  lang?: 'es' | 'en';
+}
+const { lang = 'es' } = Astro.props;
+const isEs = lang === 'es';
+const nav = isEs ? NAV_ES : NAV_EN;
+const children = (href: string) => nav.find((n) => n.href === href)?.children ?? [];
+
+const landings = isEs
+  ? (await getCollection('paginas', (e) => e.data.type === 'landing' && !e.id.startsWith('en/')))
+      .map((e) => ({ label: e.data.title, href: `/${e.id}/` }))
+      .sort((a, b) => a.label.localeCompare(b.label, 'es'))
+  : [];
+
+const groups: { title: string; links: NavLink[] }[] = isEs
+  ? [
+      { title: 'Inicio y Firma', links: [{ label: 'Inicio', href: '/' }, ...children('/nosotros/')] },
+      { title: 'Servicios', links: [{ label: 'Todos los servicios', href: '/servicios/' }, ...children('/servicios/')] },
+      { title: 'Áreas del Derecho', links: LEGAL_AREAS_ES.map(({ label, href }) => ({ label, href })) },
+      {
+        title: 'Recursos y Contacto',
+        links: [
+          { label: 'Blog', href: '/blog/' },
+          { label: 'Preguntas Frecuentes', href: '/faq/' },
+          { label: 'Contacto y Valoración Confidencial', href: '/contacto/' },
+        ],
+      },
+      {
+        title: 'Legal',
+        links: [
+          { label: 'Términos y Condiciones', href: '/terminos-y-condiciones/' },
+          { label: 'Política de Tratamiento de Datos', href: '/politica-de-tratamiento-de-datos-y-privacidad/' },
+        ],
+      },
+      { title: 'Investigación Privada por Ciudad y Tema', links: landings },
+    ]
+  : [
+      { title: 'Home and Firm', links: [{ label: 'Home', href: '/en/' }, ...children('/en/about-us/')] },
+      { title: 'Services', links: [{ label: 'All services', href: '/en/services/' }, ...children('/en/services/')] },
+      {
+        title: 'Resources and Contact',
+        links: [
+          { label: 'Blog', href: '/en/blog/' },
+          { label: 'FAQ', href: '/en/faq/' },
+          { label: 'Contact', href: '/en/contact/' },
+        ],
+      },
+      {
+        title: 'Legal (Spanish)',
+        links: [
+          { label: 'Terms and Conditions', href: '/terminos-y-condiciones/' },
+          { label: 'Data Processing Policy', href: '/politica-de-tratamiento-de-datos-y-privacidad/' },
+        ],
+      },
+    ];
+---
+
+<section class="section-pad">
+  <div class="container-site grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+    {
+      groups.map((g) => (
+        <nav aria-label={g.title} data-reveal>
+          <h2 class="border-b-2 border-gold-400 pb-2 font-display text-xl font-semibold text-ink-950">{g.title}</h2>
+          <ul class="mt-4 space-y-2 text-[0.95rem]">
+            {g.links.map((l) => (
+              <li>
+                <a href={l.href} class="text-brand-700 underline decoration-brand-300 underline-offset-4 hover:text-brand-600">{l.label}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      ))
+    }
+  </div>
+</section>

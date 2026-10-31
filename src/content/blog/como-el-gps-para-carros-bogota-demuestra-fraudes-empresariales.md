@@ -31,7 +31,7 @@ La ley colombiana contempla pruebas sólidas para justificar un despido o una ac
 
 ## El [**GPS, rastreo satelital**](/plataforma-gps/) como recurso forense
 
-La tecnología de seguimiento satelital, cuando se usa en el sector de la investigación privada, se transforma en una herramienta forense de precisión.
+La tecnología de monitoreo satelital, cuando se usa en el sector de la investigación privada, se transforma en una herramienta forense de precisión.
 
 ### ¿Qué es la prueba geolocalizada y por qué es precisa?
 
@@ -66,7 +66,7 @@ Nos encargamos de desarrollar un informe pericial detallado. Es un documento que
 
 No permitas que el fraude empresarial continúe generando pérdidas millonarias. Confía en la precisión de la tecnología y validez legal con la que contamos en CENIPSA.
 
-Proteja su margen de beneficio y la integridad de su personal honesto. Contamos con dispositivos GPS de CENIPSA TRACK que cuentan con micrófonos imperceptibles, herramienta exclusiva para propietarios.
+Proteja su margen de beneficio y la integridad de su personal honesto. Contamos con dispositivos GPS de CENIPSA TRACK para el monitoreo de los vehículos y activos de la empresa.
 
 Además, se caracteriza por permitir la transmisión de cualquier tipo de sonido dentro del vehículo. Si requieres aclarar alguna duda con respecto a [**GPS para carros Bogotá**](/gps-para-carros-bogota/), puedes solicitar una asesoría especializada, contactándonos mediante PBX investigativo: [+57 (601) 629 0498](https://wa.me/+576016290498) o al correo electrónico: [info@inteligenciainvestigativa.com](mailto:info@inteligenciainvestigativa.com).
 
@@ -76,7 +76,7 @@ Con gusto podemos facilitar información sobre el servicio de interés.
 
 ### ¿Podemos rastrear a nuestros empleados sin violar sus derechos de intimidad?
 
-Sí, siempre que el rastreo se enfoque en activos de la empresa. Al respecto, la ley colombiana permite el seguimiento de bienes de la empresa con fines de control y seguridad de productividad.
+Sí, siempre que el rastreo se enfoque en activos de la empresa. Al respecto, la ley colombiana permite el monitoreo de bienes de la empresa con fines de control y seguridad de productividad.
 
 La violación de la intimidad aparece cuando se rastrea a la persona en sus respectivos bienes privados. En CENIPSA nos dedicamos a rastrear los activos de tu empresa para obtener evidencia geolocalizada que responda con las normativas legales.
 

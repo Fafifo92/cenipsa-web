@@ -1,5 +1,5 @@
 ---
-title: "Derecho laboral, seguridad social y gestión del riesgo en talento humano"
+title: "Derecho Laboral, Seguridad Social y Gestión del Riesgo en Talento Humano"
 seoTitle: "Abogado laboral en Bogotá | Derecho laboral y seguridad social | CENIPSA"
 description: "Abogados laborales en Bogotá para empresas y trabajadores: contratos y reglamentos, procesos disciplinarios, acoso laboral, despidos, liquidaciones, pensiones y conciliaciones."
 type: service
@@ -15,16 +15,16 @@ related:
   - { label: "¿Qué hacer si soy víctima de acoso laboral?", href: "/blog/que-hacer-si-soy-victima-de-acoso-laboral/" }
 ---
 
-## Asesoría laboral corporativa, litigio e investigación en gestión humana
+## Asesoría Laboral Corporativa, Litigio e Investigación en Gestión Humana
 
 Ofrecemos soluciones integrales para la regulación de las relaciones de trabajo, abordando la prevención de contingencias pasivo-laborales para empresas y la defensa técnica de los derechos de los trabajadores. Articulamos el derecho laboral con pruebas de poligrafía empresarial, estudios de seguridad e investigaciones en precontratación.
 
-### Portafolio de servicios en derecho laboral
+### Portafolio de Servicios en Derecho Laboral
 
-- **Consultoría laboral empresarial y auditorías en gestión humana:** estructuración de contratos de trabajo, reglamentos internos, esquemas salariales y auditorías de cumplimiento normativo conforme al Código Sustantivo del Trabajo.
-- **Estudios de seguridad, poligrafía e investigación laboral:** verificación de antecedentes en procesos de precontratación, investigaciones por fuga de información, detección de falsedad en incapacidades médicas y prevención del acoso laboral. Ver [estudios de seguridad y pruebas de confiabilidad](/examen-de-poligrafia/).
-- **Representación en litigios y demandas laborales:** atención de procesos ordinarios laborales ante jueces de la República por despidos sin justa causa, reliquidación de acreencias, indemnizaciones y responsabilidad por culpa patronal en accidentes de trabajo.
-- **Fueros laborales y protección de la seguridad social:** acompañamiento en trámites de levantamiento e impugnación de fuero de maternidad, fuero sindical y estabilidad laboral reforzada por condición de salud.
-- **Reclamaciones pensionales y contencioso de la seguridad social:** representación administrativa y judicial para la reliquidación de pensiones de vejez, invalidez y sobrevivientes ante fondos públicos y privados.
+- **Consultoría Laboral Empresarial y Auditorías en Gestión Humana:** estructuración de contratos de trabajo, reglamentos internos, esquemas salariales y auditorías de cumplimiento normativo conforme al Código Sustantivo del Trabajo.
+- **Estudios de Seguridad, Poligrafía e Investigación Laboral:** verificación de antecedentes en procesos de precontratación, investigaciones por fuga de información, detección de falsedad en incapacidades médicas y prevención del acoso laboral. Ver [estudios de seguridad y pruebas de confiabilidad](/examen-de-poligrafia/).
+- **Representación en Litigios y Demandas Laborales:** atención de procesos ordinarios laborales ante jueces de la República por despidos sin justa causa, reliquidación de acreencias, indemnizaciones y responsabilidad por culpa patronal en accidentes de trabajo.
+- **Fueros Laborales y Protección de la Seguridad Social:** acompañamiento en trámites de levantamiento e impugnación de fuero de maternidad, fuero sindical y estabilidad laboral reforzada por condición de salud.
+- **Reclamaciones Pensionales y Contencioso de la Seguridad Social:** representación administrativa y judicial para la reliquidación de pensiones de vejez, invalidez y sobrevivientes ante fondos públicos y privados.
 
 > La información que comparta con nosotros se trata de forma confidencial. Enviar una solicitud no crea por sí misma una relación abogado-cliente; esta inicia cuando se acuerda formalmente el servicio.

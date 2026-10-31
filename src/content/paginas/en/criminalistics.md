@@ -14,29 +14,29 @@ At CENIPSA SAS, our investigators specialize in obtaining and introducing eviden
 
 Our investigators and lawyers act as officers of the court, working hand in hand with the justice system: easing congestion in the courts, supporting the work of judges and securing redress for victims.
 
-## Investigation of crimes against life and family
+## Investigation of Crimes Against Life and Family
 
 We are committed to cases involving violations of the rights to life and family, given the harm caused to the victim, their household and society as a whole. We apply investigative, legal and psychological tools to help clarify the facts under investigation.
 
-## Investigation of fraud against communities
+## Investigation of Fraud Against Communities
 
 Unscrupulous actors exploit the good faith of rural communities through identity theft and false promises, encroaching on their land and diverting budgets intended for roads, public utilities or renewable energy projects. We provide investigative and legal services to prevent re-victimization and to pursue compensation for damages.
 
-## Vehicle theft investigation
+## Vehicle Theft Investigation
 
 Our lawyers and investigators have deep knowledge of the methods used by criminal organizations dedicated to vehicle theft. These schemes have evolved: offenders may deceive victims with a rental contract and later frame the theft as a mere breach of trust, exploiting legal loopholes to evade justice.
 
 Because this type of crime carries a high rate of impunity, we provide investigative and legal support to gather the necessary evidence and clarify the facts before Colombia's Attorney General's Office (Fiscalía General de la Nación) or in insurance claims.
 
-## Document examination
+## Document Examination
 
 Criminal organizations engaged in fraud present false visas, diplomas, academic records, military service cards and contracts — even documents belonging to deceased persons. Our forensic experts are trained to detect inconsistencies in information supplied by third parties and determine its authenticity.
 
-## Fingerprint and lophoscopy analysis
+## Fingerprint and Lophoscopy Analysis
 
 Our investigators specialize in these techniques, analyzing crime scenes to identify potential evidence — fingerprints, fluids and hidden traces — supported by biometric science for more precise identification and individualization of those involved in a crime.
 
-## Substance analysis
+## Substance Analysis
 
 Our expert examiners analyze adulterated beverages, psychoactive substances and biological fluids, among others — findings that are often decisive in judicial investigations.
 

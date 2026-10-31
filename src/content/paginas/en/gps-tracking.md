@@ -1,39 +1,37 @@
 ---
-title: "GPS satellite tracking"
-seoTitle: "GPS Tracking & Investigative Platform Bogotá | CENIPSA"
-description: "Investigative GPS tracking in Bogotá, Colombia: real-time satellite location, ambient audio, geofences, alerts and the CENIPSA TRACK mobile app."
+title: "Satellite Monitoring, Logistics and Asset Control (GPS)"
+seoTitle: "GPS Satellite Monitoring, Logistics & Asset Control in Colombia | CENIPSA"
+description: "GPS satellite monitoring for companies: fleet traceability, security for cargo in transit, telemetry, device inspection and route reconstruction, in compliance with Habeas Data."
 type: service
-eyebrow: "Services"
+eyebrow: "Prevent"
 order: 5
 icon: "satellite"
-related: []
+related:
+  - { label: "Corporate investigation", href: "/en/corporate-investigation/" }
+  - { label: "Electronic sweep (TSCM)", href: "/en/electronic-sweep/" }
 heroImage: "/images/servicio-monitoreo-gps.jpg"
 ---
 
-CENIPSA operates its own GPS platform in Bogotá, Colombia, built specifically for investigative work: real-time satellite tracking, ambient audio, geofences and mobile alerts, all integrated with our [private investigation services](/en/services/).
+## Location Technology, Cargo Protection and Corporate Fleet Management
 
-## A proprietary platform designed for investigations
+At CENIPSA S.A.S. we combine GPS/GNSS satellite positioning technology with risk-management consulting and corporate investigation. We offer companies, carriers and fleet owners advanced solutions for traceability, protection of strategic assets and safer logistics across Colombia.
 
-Our covert devices are miniaturized and imperceptible, performing several functions at once — satellite tracking and ambient listening from the same unit. They are professionally installed by our technicians to appear as just another component of the vehicle's electronics, and the "follow" function delivers precise real-time location for surveillance operations.
+All our technology is implemented under strict legal compliance, informed consent and personal data protection rules (Habeas Data), ensuring operational transparency and evidentiary value should an incident or claim arise.
 
-## CENIPSA TRACK
+## Our Satellite Monitoring and GPS Services
 
-### Satellite tracker
+### 1. Monitoring and Traceability of Corporate Vehicle Fleets
 
-A functional, user-friendly and intuitive platform. Manage routes with full history or in real time, with exact traceability for surveillance and follow-up operations.
+- **Security and logistics control:** real-time monitoring of the location, routes and operating times of company transport, cargo and heavy-machinery vehicles.
+- **Prevention of detours and unauthorized use:** automatic alerts when a vehicle leaves authorized geofences, makes unscheduled stops or is opened improperly on critical routes.
+- **Driving habits and telemetry:** technical telemetry reports on speed and harsh acceleration to improve road safety and fuel consumption.
 
-## Compact GPS devices with exclusive features
+### 2. Technology Security for Cargo and Goods in Transit
 
-Beyond standard tracking, CENIPSA TRACK devices include **imperceptible microphones** — an owner-exclusive tool that transmits any sound inside the vehicle, installed only with the vehicle owner's authorization.
+- **Supply chain assurance:** portable traceability devices placed in containers or high-value goods to mitigate the risk of loss or theft.
+- **Incident response protocols:** technical coordination and geolocation data to support immediate complaints and recovery operations with the authorities.
 
-- **Covert control:** only the owner knows where the GPS is placed in the vehicle.
-- **Intelligent platform:** displays the route of a moving vehicle for tracking and location.
-- **Real-time monitoring:** watch movement as it happens.
-- **Custom geofences:** designed to the client's requirements for vehicle control.
-- **Mobile app:** manage your devices from anywhere.
-- **Phone alerts:** configurable for arrival and departure times at frequent locations.
-- **Information analysis:** actionable intelligence to support decision-making.
-- **Investigative integration:** tracking data is coordinated with your [personal](/en/personal-investigation/) or [corporate investigation](/en/corporate-investigation/) and with [legal strategy](/en/legal-advice/).
-- **Flexible use:** our GPS devices serve different investigative objectives or simple satellite location.
+### 3. Technical Device Verification and Security Inspection
 
-Need discreet vehicle tracking in Colombia? [Contact our team](/en/contact/) for a confidential consultation.
+- **Electronic vehicle inspection:** preventive technical checks to detect unauthorized devices or security vulnerabilities in corporate or private vehicles.
+- **Telemetry and route reconstruction:** extraction and interpretation of satellite data to support technical reports for insurance claims or traffic-accident expert reports.

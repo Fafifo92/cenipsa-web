@@ -1,5 +1,5 @@
 ---
-title: "Consejos de seguridad al contratar una investigación"
+title: "Consejos de Seguridad al Contratar una Investigación"
 seoTitle: "Consejos de seguridad para contratar una investigación | CENIPSA"
 eyebrow: "Recursos"
 description: "Para un servicio investigativo, por su seguridad, tenga en cuenta lo siguiente:"
@@ -23,7 +23,7 @@ Para un servicio investigativo, por su seguridad, tenga en cuenta lo siguiente:
 - Página Web. Que la empresa cuente con un sitio web serio y esmerado no con plantillas hechas de momento con claras pretensiones de estafa.
 - Factura Legal. Estas empresas deben cumplir toda la normatividad legal, entre ellas DIAN. Por tanto se debe exigir la factura.
 
-## Productos y servicios
+## Productos y Servicios
 
 - [Investigación corporativa](/investigacion-corporativa/)
 - [Asesoría jurídica](/asesoria-juridica/)
@@ -31,7 +31,7 @@ Para un servicio investigativo, por su seguridad, tenga en cuenta lo siguiente:
 - [Poligrafía](/examen-de-poligrafia/)
 - [Abogados y empresas](/servicios-especiales/)
 
-### Servicios especiales para abogados y empresas de cobro de cartera morosa
+### Servicios Especiales para Abogados y Empresas de Cobro de Cartera Morosa
 
 - [Ubicación de personas para notificación judicial](/ubicacion-de-personas-para-notificacion-judicial/)
 - [Investigación patrimonial para medidas cautelares](/investigacion-patrimonial-para-medidas-cautelares/)

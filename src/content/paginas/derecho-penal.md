@@ -1,5 +1,5 @@
 ---
-title: "Derecho penal y sancionatorio"
+title: "Derecho Penal y Sancionatorio"
 seoTitle: "Abogados penalistas en Bogotá | Derecho penal y sancionatorio | CENIPSA"
 description: "Asesoría y representación en derecho penal en Bogotá: defensa técnica, acompañamiento a víctimas, criminalística y peritaje, y procesos disciplinarios. CENIPSA S.A.S."
 type: service
@@ -15,20 +15,20 @@ related:
   - { label: "¿Cómo es un proceso penal en Colombia?", href: "/blog/como-es-un-proceso-penal-en-colombia/" }
 ---
 
-## Defensa penal respaldada por investigación
+## Defensa Penal Respaldada por Investigación
 
 En CENIPSA S.A.S. articulamos el ejercicio del derecho penal con el trabajo de investigadores privados y peritos auxiliares de justicia. Esta integración estratégica nos permite obtener evidencias y pruebas contundentes para agilizar los trámites judiciales y garantizar el acceso a la verdad y a la justicia.
 
 La firma ofrece un conjunto de soluciones enfocado en la prevención, defensa e investigación de conductas delictivas para personas naturales y empresas:
 
-- **Asesorías jurídicas en materia penal:** consultoría orientada a prevenir la comisión de actos delictivos en actividades corporativas o personales, así como el asesoramiento técnico ante eventuales investigaciones o actuaciones penales.
-- **Asistencia a diligencias judiciales:** acompañamiento legal e intervención técnica en representación de la persona capturada o como voceros de las víctimas en audiencias.
-- **Asistencia investigativa, criminalística y peritaje técnico:** trabajo coordinado entre abogados e investigadores privados para estructurar estrategias de defensa o prevención respaldadas por peritajes e investigación judicial. Ver [criminalística y ciencias forenses](/criminalistica/).
-- **Asistencia y acompañamiento a víctimas:** representación en fases prejudiciales y judiciales, liderando la actuación dentro del incidente de reparación integral para la restitución de derechos.
-- **Recolección de información e investigación corporativa:** procedimientos de investigación y aseguramiento probatorio para enfrentar juicios penales o detectar conductas punibles e irregularidades al interior de las empresas o en el entorno personal.
-- **Asistencia judicial en procesos disciplinarios:** defensa y asesoría legal frente a investigaciones por faltas u omisiones, abarcando la atención de querellas y la participación en audiencias de conciliación.
+- **Asesorías Jurídicas en Materia Penal:** consultoría orientada a prevenir la comisión de actos delictivos en actividades corporativas o personales, así como el asesoramiento técnico ante eventuales investigaciones o actuaciones penales.
+- **Asistencia a Diligencias Judiciales:** acompañamiento legal e intervención técnica en representación de la persona capturada o como voceros de las víctimas en audiencias.
+- **Asistencia Investigativa, Criminalística y Peritaje Técnico:** trabajo coordinado entre abogados e investigadores privados para estructurar estrategias de defensa o prevención respaldadas por peritajes e investigación judicial. Ver [criminalística y ciencias forenses](/criminalistica/).
+- **Asistencia y Acompañamiento a Víctimas:** representación en fases prejudiciales y judiciales, liderando la actuación dentro del incidente de reparación integral para la restitución de derechos.
+- **Recolección de Información e Investigación Corporativa:** procedimientos de investigación y aseguramiento probatorio para enfrentar juicios penales o detectar conductas punibles e irregularidades al interior de las empresas o en el entorno personal.
+- **Asistencia Judicial en Procesos Disciplinarios:** defensa y asesoría legal frente a investigaciones por faltas u omisiones, abarcando la atención de querellas y la participación en audiencias de conciliación.
 
-## Principios que guían nuestra defensa
+## Principios que Guían Nuestra Defensa
 
 - **Presunción de inocencia:** nadie es culpable hasta que se demuestre lo contrario en un juicio con todas las garantías.
 - **Legalidad:** solo puede sancionarse una conducta descrita previamente en la ley.

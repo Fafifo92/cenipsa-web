@@ -152,7 +152,7 @@
     "id": "empresas-2",
     "category": "empresas",
     "question": "¿Tienen servicio de rastreo GPS y tecnología forense?",
-    "answer": "<p>Sí. Contamos con CENIPSA Track, nuestra plataforma de monitoreo satelital GPS en tiempo real para vehículos, que incluye micrófono ambiental e historial de rutas. También realizamos auditoría forense a dispositivos móviles para recuperar información borrada o manipulada.</p>",
+    "answer": "<p>Sí. Contamos con CENIPSA Track, nuestra plataforma de monitoreo satelital GPS en tiempo real para vehículos, con historial de rutas, geocercas y alertas para vehículos de la empresa. También realizamos auditoría forense a dispositivos móviles para recuperar información borrada o manipulada.</p>",
     "links": [
       {
         "label": "Saber más sobre GPS",
@@ -172,7 +172,7 @@
     "answer": "<p>Actuamos como el brazo investigador y técnico del abogado. Realizamos recolección de pruebas con cadena de custodia, búsqueda de testigos, auditoría a investigaciones previas, investigación patrimonial para embargos y elaboración de dictámenes periciales válidos en juicio.</p>",
     "links": [
       {
-        "label": "Ver servicios para abogados",
+        "label": "Ver servicios para firmas de abogados",
         "href": "/servicios-especiales/"
       },
       {

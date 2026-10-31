@@ -22,7 +22,7 @@ Son varias las técnicas que los investigadores privados llevan a cabo para gest
 - *Búsquedas en la comunidad*: llevar a cabo entrevistas entre familiares y amigos para conseguir pistas sobre la última vez que alguien vio a la persona que ha desaparecido.
 - *Investigación de medios digitales*: evaluar correos electrónicos, redes sociales y otros perfiles digitales, que puedan ofrecer datos e información relevante sobre el paradero de la persona.
 - *Colaboración con autoridades locales*: trabajar de manera conjunta con las organizaciones que puedan llegar a tener acceso a información relevante.
-- *Seguimiento de pistas*: llegar a rastrear información que se ha recibido mediante llamadas anónimas o informes de avistamientos, con la finalidad de comprobar su veracidad.
+- *Verificación de pistas*: llegar a rastrear información que se ha recibido mediante llamadas anónimas o informes de avistamientos, con la finalidad de comprobar su veracidad.
 
 #### Herramientas utilizadas en la localización
 
@@ -30,7 +30,7 @@ Para gestionar una búsqueda que sea realmente efectiva, los [**detectives priva
 
 - *Sistemas de búsqueda en bases de datos*: verificar datos donde se maneja información de diferente índole, para reconocer posibles leads.
 - *Tecnología de geolocalización*: usar GPS y otros tipos de tecnología que ayuden a localizar dispositivos móviles que puedan estar relacionados con la persona que ha desaparecido.
-- *Fotografía y vídeo*: documentar las evidencias que se han encontrado o llevar a cabo un seguimiento visual que pueda realmente resultar útil.
+- *Fotografía y vídeo*: documentar las evidencias que se han encontrado de forma lícita.
 - *Redes de contactos*: Disponer de contactos determinados que puedan ofrecer información oportuna durante el proceso investigativo.
 
 ## Investigación de fraudes y estafas con [**detectives privados en Medellín**](/detectives-privados-en-medellin/)

@@ -89,7 +89,7 @@ Elegir un detective privado es una decisión que no se puede tomar a la ligera. 
 
 ### Licencias y acreditaciones
 
-Operamos con cada una de las licencias y acreditaciones que se requieren para ejercer la labor de [**detectives privados**](/blog/herramientas-modernas-para-la-vigilancia-con-detectives-privados/) en Colombia. Nuestra actuación legal y profesional en este ámbito cumple con la normativa legal vigente. Lo que garantiza que las pruebas y la información recopiladas son válidas.
+Operamos con cada una de las licencias y acreditaciones que se requieren para ejercer la labor de [**detectives privados**](/criminalistica/) en Colombia. Nuestra actuación legal y profesional en este ámbito cumple con la normativa legal vigente. Lo que garantiza que las pruebas y la información recopiladas son válidas.
 
 ### Confidencialidad absoluta
 

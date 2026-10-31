@@ -30,6 +30,10 @@ const t =
         noRelationship:
           'El envío de este formulario no crea una relación abogado-cliente ni de prestación de servicios; esta inicia solo cuando se acuerda formalmente el alcance.',
         privacy: 'He leído y acepto la',
+        consent:
+          'Acepto el uso de mis datos de contacto para atención comercial, análisis de tráfico y optimización de servicios por parte de CENIPSA S.A.S.',
+        disclaimer:
+          'Al enviar este formulario o comunicarse a través de nuestros canales de atención virtual, acepta que CENIPSA S.A.S. procese la información suministrada exclusivamente para fines de respuesta a consultas, prospección comercial, medición de tráfico web y optimización de nuestros servicios, siempre bajo estrictos estándares de reserva profesional.',
         privacyLink: 'política de tratamiento de datos y privacidad',
         submit: 'Solicitar valoración confidencial',
         sending: 'Enviando…',
@@ -54,6 +58,10 @@ const t =
         noRelationship:
           'Submitting this form does not create an attorney-client or service relationship; that begins only once the scope is formally agreed.',
         privacy: 'I have read and accept the',
+        consent:
+          'I accept the use of my contact data for commercial service, traffic analysis and service optimization by CENIPSA S.A.S.',
+        disclaimer:
+          'By submitting this form or contacting us through our virtual service channels, you agree that CENIPSA S.A.S. may process the information provided solely to respond to inquiries, for commercial outreach, web traffic measurement and service optimization, always under strict standards of professional confidentiality.',
         privacyLink: 'data processing and privacy policy',
         submit: 'Request a confidential assessment',
         sending: 'Sending…',
@@ -136,11 +144,17 @@ const privacyHref = lang === 'es' ? '/politica-de-tratamiento-de-datos-y-privaci
     </label>
   </div>
 
+  <div class="flex items-start gap-3">
+    <input id="cf-consent" name="consentimiento" type="checkbox" required class="field-checkbox" />
+    <label for="cf-consent" class="text-[0.85rem] leading-relaxed text-ink-700">{t.consent} *</label>
+  </div>
+
   <button type="submit" class="btn-primary w-full sm:w-auto" data-label={t.submit} data-sending={t.sending}>
     {t.submit}
   </button>
   <p class="text-[0.8rem] text-ink-600">{t.note}</p>
   <p class="text-[0.78rem] leading-relaxed text-ink-500">{t.noRelationship}</p>
+  <p class="border-l-2 border-gold-400 pl-3 text-[0.78rem] leading-relaxed text-ink-600">{t.disclaimer}</p>
 
   {
     recaptchaKey && (

@@ -1,7 +1,7 @@
 ---
 title: "Prueba de polígrafo Bogotá"
 seoTitle: "Prueba de polígrafo Bogotá - Inteligencia Investigativa"
-description: "La prueba de polígrafo es una herramienta orientada a evaluar y brindar un seguimiento del empleado de una compañía a través de una serie de preguntas"
+description: "La prueba de polígrafo es una herramienta orientada a evaluar periódicamente la confiabilidad del personal de una compañía a través de una serie de preguntas"
 type: landing
 focusKeyword: "Prueba de polígrafo Bogotá"
 related:
@@ -17,7 +17,7 @@ En CENIPSA SAS contamos con expertos en la aplicación de procesos de confiabili
 
 En la gestión del talento humano, las pruebas psicológicas se subdividen en psicométricas y proyectivas. Son utilizadas de acuerdo con la necesidad corporativa, por ejemplo: en las psicométricas tienen doble funcionalidad porque evalúan a los aspirantes de una vacante o brindan seguimiento al empleado activo en la compañía. Mientras que, en el caso de las proyectivas, solo permiten aplicarse en los procesos de reclutamiento.
 
-De modo que, el reclutamiento y vigilancia del personal es una acción ejecutiva que establece parámetros de fidelización del cliente interno y externo de las organizaciones, por consiguiente, la prueba de polígrafo está clasificada en las psicométricas, asegura un proceso de gestión del talento humano, establece procedimientos holísticos y transparentes en los procesos de selección y seguimiento de personal activo.
+De modo que, el reclutamiento y la evaluación del personal es una acción ejecutiva que establece parámetros de fidelización del cliente interno y externo de las organizaciones, por consiguiente, la prueba de polígrafo está clasificada en las psicométricas, asegura un proceso de gestión del talento humano, establece procedimientos holísticos y transparentes en los procesos de selección y seguimiento de personal activo.
 
 Clases de pruebas poligráficas
 

@@ -63,7 +63,6 @@ Entre las áreas de competencias de los principales servicios están:
 - Hurtos.
 - Prevención de fraude.
 - Fallecimientos.
-- Seguimiento de lesionados.
 
 En CENIPSA, como firma de [**abogados Bogotá**](/abogados-bogota/)**,** nos caracterizamos por ayudar al restablecimiento de los derechos vulnerados; por tanto, trabajamos con un enfoque investigativo-socio-jurídico que permite la búsqueda del material probatorio y esclarecimiento de los hechos investigados.
 

@@ -152,7 +152,7 @@
     "id": "empresas-2",
     "category": "empresas",
     "question": "Do you offer GPS tracking and forensic technology?",
-    "answer": "<p>Yes. CENIPSA Track is our real-time GPS satellite monitoring platform for vehicles, with ambient microphone and route history. We also perform forensic audits of mobile devices to recover deleted or manipulated information.</p>",
+    "answer": "<p>Yes. CENIPSA Track is our real-time GPS satellite monitoring platform for vehicles, with route history, geofences and alerts for company vehicles. We also perform forensic audits of mobile devices to recover deleted or manipulated information.</p>",
     "links": [
       {
         "label": "More about GPS",
@@ -172,7 +172,7 @@
     "answer": "<p>We act as the lawyer’s investigative and technical arm: evidence gathering with chain of custody, locating witnesses, auditing prior investigations, asset investigation for attachments and expert reports valid at trial.</p>",
     "links": [
       {
-        "label": "Services for lawyers",
+        "label": "Services for Law Firms and Legal Departments",
         "href": "/en/services-for-lawyers/"
       },
       {

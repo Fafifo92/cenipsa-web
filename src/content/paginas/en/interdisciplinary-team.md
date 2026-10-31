@@ -1,5 +1,5 @@
 ---
-title: "Interdisciplinary team"
+title: "Interdisciplinary Team"
 seoTitle: "Interdisciplinary team: lawyers, investigators and forensic experts | CENIPSA"
 description: "CENIPSA's interdisciplinary team: specialized law and litigation, criminal and judicial investigation, social sciences, cybersecurity and digital forensics, and forensic expert work."
 type: info
@@ -16,25 +16,25 @@ Legal investigations — both corporate and personal — face complex technical,
 
 At CENIPSA we have an interdisciplinary team that combines solid theoretical grounding, scientific rigor, practical precision and strict professional ethics. We provide comprehensive support in building evidentiary strategy and clarifying the facts for investigative and judicial proceedings.
 
-## Our areas of practice and interdisciplinary intervention
+## Our Areas of Practice and Interdisciplinary Intervention
 
-### Specialized law and litigation
+### Specialized Law and Litigation
 
 Our lawyers are highly specialized in criminal and disciplinary, civil, family, administrative, commercial, labor and intellectual property law. We advise and represent individuals and companies with legal rigor, ensuring a technical, well-founded defense of their rights and interests.
 
-### Criminal and judicial investigation
+### Criminal and Judicial Investigation
 
 CENIPSA's investigators combine knowledge in criminalistics, forensic science, exact sciences and legal science, with specialization in criminology, victimology, fingerprint analysis, ballistics, chain-of-custody management and document examination, providing technical advice and expert intervention in the analytical reconstruction of events.
 
-### Social sciences and human rights
+### Social Sciences and Human Rights
 
 We understand the human dimension of the evidentiary process. Our professionals in sociology, social work, anthropology and history specialize in judicial investigation, analysis of social behavior and the protection of human rights.
 
-### Cybersecurity and digital forensics
+### Cybersecurity and Digital Forensics
 
 We provide advanced solutions for the prevention, mitigation and technical investigation of cybercrime and security breaches. Our engineers carry out digital forensic analysis, acquisition and preservation of electronic evidence, and the investigation of complex incidents (data leaks, corporate fraud, identity theft and network intrusions), in strict compliance with the digital chain of custody and international electronic-evidence standards. See our [cybersecurity and digital forensics](/en/cybersecurity-digital-forensics/) service.
 
-### Specialized forensic expert work
+### Specialized Forensic Expert Work
 
 We contribute decisive scientific, technical and methodological knowledge to inform judges and courts, using systematic observation, in-depth interviews, mental-state examination and specialized testing:
 

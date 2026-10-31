@@ -2,8 +2,7 @@
 /** Footer corporativo: marca, la firma, soluciones (pilares), legal, contacto y sellos de confianza. */
 import Logo from './Logo.astro';
 import TrustSeals from './TrustSeals.astro';
-import { SITE, CONTACT, SOCIAL } from '@/lib/site';
-import { PILLARS_ES, PILLARS_EN } from '@/lib/pillars';
+import { SITE, CONTACT, SOCIAL, NAV_ES, NAV_EN } from '@/lib/site';
 
 export interface Props {
   lang?: 'es' | 'en';
@@ -33,45 +32,33 @@ const t = isEs
 
 const firmLinks = isEs
   ? [
-      { label: 'Quiénes somos', href: '/nosotros/' },
-      { label: 'Equipo interdisciplinar', href: '/equipo-interdisciplinar/' },
-      { label: 'Garantías de servicio', href: '/garantias/' },
-      { label: 'Cómo trabajamos', href: '/como-trabajamos/' },
+      { label: 'Quiénes Somos', href: '/nosotros/' },
+      { label: 'Equipo Interdisciplinar', href: '/equipo-interdisciplinar/' },
+      { label: 'Garantías de Servicio', href: '/garantias/' },
+      { label: 'Cómo Trabajamos', href: '/como-trabajamos/' },
       { label: 'Blog', href: '/blog/' },
-      { label: 'Preguntas frecuentes', href: '/faq/' },
+      { label: 'Preguntas Frecuentes', href: '/faq/' },
       { label: 'Contacto', href: '/contacto/' },
     ]
   : [
-      { label: 'Who we are', href: '/en/about-us/' },
-      { label: 'Interdisciplinary team', href: '/en/interdisciplinary-team/' },
+      { label: 'Who We Are', href: '/en/about-us/' },
+      { label: 'Interdisciplinary Team', href: '/en/interdisciplinary-team/' },
       { label: 'Guarantees', href: '/en/guarantees/' },
-      { label: 'How we work', href: '/en/how-we-work/' },
+      { label: 'How We Work', href: '/en/how-we-work/' },
       { label: 'Blog', href: '/en/blog/' },
       { label: 'FAQ', href: '/en/faq/' },
       { label: 'Contact', href: '/en/contact/' },
     ];
 
-const pillars = isEs ? PILLARS_ES : PILLARS_EN;
-const servicesPath = isEs ? '/servicios/' : '/en/services/';
-const solutionLinks = [
-  ...pillars.map((p) => ({ label: p.name, href: `${servicesPath}#${p.id}` })),
-  ...(isEs
-    ? [
-        { label: 'Asesoría jurídica y litigio', href: '/asesoria-juridica/' },
-        { label: 'Servicios para abogados', href: '/servicios-especiales/' },
-        { label: 'Ciberseguridad e informática forense', href: '/ciberseguridad-e-informatica-forense/' },
-      ]
-    : [
-        { label: 'Legal advice & litigation', href: '/en/legal-advice/' },
-        { label: 'Services for lawyers', href: '/en/services-for-lawyers/' },
-        { label: 'Cybersecurity & digital forensics', href: '/en/cybersecurity-digital-forensics/' },
-      ]),
-];
+// Soluciones: TODOS los servicios (mismo listado que el menú «Servicios»).
+const nav = isEs ? NAV_ES : NAV_EN;
+const solutionLinks = nav.find((n) => n.href === (isEs ? '/servicios/' : '/en/services/'))?.children ?? [];
 
 // Legales: solo existen en español; en EN se enlazan igual (texto jurídico primario).
 const legalLinks = [
-  { label: isEs ? 'Términos y condiciones' : 'Terms and conditions', href: '/terminos-y-condiciones/' },
-  { label: isEs ? 'Política de tratamiento de datos (Habeas Data)' : 'Data processing policy (Habeas Data)', href: '/politica-de-tratamiento-de-datos-y-privacidad/' },
+  { label: isEs ? 'Términos y Condiciones' : 'Terms and Conditions', href: '/terminos-y-condiciones/' },
+  { label: isEs ? 'Política de Tratamiento de Datos (Habeas Data)' : 'Data Processing Policy (Habeas Data)', href: '/politica-de-tratamiento-de-datos-y-privacidad/' },
+  { label: isEs ? 'Mapa del Sitio' : 'Site Map', href: isEs ? '/mapa-del-sitio/' : '/en/sitemap/' },
 ];
 
 const socials = [
@@ -99,7 +86,7 @@ const socials = [
   <div class="pointer-events-none absolute -bottom-32 -left-24 h-96 w-96 rounded-full bg-gold-500/5 blur-3xl" aria-hidden="true"></div>
 
   <div class="container-site relative section-pad">
-    <div class="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+    <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.3fr_0.9fr_1.9fr_1fr]">
       <!-- Marca -->
       <div>
         <a href={isEs ? '/' : '/en/'} aria-label={`${SITE.brand} — ${isEs ? SITE.descriptor : SITE.descriptorEn}`}>
@@ -126,12 +113,12 @@ const socials = [
 
       {[
         { title: t.firm, links: firmLinks },
-        { title: t.solutions, links: solutionLinks },
+        { title: t.solutions, links: solutionLinks, wide: true },
         { title: t.legal, links: legalLinks },
       ].map((col) => (
-        <nav aria-label={col.title}>
+        <nav aria-label={col.title} class:list={[col.wide && 'sm:col-span-2 lg:col-span-1']}>
           <h2 class="font-display text-[0.95rem] font-semibold tracking-wide text-white">{col.title}</h2>
-          <ul class="mt-5 space-y-2.5 text-[0.9rem]">
+          <ul class:list={['mt-5 space-y-2.5 text-[0.9rem]', col.wide && 'sm:columns-2 sm:gap-8 [&>li]:break-inside-avoid']}>
             {col.links.map((l) => (
               <li>
                 <a href={l.href} class="text-ink-300 transition-colors hover:text-gold-300">{l.label}</a>

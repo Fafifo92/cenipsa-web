@@ -31,6 +31,11 @@ Para que el **mismo bot** responda dentro del chat de Tawk, se configura en el p
 3. **Chatbot / AI Assist (si el plan lo incluye)**: crear el flujo con los 6 botones del menú
    y, como fuente de conocimiento, la URL `https://www.inteligenciainvestigativa.com/faq/`.
 4. **Idioma del widget**: Español, y horario de atención para el mensaje «fuera de línea».
+5. **Formulario previo al chat (Pre-Chat Form)**: activarlo y poner como texto el aviso aprobado por la firma:
+   «Al enviar este formulario o comunicarse a través de nuestros canales de atención virtual, acepta que CENIPSA
+   S.A.S. procese la información suministrada exclusivamente para fines de respuesta a consultas, prospección
+   comercial, medición de tráfico web y optimización de nuestros servicios, siempre bajo estrictos estándares de
+   reserva profesional.» (El mismo aviso ya aparece en el formulario de contacto y al pie del asistente de FAQ.)
 
 ## 3. WhatsApp (celular)
 

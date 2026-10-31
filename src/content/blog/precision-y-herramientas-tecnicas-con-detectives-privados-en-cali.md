@@ -32,7 +32,7 @@ Usamos equipos de vanguardia que nos ayudan a obtener registros claros, inclusiv
 
 ### Informática forense
 
-Como [expertos en tecnología investigativa](/blog/herramientas-modernas-para-la-vigilancia-con-detectives-privados/), nos caracterizamos por tener la capacidad de llevar a cabo extracciones forenses en dispositivos móviles y computadoras. Se trata de un tratamiento que nos ayuda a recuperar mensajes eliminados, rastrear huellas digitales y evaluar metadatos de archivos, siendo la herramienta esencial para combatir el catfishing y las estafas digitales.
+Como [expertos en tecnología investigativa](/criminalistica/), nos caracterizamos por tener la capacidad de llevar a cabo extracciones forenses en dispositivos móviles y computadoras. Se trata de un tratamiento que nos ayuda a recuperar mensajes eliminados, rastrear huellas digitales y evaluar metadatos de archivos, siendo la herramienta esencial para combatir el catfishing y las estafas digitales.
 
 ### Localización de personas y rastreo de activos
 

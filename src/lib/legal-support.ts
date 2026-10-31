@@ -37,14 +37,8 @@ const ES: Record<string, LegalSupportEntry> = {
     text: 'Si se detecta vigilancia ilegal, hay conductas que pueden denunciarse. Le acompañamos en la actuación penal y en las medidas de protección de su información.',
     areas: ['Delitos informáticos y contra la intimidad', 'Protección de datos personales', 'Denuncia penal', 'Protección de secretos empresariales'],
   },
-  'seguimientos-inteligentes': {
-    text: 'Los seguimientos documentan hechos; nuestros abogados definen cómo usarlos legalmente y representan al cliente en el proceso que corresponda.',
-    areas: ['Derecho de familia', 'Derecho laboral', 'Derecho penal', 'Derecho civil y comercial'],
-  },
-  'servicios-comunidad-lgtb': {
-    text: 'Acompañamos jurídicamente a personas y parejas LGTB con atención respetuosa y confidencial, en la protección de sus derechos y en los procesos que necesiten.',
-    areas: ['Protección de derechos fundamentales', 'Derecho de familia', 'Denuncias por discriminación o violencia', 'Sucesiones'],
-  },
+
+
   'servicios-especiales': {
     text: 'Además de la evidencia, ofrecemos a abogados y casas de cobro respaldo jurídico en la estrategia del proceso, incluidas las medidas cautelares y la notificación.',
     areas: ['Procesos ejecutivos y cobro de cartera', 'Medidas cautelares', 'Notificación judicial', 'Estrategia probatoria'],

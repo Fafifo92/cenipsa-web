@@ -29,7 +29,7 @@ Los detectives privados de CENIPSA son profesionales que destacan por su capacid
 - Discreción absoluta. En los casos de investigación, el control confidencial de los datos e información existente y el anonimato del cliente son fundamentales. Nuestros expertos manejan cada caso con alto nivel de ética y profesionalismo.
 - Experiencia multidisciplinaria. Son especialistas con preparación en derecho, criminología, tecnología, psicología y seguridad, que aplican sus conocimientos para solventar casos de alta complejidad.
 - Métodos legales y éticos. En CENIPSA aseguramos que cada prueba obtenida cumpla debidamente con la legislación vigente y garantizamos su validez en procesos legales.
-- Tecnología avanzada. El uso de herramientas modernas para evaluación digital, vigilancia, reconstrucción de hechos y validación de evidencias es clave a fin de conseguir resultados satisfactorios.
+- Tecnología avanzada. El uso de herramientas modernas para evaluación digital, verificación de campo, reconstrucción de hechos y validación de evidencias es clave a fin de conseguir resultados satisfactorios.
 - Adaptabilidad a distintos perfiles. Ofrecemos atención a particulares que están preocupados por la seguridad de la familia y la parte personal, así como a empresas que necesitan mitigación de riesgos corporativos.
 
 Cada intervención que nosotros hacemos como empresa tiene un alto compromiso, también, con el aspecto social; por ello tenemos alta responsabilidad con la búsqueda de verdad, justicia y protección de los derechos.

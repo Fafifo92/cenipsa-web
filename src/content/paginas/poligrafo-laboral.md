@@ -46,7 +46,7 @@ La prueba preempleo es utilizada en los procesos de selección de personal, y pe
 
 ### Prueba de rutina para empresas
 
-Existen otros tipos de prueba de rutina; esto se hace con el fin de hacer seguimiento a los empleados en cuanto a las funciones de su cargo, y de prevenir situaciones de tipo jurídico o económico que vayan en contravía de la empresa.
+Existen otros tipos de prueba de rutina; esto se hace con el fin de verificar periódicamente la confiabilidad de los empleados en las funciones de su cargo, y de prevenir situaciones de tipo jurídico o económico que vayan en contravía de la empresa.
 
 - *Detalle de lo que se busca*: monitorear de forma periódica la adherencia a las políticas de seguridad, así como los códigos de conducta. En este caso, se mantiene un enfoque en la prevención de la fuga de información sensible, el uso indebido de recursos corporativos, la aceptación de sobornos y la detección de actos de corrupción o fraude que no hayan sido reportados.
 

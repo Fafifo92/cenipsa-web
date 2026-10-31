@@ -1,5 +1,5 @@
 ---
-title: "Legal advice and representation"
+title: "Legal Advice and Representation"
 seoTitle: "Legal Advice & Representation in Bogotá | CENIPSA"
 description: "Lawyers and private investigators in Bogotá, Colombia. Legal representation, asset searches and litigation support for individuals and companies."
 type: service
@@ -12,7 +12,7 @@ heroImage: "/images/servicio-asesoria-juridica.jpg"
 
 CENIPSA is a firm of lawyers and private investigators providing complete legal representation in Bogotá, Colombia — before courts and tribunals as well as in commercial matters. Over the years we have developed investigative methodologies with the highest quality standards, allowing us to deliver solutions inside and outside the courtroom, for both local and international clients.
 
-## Practice areas
+## Practice Areas
 
 - Family law
 - Criminal law
@@ -20,7 +20,7 @@ CENIPSA is a firm of lawyers and private investigators providing complete legal 
 - Commercial law
 - Administrative law
 
-### Special services for law firms and debt-collection companies
+### Special Services for Law Firms and Debt-Collection Companies
 
 Our investigative capabilities give attorneys and collection agencies the evidence and information they need to move cases forward in Colombia:
 
@@ -30,7 +30,7 @@ Our investigative capabilities give attorneys and collection agencies the eviden
 
 If you need legal counsel backed by professional investigators in Colombia, [contact us](/en/contact/) or learn more about our [corporate investigation services](/en/corporate-investigation/).
 
-## Legal support across all our services
+## Legal Support Across All Our Services
 
 Our lawyers work alongside the investigators from day one, so evidence is obtained lawfully and holds up in proceedings. Typical situations where you can count on us:
 

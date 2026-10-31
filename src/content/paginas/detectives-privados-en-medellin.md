@@ -59,7 +59,7 @@ Son fundamentales en las investigaciones de riesgos y amenazas corporativas, est
 
 ## GPS - Plataforma de rastreo satelital
 
-Plataforma propia diseñada con carácter investigativo. Nuestros dispositivos son imperceptibles y minimizados en su tamaño, que realizan varias actividades al tiempo, como rastreo satelital, escucha o sonido ambiental en el mismo equipo. Son técnicamente instalados por nuestros profesionales, para proporcionar apariencia de un componente más de la electrónica del vehículo. También permiten monitorear a través de la función «seguimiento», herramienta fundamental de ubicación en tiempo real.
+Plataforma propia de monitoreo satelital para vehículos y activos de las empresas: ubicación en tiempo real, historial de rutas, geocercas y alertas, con instalación técnica por nuestros profesionales y cumplimiento de la normativa de protección de datos.
 
 ## Investigación demográfica-ubicación de personas
 

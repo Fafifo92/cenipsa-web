@@ -19,40 +19,40 @@ const segments = [
     title: 'Companies',
     text: 'Due diligence, internal fraud, staff reliability, information security and corporate legal defense.',
     links: [
-      { label: 'Corporate investigation', href: '/en/corporate-investigation/' },
-      { label: 'Reliability testing', href: '/en/polygraph/' },
-      { label: 'Electronic sweeps', href: '/en/electronic-sweep/' },
-      { label: 'Legal advice', href: '/en/legal-advice/' },
+      { label: 'Corporate Investigation', href: '/en/corporate-investigation/' },
+      { label: 'Reliability Testing', href: '/en/polygraph/' },
+      { label: 'Electronic Sweeps', href: '/en/electronic-sweep/' },
+      { label: 'Legal Advice', href: '/en/legal-advice/' },
     ],
   },
   {
     id: 'personas',
     icon: 'users',
-    title: 'Individuals & families',
+    title: 'Individuals & Families',
     text: 'Verification of personal and asset-related facts in full confidence, with legal support in family, inheritance and criminal matters.',
     links: [
-      { label: 'Personal & asset investigation', href: '/en/personal-investigation/' },
-      { label: 'Legal advice & representation', href: '/en/legal-advice/' },
+      { label: 'Personal & Asset Investigation', href: '/en/personal-investigation/' },
+      { label: 'Legal Advice & Representation', href: '/en/legal-advice/' },
     ],
   },
   {
     id: 'abogados',
     icon: 'briefcase',
-    title: 'Lawyers & firms',
+    title: 'Law Firms & Legal Departments',
     text: 'Evidentiary support for your litigation: locating people, asset investigation, expert reports and evidence assessment.',
     links: [
-      { label: 'Services for lawyers', href: '/en/services-for-lawyers/' },
-      { label: 'Criminalistics & expert reports', href: '/en/criminalistics/' },
+      { label: 'Services for Law Firms and Legal Departments', href: '/en/services-for-lawyers/' },
+      { label: 'Criminalistics & Expert Reports', href: '/en/criminalistics/' },
     ],
   },
 ];
 
 const disciplines = [
-  { n: '01', title: 'Criminal & corporate law', text: 'Lawyers in criminal, civil, family, administrative, labor, commercial and intellectual property law.' },
-  { n: '02', title: 'Criminal & judicial investigation', text: 'Investigators trained in criminalistics and forensic science: fingerprinting, ballistics, document examination and chain of custody.' },
-  { n: '03', title: 'Social & behavioral sciences', text: 'Sociology, social work, forensic psychology and anthropology applied to judicial investigation and human rights.' },
-  { n: '04', title: 'Engineering & technical IT', text: 'Electronics and telecommunications engineers for technical analysis, digital forensics and evidentiary support.' },
-  { n: '05', title: 'Technical expert witnesses', text: 'Experts with scientific, technical and methodological knowledge to advise judges, courts and parties.' },
+  { n: '01', title: 'Criminal & Corporate Law', text: 'Lawyers in criminal, civil, family, administrative, labor, commercial and intellectual property law.' },
+  { n: '02', title: 'Criminal & Judicial Investigation', text: 'Investigators trained in criminalistics and forensic science: fingerprinting, ballistics, document examination and chain of custody.' },
+  { n: '03', title: 'Social & Behavioral Sciences', text: 'Sociology, social work, forensic psychology and anthropology applied to judicial investigation and human rights.' },
+  { n: '04', title: 'Engineering & Technical IT', text: 'Electronics and telecommunications engineers for technical analysis, digital forensics and evidentiary support.' },
+  { n: '05', title: 'Technical Expert Witnesses', text: 'Experts with scientific, technical and methodological knowledge to advise judges, courts and parties.' },
 ];
 ---
 
@@ -66,9 +66,9 @@ const disciplines = [
   <!-- ============ HERO ============ -->
   <section class="relative flex min-h-[92vh] items-center overflow-hidden bg-ink-950 pt-32 pb-20">
     <HeroImage name="plaza-bolivar" class="object-[center_35%] brightness-110 saturate-[1.08]" />
-    <div class="absolute inset-0 bg-gradient-to-r from-ink-950/80 via-ink-950/45 to-transparent" aria-hidden="true"></div>
-    <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-ink-950/50 to-transparent" aria-hidden="true"></div>
-    <div class="container-site relative">
+    <div class="absolute inset-0 bg-gradient-to-r from-ink-950/65 via-ink-950/25 to-transparent" aria-hidden="true"></div>
+    <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ink-950/45 to-transparent" aria-hidden="true"></div>
+    <div class="container-site text-on-photo relative">
       <p class="eyebrow text-gold-400" data-reveal>
         <span class="h-px w-8 bg-gold-400" aria-hidden="true"></span>
         {SITE.brand} · {SITE.descriptorEn}
@@ -77,7 +77,7 @@ const disciplines = [
         We investigate the truth.
         <span class="mt-2 block text-gold-400">We defend your rights.</span>
       </h1>
-      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200 md:text-xl" data-reveal style="--reveal-delay:200ms">
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-white/90 md:text-xl" data-reveal style="--reveal-delay:200ms">
         We turn complex facts into useful evidence and clear legal decisions. Forensic intelligence and specialized
         legal advice for companies and individuals in Colombia.
       </p>
@@ -93,20 +93,20 @@ const disciplines = [
       </div>
       <p class="mt-6 flex flex-wrap gap-x-7 gap-y-2 text-[0.95rem]" data-reveal style="--reveal-delay:360ms">
         <a href="/en/contact/" class="link-underline font-semibold text-gold-400">Request a confidential assessment</a>
-        <a href="#process" class="link-underline font-medium text-ink-200">How do we work?</a>
+        <a href="#process" class="link-underline font-medium text-white/90">How do we work?</a>
       </p>
       <dl class="mt-14 grid max-w-3xl grid-cols-1 gap-6 border-t border-white/10 pt-8 sm:grid-cols-3" data-reveal style="--reveal-delay:420ms">
         <div>
-          <dt class="text-[0.78rem] font-semibold tracking-[0.14em] text-ink-300 uppercase">Registered company</dt>
-          <dd class="mt-1.5 font-display text-lg leading-snug font-medium text-white">{SITE.legalName} <span class="block text-[0.9rem] text-ink-300">NIT {SITE.nit}</span></dd>
+          <dt class="text-[0.78rem] font-semibold tracking-[0.14em] text-white/80 uppercase">Registered company</dt>
+          <dd class="mt-1.5 font-display text-lg leading-snug font-medium text-white">{SITE.legalName} <span class="block text-[0.9rem] text-white/80">NIT {SITE.nit}</span></dd>
         </div>
         <div>
-          <dt class="text-[0.78rem] font-semibold tracking-[0.14em] text-ink-300 uppercase">Quality seal</dt>
+          <dt class="text-[0.78rem] font-semibold tracking-[0.14em] text-white/80 uppercase">Quality seal</dt>
           <dd class="mt-1.5 font-display text-lg leading-snug font-medium text-white">Bogotá Chamber of Commerce <span class="text-gold-400">Affiliates</span></dd>
         </div>
         <div>
-          <dt class="text-[0.78rem] font-semibold tracking-[0.14em] text-ink-300 uppercase">Office</dt>
-          <dd class="mt-1.5 font-display text-lg leading-snug font-medium text-white">Torre del Reloj, Bogotá <span class="block text-[0.9rem] text-ink-300">Nationwide coverage</span></dd>
+          <dt class="text-[0.78rem] font-semibold tracking-[0.14em] text-white/80 uppercase">Office</dt>
+          <dd class="mt-1.5 font-display text-lg leading-snug font-medium text-white">Torre del Reloj, Bogotá <span class="block text-[0.9rem] text-white/80">Nationwide coverage</span></dd>
         </div>
       </dl>
     </div>
@@ -154,7 +154,7 @@ const disciplines = [
       <div data-reveal="left">
         <div class="relative overflow-hidden rounded-3xl bg-ink-950 p-10 shadow-lift md:p-14">
           <img src="/images/despacho-juridico.jpg" alt="" width="1200" height="800" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover" />
-          <div class="absolute inset-0 bg-gradient-to-t from-ink-950/92 via-ink-950/60 to-ink-950/15" aria-hidden="true"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-ink-950/35 to-transparent" aria-hidden="true"></div>
           <p class="relative font-display text-2xl leading-snug font-medium text-white md:text-[1.7rem]">
             «We don't just hand over a report: evidence is gathered from day one with a view to how it will stand
             before an authority.»
@@ -254,13 +254,13 @@ const disciplines = [
   </section>
 
   <!-- ============ TEAM ============ -->
-  <section class="bg-ink-950 section-pad" aria-labelledby="team-title-en">
+  <section class="bg-white section-pad" aria-labelledby="team-title-en">
     <div class="container-site">
       <div class="grid gap-12 lg:grid-cols-[1fr_1.4fr]">
         <div data-reveal="left">
-          <p class="eyebrow text-gold-400"><span class="h-px w-8 bg-gold-400" aria-hidden="true"></span>Interdisciplinary team</p>
-          <h2 id="team-title-en" class="mt-4 font-display text-3xl font-semibold text-white md:text-4xl">Five disciplines, one case</h2>
-          <p class="mt-5 leading-relaxed text-ink-200">
+          <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>Interdisciplinary team</p>
+          <h2 id="team-title-en" class="mt-4 font-display text-3xl font-semibold text-ink-950 md:text-4xl">Five disciplines, one case</h2>
+          <p class="mt-5 leading-relaxed text-ink-700">
             Complex cases are not solved from a single profession. Our team brings together law, criminal
             investigation, social sciences, engineering and technical expert work.
           </p>
@@ -269,10 +269,10 @@ const disciplines = [
         <ol class="grid gap-4 sm:grid-cols-2">
           {
             disciplines.map((t, i) => (
-              <li class:list={['rounded-2xl border border-white/10 bg-white/[0.04] p-6', i === 4 && 'sm:col-span-2']} data-reveal style={`--reveal-delay:${i * 80}ms`}>
-                <span class="font-display text-xl font-semibold text-gold-400" aria-hidden="true">{t.n}</span>
-                <h3 class="mt-2 font-display text-lg font-semibold text-white">{t.title}</h3>
-                <p class="mt-1.5 text-[0.9rem] leading-relaxed text-ink-300">{t.text}</p>
+              <li class:list={['rounded-2xl border-l-4 border-gold-400 bg-paper p-6', i === 4 && 'sm:col-span-2']} data-reveal style={`--reveal-delay:${i * 80}ms`}>
+                <span class="font-display text-xl font-semibold text-gold-600" aria-hidden="true">{t.n}</span>
+                <h3 class="mt-2 font-display text-lg font-semibold text-ink-950">{t.title}</h3>
+                <p class="mt-1.5 text-[0.9rem] leading-relaxed text-ink-700">{t.text}</p>
               </li>
             ))
           }

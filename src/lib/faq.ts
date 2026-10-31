@@ -15,17 +15,17 @@ export interface FaqEntry {
 
 export const FAQ_CATEGORIES: Record<'es' | 'en', { id: FaqCategory; label: string }[]> = {
   es: [
-    { id: 'legalidad', label: 'Legalidad, confidencialidad y seguridad' },
-    { id: 'personal', label: 'Investigación personal y familiar' },
-    { id: 'empresas', label: 'Servicios empresariales, poligrafía y tecnología' },
-    { id: 'abogados', label: 'Servicios para abogados, criminalística y peritajes' },
-    { id: 'precios', label: 'Precios, tiempos, citas y medios de pago' },
+    { id: 'legalidad', label: 'Legalidad, Confidencialidad y Seguridad' },
+    { id: 'personal', label: 'Investigación Personal y Familiar' },
+    { id: 'empresas', label: 'Servicios Empresariales, Poligrafía y Tecnología' },
+    { id: 'abogados', label: 'Servicios para Firmas de Abogados, Criminalística y Peritajes' },
+    { id: 'precios', label: 'Precios, Tiempos, Citas y Medios de Pago' },
   ],
   en: [
-    { id: 'legalidad', label: 'Legality, confidentiality and security' },
-    { id: 'personal', label: 'Personal and family investigation' },
-    { id: 'empresas', label: 'Business services, polygraph and technology' },
-    { id: 'abogados', label: 'Services for lawyers, criminalistics and expert reports' },
-    { id: 'precios', label: 'Prices, timelines, appointments and payment' },
+    { id: 'legalidad', label: 'Legality, Confidentiality and Security' },
+    { id: 'personal', label: 'Personal and Family Investigation' },
+    { id: 'empresas', label: 'Business Services, Polygraph and Technology' },
+    { id: 'abogados', label: 'Services for Law Firms, Criminalistics and Expert Reports' },
+    { id: 'precios', label: 'Prices, Timelines, Appointments and Payment' },
   ],
 };

@@ -6,7 +6,7 @@ type: landing
 related:
   - { label: "Abogados Bogotá", href: "/abogados-bogota/" }
   - { label: "Asesoría y representación jurídica", href: "/asesoria-juridica/" }
-  - { label: "Servicios especiales para abogados", href: "/servicios-especiales/" }
+  - { label: "Servicios para Firmas de Abogados y Departamentos Jurídicos", href: "/servicios-especiales/" }
   - { label: "Ubicación de personas para notificación judicial", href: "/ubicacion-de-personas-para-notificacion-judicial/" }
 ---
 

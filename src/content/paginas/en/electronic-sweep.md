@@ -1,5 +1,5 @@
 ---
-title: "Electronic sweep"
+title: "Electronic Sweep"
 seoTitle: "Electronic Sweep & Bug Detection | CENIPSA"
 description: "Corporate electronic sweep in Bogota, Colombia: detect hidden microphones, cameras and spy devices to protect your company's privacy and information."
 type: service
@@ -14,11 +14,11 @@ heroImage: "/images/servicio-barrido-electronico.jpg"
 
 At **CENIPSA SAS** we develop preventive and corrective technological solutions to corporate security and privacy problems. Using advanced, high-precision electronic systems, we locate intrusive devices irregularly installed inside your company's premises. Our service prevents information leaks, protects corporate privacy and uncovers potential irregularities.
 
-## How the sweep works
+## How the Sweep Works
 
 The system is operated by expert engineers who carry out an exhaustive analysis and physical inspection of the facilities, infrastructure, furniture, fixtures and electrical network. This allows us to detect hidden cameras and video transmitters, voice recorders, phones, microphones, trackers and other covert devices.
 
-## What you gain
+## What You Gain
 
 With the results of the sweep you will be able to:
 

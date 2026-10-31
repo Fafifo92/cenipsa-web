@@ -1,73 +1,40 @@
 ---
-title: "Personal investigation"
-seoTitle: "Personal Investigation in Bogotá, Colombia | CENIPSA"
-description: "Private investigators in Bogotá, Colombia for personal matters: locating people, asset checks, pre-marital screening and digital forensics. Confidential."
+title: "Personal, Family and Asset Investigation"
+seoTitle: "Personal, Family & Asset Investigation in Colombia | CENIPSA"
+description: "Solvency studies, pre-marital verification, investigations for family and custody disputes, and locating people and missing heirs, in strict confidence."
 type: service
-eyebrow: "Services"
+eyebrow: "Investigate"
 order: 1
 icon: "user-search"
-related: []
+related:
+  - { label: "Legal advice & litigation", href: "/en/legal-advice/" }
+  - { label: "Services for law firms", href: "/en/services-for-lawyers/" }
 heroImage: "/images/servicio-investigacion-personal.jpg"
 ---
 
-Our personal investigation services are designed for people who have suffered — or want to prevent — emotional harm, family disputes or violations of their rights. CENIPSA combines investigative, technological, psychological and legal resources so you can resolve your situation and establish the truth, in Bogotá and throughout Colombia. For an overview of everything we offer, see our [services](/en/services/) page or [contact us](/en/contact/) for a confidential consultation.
+## Technical Verification, Evidentiary Clarity and Strict Confidentiality
 
-## Locating people and families
+At CENIPSA S.A.S. we provide private investigation and evidence analysis focused on resolving uncertainty in personal, family and financial matters. We combine legal rigor with advanced investigative methods to give our clients truthful, timely and lawfully obtained information, useful both for strategic personal decisions and to support proceedings before family, civil and criminal courts.
 
-To locate a person, we deploy investigative, legal and technological intelligence work aimed at obtaining the key information needed to:
+## Our Personal, Family and Asset Investigation Services
 
-- Reunite with loved ones
-- Prevent deception in dealings between relatives, friends or partners
-- Gather evidence for custody and parental-authority rulings
-- Consolidate proof to set child support in line with the child's best interests
-- Restore economic rights
+### 1. Solvency Studies and Asset Investigation
 
-## Family asset investigation
+- **Identification of registered assets:** verification and location of real estate, vehicles, shareholdings and property rights through official sources and public records.
+- **Evidentiary support for legal proceedings:** evidence of the parties' real financial capacity in divorce, child-support, marital-property and debt-enforcement cases.
+- **Detection of fraudulent insolvency or sham transactions:** technical information to identify concealment or irregular transfers of assets intended to evade legal or family obligations.
 
-This service reveals the real income, vehicles and property of the person under investigation. Many people conceal their true earnings, evade family obligations or commit fraud — we act as your strategic ally so your rights are not violated. It is useful for uncovering deception, fraud or other offenses, and for supporting custody, child-support and economic-rights claims with solid evidence.
+### 2. Pre-Marital Verification and Personal Integrity
 
-## Ancestry research for foreign citizenship
+- **Background and suitability checks:** confirmation of personal, employment, judicial and financial background so you can make informed decisions before marriage, civil commitments or prenuptial agreements.
+- **Reliability studies:** verification of the accuracy of information provided by third parties in personal or family settings.
 
-Aimed at Colombian citizens who need documented evidence of foreign ancestors in order to obtain citizenship in another country. We can locate:
+### 3. Investigation in Family and Custody Disputes
 
-- Period civil registry records
-- Marriage certificates of the era
-- Baptism records
-- Studies of the cultural context of the period
+- **Verification of risk environments and child care:** documentary and field evidence to support custody, visitation or parental-authority proceedings.
+- **Documentation of breaches:** lawful evidence of failure to meet family support duties or violations of rights within the family.
 
-## Pre-marital investigation
+### 4. Locating People and Missing Heirs
 
-Ideal for Colombian or foreign nationals who, before entering a marriage or similar commitment, need technical advice to protect their personal integrity and assets. This investigation helps you:
-
-- Understand your partner's real intentions
-- Determine whether your moral, physical or psychological integrity is at risk
-- Verify whether an online relationship is genuine or a scam
-- Detect possible crimes such as fraud, theft, identity impersonation or document forgery
-
-## Clinical psychology services
-
-We provide timely, effective psychological care — particularly for emotional and affective disorders — through assessment and, where appropriate, a therapeutic process aimed at improving quality of life for you and your family. Services include psychological consultation, couples therapy, and treatment for anxiety, substance-related and mood disorders, including depression.
-
-## Technology
-
-### Investigative GPS satellite tracker with microphone
-
-CENIPSA's engineering department offers a satellite tracking system with monitoring software that lets you view a vehicle's real-time location and travel history through a virtual platform or app.
-
-**Benefits**
-
-- Detect deception by a partner or spouse
-- Prevent theft and fraud
-- Full control when lending your vehicle to third parties
-- Technical support from expert investigators
-- On-site installation
-
-[Learn more](/en/gps-tracking/)
-
-### Home security — hidden cameras
-
-High-quality video and audio systems that our professionals conceal within everyday objects to protect your home, family or business. They help safeguard loved ones and assets, deter theft, and identify strangers or irregular situations on your property.
-
-### Forensic analysis and audit of devices
-
-Personal or private information can be lost — or deliberately deleted by third parties who tamper with a device. We provide specialized recovery and tracing of deleted activity, allowing you to recover contact histories, calls, text messages, images, videos and other data, and to verify whether the device was manipulated by someone else. This service complements our broader [criminalistics](/en/criminalistics/) capabilities.
+- **Locating relatives and heirs:** demographic and documentary research to locate missing heirs or people whose whereabouts are unknown in probate or civil-status matters.
+- **Background and genealogy reconstruction:** historical and documentary research for nationality applications, inheritances or restitution of property rights.

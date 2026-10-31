@@ -1,5 +1,5 @@
 ---
-title: "Polygraph testing"
+title: "Polygraph Testing"
 seoTitle: "Polygraph Testing in Bogotá, Colombia | CENIPSA"
 description: "Certified polygraph examinations in Bogotá, Colombia: pre-employment, routine and investigative tests. Confidential, non-invasive and legally sound."
 type: service
@@ -12,13 +12,13 @@ heroImage: "/images/servicio-estudios-seguridad.jpg"
 
 A polygraph examination is a voluntary, non-invasive assessment that requires the written consent of the person being examined and is conducted under strict standards of respect for human dignity. At CENIPSA in Bogotá, Colombia, our certified examiners measure the physiological responses associated with deception, recorded through polygraph charts and guided by a carefully structured question protocol. The result is a concrete, reliable answer as to whether a person is being truthful about matters of interest to your company or case.
 
-## Types of examination
+## Types of Examination
 
 - **Pre-employment examinations**: Verify a candidate's employment history, criminal background, academic credentials, alcohol and illegal drug use, involvement in illicit activities, ties to criminal organizations, financial standing, possible infiltration plans, and the accuracy of the information provided in their résumé.
 - **Routine examinations**: Assess the reliability and honesty of existing employees according to their roles and risk levels. These tests help detect ongoing theft, embezzlement, inventory manipulation, falsification of invoices or accounting documents, administrative or operational corruption, and other irregularities within the company.
 - **Specific or investigative examinations**: Corroborate the version of events given by individuals involved in a specific incident. They are also a valuable source of information in criminal, administrative or disciplinary investigations.
 
-## Advantages of polygraph testing
+## Advantages of Polygraph Testing
 
 Polygraph testing is built on reliability, trust, confidentiality and fast turnaround. For your organization, that means:
 
@@ -32,7 +32,7 @@ Polygraph testing is built on reliability, trust, confidentiality and fast turna
 
 Polygraph testing is frequently combined with our [corporate investigation](/en/corporate-investigation/) services for internal fraud cases, and with [legal advice](/en/legal-advice/) when results may support formal proceedings in Colombia.
 
-## Clinical psychology
+## Clinical Psychology
 
 Our team also provides timely, effective psychological care aimed at improving the quality of life of our clients and their families. Services include:
 
