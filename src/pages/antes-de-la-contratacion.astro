@@ -1,0 +1,31 @@
+---
+/** Antes de la Contratación — ruta metodológica para clientes (OBSERVACIONES 4). */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import CtaBanner from '@/components/CtaBanner.astro';
+import BeforeHiringBody from '@/components/BeforeHiringBody.astro';
+import { breadcrumbSchema } from '@/lib/seo';
+
+const crumbs = [
+  { name: 'Inicio', path: '/' },
+  { name: 'Nosotros', path: '/nosotros/' },
+  { name: 'Antes de la Contratación', path: '/antes-de-la-contratacion/' },
+];
+---
+
+<BaseLayout
+  title="Antes de la Contratación | Ruta Metodológica para Clientes | CENIPSA"
+  description="Ruta metodológica de contratación de CENIPSA S.A.S. en 6 pasos: recepción confidencial, propuesta, contratación con NDA, desarrollo, informe y traslado opcional al área jurídica."
+  path="/antes-de-la-contratacion/"
+  altLocalePath="/en/before-hiring/"
+  schemas={[breadcrumbSchema(crumbs)]}
+>
+  <PageHero
+    eyebrow="Nosotros"
+    title="Antes de la Contratación"
+    description="Ruta metodológica para clientes: así trabajamos desde el primer contacto, con transparencia, rigor y seguridad jurídica."
+    crumbs={crumbs}
+  />
+  <BeforeHiringBody />
+  <CtaBanner />
+</BaseLayout>

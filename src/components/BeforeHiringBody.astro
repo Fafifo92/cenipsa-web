@@ -1,0 +1,138 @@
+---
+/**
+ * Contenido de «Antes de la Contratación» (ES/EN): presentación institucional,
+ * tres pilares, ruta metodológica de 6 pasos y garantías institucionales.
+ * Texto aprobado por la firma (OBSERVACIONES 4).
+ */
+import ContractRoute from './ContractRoute.astro';
+import Icon from './Icon.astro';
+import { SITE } from '@/lib/site';
+
+export interface Props {
+  lang?: 'es' | 'en';
+}
+const { lang = 'es' } = Astro.props;
+const isEs = lang === 'es';
+
+const c = isEs
+  ? {
+      quote: '«Convertir hechos complejos en evidencia útil y decisiones jurídicas claras»',
+      s1: '1. Presentación Institucional y Propuesta de Valor',
+      intro:
+        'CENIPSA S.A.S. es una firma especializada que integra la inteligencia investigativa, el análisis forense y el respaldo jurídico especializado. Nuestra misión es proteger los derechos, activos e intereses de personas y organizaciones mediante investigaciones legales, rigurosas y confidenciales, facilitando la toma de decisiones estratégicas y la obtención de evidencia técnicamente sustentada.',
+      pillars: [
+        ['Prevenir', 'Debida diligencia, estudios de seguridad, poligrafía laboral, barrido electrónico y gestión del riesgo corporativo (SAGRILAFT/PTEE).', 'shield', '/servicios/#prevenir'],
+        ['Investigar', 'Investigación de fraude interno, auditoría forense digital, búsqueda de personas y activos, criminalística y peritajes.', 'fingerprint', '/servicios/#investigar'],
+        ['Defender', 'Asesoría y representación jurídica especializada (penal, corporativo, laboral, familia, comercial) y acompañamiento probatorio.', 'scale', '/servicios/#defender'],
+      ],
+      s2: '2. Ruta Metodológica de Contratación',
+      s2sub: 'Estructura de 6 pasos',
+      s2text:
+        'Para garantizar transparencia, rigor metodológico y seguridad jurídica desde el primer contacto, CENIPSA S.A.S. aplica la siguiente estructura estandarizada de 6 pasos para la contratación de sus servicios:',
+      s3: '3. Garantías Institucionales de Seguridad y Confidencialidad',
+      guarantees: [
+        ['Confidencialidad Absoluta (NDA)', 'Todos los procedimientos e información compartida están amparados por acuerdos de confidencialidad y reserva profesional estricta.', 'lock'],
+        ['Cadena de Custodia y Licitud Probatoria', 'Toda evidencia obtenida cumple los estándares procesales legales para garantizar su plena validez ante jueces y autoridades.', 'shield'],
+        ['Respeto Irrestricto a los Derechos Fundamentales', 'CENIPSA opera bajo estrictos códigos éticos. No realiza interceptaciones ilegales, vulneración de privacidad ni actos de inteligencia informal.', 'scale'],
+        ['Acompañamiento Interdisciplinario', 'Integración permanente entre investigadores de campo, peritos técnicos y abogados especializados desde la primera etapa hasta el cierre.', 'users'],
+      ],
+      cta: 'Solicitar valoración confidencial',
+      contact: '/contacto/',
+    }
+  : {
+      quote: '“Turning complex facts into useful evidence and clear legal decisions”',
+      s1: '1. Who We Are and Our Value Proposition',
+      intro:
+        'CENIPSA S.A.S. is a specialized firm that combines investigative intelligence, forensic analysis and specialized legal support. Our mission is to protect the rights, assets and interests of individuals and organizations through lawful, rigorous and confidential investigations, enabling strategic decisions and technically sound evidence.',
+      pillars: [
+        ['Prevent', 'Due diligence, security studies, workplace polygraph, electronic sweeps and corporate risk management (SAGRILAFT/PTEE).', 'shield', '/en/services/#prevenir'],
+        ['Investigate', 'Internal fraud investigation, digital forensic audit, locating people and assets, criminalistics and expert reports.', 'fingerprint', '/en/services/#investigar'],
+        ['Defend', 'Specialized legal advice and representation (criminal, corporate, labor, family, commercial) and evidentiary support.', 'scale', '/en/services/#defender'],
+      ],
+      s2: '2. Our Engagement Route',
+      s2sub: 'Six-step structure',
+      s2text:
+        'To ensure transparency, methodological rigor and legal certainty from the first contact, CENIPSA S.A.S. applies the following standardized six-step structure to engage its services:',
+      s3: '3. Institutional Security and Confidentiality Guarantees',
+      guarantees: [
+        ['Absolute Confidentiality (NDA)', 'All procedures and shared information are covered by confidentiality agreements and strict professional secrecy.', 'lock'],
+        ['Chain of Custody and Lawful Evidence', 'All evidence meets legal procedural standards so it is fully valid before judges and authorities.', 'shield'],
+        ['Full Respect for Fundamental Rights', 'CENIPSA operates under strict ethical codes. It does not carry out illegal interception, privacy violations or informal intelligence activities.', 'scale'],
+        ['Interdisciplinary Support', 'Field investigators, technical experts and specialized lawyers work together from the first stage to closing.', 'users'],
+      ],
+      cta: 'Request a confidential assessment',
+      contact: '/en/contact/',
+    };
+---
+
+<section class="section-pad" aria-labelledby="bh-intro">
+  <div class="container-site">
+    <div class="rounded-2xl border border-gold-400 bg-ink-950 px-6 py-8 text-center text-white md:py-10" data-reveal>
+      <p class="font-display text-2xl font-semibold md:text-3xl">{SITE.legalName}</p>
+      <p class="mt-2 font-semibold text-gold-400 md:text-lg">{isEs ? SITE.tagline : SITE.taglineEn}</p>
+      <p class="mt-4 font-display text-lg text-white/90 italic md:text-xl">{c.quote}</p>
+    </div>
+
+    <div class="mt-14 max-w-3xl" data-reveal>
+      <h2 id="bh-intro" class="font-display text-2xl font-semibold text-ink-950 md:text-3xl">{c.s1}</h2>
+      <p class="mt-4 text-[1.05rem] leading-relaxed text-ink-700">{c.intro}</p>
+    </div>
+    <ul class="mt-8 grid gap-5 md:grid-cols-3">
+      {
+        c.pillars.map(([name, text, icon, href], i) => (
+          <li data-reveal style={`--reveal-delay:${i * 90}ms`}>
+            <a href={href} class="flex h-full flex-col rounded-2xl bg-brand-700 p-6 text-white shadow-lift transition-transform hover:-translate-y-1">
+              <span class="flex items-center gap-3">
+                <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 text-gold-400">
+                  <Icon name={icon} class="h-6 w-6" />
+                </span>
+                <span class="font-display text-xl font-semibold tracking-wide uppercase">{name}</span>
+              </span>
+              <span class="mt-4 text-[0.93rem] leading-relaxed text-brand-50">{text}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<section class="bg-mist section-pad" aria-labelledby="bh-route">
+  <div class="container-site">
+    <div class="max-w-3xl" data-reveal>
+      <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>{c.s2sub}</p>
+      <h2 id="bh-route" class="mt-3 font-display text-2xl font-semibold text-ink-950 md:text-3xl">{c.s2}</h2>
+      <p class="mt-4 leading-relaxed text-ink-700">{c.s2text}</p>
+    </div>
+    <div class="mt-10">
+      <ContractRoute lang={lang} variant="timeline" />
+    </div>
+    <div class="mt-12">
+      <ContractRoute lang={lang} variant="cards" />
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" aria-labelledby="bh-guarantees">
+  <div class="container-site">
+    <h2 id="bh-guarantees" class="max-w-3xl font-display text-2xl font-semibold text-ink-950 md:text-3xl" data-reveal>{c.s3}</h2>
+    <ul class="mt-8 grid gap-5 sm:grid-cols-2">
+      {
+        c.guarantees.map(([title, text, icon], i) => (
+          <li class="flex gap-4 rounded-2xl border border-ink-950/10 bg-white p-6" data-reveal style={`--reveal-delay:${i * 80}ms`}>
+            <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gold-400 text-ink-950">
+              <Icon name={icon} class="h-5 w-5" />
+            </span>
+            <span>
+              <span class="block font-display text-lg font-semibold text-ink-950">{title}</span>
+              <span class="mt-1.5 block text-[0.93rem] leading-relaxed text-ink-700">{text}</span>
+            </span>
+          </li>
+        ))
+      }
+    </ul>
+    <p class="mt-10" data-reveal>
+      <a href={c.contact} class="btn-primary">{c.cta}</a>
+    </p>
+  </div>
+</section>

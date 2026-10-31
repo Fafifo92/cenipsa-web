@@ -1,0 +1,33 @@
+---
+/** Before Hiring — engagement route for clients (EN). */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import CtaBanner from '@/components/CtaBanner.astro';
+import BeforeHiringBody from '@/components/BeforeHiringBody.astro';
+import { breadcrumbSchema } from '@/lib/seo';
+
+const crumbs = [
+  { name: 'Home', path: '/en/' },
+  { name: 'About Us', path: '/en/about-us/' },
+  { name: 'Before Hiring', path: '/en/before-hiring/' },
+];
+---
+
+<BaseLayout
+  title="Before Hiring | Engagement Route for Clients | CENIPSA"
+  description="CENIPSA S.A.S.'s six-step engagement route: confidential intake, proposal, contract with NDA, execution, final report and optional referral to the legal team."
+  path="/en/before-hiring/"
+  altLocalePath="/antes-de-la-contratacion/"
+  lang="en"
+  schemas={[breadcrumbSchema(crumbs)]}
+>
+  <PageHero
+    eyebrow="About Us"
+    title="Before Hiring"
+    description="Our engagement route for clients: how we work from the first contact, with transparency, rigor and legal certainty."
+    crumbs={crumbs}
+    lang="en"
+  />
+  <BeforeHiringBody lang="en" />
+  <CtaBanner lang="en" />
+</BaseLayout>

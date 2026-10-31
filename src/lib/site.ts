@@ -105,6 +105,7 @@ export const NAV_ES: NavLink[] = [
       { label: 'Quiénes Somos', href: '/nosotros/' },
       { label: 'Equipo Interdisciplinar', href: '/equipo-interdisciplinar/' },
       { label: 'Garantías', href: '/garantias/' },
+      { label: 'Antes de la Contratación', href: '/antes-de-la-contratacion/' },
       { label: 'Cómo Trabajamos', href: '/como-trabajamos/' },
     ],
   },
@@ -140,6 +141,7 @@ export const NAV_EN: NavLink[] = [
       { label: 'Who We Are', href: '/en/about-us/' },
       { label: 'Interdisciplinary Team', href: '/en/interdisciplinary-team/' },
       { label: 'Guarantees', href: '/en/guarantees/' },
+      { label: 'Before Hiring', href: '/en/before-hiring/' },
       { label: 'How We Work', href: '/en/how-we-work/' },
     ],
   },
@@ -187,6 +189,7 @@ export const I18N_PAIRS: Record<string, string> = {
   '/equipo-interdisciplinar/': '/en/interdisciplinary-team/',
   '/garantias/': '/en/guarantees/',
   '/como-trabajamos/': '/en/how-we-work/',
+  '/antes-de-la-contratacion/': '/en/before-hiring/',
   '/mapa-del-sitio/': '/en/sitemap/',
 };
 
