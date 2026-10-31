@@ -152,6 +152,11 @@
     0 2px 28px rgb(11 37 56 / 0.5);
 }
 
+/* Los botones sobre foto no llevan sombra de texto (fondo sólido propio). */
+.text-on-photo :is(.btn-gold, .btn-primary, .btn-outline, .btn-outline-light) {
+  text-shadow: none;
+}
+
 /* Etiqueta pequeña sobre títulos de sección */
 @utility eyebrow {
   @apply inline-flex items-center gap-2.5 text-[0.8rem] font-semibold uppercase tracking-[0.18em] text-brand-700;
