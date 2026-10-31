@@ -147,8 +147,9 @@
 /* Texto sobre fotografía: sombra suave que garantiza legibilidad con velos ligeros */
 @utility text-on-photo {
   text-shadow:
-    0 1px 2px rgb(11 37 56 / 0.55),
-    0 2px 18px rgb(11 37 56 / 0.5);
+    0 1px 2px rgb(11 37 56 / 0.7),
+    0 0 12px rgb(11 37 56 / 0.55),
+    0 2px 28px rgb(11 37 56 / 0.5);
 }
 
 /* Etiqueta pequeña sobre títulos de sección */
