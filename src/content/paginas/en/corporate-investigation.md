@@ -10,6 +10,7 @@ related:
   - { label: "Forensic accounting", href: "/en/forensic-accounting/" }
   - { label: "Security & reliability studies", href: "/en/polygraph/" }
 heroImage: "/images/servicio-investigacion-corporativa.jpg"
+infographics: ["investigar", "proceso"]
 ---
 
 ## Comprehensive Asset Protection, Forensic Audit and Corporate Risk Management

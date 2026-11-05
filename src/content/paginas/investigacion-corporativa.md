@@ -5,12 +5,13 @@ eyebrow: "Prevenir · Investigar"
 description: "Auditoría forense, detección de fraude interno, fuga de información, competencia desleal, debida diligencia (due diligence) y pruebas de confiabilidad para empresas en Colombia."
 type: service
 related:
-  - { label: "Polígrafo laboral", href: "/poligrafo-laboral/" }
+  - { label: "Estudios de Seguridad y Confiabilidad (Poligrafía)", href: "/examen-de-poligrafia/" }
   - { label: "Barrido electrónico", href: "/barrido-electronico/" }
   - { label: "Abogados Bogotá", href: "/abogados-bogota/" }
 order: 2
 icon: "building"
 heroImage: "/images/servicio-investigacion-corporativa.jpg"
+infographics: ["investigar", "proceso"]
 ---
 
 ## Protección Integral de Activos, Auditoría Forense y Gestión del Riesgo Corporativo

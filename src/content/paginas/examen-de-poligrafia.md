@@ -1,5 +1,5 @@
 ---
-title: "Estudios de Seguridad y Pruebas de Confiabilidad"
+title: "Estudios de Seguridad y Confiabilidad (Poligrafía)"
 seoTitle: "Estudios de seguridad y poligrafía empresarial | Pruebas de confiabilidad | CENIPSA"
 eyebrow: "Prevenir"
 description: "Estudios de seguridad pre-empleo, poligrafía empresarial (ingreso, rutina y específica), debida diligencia para cargos de alta dirección y verificación de personal doméstico y de custodia."

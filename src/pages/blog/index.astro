@@ -3,11 +3,8 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import PageHero from '@/components/PageHero.astro';
 import CtaBanner from '@/components/CtaBanner.astro';
-import PostCard from '@/components/PostCard.astro';
+import BlogIndexBody from '@/components/BlogIndexBody.astro';
 import { breadcrumbSchema } from '@/lib/seo';
-import { allPosts } from '@/lib/blog';
-
-const posts = await allPosts();
 
 const crumbs = [
   { name: 'Inicio', path: '/' },
@@ -24,18 +21,13 @@ const crumbs = [
 >
   <PageHero
     eyebrow="Blog"
-    title="Noticias y actualizaciones"
-    description="Análisis y guías de nuestros investigadores y abogados: investigación privada, poligrafía, rastreo satelital GPS y derecho en Colombia."
+    title="Análisis y Contenido Experto"
+    description="Guías y análisis de nuestros investigadores y abogados sobre investigación privada, prevención del fraude y derecho en Colombia."
     crumbs={crumbs}
+    image="/images/blog-cenipsa-auditoria.jpg"
   />
 
-  <section class="section-pad">
-    <div class="container-site">
-      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {posts.map((post, i) => <PostCard post={post} index={i} lang="es" />)}
-      </div>
-    </div>
-  </section>
+  <BlogIndexBody />
 
   <CtaBanner />
 </BaseLayout>

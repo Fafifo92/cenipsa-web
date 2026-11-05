@@ -1,0 +1,62 @@
+---
+/**
+ * Video de YouTube con «fachada»: muestra la miniatura y solo carga el
+ * reproductor (youtube-nocookie, sin cookies de seguimiento) al hacer clic.
+ * No penaliza la velocidad de la página.
+ */
+export interface Props {
+  id: string;
+  title: string;
+  start?: number;
+}
+const { id, title, start = 0 } = Astro.props;
+const thumb = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+---
+
+<div class="video-facade group relative aspect-video overflow-hidden rounded-2xl bg-ink-950 shadow-lift" data-video-id={id} data-video-start={start} data-video-title={title}>
+  <img src={thumb} alt="" width="480" height="360" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-105" />
+  <div class="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-ink-950/20 to-transparent" aria-hidden="true"></div>
+  <button type="button" class="absolute inset-0 flex items-center justify-center" aria-label={`Reproducir video: ${title}`}>
+    <span class="play-ring flex h-20 w-20 items-center justify-center rounded-full bg-gold-400 text-ink-950 shadow-lift transition-transform duration-300 group-hover:scale-110">
+      <svg class="ml-1 h-8 w-8" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5Z" /></svg>
+    </span>
+  </button>
+  <p class="pointer-events-none absolute bottom-4 left-5 right-5 font-display text-lg font-semibold text-white">{title}</p>
+</div>
+
+<style>
+  .play-ring {
+    animation: play-pulse 2.4s var(--ease-out-expo) infinite;
+  }
+  @keyframes play-pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgb(201 165 54 / 0.55);
+    }
+    70% {
+      box-shadow: 0 0 0 18px rgb(201 165 54 / 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgb(201 165 54 / 0);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .play-ring {
+      animation: none;
+    }
+  }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-video-id]').forEach((box) => {
+    box.querySelector('button')?.addEventListener('click', () => {
+      const iframe = document.createElement('iframe');
+      const { videoId, videoStart, videoTitle } = box.dataset;
+      iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&start=${videoStart ?? 0}`;
+      iframe.title = videoTitle ?? 'Video';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      iframe.className = 'absolute inset-0 h-full w-full';
+      box.replaceChildren(iframe);
+    });
+  });
+</script>

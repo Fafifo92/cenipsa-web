@@ -1,5 +1,5 @@
 ---
-title: "Polygraph Testing"
+title: "Security and Reliability Studies (Polygraph)"
 seoTitle: "Polygraph Testing in Bogotá, Colombia | CENIPSA"
 description: "Certified polygraph examinations in Bogotá, Colombia: pre-employment, routine and investigative tests. Confidential, non-invasive and legally sound."
 type: service

@@ -3,11 +3,8 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import PageHero from '@/components/PageHero.astro';
 import CtaBanner from '@/components/CtaBanner.astro';
-import PostCard from '@/components/PostCard.astro';
+import BlogIndexBody from '@/components/BlogIndexBody.astro';
 import BlogSpanishNotice from '@/components/BlogSpanishNotice.astro';
-import { allPosts } from '@/lib/blog';
-
-const posts = await allPosts();
 
 const crumbs = [
   { name: 'Home', path: '/en/' },
@@ -26,19 +23,14 @@ const crumbs = [
 >
   <PageHero
     eyebrow="Blog"
-    title="News and updates"
+    title="Analysis and Expert Content"
     description="Analysis and guides from our investigators and lawyers. Articles are written in Spanish by our editorial team."
     crumbs={crumbs}
     lang="en"
+    image="/images/blog-cenipsa-auditoria.jpg"
   />
 
-  <section class="section-pad">
-    <div class="container-site">
-      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {posts.map((post, i) => <PostCard post={post} index={i} lang="en" />)}
-      </div>
-    </div>
-  </section>
+  <BlogIndexBody lang="en" />
 
   <CtaBanner lang="en" />
   <BlogSpanishNotice esUrl="/blog/" />

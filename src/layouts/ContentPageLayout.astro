@@ -10,6 +10,9 @@ import BaseLayout from './BaseLayout.astro';
 import PageHero from '@/components/PageHero.astro';
 import CtaBanner from '@/components/CtaBanner.astro';
 import LegalSupport from '@/components/LegalSupport.astro';
+import InvestigarFlow from '@/components/InvestigarFlow.astro';
+import ProcessSix from '@/components/ProcessSix.astro';
+import TeamPentagon from '@/components/TeamPentagon.astro';
 import { serviceSchema, breadcrumbSchema, metaDescription } from '@/lib/seo';
 import { altLocaleFor, CONTACT } from '@/lib/site';
 
@@ -142,6 +145,18 @@ const seoTitle =
       </div>
     </div>
   </article>
+
+  {
+    data.infographics.length > 0 && (
+      <section class="section-pad pt-0" aria-label={lang === 'es' ? 'Infografías' : 'Infographics'}>
+        <div class="container-site space-y-10">
+          {data.infographics.map((g) =>
+            g === 'investigar' ? <InvestigarFlow lang={lang} /> : g === 'proceso' ? <ProcessSix lang={lang} /> : <TeamPentagon lang={lang} />
+          )}
+        </div>
+      </section>
+    )
+  }
 
   {(data.type === 'service' || data.type === 'landing') && <LegalSupport entryId={entry.id} lang={lang} />}
 

@@ -42,7 +42,7 @@ const disciplines = [
   {
     n: '03',
     title: 'Ciencias sociales y comportamentales',
-    text: 'Sociología, trabajo social, psicología forense y antropología aplicadas a la investigación judicial y los derechos humanos.',
+    text: 'Sociología, trabajo social forense, psicología forense y antropología aplicadas a la investigación judicial y los derechos humanos.',
   },
   {
     n: '04',
@@ -65,7 +65,7 @@ const disciplines = [
 >
   <!-- ============ HERO ============ -->
   <section class="relative flex min-h-[92vh] items-center overflow-hidden bg-ink-950 pt-32 pb-20">
-    <HeroImage name="plaza-bolivar" class="object-[center_35%] brightness-[1.15] contrast-[1.05] saturate-[1.1]" />
+    <HeroImage name="plaza-bolivar" class="hero-kenburns object-[center_35%] brightness-[1.15] contrast-[1.05] saturate-[1.1]" />
     <div class="absolute inset-0 bg-gradient-to-r from-ink-950/50 via-ink-950/25 to-ink-950/10" aria-hidden="true"></div>
 
     <div class="container-site text-on-photo relative">
@@ -82,11 +82,11 @@ const disciplines = [
         asesoría legal especializada para empresas y personas en Colombia.
       </p>
       <div class="mt-9 flex flex-wrap items-center gap-4" data-reveal style="--reveal-delay:300ms">
-        <a href="/servicios/#empresas" class="btn-gold">
+        <a href="/investigacion-corporativa/" class="btn-gold">
           <Icon name="building" class="h-5 w-5" />
           Soluciones para empresas
         </a>
-        <a href="/servicios/#personas" class="btn-outline-light">
+        <a href="/investigacion-personal/" class="btn-navy">
           <Icon name="users" class="h-5 w-5" />
           Orientación para personas
         </a>
@@ -153,15 +153,15 @@ const disciplines = [
   <section class="bg-mist section-pad" aria-labelledby="legal-title">
     <div class="container-site grid items-center gap-14 lg:grid-cols-[1.05fr_1fr]">
       <div data-reveal="left">
-        <div class="relative overflow-hidden rounded-3xl bg-ink-950 p-10 shadow-lift md:p-14">
-          <img src="/images/despacho-juridico.jpg" alt="" width="1600" height="1067" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover" />
-          <div class="absolute inset-0 bg-gradient-to-t from-ink-950/75 via-ink-950/20 to-transparent" aria-hidden="true"></div>
-          <p class="relative font-display text-2xl leading-snug font-medium text-white md:text-[1.7rem]">
+        <figure class="balanza-card group relative overflow-hidden rounded-3xl bg-ink-950 shadow-lift">
+          <img src="/images/cenipsa-balanza.jpg" alt="Balanza de la justicia con expedientes de investigación forense frente a la Constitución Política de Colombia" width="929" height="715" loading="lazy" decoding="async" class="block h-auto w-full transition-transform duration-[1.6s] [transition-timing-function:var(--ease-out-expo)] group-hover:scale-[1.04]" />
+          <figcaption class="border-t border-gold-400/40 bg-ink-950 px-7 py-6 md:px-9">
+            <p class="font-display text-lg leading-snug font-medium text-white md:text-xl">
             «No entregamos solo un informe: la evidencia se obtiene pensando, desde el primer día, en cómo
             sostenerla ante una autoridad.»
           </p>
-          <p class="relative mt-6 text-[0.85rem] font-semibold tracking-[0.16em] text-gold-400 uppercase">{SITE.legalName}</p>
-        </div>
+          </figcaption>
+        </figure>
       </div>
       <div data-reveal="right">
         <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>Investigación + derecho</p>
@@ -201,7 +201,7 @@ const disciplines = [
       <ul class="mt-12 grid gap-6 lg:grid-cols-3">
         {
           PILLARS_ES.map((p, i) => (
-            <li class="flex flex-col rounded-2xl bg-brand-700 p-8 text-white shadow-lift" data-reveal style={`--reveal-delay:${i * 100}ms`}>
+            <li class="sheen flex flex-col rounded-2xl bg-brand-700 p-8 text-white shadow-lift transition-transform duration-500 hover:-translate-y-1.5" data-reveal style={`--reveal-delay:${i * 100}ms`}>
               <div class="flex items-center gap-4">
                 <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-gold-400">
                   <Icon name={p.icon} class="h-6 w-6" />

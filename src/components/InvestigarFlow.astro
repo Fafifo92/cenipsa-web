@@ -1,0 +1,171 @@
+---
+/**
+ * Infografía «Investigar: Rigor Científico y Esclarecimiento» (sin «Pilar 2»,
+ * a pedido de la firma). Reconstruida en HTML/SVG a partir de su borrador:
+ * insumos → 4 fases → dictamen, con conectores animados y realimentación.
+ */
+import Icon from './Icon.astro';
+
+export interface Props {
+  lang?: 'es' | 'en';
+}
+const { lang = 'es' } = Astro.props;
+const isEs = lang === 'es';
+
+const steps = isEs
+  ? [
+      { icon: 'target', title: 'Investigación Patrimonial y Corporativa', text: 'Rastreo de activos, ubicaciones y redes de vínculos.' },
+      { icon: 'server', title: 'Análisis Forense Digital', text: 'Trazabilidad de datos, recuperación y correlación de IPs y transacciones.' },
+      { icon: 'fingerprint', title: 'Inteligencia OSINT y Criminalística', text: 'Búsqueda en fuentes abiertas, balística, documentología y dactilotecnia.' },
+      { icon: 'certificate', title: 'Dictamen Pericial', text: 'Consolidación de informes con alto valor probatorio.' },
+    ]
+  : [
+      { icon: 'target', title: 'Asset and Corporate Investigation', text: 'Tracing assets, locations and networks of links.' },
+      { icon: 'server', title: 'Digital Forensic Analysis', text: 'Data traceability, recovery and correlation of IPs and transactions.' },
+      { icon: 'fingerprint', title: 'OSINT Intelligence and Criminalistics', text: 'Open-source research, ballistics, document examination and fingerprints.' },
+      { icon: 'certificate', title: 'Expert Report', text: 'Consolidated reports with high evidentiary value.' },
+    ];
+const t = isEs
+  ? {
+      title: 'Investigar',
+      subtitle: 'Rigor Científico y Esclarecimiento',
+      input: 'Hechos e insumos del caso',
+      output: 'Evidencia útil',
+      callout: 'Cadena de custodia intacta.',
+      calloutText: 'Sin alertas tempranas al sujeto investigado.',
+    }
+  : {
+      title: 'Investigate',
+      subtitle: 'Scientific Rigor and Clarification',
+      input: 'Case facts and inputs',
+      output: 'Useful evidence',
+      callout: 'Chain of custody intact.',
+      calloutText: 'No early alerts to the subject under investigation.',
+    };
+---
+
+<figure class="infographic relative overflow-hidden rounded-3xl bg-ink-950 px-5 py-10 text-white shadow-lift md:px-10 md:py-14" data-reveal>
+  <div class="infographic-grid pointer-events-none absolute inset-0 opacity-[0.07]" aria-hidden="true"></div>
+  <figcaption class="relative">
+    <p class="font-display text-2xl font-semibold md:text-3xl">
+      <span class="text-gold-400 uppercase tracking-wide">{t.title}:</span> {t.subtitle}
+    </p>
+  </figcaption>
+
+  <div class="relative mt-10 grid items-stretch gap-4 lg:grid-cols-[auto_repeat(4,minmax(0,1fr))_auto] lg:gap-3">
+    <!-- Entrada -->
+    <div class="flow-node flex items-center gap-3 lg:flex-col lg:justify-center lg:text-center">
+      <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-gold-400/50 bg-white/5 text-gold-400">
+        <Icon name="funnel" class="h-7 w-7" />
+      </span>
+      <span class="text-[0.8rem] font-semibold text-ink-200 lg:max-w-[6.5rem]">{t.input}</span>
+    </div>
+
+    {
+      steps.map((s, i) => (
+        <div class="flow-node relative" style={`--i:${i + 1}`}>
+          <span class="flow-link hidden lg:block" aria-hidden="true" />
+          <div class="flex h-full gap-4 rounded-2xl border border-brand-500/40 bg-brand-700/40 p-5 transition-colors duration-500 hover:border-gold-400/70 lg:flex-col lg:text-center">
+            <span class="relative mx-0 flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-white/15 bg-brand-700 text-gold-300 lg:mx-auto">
+              <Icon name={s.icon} class="h-7 w-7" />
+            </span>
+            <span>
+              <span class="block font-semibold leading-snug">
+                <span class="text-gold-400">{i + 1}.</span> {s.title}
+              </span>
+              <span class="mt-1.5 block text-[0.86rem] leading-relaxed text-ink-200">{s.text}</span>
+            </span>
+          </div>
+        </div>
+      ))
+    }
+
+    <!-- Salida -->
+    <div class="flow-node relative flex items-center gap-3 lg:flex-col lg:justify-center lg:text-center" style="--i:5">
+      <span class="flow-link hidden lg:block" aria-hidden="true" />
+      <span class="output-glow flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-gold-400 bg-gold-400/15 text-gold-300">
+        <Icon name="document" class="h-7 w-7" />
+      </span>
+      <span class="text-[0.8rem] font-semibold text-gold-300 lg:max-w-[6.5rem]">{t.output}</span>
+    </div>
+  </div>
+
+  <div class="relative mt-8 flex justify-end">
+    <p class="max-w-sm rounded-xl border border-gold-400/70 bg-gold-400/10 px-5 py-4 text-center">
+      <span class="block font-display text-lg font-semibold text-gold-300">{t.callout}</span>
+      <span class="mt-1 block text-[0.95rem] text-white/90">{t.calloutText}</span>
+    </p>
+  </div>
+</figure>
+
+<style>
+  .infographic-grid {
+    background-image:
+      linear-gradient(rgb(255 255 255 / 0.6) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(255 255 255 / 0.6) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(ellipse at 50% 40%, black 30%, transparent 75%);
+  }
+  /* Conector entre fases: línea dorada con un pulso de luz que recorre el flujo */
+  .flow-link {
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    width: 0.75rem;
+    height: 2px;
+    background: var(--color-gold-400);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.6s var(--ease-out-expo);
+    transition-delay: calc(var(--i, 1) * 160ms + 200ms);
+  }
+  .flow-link::after {
+    content: '';
+    position: absolute;
+    right: -4px;
+    top: -3px;
+    width: 8px;
+    height: 8px;
+    border-radius: 9999px;
+    background: var(--color-gold-300);
+    box-shadow: 0 0 10px var(--color-gold-400);
+  }
+  .infographic.is-visible .flow-link,
+  :global(html:not(.js)) .flow-link {
+    transform: scaleX(1);
+  }
+  .flow-node {
+    opacity: 1;
+  }
+  :global(html.js) .infographic:not(.is-visible) .flow-node {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  :global(html.js) .flow-node {
+    transition:
+      opacity 0.7s var(--ease-out-expo),
+      transform 0.7s var(--ease-out-expo);
+    transition-delay: calc(var(--i, 0) * 160ms);
+  }
+  .output-glow {
+    animation: glow 2.8s ease-in-out infinite;
+  }
+  @keyframes glow {
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 rgb(201 165 54 / 0.35);
+    }
+    50% {
+      box-shadow: 0 0 22px 4px rgb(201 165 54 / 0.35);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .output-glow {
+      animation: none;
+    }
+    .flow-link {
+      transform: scaleX(1);
+      transition: none;
+    }
+  }
+</style>

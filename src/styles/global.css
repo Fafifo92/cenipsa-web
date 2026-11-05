@@ -153,7 +153,7 @@
 }
 
 /* Los botones sobre foto no llevan sombra de texto (fondo sólido propio). */
-.text-on-photo :is(.btn-gold, .btn-primary, .btn-outline, .btn-outline-light) {
+.text-on-photo :is(.btn-gold, .btn-primary, .btn-outline, .btn-outline-light, .btn-navy) {
   text-shadow: none;
 }
 
@@ -205,9 +205,11 @@
 html.js [data-reveal] {
   opacity: 0;
   transform: translateY(26px);
+  filter: blur(5px);
   transition:
     opacity 0.9s var(--ease-out-expo),
-    transform 0.9s var(--ease-out-expo);
+    transform 0.9s var(--ease-out-expo),
+    filter 0.9s var(--ease-out-expo);
   transition-delay: var(--reveal-delay, 0ms);
 }
 
@@ -218,12 +220,137 @@ html.js [data-reveal='zoom'] { transform: scale(0.94); }
 html.js [data-reveal].is-visible {
   opacity: 1;
   transform: none;
+  filter: none;
+}
+
+/* La línea dorada de los «eyebrow» se dibuja cuando su bloque aparece */
+html.js [data-reveal] .eyebrow > span[aria-hidden='true']:first-child {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.9s var(--ease-out-expo);
+  transition-delay: calc(var(--reveal-delay, 0ms) + 250ms);
+}
+html.js [data-reveal].is-visible .eyebrow > span[aria-hidden='true']:first-child {
+  transform: scaleX(1);
 }
 
 @media (prefers-reduced-motion: reduce) {
   html.js [data-reveal] {
     opacity: 1;
     transform: none;
+    filter: none;
+  }
+  html.js [data-reveal] .eyebrow > span[aria-hidden='true']:first-child {
+    transform: none;
+  }
+}
+
+/* ============================================================
+   Transiciones entre páginas (View Transitions entre documentos).
+   Navegación normal (sin SPA): el chat de Tawk no se ve afectado.
+   Navegadores sin soporte simplemente cargan la página.
+   ============================================================ */
+@view-transition {
+  navigation: auto;
+}
+#site-header {
+  view-transition-name: site-header;
+}
+::view-transition-old(root) {
+  animation: vt-out 0.22s ease both;
+}
+::view-transition-new(root) {
+  animation: vt-in 0.5s var(--ease-out-expo) both;
+}
+@keyframes vt-out {
+  to {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+@keyframes vt-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}
+
+/* ============================================================
+   Microanimaciones
+   ============================================================ */
+/* Acercamiento lento de la foto del hero de la portada (efecto Ken Burns) */
+.hero-kenburns {
+  animation: kenburns 16s var(--ease-out-expo) both;
+}
+@keyframes kenburns {
+  from {
+    transform: scale(1.12);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Destello que recorre tarjetas y botones dorados al pasar el cursor */
+@utility sheen {
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg, transparent 35%, rgb(255 255 255 / 0.22) 50%, transparent 65%);
+    transform: translateX(-120%);
+    transition: transform 0.9s var(--ease-out-expo);
+    pointer-events: none;
+  }
+  &:hover::after {
+    transform: translateX(120%);
+  }
+}
+
+/* Línea de tiempo de la ruta de contratación: conectores que se dibujan y números que aparecen */
+html.js .route-timeline > li .route-connector {
+  transform: scale(0);
+  transform-origin: top left;
+  transition: transform 0.8s var(--ease-out-expo);
+  transition-delay: calc(var(--reveal-delay, 0ms) + 350ms);
+}
+html.js .route-timeline > li.is-visible .route-connector {
+  transform: none;
+}
+html.js .route-timeline > li .route-dot {
+  transform: scale(0.4);
+  opacity: 0;
+  transition:
+    transform 0.6s var(--ease-spring),
+    opacity 0.4s ease;
+  transition-delay: calc(var(--reveal-delay, 0ms) + 120ms);
+}
+html.js .route-timeline > li.is-visible .route-dot {
+  transform: none;
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-kenburns {
+    animation: none;
+  }
+  .sheen::after,
+  .btn-primary::after,
+  .btn-gold::after {
+    display: none;
+  }
+  html.js .route-timeline > li .route-connector,
+  html.js .route-timeline > li .route-dot {
+    transform: none;
+    opacity: 1;
   }
 }
 
@@ -311,13 +438,16 @@ html.js [data-reveal].is-visible {
   @apply inline-flex items-center justify-center gap-2.5 rounded-lg px-7 py-3.5 text-[0.95rem] font-semibold tracking-wide transition-all duration-300;
 }
 .btn-primary {
-  @apply btn bg-gold-400 text-ink-950 shadow-soft hover:-translate-y-0.5 hover:bg-gold-300 hover:shadow-lift active:translate-y-0;
+  @apply btn sheen bg-gold-400 text-ink-950 shadow-soft hover:-translate-y-0.5 hover:bg-gold-300 hover:shadow-lift active:translate-y-0;
 }
 .btn-gold {
-  @apply btn bg-gold-400 text-ink-950 shadow-soft hover:-translate-y-0.5 hover:bg-gold-300 hover:shadow-lift active:translate-y-0;
+  @apply btn sheen bg-gold-400 text-ink-950 shadow-soft hover:-translate-y-0.5 hover:bg-gold-300 hover:shadow-lift active:translate-y-0;
 }
 .btn-outline {
   @apply btn border border-ink-950/25 bg-transparent text-ink-950 hover:border-ink-950 hover:bg-ink-950 hover:text-white;
+}
+.btn-navy {
+  @apply btn bg-ink-950 text-white ring-1 ring-white/25 shadow-soft hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-lift active:translate-y-0;
 }
 .btn-outline-light {
   @apply btn border border-white/30 bg-white/5 text-white backdrop-blur-sm hover:border-white/70 hover:bg-white/10;

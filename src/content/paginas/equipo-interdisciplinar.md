@@ -10,6 +10,7 @@ related:
   - { label: "Cómo trabajamos", href: "/como-trabajamos/" }
 order: 20
 heroImage: "/images/nosotros-equipo.jpg"
+infographics: ["equipo"]
 ---
 
 Las investigaciones jurídicas —tanto corporativas como personales— enfrentan complejos desafíos técnicos, legales y humanos. Cuando existen afectaciones psicológicas, daños morales o vulneraciones a los derechos fundamentales, la búsqueda de la verdad exige estrategias investigativas rigurosas, metódicas y adaptadas a cada caso para lograr una efectiva reparación integral.
@@ -28,7 +29,7 @@ Los investigadores de CENIPSA integran conocimientos multidisciplinarios en crim
 
 ### Ciencias Sociales y Derechos Humanos
 
-Comprendemos la dimensión humana del proceso probatorio. Disponemos de profesionales en sociología, trabajo social, antropología e historia, especializados en investigación judicial, análisis del comportamiento social y protección de los derechos humanos.
+Comprendemos la dimensión humana del proceso probatorio. Disponemos de profesionales en sociología, trabajo social, trabajo social forense, antropología e historia, especializados en investigación judicial, análisis del comportamiento social y protección de los derechos humanos.
 
 ### Ciberseguridad e Informática Forense
 

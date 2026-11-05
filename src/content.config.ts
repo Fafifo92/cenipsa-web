@@ -40,6 +40,8 @@ const paginas = defineCollection({
     icon: z.string().optional(),
     /** Foto de fondo del hero (ruta pública). */
     heroImage: z.string().optional(),
+    /** Infografías animadas que se muestran bajo el contenido. */
+    infographics: z.array(z.enum(['investigar', 'proceso', 'equipo'])).default([]),
   }),
 });
 

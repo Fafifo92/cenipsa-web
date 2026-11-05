@@ -1,0 +1,149 @@
+---
+/**
+ * Infografía «Nuestro Proceso: Transparencia y Reserva Estricta» (6 pasos).
+ * Reconstruida a partir del borrador de la firma, con los textos corregidos
+ * de los pasos 4 y 5 (OBSERVACIONES 5). Pasos 3 y 6 destacados en dorado.
+ */
+import Icon from './Icon.astro';
+
+export interface Props {
+  lang?: 'es' | 'en';
+}
+const { lang = 'es' } = Astro.props;
+const isEs = lang === 'es';
+
+const steps = isEs
+  ? [
+      { icon: 'lock', title: 'Recepción Confidencial', text: 'Evaluación inicial de viabilidad técnica y legal.' },
+      { icon: 'user-search', title: 'Análisis de Caso', text: 'Estructuración de propuesta técnica, metodología y cronograma.' },
+      { icon: 'sign', title: 'Contratación', text: 'Firma bilateral y Acuerdo de Confidencialidad (NDA).', key: true },
+      { icon: 'gear', title: 'Desarrollo Operativo', text: 'Hallazgos de investigación y prejurídicos.' },
+      { icon: 'document', title: 'Informe y Socialización', text: 'Entrega de evidencias útiles para la toma de decisiones informadas.' },
+      { icon: 'scale', title: 'Traslado Jurídico', text: 'Diseño de hipótesis procesales e inicio de representación legal.', key: true },
+    ]
+  : [
+      { icon: 'lock', title: 'Confidential Intake', text: 'Initial technical and legal feasibility assessment.' },
+      { icon: 'user-search', title: 'Case Analysis', text: 'Technical proposal, methodology and timeline.' },
+      { icon: 'sign', title: 'Engagement', text: 'Bilateral signature and Non-Disclosure Agreement (NDA).', key: true },
+      { icon: 'gear', title: 'Operational Execution', text: 'Investigative and pre-litigation findings.' },
+      { icon: 'document', title: 'Report and Briefing', text: 'Delivery of useful evidence for informed decision-making.' },
+      { icon: 'scale', title: 'Legal Referral', text: 'Procedural hypotheses and start of legal representation.', key: true },
+    ];
+const t = isEs
+  ? { title: 'Nuestro Proceso: Transparencia y Reserva Estricta', step: 'Paso' }
+  : { title: 'Our Process: Transparency and Strict Confidentiality', step: 'Step' };
+---
+
+<figure class="process-six relative overflow-hidden rounded-3xl bg-ink-950 px-5 py-10 text-white shadow-lift md:px-10 md:py-14" data-reveal>
+  <div class="ps-grid pointer-events-none absolute inset-0 opacity-[0.07]" aria-hidden="true"></div>
+  <figcaption class="relative text-center font-display text-2xl font-semibold md:text-3xl">{t.title}</figcaption>
+
+  <div class="relative mt-10">
+    <!-- Riel dorado con pulso de luz que recorre los 6 pasos (escritorio) -->
+    <span class="ps-rail hidden lg:block" aria-hidden="true"><span class="ps-pulse"></span></span>
+    <ol class="relative grid gap-4 sm:grid-cols-2 lg:grid-cols-6 lg:gap-3">
+      {
+        steps.map((s, i) => (
+          <li class="ps-step flex flex-col" style={`--i:${i}`}>
+            <span
+              class:list={[
+                'relative z-10 mx-auto flex h-12 w-12 items-center justify-center rounded-xl border',
+                s.key ? 'border-gold-400 bg-gold-400 text-ink-950' : 'border-gold-400/60 bg-ink-950 text-gold-300',
+              ]}
+            >
+              <Icon name={s.icon} class="h-6 w-6" />
+            </span>
+            <div
+              class:list={[
+                'mt-4 flex flex-1 flex-col overflow-hidden rounded-2xl border text-center transition-transform duration-500 hover:-translate-y-1',
+                s.key ? 'ps-key border-gold-400' : 'border-brand-500/50',
+              ]}
+            >
+              <div class:list={['px-3 pt-4 pb-3', s.key ? 'bg-gradient-to-b from-gold-400/35 to-gold-400/10' : 'bg-brand-700/60']}>
+                <p class="text-[0.85rem] text-gold-300">[{t.step} {i + 1}]</p>
+                <p class="mt-1 font-display text-[1.08rem] leading-snug font-semibold">{s.title}</p>
+              </div>
+              <p class="flex-1 bg-black/20 px-3 py-4 text-[0.88rem] leading-relaxed text-ink-100">{s.text}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</figure>
+
+<style>
+  .ps-grid {
+    background-image:
+      linear-gradient(rgb(255 255 255 / 0.6) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(255 255 255 / 0.6) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(ellipse at 50% 40%, black 30%, transparent 75%);
+  }
+  .ps-rail {
+    position: absolute;
+    left: 8%;
+    right: 8%;
+    top: 1.5rem;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-gold-400) 8%, var(--color-gold-400) 92%, transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 1.4s var(--ease-out-expo) 0.2s;
+  }
+  .process-six.is-visible .ps-rail,
+  :global(html:not(.js)) .ps-rail {
+    transform: scaleX(1);
+  }
+  .ps-pulse {
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 9999px;
+    background: var(--color-gold-200);
+    box-shadow: 0 0 14px 3px var(--color-gold-400);
+    animation: ps-travel 5.5s ease-in-out infinite 1.6s;
+    opacity: 0;
+  }
+  @keyframes ps-travel {
+    0% {
+      left: 0;
+      opacity: 0;
+    }
+    8% {
+      opacity: 1;
+    }
+    92% {
+      opacity: 1;
+    }
+    100% {
+      left: calc(100% - 10px);
+      opacity: 0;
+    }
+  }
+  .ps-key {
+    box-shadow: 0 0 28px -6px rgb(201 165 54 / 0.55);
+  }
+  :global(html.js) .process-six:not(.is-visible) .ps-step {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  :global(html.js) .ps-step {
+    transition:
+      opacity 0.7s var(--ease-out-expo),
+      transform 0.7s var(--ease-out-expo);
+    transition-delay: calc(var(--i, 0) * 120ms + 150ms);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ps-pulse {
+      animation: none;
+      display: none;
+    }
+    .ps-rail {
+      transform: scaleX(1);
+      transition: none;
+    }
+  }
+</style>

@@ -5,8 +5,9 @@ eyebrow: "Investigar"
 description: "Estudios de solvencia, verificaciones pre-conyugales, investigación en litigios de familia y custodia, y búsqueda de personas y herederos ausentes, con estricta confidencialidad."
 type: service
 related:
-  - { label: "Detectives privados Bogotá", href: "/detectives-privados-bogota-2/" }
-  - { label: "Investigadores privados Bogotá", href: "/investigadores-privados-bogota-2/" }
+  - { label: "Derecho de Familia", href: "/derecho-de-familia/" }
+  - { label: "Abogados de Sucesiones", href: "/abogados-sucesiones-bogota/" }
+  - { label: "Ubicación de Partes Procesales y Herederos", href: "/ubicacion-de-personas-para-notificacion-judicial/" }
 order: 1
 icon: "user-search"
 heroImage: "/images/servicio-investigacion-personal.jpg"

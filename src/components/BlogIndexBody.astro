@@ -1,0 +1,179 @@
+---
+/**
+ * Cuerpo del índice del blog (ES/EN): video corporativo + artículo
+ * destacado, filtros por tema con buscador y rejilla de artículos.
+ * El filtrado es progresivo: sin JS se ven todos los artículos.
+ */
+import PostCard from './PostCard.astro';
+import VideoFacade from './VideoFacade.astro';
+import { allPosts, BLOG_TOPICS, postTopic } from '@/lib/blog';
+
+export interface Props {
+  lang?: 'es' | 'en';
+}
+const { lang = 'es' } = Astro.props;
+const isEs = lang === 'es';
+const posts = await allPosts();
+const [featured, ...rest] = posts;
+const present = new Set(posts.map(postTopic));
+const topics = BLOG_TOPICS[lang].filter((t) => present.has(t.id));
+const counts = Object.fromEntries(topics.map((t) => [t.id, posts.filter((p) => postTopic(p) === t.id).length]));
+
+const t = isEs
+  ? {
+      videoEyebrow: 'Video corporativo',
+      videoTitle: 'Conozca CENIPSA S.A.S.',
+      videoText: 'Inteligencia investigativa y jurídica: así trabajamos para convertir hechos complejos en evidencia útil.',
+      latest: 'Lo más reciente',
+      all: 'Todos',
+      search: 'Buscar artículos…',
+      searchLabel: 'Buscar en el blog',
+      empty: 'No hay artículos que coincidan con su búsqueda.',
+      count: 'artículos',
+    }
+  : {
+      videoEyebrow: 'Corporate video',
+      videoTitle: 'Meet CENIPSA S.A.S.',
+      videoText: 'Investigative and legal intelligence: how we turn complex facts into useful evidence.',
+      latest: 'Latest',
+      all: 'All',
+      search: 'Search articles…',
+      searchLabel: 'Search the blog',
+      empty: 'No articles match your search.',
+      count: 'articles',
+    };
+---
+
+<section class="section-pad" aria-labelledby="blog-featured">
+  <div class="container-site grid items-stretch gap-8 lg:grid-cols-[1.15fr_1fr]">
+    <div data-reveal="left">
+      <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>{t.videoEyebrow}</p>
+      <h2 id="blog-featured" class="mt-3 font-display text-2xl font-semibold text-ink-950 md:text-3xl">{t.videoTitle}</h2>
+      <p class="mt-2 mb-6 text-[0.98rem] text-ink-700">{t.videoText}</p>
+      <VideoFacade id="M58IAt_LMCY" start={15} title={t.videoTitle} />
+    </div>
+    <div class="flex flex-col" data-reveal="right">
+      <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>{t.latest}</p>
+      <div class="mt-5 flex-1">
+        {featured && <PostCard post={featured} lang={lang} featured />}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-mist section-pad pt-12" aria-label={t.searchLabel}>
+  <div class="container-site" data-blog-filter>
+    <div class="sticky top-[4.6rem] z-20 -mx-2 rounded-2xl bg-mist/90 px-2 py-3 backdrop-blur-md">
+      <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+        <div class="flex flex-wrap gap-2" role="group" aria-label={t.searchLabel}>
+          <button type="button" class="topic-chip is-active" data-topic="all" aria-pressed="true">{t.all} <span>{posts.length - 1}</span></button>
+          {topics.map((tp) => (
+            <button type="button" class="topic-chip" data-topic={tp.id} aria-pressed="false">
+              {tp.label} <span>{counts[tp.id]}</span>
+            </button>
+          ))}
+        </div>
+        <label class="relative block lg:w-72">
+          <span class="sr-only">{t.searchLabel}</span>
+          <svg class="pointer-events-none absolute top-1/2 left-3.5 h-4 w-4 -translate-y-1/2 text-ink-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" stroke-linecap="round" /></svg>
+          <input type="search" class="field pl-10" placeholder={t.search} data-blog-search />
+        </label>
+      </div>
+    </div>
+
+    <div class="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3" data-blog-grid>
+      {rest.map((post, i) => <PostCard post={post} index={i} lang={lang} />)}
+    </div>
+    <p class="mt-10 hidden text-center text-ink-600" data-blog-empty>{t.empty}</p>
+  </div>
+</section>
+
+<style>
+  .topic-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    border-radius: 9999px;
+    border: 1px solid rgb(11 37 56 / 0.15);
+    background: #fff;
+    padding: 0.45rem 0.95rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-ink-800);
+    transition:
+      background-color 0.3s,
+      color 0.3s,
+      border-color 0.3s,
+      transform 0.3s var(--ease-out-expo);
+  }
+  .topic-chip span {
+    font-size: 0.72rem;
+    opacity: 0.6;
+  }
+  .topic-chip:hover {
+    border-color: var(--color-gold-400);
+    transform: translateY(-1px);
+  }
+  .topic-chip.is-active {
+    background: var(--color-ink-950);
+    border-color: var(--color-ink-950);
+    color: #fff;
+  }
+  :global(.post-card.is-filtered-out) {
+    display: none;
+  }
+  :global(.post-card.is-filter-in) {
+    animation: card-in 0.5s var(--ease-out-expo) both;
+  }
+  @keyframes card-in {
+    from {
+      opacity: 0;
+      transform: translateY(12px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>
+
+<script>
+  const root = document.querySelector<HTMLElement>('[data-blog-filter]');
+  if (root) {
+    const chips = [...root.querySelectorAll<HTMLButtonElement>('.topic-chip')];
+    const cards = [...root.querySelectorAll<HTMLElement>('[data-blog-grid] .post-card')];
+    const search = root.querySelector<HTMLInputElement>('[data-blog-search]');
+    const empty = root.querySelector<HTMLElement>('[data-blog-empty]');
+    let topic = 'all';
+
+    const apply = () => {
+      const q = (search?.value ?? '').trim().toLowerCase();
+      let shown = 0;
+      cards.forEach((card) => {
+        const ok = (topic === 'all' || card.dataset.topic === topic) && (!q || (card.dataset.title ?? '').includes(q));
+        card.classList.toggle('is-filtered-out', !ok);
+        if (ok) {
+          shown++;
+          card.classList.add('is-visible');
+          card.classList.remove('is-filter-in');
+          void card.offsetWidth; // reinicia la animación de entrada
+          card.classList.add('is-filter-in');
+        }
+      });
+      empty?.classList.toggle('hidden', shown > 0);
+    };
+
+    chips.forEach((chip) =>
+      chip.addEventListener('click', () => {
+        topic = chip.dataset.topic ?? 'all';
+        chips.forEach((c) => {
+          const active = c === chip;
+          c.classList.toggle('is-active', active);
+          c.setAttribute('aria-pressed', String(active));
+        });
+        apply();
+      })
+    );
+    search?.addEventListener('input', apply);
+  }
+</script>
