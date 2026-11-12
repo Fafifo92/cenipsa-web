@@ -26,5 +26,10 @@ Fotos de [Unsplash](https://unsplash.com) bajo la [Licencia Unsplash](https://un
 | derecho-administrativo.jpg | https://images.unsplash.com/photo-1784900020716-740cef2892ce |
 | derecho-constitucional.jpg | https://images.unsplash.com/photo-1483600516620-7254872369ae |
 | derecho-propiedad-intelectual.jpg | https://images.unsplash.com/photo-1773047746657-ab8ad1c33ec3 |
+| nosotros-bogota.jpg | https://images.unsplash.com/photo-1761253469057-4a39359889f2 |
+| hero-justicia.jpg (carrusel portada) | https://images.unsplash.com/photo-1768839719921-6a554fb3e847 |
+| hero-huella.jpg (carrusel portada) | https://images.unsplash.com/photo-1585079374502-415f8516dcc3 |
+| hero-tribunal.jpg (carrusel portada) | https://images.unsplash.com/photo-1773433392027-2dff23126d86 |
+| hero-lupa-expediente.jpg (carrusel portada) | https://images.unsplash.com/photo-1697301439916-169bd6844842 |
 
 El flujograma metodológico (flujograma-metodologico-cenipsa.*) y el sello CCB (sello-ccb-afiliados-2026.png) fueron entregados por la firma.

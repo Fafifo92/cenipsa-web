@@ -2,17 +2,27 @@
  * Genera variantes responsivas AVIF/WebP de las fotos de hero (public/images/*.jpg)
  * en public/images/hero/<nombre>-<ancho>.<formato>. Las consume <HeroImage />.
  * Ejecutar tras añadir o cambiar una foto de hero:  node scripts/gen-hero-images.mjs
+ * (las variantes existentes se reutilizan; --force las regenera todas).
+ *
+ * También mide la luminosidad media de la zona donde va el texto (55 % izquierdo)
+ * → «lum» (0–1) en el manifiesto: <PageHero /> la usa para elegir un velo más
+ * denso en fotos claras y que el texto blanco nunca se pierda.
  */
 import sharp from 'sharp';
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 /** Fotos de hero. Las de servicios/áreas son de Unsplash (licencia libre, uso comercial; ver docs/fotos.md). */
 export const HERO_IMAGES = [
   'plaza-bolivar',
+  'hero-justicia',
+  'hero-huella',
+  'hero-tribunal',
+  'hero-lupa-expediente',
   'despacho-juridico',
   'bogota-edificios',
   'nosotros-equipo',
+  'nosotros-bogota',
   'garantias-acuerdo',
   'contacto-mundo',
   'contacto-red-global',
@@ -40,6 +50,7 @@ export const HERO_IMAGES = [
 ];
 export const HERO_WIDTHS = [640, 1024, 1600, 1920];
 
+const FORCE = process.argv.includes('--force');
 const root = join(import.meta.dirname, '..', 'public', 'images');
 mkdirSync(join(root, 'hero'), { recursive: true });
 
@@ -52,12 +63,20 @@ for (const name of HERO_IMAGES) {
   // Nunca escalar hacia arriba: anchos mayores que la original se sustituyen por la original.
   const widths = [...new Set(HERO_WIDTHS.map((w) => Math.min(w, srcWidth)))];
   for (const w of widths) {
+    const avif = join(root, 'hero', `${name}-${w}.avif`);
+    const webp = join(root, 'hero', `${name}-${w}.webp`);
+    if (!FORCE && existsSync(avif) && existsSync(webp)) continue;
     const base = sharp(input).resize({ width: w });
-    await base.clone().avif({ quality: 50 }).toFile(join(root, 'hero', `${name}-${w}.avif`));
-    await base.clone().webp({ quality: 72 }).toFile(join(root, 'hero', `${name}-${w}.webp`));
+    await base.clone().avif({ quality: 50 }).toFile(avif);
+    await base.clone().webp({ quality: 72 }).toFile(webp);
   }
-  manifest[name] = { widths, width: srcWidth, height: srcHeight };
-  console.log(`✓ ${name} (${widths.join(', ')})`);
+  const { channels } = await sharp(input)
+    .extract({ left: 0, top: 0, width: Math.round(srcWidth * 0.55), height: srcHeight })
+    .stats();
+  const [r, g, b] = channels.map((c) => c.mean / 255);
+  const lum = Math.round((0.2126 * r + 0.7152 * g + 0.0722 * b) * 100) / 100;
+  manifest[name] = { widths, width: srcWidth, height: srcHeight, lum };
+  console.log(`✓ ${name} (${widths.join(', ')}) lum=${lum}`);
 }
 
 writeFileSync(

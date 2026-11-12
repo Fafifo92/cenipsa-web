@@ -25,10 +25,11 @@ const t = isEs
       ask: '¿En qué puedo ayudarle hoy? Seleccione una opción:',
       location: 'Ubicación y agendar cita confidencial',
       human: 'Hablar con un asesor humano',
+      chat: 'Abrir chat en línea',
       pick: 'Estas son las preguntas sobre',
       back: 'Menú principal',
       more: 'Otra pregunta de este tema',
-      handoff: 'Le comunico con un asesor. Si el chat no se abre, le llevamos a WhatsApp.',
+      handoff: 'Le abrimos WhatsApp para hablar directamente con un investigador o abogado. Si prefiere, también puede escribirnos en el chat en línea.',
       book: 'Agendar cita confidencial',
       reset: 'Reiniciar conversación',
       disclaimer:
@@ -42,10 +43,11 @@ const t = isEs
       ask: 'How can I help you today? Choose an option:',
       location: 'Location and confidential appointment',
       human: 'Talk to a human advisor',
+      chat: 'Open live chat',
       pick: 'Here are the questions about',
       back: 'Main menu',
       more: 'Another question on this topic',
-      handoff: 'Connecting you with an advisor. If the chat does not open, we will take you to WhatsApp.',
+      handoff: 'We are opening WhatsApp so you can talk directly with an investigator or lawyer. You can also write to us in the live chat.',
       book: 'Book a confidential appointment',
       reset: 'Restart conversation',
       disclaimer:
@@ -142,10 +144,31 @@ const data = {
     background: var(--color-gold-400);
     border-color: var(--color-gold-400);
   }
+  /* Conversión (hablar con un asesor): dorado corporativo, como todas las conversiones. */
   .faq-assistant-log :global(.fa-opt-human) {
-    background: #25d366;
-    border-color: #25d366;
-    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: var(--color-gold-400);
+    border-color: var(--color-gold-400);
+    color: var(--color-ink-950);
+    font-weight: 700;
+    box-shadow: 0 0 0 0 rgb(201 165 54 / 0.5);
+    animation: fa-pulse 2.6s ease-out infinite;
+  }
+  .faq-assistant-log :global(.fa-opt-human:hover),
+  .faq-assistant-log :global(.fa-opt-human:focus-visible) {
+    background: var(--color-gold-300);
+    border-color: var(--color-gold-300);
+  }
+  @keyframes fa-pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgb(201 165 54 / 0.5);
+    }
+    70%,
+    100% {
+      box-shadow: 0 0 0 10px rgb(201 165 54 / 0);
+    }
   }
   @keyframes fa-in {
     from {
@@ -158,7 +181,8 @@ const data = {
     }
   }
   @media (prefers-reduced-motion: reduce) {
-    .faq-assistant-log :global(.fa-msg) {
+    .faq-assistant-log :global(.fa-msg),
+    .faq-assistant-log :global(.fa-opt-human) {
       animation: none;
     }
   }
@@ -215,6 +239,8 @@ const data = {
             el.target = '_blank';
             el.rel = 'noopener';
           }
+          // Los enlaces nunca se bloquean: la navegación ocurre siempre (sin ventanas emergentes).
+          if (a.run) el.addEventListener('click', () => a.run?.());
         } else {
           (el as HTMLButtonElement).type = 'button';
           el.addEventListener('click', () => {
@@ -228,16 +254,16 @@ const data = {
       scroll();
     };
 
+    /* Paso a un asesor: enlace directo a WhatsApp (funciona siempre, sin depender
+       de que el chat en línea haya cargado). El chat en línea se ofrece aparte. */
     const human = () => {
       bubble(t.human, 'user');
       bubble(`<p>${t.handoff}</p>`, 'bot');
-      const tawk = (window as unknown as { Tawk_API?: { maximize?: () => void } }).Tawk_API;
-      if (tawk && typeof tawk.maximize === 'function') tawk.maximize();
-      else window.open(data.whatsapp, '_blank', 'noopener');
-      menuButtons();
+      setTimeout(menuButtons, 400);
     };
+    const tawk = () => (window as unknown as { Tawk_API?: { maximize?: () => void } }).Tawk_API;
 
-    const humanAction: Action = { label: t.human, kind: 'human', run: human };
+    const humanAction: Action = { label: t.human, kind: 'human', href: 'whatsapp', run: human };
 
     const showAnswer = (e: Entry, fromCategory?: string) => {
       bubble(e.question, 'user');
@@ -269,6 +295,7 @@ const data = {
         ...data.categories.map((c, i) => ({ label: `${i + 1}. ${c.label}`, run: () => showCategory(c.id) })),
         { label: `6. ${t.location}`, run: showLocation },
         humanAction,
+        ...(typeof tawk()?.maximize === 'function' ? [{ label: t.chat, run: () => tawk()?.maximize?.() } as Action] : []),
       ]);
 
     const menu = (welcome: boolean) => {

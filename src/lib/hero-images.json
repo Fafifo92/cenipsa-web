@@ -7,7 +7,52 @@
       1920
     ],
     "width": 1920,
-    "height": 1440
+    "height": 1440,
+    "lum": 0.4
+  },
+  "hero-justicia": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      1920
+    ],
+    "width": 1920,
+    "height": 1280,
+    "lum": 0.36
+  },
+  "hero-huella": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      1920
+    ],
+    "width": 1920,
+    "height": 1280,
+    "lum": 0.13
+  },
+  "hero-tribunal": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      1920
+    ],
+    "width": 1920,
+    "height": 939,
+    "lum": 0.46
+  },
+  "hero-lupa-expediente": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      1920
+    ],
+    "width": 1920,
+    "height": 1439,
+    "lum": 0.4
   },
   "despacho-juridico": {
     "widths": [
@@ -16,7 +61,8 @@
       1200
     ],
     "width": 1200,
-    "height": 800
+    "height": 800,
+    "lum": 0.3
   },
   "bogota-edificios": {
     "widths": [
@@ -25,7 +71,8 @@
       1280
     ],
     "width": 1280,
-    "height": 888
+    "height": 888,
+    "lum": 0.54
   },
   "nosotros-equipo": {
     "widths": [
@@ -34,7 +81,19 @@
       1600
     ],
     "width": 1600,
-    "height": 1067
+    "height": 1067,
+    "lum": 0.43
+  },
+  "nosotros-bogota": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      1920
+    ],
+    "width": 1920,
+    "height": 1280,
+    "lum": 0.5
   },
   "garantias-acuerdo": {
     "widths": [
@@ -43,7 +102,8 @@
       1600
     ],
     "width": 1600,
-    "height": 1067
+    "height": 1067,
+    "lum": 0.31
   },
   "contacto-mundo": {
     "widths": [
@@ -52,7 +112,8 @@
       1600
     ],
     "width": 1600,
-    "height": 1063
+    "height": 1063,
+    "lum": 0.71
   },
   "contacto-red-global": {
     "widths": [
@@ -61,23 +122,28 @@
       1600
     ],
     "width": 1600,
-    "height": 1067
+    "height": 1067,
+    "lum": 0.25
   },
   "blog-cenipsa-auditoria": {
     "widths": [
       640,
-      903
+      1024,
+      1235
     ],
-    "width": 903,
-    "height": 889
+    "width": 1235,
+    "height": 1212,
+    "lum": 0.16
   },
   "cenipsa-balanza": {
     "widths": [
       640,
-      929
+      1024,
+      1254
     ],
-    "width": 929,
-    "height": 715
+    "width": 1254,
+    "height": 1254,
+    "lum": 0.29
   },
   "servicio-asesoria-juridica": {
     "widths": [
@@ -86,7 +152,8 @@
       1600
     ],
     "width": 1600,
-    "height": 1067
+    "height": 1067,
+    "lum": 0.58
   },
   "servicio-investigacion-corporativa": {
     "widths": [
@@ -95,7 +162,8 @@
       1600
     ],
     "width": 1600,
-    "height": 1067
+    "height": 1067,
+    "lum": 0.73
   },
   "servicio-investigacion-personal": {
     "widths": [
@@ -104,7 +172,8 @@
       1600
     ],
     "width": 1600,
-    "height": 1199
+    "height": 1199,
+    "lum": 0.4
   },
   "servicio-ubicacion-personas": {
     "widths": [
@@ -113,7 +182,8 @@
       1600
     ],
     "width": 1600,
-    "height": 1067
+    "height": 1067,
+    "lum": 0.71
   },
   "servicio-criminalistica": {
     "widths": [
@@ -122,7 +192,8 @@
       1600
     ],
     "width": 1600,
-    "height": 1067
+    "height": 1067,
+    "lum": 0.48
   },
   "servicio-auditoria-forense": {
     "widths": [
@@ -131,7 +202,8 @@
       1600
     ],
     "width": 1600,
-    "height": 1067
+    "height": 1067,
+    "lum": 0.62
   },
   "servicio-ciberseguridad": {
     "widths": [
@@ -140,7 +212,8 @@
       1600
     ],
     "width": 1600,
-    "height": 1068
+    "height": 1068,
+    "lum": 0.74
   },
   "servicio-barrido-electronico": {
     "widths": [
@@ -149,7 +222,8 @@
       1600
     ],
     "width": 1600,
-    "height": 1201
+    "height": 1201,
+    "lum": 0.21
   },
   "servicio-monitoreo-gps": {
     "widths": [
@@ -158,7 +232,8 @@
       1600
     ],
     "width": 1600,
-    "height": 980
+    "height": 980,
+    "lum": 0.46
   },
   "servicio-estudios-seguridad": {
     "widths": [
@@ -167,7 +242,8 @@
       1600
     ],
     "width": 1600,
-    "height": 900
+    "height": 900,
+    "lum": 0.55
   },
   "servicio-abogados": {
     "widths": [
@@ -176,7 +252,8 @@
       1600
     ],
     "width": 1600,
-    "height": 1067
+    "height": 1067,
+    "lum": 0.24
   },
   "derecho-penal": {
     "widths": [
@@ -185,7 +262,8 @@
       1600
     ],
     "width": 1600,
-    "height": 1067
+    "height": 1067,
+    "lum": 0.79
   },
   "derecho-familia": {
     "widths": [
@@ -194,7 +272,8 @@
       1600
     ],
     "width": 1600,
-    "height": 1067
+    "height": 1067,
+    "lum": 0.33
   },
   "derecho-civil": {
     "widths": [
@@ -203,7 +282,8 @@
       1600
     ],
     "width": 1600,
-    "height": 1202
+    "height": 1202,
+    "lum": 0.51
   },
   "derecho-laboral": {
     "widths": [
@@ -212,7 +292,8 @@
       1600
     ],
     "width": 1600,
-    "height": 1067
+    "height": 1067,
+    "lum": 0.53
   },
   "derecho-comercial": {
     "widths": [
@@ -221,7 +302,8 @@
       1600
     ],
     "width": 1600,
-    "height": 900
+    "height": 900,
+    "lum": 0.41
   },
   "derecho-administrativo": {
     "widths": [
@@ -230,7 +312,8 @@
       1600
     ],
     "width": 1600,
-    "height": 1200
+    "height": 1200,
+    "lum": 0.55
   },
   "derecho-constitucional": {
     "widths": [
@@ -239,7 +322,8 @@
       1600
     ],
     "width": 1600,
-    "height": 1067
+    "height": 1067,
+    "lum": 0.64
   },
   "derecho-propiedad-intelectual": {
     "widths": [
@@ -248,6 +332,7 @@
       1600
     ],
     "width": 1600,
-    "height": 1067
+    "height": 1067,
+    "lum": 0.91
   }
 }

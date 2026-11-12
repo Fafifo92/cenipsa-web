@@ -1,12 +1,12 @@
 ---
 /**
  * Cuerpo de la página de preguntas frecuentes (ES/EN): asistente virtual
- * guiado arriba y, debajo, las preguntas agrupadas por categoría con ancla
- * propia (#legalidad, #personal, #empresas, #abogados, #precios).
+ * guiado. La lista completa de preguntas se retiró a petición de la firma
+ * (OBSERVACIONES 7); todas las respuestas siguen disponibles en el asistente.
  */
-import FaqAccordion from './FaqAccordion.astro';
 import FaqAssistant from './FaqAssistant.astro';
-import { FAQ_CATEGORIES, type FaqEntry } from '@/lib/faq';
+import type { FaqEntry } from '@/lib/faq';
+import { CONTACT } from '@/lib/site';
 
 export interface Props {
   entries: FaqEntry[];
@@ -19,19 +19,16 @@ const t = isEs
       assistantTitle: 'Resuelva sus dudas con nuestro asistente',
       assistantText:
         'Elija un tema y obtenga la respuesta al instante. Si necesita algo más, le pasamos con un asesor humano por chat o WhatsApp.',
-      topics: 'Temas',
-      all: 'Todas las preguntas por tema',
+      whatsapp: 'Hablar con un asesor',
+      contact: 'Solicitar valoración confidencial',
     }
   : {
       assistantTitle: 'Get answers from our assistant',
       assistantText:
         'Pick a topic and get the answer instantly. If you need more, we will connect you with a human advisor via chat or WhatsApp.',
-      topics: 'Topics',
-      all: 'All questions by topic',
+      whatsapp: 'Talk to an advisor',
+      contact: 'Request a confidential assessment',
     };
-const groups = FAQ_CATEGORIES[lang]
-  .map((c) => ({ ...c, items: entries.filter((e) => e.category === c.id).sort((a, b) => a.order - b.order) }))
-  .filter((g) => g.items.length > 0);
 ---
 
 <section class="section-pad" aria-labelledby="assistant-title">
@@ -40,32 +37,11 @@ const groups = FAQ_CATEGORIES[lang]
       <p class="eyebrow"><span class="h-px w-8 bg-gold-500" aria-hidden="true"></span>{isEs ? 'Asistente virtual' : 'Virtual assistant'}</p>
       <h2 id="assistant-title" class="mt-4 font-display text-3xl font-semibold text-ink-950 md:text-4xl">{t.assistantTitle}</h2>
       <p class="mt-4 leading-relaxed text-ink-700">{t.assistantText}</p>
-      <nav class="mt-8" aria-label={t.topics}>
-        <p class="text-[0.78rem] font-semibold tracking-[0.14em] text-ink-500 uppercase">{t.topics}</p>
-        <ul class="mt-3 space-y-2 text-[0.95rem]">
-          {groups.map((g) => (
-            <li><a href={`#${g.id}`} class="font-medium text-brand-700 underline decoration-brand-300 underline-offset-4 hover:text-brand-600">{g.label}</a></li>
-          ))}
-        </ul>
-      </nav>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href={isEs ? CONTACT.whatsappHref : CONTACT.whatsappHrefEn} target="_blank" rel="noopener" class="btn-gold">{t.whatsapp}</a>
+        <a href={isEs ? '/contacto/' : '/en/contact/'} class="btn-outline">{t.contact}</a>
+      </div>
     </div>
     <FaqAssistant entries={entries} lang={lang} />
-  </div>
-</section>
-
-<section class="bg-mist section-pad" aria-labelledby="faq-all-title">
-  <div class="container-site">
-    <h2 id="faq-all-title" class="font-display text-3xl font-semibold text-ink-950 md:text-4xl" data-reveal>{t.all}</h2>
-    <div class="mt-10 space-y-14">
-      {groups.map((g, i) => (
-        <div id={g.id} class="scroll-mt-28">
-          <h3 class="mb-5 flex items-center gap-3 font-display text-xl font-semibold text-ink-950 md:text-2xl">
-            <span class="font-display text-gold-600" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
-            {g.label}
-          </h3>
-          <FaqAccordion items={g.items} openFirst={i === 0} />
-        </div>
-      ))}
-    </div>
   </div>
 </section>

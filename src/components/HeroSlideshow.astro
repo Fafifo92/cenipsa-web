@@ -1,0 +1,205 @@
+---
+/**
+ * Fondo del hero de la portada: secuencia de fotografías con fundido cruzado
+ * y efecto Ken Burns (cada foto con un movimiento distinto). El texto del
+ * hero no cambia; solo las imágenes (OBSERVACIONES 7).
+ *
+ * - La primera foto es la imagen LCP (prioridad alta); las demás cargan en diferido.
+ * - Con «reducir movimiento» se muestra solo la primera foto, sin animación.
+ * - Se pausa cuando la pestaña no está visible.
+ */
+import HeroImage from './HeroImage.astro';
+
+const slides = [
+  { name: 'plaza-bolivar', pos: 'object-[center_35%] brightness-[1.1] saturate-[1.1]', kb: 'kb-1' },
+  { name: 'hero-justicia', pos: 'object-[70%_center]', kb: 'kb-2' },
+  { name: 'hero-lupa-expediente', pos: 'object-[30%_60%]', kb: 'kb-3' },
+  { name: 'hero-tribunal', pos: 'object-[center_40%]', kb: 'kb-4' },
+  { name: 'hero-huella', pos: 'object-center', kb: 'kb-5' },
+];
+---
+
+<div class="hero-slides absolute inset-0" data-hero-slides aria-hidden="true">
+  {
+    slides.map((s, i) => (
+      <div class:list={['hs-slide', s.kb, i === 0 && 'is-active']}>
+        <HeroImage name={s.name} class={s.pos} priority={i === 0} />
+      </div>
+    ))
+  }
+</div>
+
+<!-- Indicador de progreso (decorativo) -->
+<div class="hs-progress pointer-events-none absolute inset-x-0 bottom-8 z-10" aria-hidden="true">
+  <div class="container-site flex gap-2">
+    {slides.map((_, i) => <span class:list={['hs-bar', i === 0 && 'is-active']}><span /></span>)}
+  </div>
+</div>
+
+<style>
+  .hs-slide {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 1.6s ease-in-out;
+  }
+  .hs-slide.is-active {
+    opacity: 1;
+    z-index: 2;
+  }
+  /* La foto saliente permanece debajo mientras la nueva aparece. */
+  .hs-slide.is-leaving {
+    opacity: 1;
+    z-index: 1;
+    transition: none;
+  }
+  .hs-slide :global(img) {
+    will-change: transform;
+  }
+  .hs-slide.is-active :global(img),
+  .hs-slide.is-leaving :global(img) {
+    animation: var(--kb-name) 9.5s linear both;
+  }
+  .kb-1 {
+    --kb-name: kb-zoom-out;
+  }
+  .kb-2 {
+    --kb-name: kb-pan-left;
+  }
+  .kb-3 {
+    --kb-name: kb-zoom-in-up;
+  }
+  .kb-4 {
+    --kb-name: kb-pan-right;
+  }
+  .kb-5 {
+    --kb-name: kb-zoom-in;
+  }
+  @keyframes kb-zoom-out {
+    from {
+      transform: scale(1.16) translate3d(1.5%, 1%, 0);
+    }
+    to {
+      transform: scale(1.02) translate3d(0, 0, 0);
+    }
+  }
+  @keyframes kb-pan-left {
+    from {
+      transform: scale(1.12) translate3d(3%, 0, 0);
+    }
+    to {
+      transform: scale(1.12) translate3d(-2.5%, -1%, 0);
+    }
+  }
+  @keyframes kb-zoom-in-up {
+    from {
+      transform: scale(1.03) translate3d(0, 1.5%, 0);
+    }
+    to {
+      transform: scale(1.17) translate3d(-1.5%, -1.5%, 0);
+    }
+  }
+  @keyframes kb-pan-right {
+    from {
+      transform: scale(1.14) translate3d(-3%, 1%, 0);
+    }
+    to {
+      transform: scale(1.1) translate3d(2.5%, -0.5%, 0);
+    }
+  }
+  @keyframes kb-zoom-in {
+    from {
+      transform: scale(1.02);
+    }
+    to {
+      transform: scale(1.18) translate3d(-1%, 0.5%, 0);
+    }
+  }
+
+  .hs-bar {
+    position: relative;
+    height: 3px;
+    width: 2.25rem;
+    overflow: hidden;
+    border-radius: 9999px;
+    background: rgb(255 255 255 / 0.28);
+  }
+  .hs-bar > span {
+    position: absolute;
+    inset: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: var(--color-gold-400);
+  }
+  .hs-bar.is-active > span {
+    animation: hs-fill var(--hs-interval, 7000ms) linear both;
+  }
+  .hs-bar.is-done > span {
+    transform: none;
+  }
+  @keyframes hs-fill {
+    to {
+      transform: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hs-slide.is-active :global(img),
+    .hs-slide.is-leaving :global(img) {
+      animation: none;
+    }
+    .hs-progress {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  const INTERVAL = 7000;
+  const FADE = 1700;
+
+  function initHeroSlides() {
+    const root = document.querySelector<HTMLElement>('[data-hero-slides]');
+    if (!root || root.dataset.ready) return;
+    root.dataset.ready = '1';
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const slides = [...root.querySelectorAll<HTMLElement>('.hs-slide')];
+    const bars = [...(root.parentElement?.querySelectorAll<HTMLElement>('.hs-bar') ?? [])];
+    if (slides.length < 2) return;
+    root.parentElement?.style.setProperty('--hs-interval', `${INTERVAL}ms`);
+
+    // Precarga las demás fotos cuando la página ya está lista (no compite con la LCP).
+    const warm = () =>
+      slides.slice(1).forEach((s) => s.querySelector('img')?.setAttribute('loading', 'eager'));
+    if (document.readyState === 'complete') setTimeout(warm, 800);
+    else window.addEventListener('load', () => setTimeout(warm, 800), { once: true });
+
+    let current = 0;
+    const go = () => {
+      if (document.hidden) return;
+      const prev = slides[current];
+      current = (current + 1) % slides.length;
+      const next = slides[current];
+      prev.classList.remove('is-active');
+      prev.classList.add('is-leaving');
+      next.classList.add('is-active');
+      setTimeout(() => prev.classList.remove('is-leaving'), FADE + 100);
+      bars.forEach((b, i) => {
+        b.classList.remove('is-active');
+        b.classList.toggle('is-done', current !== 0 && i < current);
+      });
+      // Reinicia la barra activa
+      const bar = bars[current];
+      if (bar) {
+        void bar.offsetWidth;
+        bar.classList.add('is-active');
+      }
+    };
+    setInterval(go, INTERVAL);
+  }
+
+  initHeroSlides();
+  document.addEventListener('astro:page-load', initHeroSlides);
+</script>

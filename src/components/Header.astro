@@ -86,16 +86,21 @@ const isActive = (href: string) =>
                   class="dropdown-panel invisible absolute left-1/2 top-full z-50 -translate-x-1/2 translate-y-2 pt-3 opacity-0 transition-all duration-300 [transition-timing-function:var(--ease-out-expo)]"
                 >
                   <ul class="min-w-72 rounded-2xl border border-ink-100 bg-white p-2.5 shadow-lift">
-                    <li>
-                      <a
-                        href={item.href}
-                        class="block rounded-xl px-4 py-2.5 text-[0.9rem] font-bold text-ink-950 transition-colors hover:bg-brand-50 hover:text-brand-700"
-                        aria-current={currentPath === item.href ? 'page' : undefined}
-                      >
-                        {lang === 'es' ? `Ver todos — ${item.label}` : `All — ${item.label}`}
-                      </a>
-                    </li>
-                    <li role="separator" class="mx-4 my-1.5 border-t border-ink-100"></li>
+                    {/* «Ver todos» solo si la página índice no figura ya como hijo (p. ej. Nosotros = Quiénes Somos). */}
+                    {!item.children.some((c) => c.href === item.href) && (
+                      <>
+                        <li>
+                          <a
+                            href={item.href}
+                            class="block rounded-xl px-4 py-2.5 text-[0.9rem] font-bold text-ink-950 transition-colors hover:bg-brand-50 hover:text-brand-700"
+                            aria-current={currentPath === item.href ? 'page' : undefined}
+                          >
+                            {lang === 'es' ? `Ver todos — ${item.label}` : `All — ${item.label}`}
+                          </a>
+                        </li>
+                        <li role="separator" class="mx-4 my-1.5 border-t border-ink-100" />
+                      </>
+                    )}
                     {item.children.map((child) => (
                       <li>
                         <a
@@ -154,7 +159,7 @@ const isActive = (href: string) =>
         <button
           type="button"
           id="mobile-menu-button"
-          class="relative z-50 flex h-11 w-11 items-center justify-center rounded-lg text-white lg:hidden"
+          class="relative z-50 -mr-2.5 flex h-11 w-11 items-center justify-center rounded-lg text-white lg:hidden"
           aria-expanded="false"
           aria-controls="mobile-menu"
           aria-label={lang === 'es' ? 'Abrir menú' : 'Open menu'}

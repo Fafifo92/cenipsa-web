@@ -15,14 +15,17 @@ export interface Props {
 const { lang = 'es', variant = 'timeline' } = Astro.props;
 const isEs = lang === 'es';
 const steps = isEs ? ROUTE_ES : ROUTE_EN;
-const t = isEs ? { step: 'Paso', optional: 'Opcional' } : { step: 'Step', optional: 'Optional' };
+const t = isEs
+  ? { step: 'Paso', optional: 'Opcional', of: 'de', more: 'Ver detalle', anchor: 'paso', page: '/antes-de-la-contratacion/' }
+  : { step: 'Step', optional: 'Optional', of: 'of', more: 'See details', anchor: 'step', page: '/en/before-hiring/' };
+const total = steps.length;
 ---
 
 {
   variant === 'timeline' ? (
-    <ol class="route-timeline relative grid gap-6 lg:grid-cols-6 lg:gap-4">
+    <ol class="route-timeline relative grid gap-6 lg:grid-cols-6 lg:gap-4" data-route-cycle>
       {steps.map((s, i) => (
-        <li class="relative flex gap-4 lg:flex-col lg:gap-0" data-reveal style={`--reveal-delay:${i * 90}ms`}>
+        <li class="route-step relative flex gap-4 lg:flex-col lg:gap-0" data-reveal style={`--reveal-delay:${i * 90}ms`}>
           {/* conector */}
           {i < steps.length - 1 && (
             <span
@@ -41,9 +44,10 @@ const t = isEs ? { step: 'Paso', optional: 'Opcional' } : { step: 'Step', option
           >
             {s.n}
           </span>
-          <div
+          <a
+            href={`${t.page}#${t.anchor}-${s.n}`}
             class:list={[
-              'flex-1 rounded-xl border bg-white p-4 lg:mt-4 lg:text-center',
+              'route-card group flex-1 rounded-xl border bg-white p-4 lg:mt-4 lg:text-center',
               s.optional ? 'border-gold-400 bg-gold-50' : 'border-ink-950/10',
             ]}
           >
@@ -57,7 +61,11 @@ const t = isEs ? { step: 'Paso', optional: 'Opcional' } : { step: 'Step', option
                 <span class="inline-block rounded bg-gold-400 px-2 py-0.5 text-[0.7rem] font-bold tracking-[0.14em] text-ink-950 uppercase">{t.optional}</span>
               </p>
             )}
-          </div>
+            <span class="route-more mt-3 inline-flex items-center gap-1 text-[0.78rem] font-bold text-brand-700">
+              {t.more}
+              <svg class="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </span>
+          </a>
         </li>
       ))}
     </ol>
@@ -65,13 +73,15 @@ const t = isEs ? { step: 'Paso', optional: 'Opcional' } : { step: 'Step', option
     <ol class="grid gap-5 md:grid-flow-col md:grid-cols-2 md:grid-rows-3">
       {steps.map((s, i) => (
         <li
+          id={`${t.anchor}-${s.n}`}
           class:list={[
-            'relative overflow-hidden rounded-2xl border border-l-[6px] p-6 shadow-soft md:p-7',
-            s.optional ? 'border-gold-400 bg-gold-50' : 'border-ink-950/10 border-l-ink-950 bg-white',
+            'route-full group relative scroll-mt-32 overflow-hidden rounded-2xl border border-l-[6px] p-6 shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-lift md:p-7',
+            s.optional ? 'border-gold-400 bg-gold-50' : 'border-ink-950/10 border-l-ink-950 bg-white hover:border-l-gold-400',
           ]}
           data-reveal
           style={`--reveal-delay:${i * 80}ms`}
         >
+          <span class="pointer-events-none absolute -top-4 right-3 font-display text-[6.5rem] leading-none font-bold text-ink-950/[0.05] transition-colors duration-500 group-hover:text-gold-400/20" aria-hidden="true">{s.n}</span>
           <div class="flex flex-wrap items-center gap-3">
             <span
               class:list={[
@@ -93,8 +103,108 @@ const t = isEs ? { step: 'Paso', optional: 'Opcional' } : { step: 'Step', option
               </li>
             ))}
           </ul>
+          <div class="mt-5 flex items-center gap-3" aria-hidden="true">
+            <span class="flex flex-1 gap-1">
+              {Array.from({ length: total }, (_, k) => (
+                <span class:list={['h-1 flex-1 rounded-full transition-colors duration-500', k < s.n ? (s.optional ? 'bg-gold-500' : 'bg-brand-600') : 'bg-ink-950/10']} />
+              ))}
+            </span>
+            <span class="text-[0.72rem] font-semibold tracking-wide text-ink-500 uppercase">{`${t.step} ${s.n} ${t.of} ${total}`}</span>
+          </div>
         </li>
       ))}
     </ol>
   )
 }
+
+<style>
+  .route-card {
+    display: block;
+    transition:
+      transform 0.5s var(--ease-out-expo),
+      box-shadow 0.5s var(--ease-out-expo),
+      border-color 0.4s ease;
+  }
+  .route-card:hover,
+  .route-card:focus-visible,
+  .route-step.is-current .route-card {
+    transform: translateY(-4px);
+    border-color: var(--color-brand-500);
+    box-shadow: var(--shadow-lift);
+  }
+  :global(html) .route-timeline > .route-step.is-visible .route-dot {
+    transition:
+      transform 0.5s var(--ease-spring),
+      background-color 0.4s ease,
+      color 0.4s ease,
+      box-shadow 0.4s ease;
+    transition-delay: 0s;
+  }
+  :global(html) .route-timeline > .route-step.is-visible:hover .route-dot,
+  :global(html) .route-timeline > .route-step.is-visible.is-current .route-dot {
+    transform: scale(1.12);
+    background: var(--color-gold-400);
+    color: var(--color-ink-950);
+    box-shadow: 0 0 0 6px rgb(201 165 54 / 0.25);
+  }
+  .route-step.is-passed .route-connector {
+    background-color: var(--color-gold-500);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .route-card,
+    :global(html) .route-timeline > .route-step.is-visible .route-dot {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  /* Recorre los pasos uno a uno (1 → 6) para que se lean como una secuencia.
+     Al pasar el cursor, el paso señalado toma el control; se detiene fuera de pantalla. */
+  function initRouteCycle() {
+    document.querySelectorAll<HTMLElement>('[data-route-cycle]').forEach((list) => {
+      if (list.dataset.ready) return;
+      list.dataset.ready = '1';
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const steps = [...list.querySelectorAll<HTMLElement>('.route-step')];
+      let idx = -1;
+      let timer = 0;
+      let hovering = false;
+      const show = (n: number) => {
+        idx = n;
+        steps.forEach((s, k) => {
+          s.classList.toggle('is-current', k === n);
+          s.classList.toggle('is-passed', k < n);
+        });
+      };
+      const tick = () => {
+        if (!hovering) show((idx + 1) % steps.length);
+      };
+      const start = () => {
+        if (!timer) timer = window.setInterval(tick, 2200);
+      };
+      const stop = () => {
+        clearInterval(timer);
+        timer = 0;
+      };
+      steps.forEach((s, k) => {
+        s.addEventListener('mouseenter', () => {
+          hovering = true;
+          show(k);
+        });
+        s.addEventListener('mouseleave', () => (hovering = false));
+      });
+      new IntersectionObserver(
+        ([e]) => {
+          if (e.isIntersecting) {
+            if (idx < 0) setTimeout(() => show(0), 900);
+            start();
+          } else stop();
+        },
+        { threshold: 0.3 }
+      ).observe(list);
+    });
+  }
+  initRouteCycle();
+  document.addEventListener('astro:page-load', initRouteCycle);
+</script>

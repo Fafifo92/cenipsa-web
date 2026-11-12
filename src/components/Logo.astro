@@ -12,7 +12,7 @@ export interface Props {
 }
 const { variant = 'dark', full = false, class: className = '' } = Astro.props;
 const name = `logo-cenipsa-${full ? 'full' : 'mark'}${variant === 'light' ? '-light' : ''}.png`;
-const [width, height] = full ? [900, 236] : [720, 151];
+const [width, height] = full ? [900, 236] : [704, 151];
 ---
 
 <img
@@ -20,6 +20,6 @@ const [width, height] = full ? [900, 236] : [720, 151];
   width={width}
   height={height}
   alt="CENIPSA — Investigamos la verdad. Defendemos sus derechos."
-  class:list={['h-auto w-auto select-none', className || (full ? 'h-16' : 'h-10 md:h-11')]}
+  class:list={['w-auto select-none', className || (full ? 'h-16' : 'h-10 md:h-11')]}
   decoding="async"
 />

@@ -153,8 +153,15 @@
 }
 
 /* Los botones sobre foto no llevan sombra de texto (fondo sólido propio). */
-.text-on-photo :is(.btn-gold, .btn-primary, .btn-outline, .btn-outline-light, .btn-navy) {
+.text-on-photo :is(.btn-gold, .btn-primary, .btn-outline, .btn-outline-light, .btn-navy, .btn-brand) {
   text-shadow: none;
+}
+
+/* Texto de tarjetas alineado al margen y con líneas llenas, como en las tarjetas
+   verdes de los pilares (sin el corte «equilibrado» que deja renglones cortos). */
+@utility text-fill {
+  text-align: left;
+  text-wrap: wrap;
 }
 
 /* Etiqueta pequeña sobre títulos de sección */
@@ -448,6 +455,9 @@ html.js .route-timeline > li.is-visible .route-dot {
 }
 .btn-navy {
   @apply btn bg-ink-950 text-white ring-1 ring-white/25 shadow-soft hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-lift active:translate-y-0;
+}
+.btn-brand {
+  @apply btn sheen bg-brand-600 text-white ring-1 ring-white/20 shadow-soft hover:-translate-y-0.5 hover:bg-brand-500 hover:shadow-lift active:translate-y-0;
 }
 .btn-outline-light {
   @apply btn border border-white/30 bg-white/5 text-white backdrop-blur-sm hover:border-white/70 hover:bg-white/10;

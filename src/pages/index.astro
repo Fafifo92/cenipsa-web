@@ -4,7 +4,7 @@
  * Orden (recomendaciones de la firma): propuesta de valor con bifurcación
  * B2B/B2C → segmentos → diferenciador investigación + derecho → tres pilares →
  * proceso → áreas del derecho → equipo → sellos de confianza → contenido
- * experto → preguntas frecuentes → contacto confidencial.
+ * experto → contacto confidencial.
  */
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
@@ -12,7 +12,7 @@ import Icon from '@/components/Icon.astro';
 import PostCard from '@/components/PostCard.astro';
 import CtaBanner from '@/components/CtaBanner.astro';
 import TrustSeals from '@/components/TrustSeals.astro';
-import HeroImage from '@/components/HeroImage.astro';
+import HeroSlideshow from '@/components/HeroSlideshow.astro';
 import { SITE } from '@/lib/site';
 import { PILLARS_ES, SEGMENTS_ES, LEGAL_AREAS_ES } from '@/lib/pillars';
 import ContractRoute from '@/components/ContractRoute.astro';
@@ -21,36 +21,31 @@ const posts = (await getCollection('blog'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 3);
 
-const HOME_FAQ_IDS = ['legal-1', 'legal-2', 'precios-1', 'precios-2'];
-const faqs = (await getCollection('faq'))
-  .filter((f) => HOME_FAQ_IDS.includes(f.data.id))
-  .sort((a, b) => HOME_FAQ_IDS.indexOf(a.data.id) - HOME_FAQ_IDS.indexOf(b.data.id));
-
 const segmentIcons: Record<string, string> = { empresas: 'building', personas: 'users', abogados: 'briefcase' };
 
 const disciplines = [
   {
-    n: '01',
+    n: '01', icon: 'gavel',
     title: 'Derecho penal y corporativo',
     text: 'Abogados en derecho penal y sancionatorio, civil, de familia, administrativo, laboral, comercial y de propiedad intelectual.',
   },
   {
-    n: '02',
+    n: '02', icon: 'fingerprint',
     title: 'Investigación criminal y judicial',
     text: 'Investigadores formados en criminalística y ciencias forenses: dactiloscopia, balística, documentología y cadena de custodia.',
   },
   {
-    n: '03',
+    n: '03', icon: 'users',
     title: 'Ciencias sociales y comportamentales',
     text: 'Sociología, trabajo social forense, psicología forense y antropología aplicadas a la investigación judicial y los derechos humanos.',
   },
   {
-    n: '04',
+    n: '04', icon: 'cpu',
     title: 'Ingeniería e informática técnica',
     text: 'Ingenieros en electrónica y telecomunicaciones para análisis técnico, informática forense y soporte del material probatorio.',
   },
   {
-    n: '05',
+    n: '05', icon: 'microscope',
     title: 'Peritaje técnico',
     text: 'Peritos con conocimiento científico, técnico y metodológico para asesorar a jueces, tribunales y partes procesales.',
   },
@@ -64,11 +59,13 @@ const disciplines = [
   altLocalePath="/en/"
 >
   <!-- ============ HERO ============ -->
-  <section class="relative flex min-h-[92vh] items-center overflow-hidden bg-ink-950 pt-32 pb-20">
-    <HeroImage name="plaza-bolivar" class="hero-kenburns object-[center_35%] brightness-[1.15] contrast-[1.05] saturate-[1.1]" />
-    <div class="absolute inset-0 bg-gradient-to-r from-ink-950/50 via-ink-950/25 to-ink-950/10" aria-hidden="true"></div>
+  <section class="relative flex min-h-[92vh] items-center overflow-hidden bg-ink-950 pt-32 pb-24">
+    <HeroSlideshow />
+    <!-- Degradé: más denso detrás del texto (izquierda), la foto se aprecia a la derecha -->
+    <div class="absolute inset-0 z-[3] bg-gradient-to-r from-ink-950/85 via-ink-950/55 to-ink-950/5" aria-hidden="true"></div>
+    <div class="absolute inset-x-0 bottom-0 z-[3] h-40 bg-gradient-to-t from-ink-950/60 to-transparent" aria-hidden="true"></div>
 
-    <div class="container-site text-on-photo relative">
+    <div class="container-site text-on-photo relative z-10">
       <p class="eyebrow text-gold-400" data-reveal>
         <span class="h-px w-8 bg-gold-400" aria-hidden="true"></span>
         {SITE.brand} · {SITE.descriptor}
@@ -77,11 +74,10 @@ const disciplines = [
         Investigamos la verdad.
         <span class="mt-2 block text-gold-400">Defendemos sus derechos.</span>
       </h1>
-      <p class="mt-6 max-w-2xl rounded-lg bg-ink-950/45 px-4 py-3 text-lg leading-relaxed text-white backdrop-blur-[2px] md:text-xl" data-reveal style="--reveal-delay:200ms">
-        Convertimos hechos complejos en evidencia útil y decisiones jurídicas claras. Inteligencia forense y
-        asesoría legal especializada para empresas y personas en Colombia.
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-white md:text-xl" data-reveal style="--reveal-delay:200ms">
+        Inteligencia forense y asesoría legal especializada para empresas y personas en Colombia.
       </p>
-      <div class="mt-9 flex flex-wrap items-center gap-4" data-reveal style="--reveal-delay:300ms">
+      <div class="mt-9 flex flex-wrap items-center gap-3 sm:gap-4 [&>a]:w-full sm:[&>a]:w-auto" data-reveal style="--reveal-delay:300ms">
         <a href="/investigacion-corporativa/" class="btn-gold">
           <Icon name="building" class="h-5 w-5" />
           Soluciones para empresas
@@ -90,26 +86,15 @@ const disciplines = [
           <Icon name="users" class="h-5 w-5" />
           Orientación para personas
         </a>
+        <a href="/asesoria-juridica/" class="btn-brand">
+          <Icon name="scale" class="h-5 w-5" />
+          Asesoría jurídica y litigio
+        </a>
       </div>
-      <p class="mt-6 inline-flex flex-wrap items-center gap-x-6 gap-y-2 rounded-lg bg-ink-950/55 px-4 py-2.5 text-[0.95rem] backdrop-blur-[2px]" data-reveal style="--reveal-delay:360ms">
+      <p class="mt-7 flex flex-wrap items-center gap-x-6 gap-y-2 text-[0.95rem]" data-reveal style="--reveal-delay:360ms">
         <a href="/contacto/" class="link-underline font-semibold text-gold-300">Solicitar valoración confidencial</a>
         <a href="#proceso" class="link-underline font-medium text-white">¿Cómo trabajamos?</a>
       </p>
-
-      <dl class="mt-14 grid max-w-3xl grid-cols-1 gap-6 border-t border-white/10 pt-8 sm:grid-cols-3" data-reveal style="--reveal-delay:420ms">
-        <div>
-          <dt class="text-[0.78rem] font-semibold tracking-[0.14em] text-white/80 uppercase">Razón social</dt>
-          <dd class="mt-1.5 font-display text-lg leading-snug font-medium text-white">{SITE.legalName} <span class="block text-[0.9rem] text-white/80">NIT {SITE.nit}</span></dd>
-        </div>
-        <div>
-          <dt class="text-[0.78rem] font-semibold tracking-[0.14em] text-white/80 uppercase">Sello de calidad</dt>
-          <dd class="mt-1.5 font-display text-lg leading-snug font-medium text-white">Círculo de Afiliados <span class="text-gold-400">CCB</span></dd>
-        </div>
-        <div>
-          <dt class="text-[0.78rem] font-semibold tracking-[0.14em] text-white/80 uppercase">Sede</dt>
-          <dd class="mt-1.5 font-display text-lg leading-snug font-medium text-white">Torre del Reloj, Bogotá <span class="block text-[0.9rem] text-white/80">Cobertura nacional</span></dd>
-        </div>
-      </dl>
     </div>
   </section>
 
@@ -125,23 +110,24 @@ const disciplines = [
       <ul class="mt-12 grid gap-6 lg:grid-cols-3">
         {
           SEGMENTS_ES.map((s, i) => (
-            <li class="flex flex-col rounded-2xl border border-ink-950/10 bg-white p-7 shadow-soft" data-reveal style={`--reveal-delay:${i * 90}ms`}>
-              <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-ink-950 text-gold-400">
-                <Icon name={segmentIcons[s.id]} class="h-6 w-6" />
+            <li class="seg-card sheen group relative flex flex-col overflow-hidden rounded-2xl border border-brand-700/10 bg-gradient-to-br from-white via-white to-brand-50 p-7 shadow-soft transition-all duration-500 hover:-translate-y-1.5 hover:border-brand-500/40 hover:shadow-lift" data-reveal style={`--reveal-delay:${i * 90}ms`}>
+              <span class="absolute inset-x-0 top-0 h-1 origin-left bg-gradient-to-r from-gold-400 via-brand-500 to-brand-700 transition-transform duration-700 group-hover:scale-x-100 md:scale-x-[0.35]" aria-hidden="true" />
+              <span class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-600 to-brand-800 text-gold-300 shadow-soft transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110">
+                <Icon name={segmentIcons[s.id]} class="h-7 w-7" />
               </span>
               <h3 class="mt-5 font-display text-xl font-semibold text-ink-950">{s.title}</h3>
-              <p class="mt-2.5 text-[0.94rem] leading-relaxed text-ink-700">{s.text}</p>
+              <p class="text-fill mt-2.5 text-[0.94rem] leading-relaxed text-ink-700">{s.text}</p>
               <ul class="mt-5 flex-1 space-y-2 border-t border-ink-100 pt-5 text-[0.92rem]">
                 {s.links.map((l) => (
                   <li>
-                    <a href={l.href} class="group inline-flex items-center gap-2 font-medium text-brand-700 hover:text-brand-600">
-                      <span class="h-1.5 w-1.5 rounded-full bg-gold-500" aria-hidden="true" />
+                    <a href={l.href} class="flex items-start gap-2.5 font-medium text-brand-700 transition-colors hover:text-brand-600">
+                      <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-500" aria-hidden="true" />
                       {l.label}
                     </a>
                   </li>
                 ))}
               </ul>
-              <a href={`/servicios/#${s.id}`} class="btn-outline mt-6 self-start">Ver soluciones</a>
+              <a href={`/servicios/#${s.id}`} class="btn-brand mt-7 self-start">Ver soluciones</a>
             </li>
           ))
         }
@@ -154,7 +140,7 @@ const disciplines = [
     <div class="container-site grid items-center gap-14 lg:grid-cols-[1.05fr_1fr]">
       <div data-reveal="left">
         <figure class="balanza-card group relative overflow-hidden rounded-3xl bg-ink-950 shadow-lift">
-          <img src="/images/cenipsa-balanza.jpg" alt="Balanza de la justicia con expedientes de investigación forense frente a la Constitución Política de Colombia" width="929" height="715" loading="lazy" decoding="async" class="block h-auto w-full transition-transform duration-[1.6s] [transition-timing-function:var(--ease-out-expo)] group-hover:scale-[1.04]" />
+          <img src="/images/cenipsa-balanza.jpg" alt="Balanza de la justicia con expedientes de investigación forense frente a la Constitución Política de Colombia" width="1254" height="1254" loading="lazy" decoding="async" class="block h-auto w-full transition-transform duration-[1.6s] [transition-timing-function:var(--ease-out-expo)] group-hover:scale-[1.04]" />
           <figcaption class="border-t border-gold-400/40 bg-ink-950 px-7 py-6 md:px-9">
             <p class="font-display text-lg leading-snug font-medium text-white md:text-xl">
             «No entregamos solo un informe: la evidencia se obtiene pensando, desde el primer día, en cómo
@@ -208,7 +194,7 @@ const disciplines = [
                 </span>
                 <h3 class="font-display text-2xl font-semibold">{p.name}</h3>
               </div>
-              <p class="mt-4 text-[0.95rem] leading-relaxed text-brand-100">{p.tagline}</p>
+              <p class="text-fill mt-4 text-[0.95rem] leading-relaxed text-brand-100">{p.tagline}</p>
               <ul class="mt-6 flex-1 space-y-2.5 border-t border-white/15 pt-6 text-[0.92rem]">
                 {p.items.map((it) => (
                   <li>
@@ -271,10 +257,12 @@ const disciplines = [
         {
           LEGAL_AREAS_ES.map((a, i) => (
             <li data-reveal style={`--reveal-delay:${(i % 4) * 80}ms`}>
-              <a href={a.href} class="card-lift group flex h-full flex-col p-6">
-                <Icon name={a.icon} class="h-7 w-7 text-brand-700" />
-                <h3 class="mt-4 font-display text-[1.08rem] font-semibold text-ink-950 transition-colors group-hover:text-brand-700">{a.label}</h3>
-                <p class="mt-2 text-[0.88rem] leading-relaxed text-ink-600">{a.text}</p>
+              <a href={a.href} class="card-lift sheen group flex h-full flex-col p-6">
+                <span class="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-50 text-brand-700 ring-1 ring-brand-700/10 transition-all duration-500 group-hover:-rotate-6 group-hover:bg-brand-700 group-hover:text-gold-300">
+                  <Icon name={a.icon} class="h-8 w-8" />
+                </span>
+                <h3 class="mt-5 font-display text-[1.08rem] font-semibold text-ink-950 transition-colors group-hover:text-brand-700">{a.label}</h3>
+                <p class="text-fill mt-2 text-[0.9rem] leading-relaxed text-ink-600">{a.text}</p>
               </a>
             </li>
           ))
@@ -301,10 +289,15 @@ const disciplines = [
         <ol class="grid gap-4 sm:grid-cols-2">
           {
             disciplines.map((t, i) => (
-              <li class:list={['rounded-2xl border-l-4 border-gold-400 bg-paper p-6', i === 4 && 'sm:col-span-2']} data-reveal style={`--reveal-delay:${i * 80}ms`}>
-                <span class="font-display text-xl font-semibold text-gold-600" aria-hidden="true">{t.n}</span>
-                <h3 class="mt-2 font-display text-lg font-semibold text-ink-950">{t.title}</h3>
-                <p class="mt-1.5 text-[0.9rem] leading-relaxed text-ink-700">{t.text}</p>
+              <li class:list={['group rounded-2xl border-l-4 border-gold-400 bg-paper p-6 transition-all duration-500 hover:-translate-y-1 hover:shadow-lift', i === 4 && 'sm:col-span-2']} data-reveal style={`--reveal-delay:${i * 80}ms`}>
+                <div class="flex items-center justify-between gap-4">
+                  <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-brand-600 to-brand-800 text-gold-300 shadow-soft transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110">
+                    <Icon name={t.icon} class="h-6 w-6" />
+                  </span>
+                  <span class="font-display text-2xl font-semibold text-gold-500/70" aria-hidden="true">{t.n}</span>
+                </div>
+                <h3 class="mt-4 font-display text-lg font-semibold text-ink-950">{t.title}</h3>
+                <p class="text-fill mt-1.5 text-[0.9rem] leading-relaxed text-ink-700">{t.text}</p>
               </li>
             ))
           }
@@ -351,37 +344,6 @@ const disciplines = [
           <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {posts.map((post, i) => (
               <PostCard post={post} index={i} />
-            ))}
-          </div>
-        </div>
-      </section>
-    )
-  }
-
-  <!-- ============ PREGUNTAS FRECUENTES ============ -->
-  {
-    faqs.length > 0 && (
-      <section class="section-pad" aria-labelledby="faq-title">
-        <div class="container-site grid gap-12 lg:grid-cols-[1fr_1.6fr]">
-          <div data-reveal="left">
-            <p class="eyebrow">
-              <span class="h-px w-8 bg-gold-500" aria-hidden="true" />
-              Preguntas frecuentes
-            </p>
-            <h2 id="faq-title" class="mt-4 font-display text-3xl font-semibold text-ink-950 md:text-4xl">
-              Lo que suelen preguntarnos
-            </h2>
-            <a href="/faq/" class="btn-outline mt-8">Todas las preguntas</a>
-          </div>
-          <div class="divide-y divide-ink-100 border-y border-ink-100" data-reveal="right">
-            {faqs.map((f) => (
-              <details class="group py-5">
-                <summary class="flex cursor-pointer list-none items-start justify-between gap-6 font-display text-[1.08rem] font-semibold text-ink-950 marker:hidden">
-                  {f.data.question}
-                  <span class="mt-1 text-gold-600 transition-transform duration-300 group-open:rotate-45" aria-hidden="true">+</span>
-                </summary>
-                <div class="prose-site mt-3 text-[0.97rem]" set:html={f.data.answer} />
-              </details>
             ))}
           </div>
         </div>

@@ -5,7 +5,7 @@ description: "CENIPSA is a Colombian firm of private investigators and lawyers i
 type: info
 eyebrow: "About us"
 order: 1
-heroImage: "/images/nosotros-equipo.jpg"
+heroImage: "/images/nosotros-bogota.jpg"
 related: []
 ---
 

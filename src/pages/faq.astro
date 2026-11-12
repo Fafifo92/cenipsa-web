@@ -1,17 +1,14 @@
 ---
-/** Preguntas frecuentes con acordeón + schema FAQPage. */
+/** Preguntas frecuentes: asistente virtual guiado (sin lista estática ni schema FAQPage, que exige contenido visible). */
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import PageHero from '@/components/PageHero.astro';
 import CtaBanner from '@/components/CtaBanner.astro';
 import FaqPageBody from '@/components/FaqPageBody.astro';
 import type { FaqEntry } from '@/lib/faq';
-import { faqSchema, breadcrumbSchema } from '@/lib/seo';
+import { breadcrumbSchema } from '@/lib/seo';
 
 const entries: FaqEntry[] = (await getCollection('faq')).map((f) => f.data).sort((a, b) => a.order - b.order);
-const items = entries.map((f) => ({ question: f.question, answer: f.answer }));
-
-const stripHtml = (html: string) => html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 
 const crumbs = [
   { name: 'Inicio', path: '/' },
@@ -25,7 +22,6 @@ const crumbs = [
   path="/faq/"
   altLocalePath="/en/faq/"
   schemas={[
-    faqSchema(items.map((it) => ({ question: it.question, answer: stripHtml(it.answer) }))),
     breadcrumbSchema(crumbs),
   ]}
 >

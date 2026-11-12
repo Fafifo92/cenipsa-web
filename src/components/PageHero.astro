@@ -3,6 +3,7 @@
 import Breadcrumbs, { type Crumb } from './Breadcrumbs.astro';
 import HeroImage from './HeroImage.astro';
 import NetworkOverlay from './NetworkOverlay.astro';
+import manifest from '@/lib/hero-images.json';
 
 export interface Props {
   eyebrow?: string;
@@ -16,11 +17,25 @@ export interface Props {
   network?: boolean;
 }
 const { eyebrow, title, description, crumbs, lang = 'es', image, network = false } = Astro.props;
+
+/* Velo adaptativo según la luminosidad de la foto en la zona del texto
+   (medida por scripts/gen-hero-images.mjs). Fotos claras → velo denso y sin
+   aclarar; fotos oscuras → velo ligero y un poco más de brillo. */
+const key = image?.replace(/^\/images\//, '').replace(/\.jpe?g$/, '') ?? '';
+const lum = (manifest as Record<string, { lum?: number }>)[key]?.lum ?? 0.4;
+const tone = lum > 0.68 ? 'xlight' : lum > 0.5 ? 'light' : lum > 0.36 ? 'mid' : 'dark';
+const photoClass = { xlight: 'brightness-[0.88] saturate-[1.05]', light: 'saturate-[1.05]', mid: 'brightness-[1.05] saturate-[1.08]', dark: 'brightness-[1.18] saturate-[1.08]' }[tone];
+const veilClass = {
+  xlight: 'from-ink-950/90 via-ink-950/70 to-ink-950/40',
+  light: 'from-ink-950/85 via-ink-950/60 to-ink-950/25',
+  mid: 'from-ink-950/75 via-ink-950/45 to-ink-950/10',
+  dark: 'from-ink-950/60 via-ink-950/25 to-transparent',
+}[tone];
 ---
 
 <section class="relative overflow-hidden bg-ink-950 pt-36 pb-16 md:pt-44 md:pb-20">
-  {image && <HeroImage name={image} class="brightness-[1.18] saturate-[1.08]" />}
-  {image && <div class="absolute inset-0 bg-gradient-to-r from-ink-950/55 via-ink-950/15 to-transparent" aria-hidden="true"></div>}
+  {image && <HeroImage name={image} class={photoClass} />}
+  {image && <div class:list={['absolute inset-0 bg-gradient-to-r', veilClass]} data-hero-tone={tone} aria-hidden="true"></div>}
   {network && <NetworkOverlay />}
   {!image && (<div class="pointer-events-none absolute inset-0" aria-hidden="true">
     <div class="absolute -top-40 right-[-10%] h-[30rem] w-[30rem] rounded-full bg-brand-500/10 blur-3xl"></div>
