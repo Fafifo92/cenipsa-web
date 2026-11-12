@@ -17,42 +17,53 @@
       1600,
       1920
     ],
-    "width": 1920,
-    "height": 1280,
+    "width": 2400,
+    "height": 1600,
     "lum": 0.36
   },
-  "hero-huella": {
+  "hero-mazo": {
     "widths": [
       640,
       1024,
       1600,
       1920
     ],
-    "width": 1920,
-    "height": 1280,
-    "lum": 0.13
+    "width": 2400,
+    "height": 1600,
+    "lum": 0.06
   },
-  "hero-tribunal": {
+  "hero-tablero": {
     "widths": [
       640,
       1024,
       1600,
       1920
     ],
-    "width": 1920,
-    "height": 939,
-    "lum": 0.46
+    "width": 2400,
+    "height": 1635,
+    "lum": 0.36
   },
-  "hero-lupa-expediente": {
+  "hero-lupa": {
     "widths": [
       640,
       1024,
       1600,
       1920
     ],
-    "width": 1920,
-    "height": 1439,
-    "lum": 0.4
+    "width": 2400,
+    "height": 985,
+    "lum": 0.27
+  },
+  "hero-forense-digital": {
+    "widths": [
+      640,
+      1024,
+      1600,
+      1920
+    ],
+    "width": 2400,
+    "height": 1600,
+    "lum": 0.17
   },
   "despacho-juridico": {
     "widths": [

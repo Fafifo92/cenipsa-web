@@ -16,9 +16,10 @@ import { join } from 'node:path';
 export const HERO_IMAGES = [
   'plaza-bolivar',
   'hero-justicia',
-  'hero-huella',
-  'hero-tribunal',
-  'hero-lupa-expediente',
+  'hero-mazo',
+  'hero-tablero',
+  'hero-lupa',
+  'hero-forense-digital',
   'despacho-juridico',
   'bogota-edificios',
   'nosotros-equipo',
